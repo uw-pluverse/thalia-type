@@ -1,0 +1,27 @@
+p: Project = input;
+fqn_count: output sum[string] of int;
+
+f_name: string;
+visit(p, visitor {
+	before n: Project -> {
+		ifall (i: int; !match(`^java$`, lowercase(n.programming_languages[i])))
+			stop;
+	}
+	before cr: CodeRepository -> {
+		snapshot := getsnapshot(cr, "SOURCE_JAVA_JLS");
+		foreach (i: int; def(snapshot[i]))
+			visit(snapshot[i]);
+		stop;
+	}
+	before cf: ChangedFile -> {
+	    f_name = cf.name;
+		if (match(format(`\.%s$`, "java"), lowercase(f_name))) {
+			node := getast(cf);
+			visit(node);
+		}
+	}
+	before node: ASTRoot -> {
+		foreach (i: int; def(node.imports[i]))
+			fqn_count[node.imports[i]] << 1;
+	}
+});
