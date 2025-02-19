@@ -1,1 +1,14 @@
-
+bugs
+doc2json
+lib
+snr*.jar
+logs
+thalia
+venv-folder
+target
+__pycache__
+summarize-output
+*.csv
+snr/
+snr-logs/
+.idea
