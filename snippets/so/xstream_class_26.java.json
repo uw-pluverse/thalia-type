@@ -1,0 +1,24 @@
+{
+  "id": 17871210,
+  "postTypeId": 1,
+  "acceptedAnswerId": 18560756,
+  "parentId": 0,
+  "createDate": "Jul 26, 2013",
+  "score": 1,
+  "viewCount": 670,
+  "body": "\u003cp\u003eDoes XStream have support for xml lists similar to JAXB?(\u003ca href\u003d\"https://jaxb.java.net/nonav/2.2.4/docs/api/javax/xml/bind/annotation/XmlList.html\" rel\u003d\"nofollow\"\u003ehttps://jaxb.java.net/nonav/2.2.4/docs/api/javax/xml/bind/annotation/XmlList.html\u003c/a\u003e)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eFor example:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e @XmlRootElement\u0026#xA; public class MyClass {\u0026#xA;     @XmlElement\u0026#xA;     @XmlList\u0026#xA;     List\u0026lt;Integer\u0026gt; values;\u0026#xA;     //+ getter \u0026amp; setters\u0026#xA; }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003egenerates:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e \u0026lt;myClass\u0026gt;\u0026#xA;   \u0026lt;values\u0026gt;1 2 3 4 5\u0026lt;/values\u0026gt;\u0026#xA; \u0026lt;/myClass\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI am not able to locate any converter that does this. In fact, there seems to be a converter \u003cstrong\u003ecom.thoughtworks.xstream.converters.collections.BitSetConverter\u003c/strong\u003e that serializes BitSet as comma separated list.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 43952,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Sep 1, 2013",
+  "title": "XStream converter for XMLList (similar to Jaxb)",
+  "tags": [
+    "java",
+    "xml",
+    "jaxb",
+    "xstream",
+    "xmllist"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

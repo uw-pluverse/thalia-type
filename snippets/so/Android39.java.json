@@ -1,0 +1,22 @@
+{
+  "id": 1153920,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Jul 20, 2009",
+  "score": 2,
+  "viewCount": 5657,
+  "body": "\u003cp\u003eRight.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo I have an app widget.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIt has 4 buttons, one one of the buttons I want it to show me the current location of the user on the map.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo - I make a new activity as below:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage com.android.driverwidget;\u0026#xA;\u0026#xA;import java.util.List;\u0026#xA;\u0026#xA;import android.os.Bundle;\u0026#xA;\u0026#xA;import com.google.android.maps.MapActivity;\u0026#xA;import com.google.android.maps.MapController;\u0026#xA;import com.google.android.maps.MapView;\u0026#xA;import com.google.android.maps.MyLocationOverlay;\u0026#xA;import com.google.android.maps.Overlay;\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;public class MyLocation extends MapActivity{\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;        public void onCreate(Bundle icicle) {\u0026#xA;          super.onCreate(icicle);\u0026#xA;\u0026#xA;          setContentView(R.layout.main);\u0026#xA;\u0026#xA;          MapView myMapView \u003d (MapView)findViewById(R.id.mapview);\u0026#xA;          MapController mapController \u003d myMapView.getController();\u0026#xA;\u0026#xA;          List\u0026lt;Overlay\u0026gt; overlays \u003d myMapView.getOverlays();\u0026#xA;          MyLocationOverlay myLocationOverlay \u003d new MyLocationOverlay(this,             myMapView);\u0026#xA;          overlays.add(myLocationOverlay);\u0026#xA;          myLocationOverlay.enableMyLocation();\u0026#xA;        }\u0026#xA;\u0026#xA;\u0026#xA;          protected boolean isRouteDisplayed() {\u0026#xA;\u0026#xA;            return false;\u0026#xA;          }\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnd then I added the appropriate uses library line to the manifest\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;activity android:name\u003d\".MyLocation\"\u0026#xA;    android:label\u003d\"myLocation\"\u0026gt;\u0026#xA;     \u0026lt;/activity\u0026gt;\u0026#xA;\u0026#xA;   \u0026lt;uses-library android:name\u003d\"com.google.android.maps\" /\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eOk yet - when I run the app the following errors occur, looks like it cannot find the MapActivity class, im running it on the GoogleApps 1.5 instead of normal android 1.5 as well.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003ca href\u003d\"http://pastebin.com/m3ee8dba2\" rel\u003d\"nofollow noreferrer\"\u003ehttp://pastebin.com/m3ee8dba2\u003c/a\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSomebody plz help me - i am now dying.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 0,
+  "ownerDisplayName": "Andy Armstrong",
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Sep 9, 2010",
+  "title": "Android AppWidget maps activity problem",
+  "tags": [
+    "android",
+    "android-mapview"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

@@ -1,0 +1,22 @@
+{
+  "id": 39005622,
+  "postTypeId": 1,
+  "acceptedAnswerId": 39229176,
+  "parentId": 0,
+  "createDate": "Aug 17, 2016",
+  "score": 0,
+  "viewCount": 325,
+  "body": "\u003cp\u003eI have the xml below that has a number value\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;detalhe\u0026gt;\u0026#xA;  \u0026lt;numLinha\u0026gt;1048  \u0026lt;/numLinha\u0026gt;\u0026#xA;\u0026lt;/detalhe\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ethe tag numLinha will be converted to a number attibute in java, however i receive the folow message because there are spaces at the end of tag:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eException in thread \"main\"  \u0026#xA;com.thoughtworks.xstream.converters.ConversionException: For input string \"1048                    \"\u0026#xA;\u0026#xA;@XStreamAlias(\"detalhe\")\u0026#xA;public class BodyDetail implements Serializable {\u0026#xA;\u0026#xA;   private static final long serialVersionUID \u003d -1000785985130865301L;\u0026#xA;\u0026#xA;   @XStreamAlias(\"numLinha\")\u0026#xA;   private Integer lineNumber;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 1095530,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Aug 30, 2016",
+  "title": "How to remove space from xml tag using XStream?",
+  "tags": [
+    "java",
+    "xml",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

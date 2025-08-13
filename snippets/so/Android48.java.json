@@ -1,0 +1,20 @@
+{
+  "id": 1305388,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1305545,
+  "parentId": 0,
+  "createDate": "Aug 20, 2009",
+  "score": 6,
+  "viewCount": 14485,
+  "body": "\u003cp\u003eI am trying to implement Camera application in android,and i got some code from net to create a Live Camera through WebCam.Upto this no problem.Now i have to capture the images when click the button, and i displayed the captured images in the Dialog window.Without any exception the program is running but the captured image is not displayed,some default image is displayed.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy code is\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic void captureImage()\u0026#xA;{\u0026#xA;    Camera.Parameters params \u003d camera.getParameters();\u0026#xA;    camera.setParameters(params);\u0026#xA;    Camera.PictureCallback jpgCallback \u003d new PictureCallback() \u0026#xA;    {\u0026#xA;        public void onPictureTaken(byte[] data, Camera camera) \u0026#xA;        {\u0026#xA;            try\u0026#xA;            {\u0026#xA;                Dialog d\u003dnew Dialog(c);\u0026#xA;                d.setContentView(0x7f030000);\u0026#xA;                BitmapFactory.Options opts \u003d new BitmapFactory.Options();\u0026#xA;                Bitmap bitmap \u003d BitmapFactory.decodeByteArray(data, 0, data.length,opts);\u0026#xA;                TextView tv\u003d(TextView)d.findViewById(0x7f050001);\u0026#xA;                ImageView i\u003d(ImageView)d.findViewById(0x7f050000);\u0026#xA;                i.setImageBitmap(bitmap);\u0026#xA;                tv.setText(\"Hai\"+data.length);\u0026#xA;                d.show();\u0026#xA;            }\u0026#xA;            catch(Exception e)\u0026#xA;            {\u0026#xA;                AlertDialog.Builder alert\u003dnew AlertDialog.Builder(c);\u0026#xA;                alert.setMessage(\"Exception1\"+e.getMessage());\u0026#xA;                alert.create();\u0026#xA;                alert.show();\u0026#xA;            }\u0026#xA;        }\u0026#xA;\u0026#xA;    };\u0026#xA;    camera.takePicture(null, null, jpgCallback);\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have no idea from where this default image is coming,i don\u0027t how to slove this problem.Anyone knows about this please help me.Waiting for the Reply.....\u003c/p\u003e\u0026#xA;",
+  "ownerId": 131062,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Nov 24, 2010",
+  "title": "How to Capture image from Camera Application in Android Programming?",
+  "tags": [
+    "android"
+  ],
+  "answerCount": 1,
+  "commentCount": 1,
+  "favoriteCount": 4
+}

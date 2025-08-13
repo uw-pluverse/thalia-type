@@ -1,0 +1,23 @@
+{
+  "id": 3143234,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3143387,
+  "parentId": 0,
+  "createDate": "Jun 29, 2010",
+  "score": 4,
+  "viewCount": 3122,
+  "body": "\u003cp\u003eThe problem is that every time I execute the main method, the old content of a.xml is lost and is substituted with a new one. How to append content to the a.xml file without losing the previous information?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport java.io.FileNotFoundException;\u0026#xA;import java.io.PrintWriter;\u0026#xA;\u0026#xA;import com.thoughtworks.xstream.XStream;\u0026#xA;import com.thoughtworks.xstream.io.xml.DomDriver;\u0026#xA;\u0026#xA;\u0026#xA;public class Test {\u0026#xA;    public static void main(String[] args) throws FileNotFoundException {\u0026#xA;        XStream xs \u003d new XStream(new DomDriver());\u0026#xA;        Foo f \u003d new Foo(1, \"booo\", new Bar(42));\u0026#xA;        PrintWriter pw \u003d new PrintWriter(\"a.xml\");\u0026#xA;        xs.toXML(f,pw);\u0026#xA;    }\u0026#xA;}\u0026#xA;\u0026#xA;\u0026#xA;public class Bar {\u0026#xA;    public int id;\u0026#xA;\u0026#xA;    public Bar(int id) {\u0026#xA;        this.id \u003d id;\u0026#xA;    }\u0026#xA;\u0026#xA;}\u0026#xA;\u0026#xA;\u0026#xA;public class Foo {\u0026#xA;    public int a;\u0026#xA;    public String b;\u0026#xA;    public Bar boo;\u0026#xA;    public Foo(int a, String b, Bar c) {\u0026#xA;        this.a \u003d a;\u0026#xA;        this.b \u003d b;\u0026#xA;        this.boo \u003d c;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 328182,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jun 29, 2010",
+  "title": "Serializing Java objects to XML with XStream",
+  "tags": [
+    "java",
+    "xml",
+    "serialization",
+    "xstream"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

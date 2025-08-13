@@ -1,0 +1,20 @@
+{
+  "id": 2482222,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2482232,
+  "parentId": 0,
+  "createDate": "Mar 20, 2010",
+  "score": 1,
+  "viewCount": 3417,
+  "body": "\u003cp\u003eMy Code is \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    String url \u003d \"http: gd.geobytes.com/gd?after\u003d-1\u0026amp;variables\u003dGeobytesCountry,GeobytesCity\";\u0026#xA;    RequestBuilder builder \u003d new RequestBuilder(RequestBuilder.GET, URL\u0026#xA;            .encode(url));\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;    try {\u0026#xA;        Request request \u003d builder.sendRequest(null, new RequestCallback() {\u0026#xA;            public void onError(Request request, Throwable exception) {\u0026#xA;                  Couldn\u0027t connect to server (could be timeout, SOP\u0026#xA;                  violation, etc.)\u0026#xA;            }\u0026#xA;\u0026#xA;            public void onResponseReceived(Request request,\u0026#xA;                    Response response) {\u0026#xA;\u0026#xA;                System.out.println(response.getText() + \"Response\");\u0026#xA;\u0026#xA;                if (200 \u003d\u003d response.getStatusCode()) {\u0026#xA;                    Window.alert(response.getText());\u0026#xA;                } else {\u0026#xA;                    Window.alert(response.getText());\u0026#xA;                }\u0026#xA;            }\u0026#xA;        });\u0026#xA;    } catch (RequestException e) {\u0026#xA;        e.printStackTrace();\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ei receive following error \u0026#xA;   com.google.gwt.http.client.RequestPermissionException: The URL \u003ca href\u003d\"http://gd.geobytes.com/gd?after\u003d-1\u0026amp;variables\u003dGeobytesCountry,GeobytesCity\" rel\u003d\"nofollow noreferrer\"\u003ehttp://gd.geobytes.com/gd?after\u003d-1\u0026amp;variables\u003dGeobytesCountry,GeobytesCity\u003c/a\u003e is invalid or violates the same-origin security restriction\u0026#xA;    at com.google.gwt.http.client.RequestBuilder.doSend(RequestBuilder.java:378)\u0026#xA;    at com.google.gwt.http.client.RequestBuilder.sendRequest(RequestBuilder.java:254)\u0026#xA;    at com.ip.client.IpAddressTest.onModuleLoad(IpAddressTest.java:46)\u0026#xA;    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\u0026#xA;    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)\u0026#xA;    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)\u0026#xA;    at java.lang.reflect.Method.invoke(Method.java:597)\u0026#xA;    at com.google.gwt.dev.shell.ModuleSpace.onLoad(ModuleSpace.java:369)\u0026#xA;    at com.google.gwt.dev.shell.OophmSessionHandler.loadModule(OophmSessionHandler.java:185)\u0026#xA;    at com.google.gwt.dev.shell.BrowserChannelServer.processConnection(BrowserChannelServer.java:380)\u0026#xA;    at com.google.gwt.dev.shell.BrowserChannelServer.run(BrowserChannelServer.java:222)\u0026#xA;    at java.lang.Thread.run(Thread.java:619)\u0026#xA;Caused by: com.google.gwt.http.client.RequestException: (NS_ERROR_DOM_BAD_URI): Access to restricted URI denied\u003c/p\u003e\u0026#xA;",
+  "ownerId": 196480,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jul 24, 2013",
+  "title": "Problem calling Request using RequestBuilder",
+  "tags": [
+    "gwt"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

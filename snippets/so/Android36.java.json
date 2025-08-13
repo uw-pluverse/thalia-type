@@ -1,0 +1,24 @@
+{
+  "id": 1105141,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1105157,
+  "parentId": 0,
+  "createDate": "Jul 9, 2009",
+  "score": 2,
+  "viewCount": 12597,
+  "body": "\u003cp\u003eI would like to create a table to store device settings. The table has three rows: id, parameter_name and parameter_value.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe table was created by executing the following query statement:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDATABASE_CREATE \u003d \"create table DATABASE_TABLE (KEY_ID INTEGER PRIMARY KEY AUTOINCREMENT, KEY_NAME INTEGER not null, VALUE TEXT not null);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eand then the rows are stored by executing the following method:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eprivate long insertRow(int rowParameter, String rowValue, SQLiteDatabase db){\u0026#xA;    long res \u003d -1;\u0026#xA;    ContentValues settingsParameterValues \u003d new ContentValues();\u0026#xA;    settingsParameterValues.put(KEY_NAME, rowParameter);\u0026#xA;    settingsParameterValues.put(VALUE, rowValue);\u0026#xA;    if(db !\u003d null){\u0026#xA;        res \u003d db.insert(DATABASE_TABLE, null, settingsParameterValues);\u0026#xA;    }\u0026#xA;    return res;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen the database is created the default values are stored:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@Override\u0026#xA;    public void onCreate(SQLiteDatabase db) {\u0026#xA;        db.execSQL(DATABASE_CREATE);\u0026#xA;        insertRow(PRIVACY_LEVEL_ROW_INDEX, \"0\", db);\u0026#xA;        insertRow(STREAM_TITLE_ROW_INDEX, \"untitled\", db);\u0026#xA;        insertRow(STREAM_TAGS_ROW_INDEX, \"\", db);\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe problem with method insertRow() however is that it can\u0027t prevent duplicating the entries.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDoes anyone know how to prevent duplicate entries in this case?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 22996,
+  "lastEditorUserId": 1777090,
+  "lastEditDate": "Jan 17, 2013",
+  "lastActivityDate": "Aug 3, 2016",
+  "title": "SQLite: prevent duplicates",
+  "tags": [
+    "sql",
+    "database",
+    "android",
+    "sqlite"
+  ],
+  "answerCount": 4,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

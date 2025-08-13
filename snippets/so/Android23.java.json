@@ -1,0 +1,25 @@
+{
+  "id": 885641,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "May 20, 2009",
+  "score": 0,
+  "viewCount": 1899,
+  "body": "\u003cp\u003eIn my Android application, I have a ListActivity. This ListActivity uses a SimpleAdapter that I fill with items from my service. So, in my code, I do:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eMySuperCoolService.Binder serviceBinder \u003d null;\u0026#xA;private ServiceConnection serviceConnection \u003d new ServiceConnection()\u0026#xA;    {\u0026#xA;        public void onServiceConnected(ComponentName className, IBinder service) {\u0026#xA;            Log.d(TAG, \"Service connection: connected!\");\u0026#xA;            serviceBinder \u003d (MySuperCoolService.Binder)service;\u0026#xA;        }\u0026#xA;        public void onServiceDisconnected(ComponentName className) {\u0026#xA;            Log.d(TAG, \"Service connection: disconnected\");\u0026#xA;            serviceBinder \u003d null;\u0026#xA;        }\u0026#xA;    };\u0026#xA;bindService(new Intent(this, MySuperCoolService.class), serviceConnection, BIND_AUTO_CREATE);\u0026#xA;while(serviceBinder\u003d\u003dnull) {\u0026#xA;    Thread.Sleep(1000);\u0026#xA;}\u0026#xA;// now retrieve from service using binder and set list adapter\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis whole operation takes hardly any time (less than a second), so I want it to run in the UI thread. See my onCreate:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic void onCreate(Bundle savedInstanceState) {\u0026#xA;    super.onCreate(savedInstanceState);\u0026#xA;    fillDataUsingCodeAbove();\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe reason I want this to run in the UI thread is that if you have a list item selected, or you have scrolled to a certain position in the ListView, and you rotate the device or take out the keyboard or something (to trigger a configuration change) when my activity is restarted, Android will try to restore the state right after onCreate. But, if I run it in a separate thread, it will not. Also there is a cool fadein animation too :)\u003cbr\u003e\u0026#xA;The problem I am having with running it in the UI thread is that when I try to bind to the service, that service bind request gets put onto the message queue. But then when I go into my loop, I stop the message queue from looping. So my program hangs, because it\u0027s waiting for the service to get bound, and the service won\u0027t get bound until the loop ends. I have thought of putting \u003ccode\u003eLooper.loop()\u003c/code\u003e inside my loop, but that just hangs it at \u003ccode\u003eLooper.loop()\u003c/code\u003e (I don\u0027t know why.)\u003cbr\u003e\u0026#xA;Sorry for such a long question,\u003cbr\u003e\u0026#xA;Isaac Waller\u003c/p\u003e\u0026#xA;",
+  "ownerId": 764272,
+  "lastEditorUserId": 3098087,
+  "lastEditDate": "Jul 14, 2016",
+  "lastActivityDate": "Jul 14, 2016",
+  "title": "Android Loading listview items from service results in hang",
+  "tags": [
+    "android",
+    "listview",
+    "service",
+    "message-queue",
+    "serviceconnection"
+  ],
+  "answerCount": 1,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

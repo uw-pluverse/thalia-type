@@ -1,0 +1,34 @@
+```java
+import src.sikkim.LiteralNode;
+import src.sikkim.ExitOperationsCollector;
+import src.sikkim.TypeSwitch;
+import src.sikkim.ExitStrategy;
+import src.sikkim.CriteriaBuilderImpl;
+import src.sikkim.LiteralExpression;
+import src.sikkim.SupportsIdentityColumns;
+import src.sikkim.ShardOperation;
+import src.sikkim.Shard;
+import src.sikkim.MapKeyPath;
+import src.sikkim.NoOpValueHandler;
+import src.sikkim.Pair;
+import src.sikkim.Query;
+import src.sikkim.AbstractEntityManagerImpl;
+import java.util.Map;
+import src.sikkim.IllegalDereferenceException;
+import src.sikkim.MapAttribute;
+import src.sikkim.Triple;
+import src.sikkim.ResinTransactionManagerLookup;
+import src.sikkim.ValidatePreUpdateEventListener;
+import src.sikkim.QueryBinder;
+import src.sikkim.InformixDialect;
+import src.sikkim.QueryImpl;
+import src.sikkim.Expression;
+import src.sikkim.ExpressionImplementor;
+import src.sikkim.MapAttributeJoin;
+import src.sikkim.MapProxy;
+import src.sikkim.PessimisticReadSelectLockingStrategy;
+import src.sikkim.NamedParameterSource;
+import src.sikkim.JoinType;
+import src.sikkim.WhenClause;
+import src.sikkim.Initializor;
+```

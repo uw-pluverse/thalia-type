@@ -1,0 +1,22 @@
+{
+  "id": 10106143,
+  "postTypeId": 1,
+  "acceptedAnswerId": 10172992,
+  "parentId": 0,
+  "createDate": "Apr 11, 2012",
+  "score": 3,
+  "viewCount": 628,
+  "body": "\u003cp\u003eHere\u0027s my code which reveals a Joda Time bug:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport org.joda.time.Period;\u0026#xA;import org.joda.time.format.PeriodFormat;\u0026#xA;import org.joda.time.format.PeriodFormatter;\u0026#xA;\u0026#xA;import java.util.Locale;\u0026#xA;\u0026#xA;public class ScratchSpace {\u0026#xA;\u0026#xA;    public static void main(String[] args) {\u0026#xA;        Locale.setDefault(Locale.GERMAN);\u0026#xA;        final PeriodFormatter periodFormatter \u003d \u0026#xA;                 PeriodFormat.wordBased(Locale.ENGLISH);\u0026#xA;        final Period period \u003d new Period(6, 5, 4, 3);\u0026#xA;        final String s \u003d period.toString(periodFormatter);\u0026#xA;        // i\u0027m expecting english to be outputted\u0026#xA;        System.out.println(\"s \u003d \" + s); // outputs german: 6 Stunden, 5 Minuten, 4 Sekunden und 3 Millisekunden\u0026#xA;    }\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAccording to the JavaDocs I should be getting the period formatted in English. But it is using the current default locale instead, which in the example above is German.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m using Joda Time 2.0, on Mac OS X 10.7, with the computer set to \"Australian English\" as the preferred language.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny simple work-around you can suggest?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 2959,
+  "lastEditorUserId": 21234,
+  "lastEditDate": "Apr 14, 2012",
+  "lastActivityDate": "Apr 16, 2012",
+  "title": "Work-around for a Joda Time bug in PeriodFormat?",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

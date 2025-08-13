@@ -1,0 +1,21 @@
+{
+  "id": 1651138,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Oct 30, 2009",
+  "score": 0,
+  "viewCount": 4958,
+  "body": "\u003cp\u003eI wanted to organize my folders my own way but it\u0027s not working so far. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is my directory structure\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003esrc\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cul\u003e\u0026#xA;\u003cli\u003ecom.tutorial.client\u0026#xA;\u0026#xA;\u003cul\u003e\u0026#xA;\u003cli\u003eDictionaryModule\u003c/li\u003e\u0026#xA;\u003c/ul\u003e\u003c/li\u003e\u0026#xA;\u003cli\u003ecom.tutorial.module\u0026#xA;\u0026#xA;\u003cul\u003e\u0026#xA;\u003cli\u003eTutorial.gwt.xml\u003c/li\u003e\u0026#xA;\u003c/ul\u003e\u003c/li\u003e\u0026#xA;\u003c/ul\u003e\u0026#xA;\u0026#xA;\u003cp\u003eTutorial.gwt.xml: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;module rename-to\u003d\"tutorial\"\u0026gt;\u0026#xA;  \u0026lt;inherits name\u003d\u0027com.google.gwt.user.User\u0027/\u0026gt;\u0026#xA;  \u0026lt;inherits name\u003d\u0027com.google.gwt.user.theme.standard.Standard\u0027/\u0026gt;\u0026#xA;  \u0026lt;entry-point class\u003d\"com.tutorial.client.DictionaryModule\"/\u0026gt;\u0026#xA;\u0026lt;/module\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDictionaryModule\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage com.tutorial.client;\u0026#xA;\u0026#xA;import com.google.gwt.core.client.EntryPoint;\u0026#xA;import com.google.gwt.user.client.ui.HorizontalPanel;\u0026#xA;import com.google.gwt.user.client.ui.Label;\u0026#xA;import com.google.gwt.user.client.ui.RootPanel;\u0026#xA;\u0026#xA;public class DictionaryModule implements EntryPoint {\u0026#xA;    HorizontalPanel dictionaryPanel;\u0026#xA;    Label wordLabel;\u0026#xA;\u0026#xA;    public DictionaryModule(){\u0026#xA;        dictionaryPanel \u003d new HorizontalPanel();\u0026#xA;        wordLabel \u003d new Label(\"Word\");\u0026#xA;    }\u0026#xA;    @Override\u0026#xA;    public void onModuleLoad() {\u0026#xA;        dictionaryPanel.add(wordLabel);\u0026#xA;        RootPanel.get(\"dictionary\").add(dictionaryPanel);\u0026#xA;    }   \u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut I get this error: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cblockquote\u003e\u0026#xA;  \u003cp\u003e\u003cstrong\u003e[ERROR]\u003c/strong\u003e Unable to find type\u0026#xA;  \u0027com.tutorial.client.DictionaryModule\u0027\u0026#xA;  \u003cstrong\u003e[ERROR]\u003c/strong\u003e Hint: Previous compiler errors\u0026#xA;  may have made this type unavailable\u0026#xA;  \u003cstrong\u003e[ERROR]\u003c/strong\u003e Hint: Check the inheritance\u0026#xA;  chain from your module; it may not be\u0026#xA;  inheriting a required module or a\u0026#xA;  module may not be adding its source\u0026#xA;  path entries properly [ERROR] Failure\u0026#xA;  to load module \u0027tutorial\u0027\u003c/p\u003e\u0026#xA;\u003c/blockquote\u003e\u0026#xA;",
+  "ownerId": 160950,
+  "lastEditorUserId": 40945,
+  "lastEditDate": "Oct 30, 2009",
+  "lastActivityDate": "Mar 4, 2013",
+  "title": "GWT: Failed to load module",
+  "tags": [
+    "gwt"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

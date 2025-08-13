@@ -1,0 +1,25 @@
+{
+  "id": 151777,
+  "postTypeId": 1,
+  "acceptedAnswerId": 151940,
+  "parentId": 0,
+  "createDate": "Sep 30, 2008",
+  "score": 2704,
+  "viewCount": 815262,
+  "body": "\u003cp\u003eI\u0027ve been working on the Android SDK platform, and it is a little unclear how to save an application\u0027s state. So given this minor re-tooling of the \u0027Hello, Android\u0027 example:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage com.android.hello;\u0026#xA;\u0026#xA;import android.app.Activity;\u0026#xA;import android.os.Bundle;\u0026#xA;import android.widget.TextView;\u0026#xA;\u0026#xA;public class HelloAndroid extends Activity {\u0026#xA;\u0026#xA;  private TextView mTextView \u003d null;\u0026#xA;\u0026#xA;  /** Called when the activity is first created. */\u0026#xA;  @Override\u0026#xA;  public void onCreate(Bundle savedInstanceState) {\u0026#xA;    super.onCreate(savedInstanceState);\u0026#xA;\u0026#xA;    mTextView \u003d new TextView(this);\u0026#xA;\u0026#xA;    if (savedInstanceState \u003d\u003d null) {\u0026#xA;       mTextView.setText(\"Welcome to HelloAndroid!\");\u0026#xA;    } else {\u0026#xA;       mTextView.setText(\"Welcome back.\");\u0026#xA;    }\u0026#xA;\u0026#xA;    setContentView(mTextView);\u0026#xA;  }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI thought it would be enough for the simplest case, but it always responds with the first message, no matter how I navigate away from the app.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m sure the solution is as simple as overriding \u003ccode\u003eonPause\u003c/code\u003e or something like that, but I\u0027ve been poking away in the documentation for 30 minutes or so and haven\u0027t found anything obvious.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 61,
+  "ownerDisplayName": "Bernard",
+  "lastEditorUserId": 4562287,
+  "lastEditorDisplayName": "user10758159",
+  "lastEditDate": "Dec 24, 2019",
+  "lastActivityDate": "Jan 7, 2021",
+  "title": "How to save an activity state using save instance state?",
+  "tags": [
+    "android",
+    "android-activity",
+    "application-state"
+  ],
+  "answerCount": 35,
+  "commentCount": 6,
+  "favoriteCount": 1065
+}

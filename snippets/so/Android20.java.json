@@ -1,0 +1,23 @@
+{
+  "id": 769326,
+  "postTypeId": 1,
+  "acceptedAnswerId": 784463,
+  "parentId": 0,
+  "createDate": "Apr 20, 2009",
+  "score": 4,
+  "viewCount": 5684,
+  "body": "\u003cp\u003eI\u0027m trying to animate some text \u0027zooming out\u0027 on top of another view.  My code looks something like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eclass BoardView extends View {\u0026#xA;\u0026#xA;private TextView animText;\u0026#xA;\u0026#xA;...\u0026#xA;\u0026#xA;private void animText(String text, int color, int xBlocks, int yBlocks) {\u0026#xA;    animText.setText(text);\u0026#xA;    animText.setTextColor(color);\u0026#xA;    animText.setVisibility(View.VISIBLE);\u0026#xA;    final int x \u003d BOARD_X_OFFSET + xBlocks * xBlockSize;\u0026#xA;    final int y \u003d BOARD_Y_OFFSET + yBlocks * yBlockSize;\u0026#xA;    final float SCALE_FROM \u003d (float) 0.25;\u0026#xA;    final float SCALE_TO \u003d (float) 5.0;\u0026#xA;    ScaleAnimation anim \u003d new ScaleAnimation(SCALE_FROM, SCALE_TO, SCALE_FROM, SCALE_TO, x, y);\u0026#xA;    anim.setDuration(500);\u0026#xA;    animText.setAnimation(anim);\u0026#xA;    this.setAnimation(null);\u0026#xA;    startAnimation(anim);\u0026#xA;}\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ewith animText being invoked in the \u003ccode\u003eonDraw()\u003c/code\u003e routine of the \u003ccode\u003eBoardView\u003c/code\u003e.  What I\u0027m seeing, however, is the \u003cem\u003eboard\u003c/em\u003e zooming out, not the text, despite the above calls to \u003ccode\u003esetAnimation()\u003c/code\u003e.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve looked in the main android docs and at one other \u003ca href\u003d\"http://stuffthathappens.com/blog/2008/11/13/android-animation-101/\" rel\u003d\"nofollow noreferrer\"\u003eexample\u003c/a\u003e.  Even pointers in the right direction would be helpful.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 8002,
+  "lastEditorUserId": 5782490,
+  "lastEditDate": "Sep 9, 2016",
+  "lastActivityDate": "Sep 9, 2016",
+  "title": "How to animate text over another View in Android?",
+  "tags": [
+    "android",
+    "animation",
+    "android-animation"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

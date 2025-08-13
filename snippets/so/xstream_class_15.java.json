@@ -1,0 +1,22 @@
+{
+  "id": 328832,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Nov 30, 2008",
+  "score": 5,
+  "viewCount": 6941,
+  "body": "\u003cp\u003eI\u0027ve been facing this issue where, the hibernate objects on serialization produces unexpect xmls containing all the instrumented code from Hibernate.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWe did some cleaning of the object before serializing the object.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut, is there a standard option available to serialize the object directly?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 31590,
+  "ownerDisplayName": "Satya",
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Aug 29, 2012",
+  "title": "Issue with serializing Hibernate objects using XStream",
+  "tags": [
+    "hibernate",
+    "xstream"
+  ],
+  "answerCount": 6,
+  "commentCount": 1,
+  "favoriteCount": 6
+}

@@ -1,0 +1,21 @@
+{
+  "id": 7423886,
+  "postTypeId": 1,
+  "acceptedAnswerId": 7423907,
+  "parentId": 0,
+  "createDate": "Sep 14, 2011",
+  "score": 1,
+  "viewCount": 677,
+  "body": "\u003cp\u003eI have a custom formatter...\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e// default our time zone to the machine local one.\u0026#xA;private static final DateTimeZone LOCAL_TZ \u003d DateTimeZone.getDefault();\u0026#xA;\u0026#xA;// format of date (i.e., timestamp) is yyyy-MM-dd HH:mm:ss.S\u0026#xA;private static final DateTimeFormatter YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER \u003d\u0026#xA;        new DateTimeFormatterBuilder()\u0026#xA;.appendYear(4,4)\u0026#xA;.appendLiteral(\u0027-\u0027)\u0026#xA;.appendMonthOfYear(1)\u0026#xA;.appendLiteral(\u0027-\u0027)\u0026#xA;.appendDayOfMonth(1)\u0026#xA;.appendLiteral(\u0027 \u0027)\u0026#xA;.appendHourOfDay(2)\u0026#xA;.appendLiteral(\u0027:\u0027)\u0026#xA;.appendMinuteOfDay(1)\u0026#xA;.appendLiteral(\u0027:\u0027)\u0026#xA;.appendSecondOfDay(1)\u0026#xA;.appendLiteral(\u0027.\u0027)\u0026#xA;.appendMillisOfDay(1)\u0026#xA;.toFormatter().withZone(LOCAL_TZ);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI do something like...\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eString value \u003d \"2011-06-21 05:00:00.0\";\u0026#xA;YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER.parseDateTime(value);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIf I look at the org.joda.time.DateTime in a debugger, I will see that the hour:minute:second.millis got converted to 00:00:00.0.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhat gives?  I\u0027ve tried mucking around with minDigits on HourOfDay, MinuteOfDay, SecondOfDay and so on.  Is this a bug in JodaTime 2.0? Or (more likely) my own ignorance?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 945660,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Sep 14, 2011",
+  "title": "Why does org.joda.time.DateTimeFormatter not parse custom date time with millis correctly?",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 1,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

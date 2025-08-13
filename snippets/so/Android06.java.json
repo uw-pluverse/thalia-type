@@ -1,0 +1,22 @@
+{
+  "id": 263507,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Nov 4, 2008",
+  "score": 19,
+  "viewCount": 44882,
+  "body": "\u003cp\u003eI\u0027m trying to get the zoom controls to show up in a \u003ccode\u003emapview\u003c/code\u003e, the following code almost works, but the zoom controls appear in the top left of the \u003ccode\u003emapview\u003c/code\u003e, not the bottom center like I\u0027m specifying via \u003ccode\u003esetGravity()\u003c/code\u003e.  Can someone enlighten me as to what I\u0027m missing?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003ezoomView \u003d (LinearLayout) mapView.getZoomControls();\u0026#xA;zoomView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT)); \u0026#xA;zoomView.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);\u0026#xA;mapView.addView(zoomView);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThese views/layouts are all constructed programmatically, there is no layout file to tweak.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 24590,
+  "lastEditorUserId": 2553431,
+  "lastEditDate": "Dec 17, 2015",
+  "lastActivityDate": "Dec 31, 2018",
+  "title": "Placing Zoom Controls in a MapView",
+  "tags": [
+    "android",
+    "android-mapview"
+  ],
+  "answerCount": 8,
+  "commentCount": 0,
+  "favoriteCount": 17
+}

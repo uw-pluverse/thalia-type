@@ -1,0 +1,21 @@
+{
+  "id": 7868105,
+  "postTypeId": 1,
+  "acceptedAnswerId": 7868131,
+  "parentId": 0,
+  "createDate": "Oct 23, 2011",
+  "score": 0,
+  "viewCount": 392,
+  "body": "\u003cp\u003eI thought \u003ccode\u003e2011-10-23 12:00:00\u003c/code\u003e would remain the same as \u003ccode\u003eUTC\u003c/code\u003e and that the \u003ccode\u003eConverted date\u003c/code\u003e would be \u003cstrong\u003e\u003ccode\u003e2011-10-23 17:00:00\u003c/code\u003e\u003c/strong\u003e.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateFormat formatter \u003d new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\");\u0026#xA;Date dt \u003d formatter.parse(\"2011-10-23 12:00:00\");\u0026#xA;LocalDateTime ldt \u003d new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();\u0026#xA;LOGGER.warn(\"Original date: \" + ldt.toDateTime().toDate().toString());\u0026#xA;DateTime cvtldt \u003d ldt.toDateTime(DateTimeZone.forID(\"-05:00\"));\u0026#xA;LOGGER.warn(\"Converted date: \" + cvtldt.toLocalDateTime().toDateTime().toDate().toString());\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI don\u0027t understand why the output is minus one hour?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eOriginal date: Sun Oct 23 11:00:00 BST 2011\u0026#xA;Converted date: Sun Oct 23 11:00:00 BST 2011    \u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 1003109,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Oct 23, 2011",
+  "title": "Why does \"12:00\" converted to UTC become \"11:00\"?",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

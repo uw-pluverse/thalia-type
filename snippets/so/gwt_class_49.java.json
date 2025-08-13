@@ -1,0 +1,22 @@
+{
+  "id": 3954392,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3954587,
+  "parentId": 0,
+  "createDate": "Oct 17, 2010",
+  "score": 2,
+  "viewCount": 1345,
+  "body": "\u003cp\u003eI want to add a MouseOver event handler for any tag. Let say just for the example, that I want to add the event handler for every anchor page in a legacy HTML page.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eFollowing the \u003ca href\u003d\"http://code.google.com/webtoolkit/doc/1.6/DevGuideUserInterface.html#DevGuideAccessingDOM\" rel\u003d\"nofollow\"\u003eGWT guide\u003c/a\u003e, I was able to use their a JSNI method suggested to retrieve all anchor tags after correcting small errors (missing parenthesis and types).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, I want to use the elements collected in the ArrayList and bind all of them to an event handler. How can I do that?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe code I wrote is listed below:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e  private native void putElementLinkIDsInList(BodyElement elt, ArrayList list) /*-{\u0026#xA;    var links \u003d elt.getElementsByTagName(\"a\");\u0026#xA;\u0026#xA;    for (var i \u003d 0; i \u0026lt; links.length; i++ ) {\u0026#xA;      var link \u003d links.item(i);\u0026#xA;      link.id \u003d (\"uid-a-\" + i);\u0026#xA;      list.@java.util.ArrayList::add(Ljava/lang/Object;) (link.id);\u0026#xA;    }\u0026#xA;  }-*/;\u0026#xA;\u0026#xA;  /**\u0026#xA;   * Find all anchor tags and if any point outside the site, redirect them to a\u0026#xA;   * \"blocked\" page.\u0026#xA;   */\u0026#xA;  private void rewriteLinksIterative() {\u0026#xA;    ArrayList links \u003d new ArrayList();\u0026#xA;    putElementLinkIDsInList(Document.get().getBody(), links);\u0026#xA;    for (int i \u003d 0; i \u0026lt; links.size(); i++) {\u0026#xA;      Element elt \u003d DOM.getElementById((String) links.get(i));\u0026#xA;      rewriteLink(elt, \"www.example.com\");\u0026#xA;    }\u0026#xA;  }\u0026#xA;\u0026#xA; /**\u0026#xA;   * Block all accesses out of the website that don\u0027t match \u0027sitename\u0027\u0026#xA;   * \u0026#xA;   * @param element\u0026#xA;   *          An anchor link element\u0026#xA;   * @param sitename\u0026#xA;   *          name of the website to check. e.g. \"www.example.com\"\u0026#xA;   */\u0026#xA;  private void rewriteLink(Element element, String sitename) {\u0026#xA;    String href \u003d DOM.getElementProperty(element, \"href\");\u0026#xA;\u0026#xA;    if (null \u003d\u003d href) {\u0026#xA;      return;\u0026#xA;    }\u0026#xA;\u0026#xA;    // We want to re-write absolute URLs that go outside of this site\u0026#xA;    if (href.startsWith(\"http://\")\u0026#xA;        \u0026amp;\u0026amp; !href.startsWith(\"http://\" + sitename + \"/\")) {\u0026#xA;      DOM.setElementProperty(element, \"href\", \"http://\" + sitename\u0026#xA;          + \"/Blocked.html\");\u0026#xA;    }\u0026#xA;  }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 388465,
+  "lastEditorUserId": 388465,
+  "lastEditDate": "Oct 17, 2010",
+  "lastActivityDate": "Oct 17, 2010",
+  "title": "In GWT, adding an event handler on any of the host page tags",
+  "tags": [
+    "javascript",
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

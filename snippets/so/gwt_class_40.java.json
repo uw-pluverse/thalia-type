@@ -1,0 +1,22 @@
+{
+  "id": 2868845,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "May 19, 2010",
+  "score": 4,
+  "viewCount": 1482,
+  "body": "\u003cp\u003eWe are working on a rather complex system using GXT. While everything works great on FF, IE (especially IE6) is a different story (looking at more than 10 seconds until the browser renders the page).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI understand that one of the main reasons is DOM manipulation which is a disaster under IE6 (See \u003ca href\u003d\"http://www.quirksmode.org/dom/innerhtml.html\" rel\u003d\"nofollow noreferrer\"\u003ehttp://www.quirksmode.org/dom/innerhtml.html\u003c/a\u003e).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis can be thought to be a generic problem of a front-end Javascript framework (i.e. GWT) but a simple code (see below) that executes the same functionality proofs otherwise. In fact, under IE6 - getSomeGWT() takes 400ms while getSomeGXT() takes 4 seconds. That\u0027s a x10 factor which makes a huge different for the user experience !!!\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eprivate HorizontalPanel getSomeGWT() {\u0026#xA;        HorizontalPanel pointsLogoPanel \u003d new HorizontalPanel();\u0026#xA;        for (int i\u003d0; i\u0026lt;350; i++) {\u0026#xA;            HorizontalPanel innerContainer \u003d new HorizontalPanel();\u0026#xA;            innerContainer.add(new Label(\"some GWT text\"));\u0026#xA;            pointsLogoPanel.add(innerContainer);\u0026#xA;        }\u0026#xA;        return pointsLogoPanel;\u0026#xA;    }\u0026#xA;\u0026#xA;    private LayoutContainer getSomeGXT() {\u0026#xA;        LayoutContainer pointsLogoPanel \u003d new LayoutContainer();\u0026#xA;        pointsLogoPanel.setLayoutOnChange(true);\u0026#xA;        for (int i\u003d0; i\u0026lt;350; i++) {\u0026#xA;            LayoutContainer innerContainer \u003d new LayoutContainer();\u0026#xA;            innerContainer.add(new Text(\"just some text\"));\u0026#xA;            pointsLogoPanel.add(innerContainer);\u0026#xA;        }\u0026#xA;        return pointsLogoPanel;\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo to solve/mitigate the issue one would need to -\u0026#xA;a. Reduce the number of DOM manipulations; or\u0026#xA;b. Replace them with innerHTML.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAFAIK, (a) is simply a side effect of using GXT and (b) is only possible with UiBinder which isn\u0027t supported yet by GXT.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny ideas?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks in advance!\u003c/p\u003e\u0026#xA;",
+  "ownerId": 323629,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jul 4, 2012",
+  "title": "GXT Performance Issues",
+  "tags": [
+    "performance",
+    "gwt",
+    "gxt"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

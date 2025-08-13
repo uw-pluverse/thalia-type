@@ -1,0 +1,31 @@
+```java
+import java.util.Map;
+import java.util.List;
+import javax.persistence.criteria.CriteriaBuilderImpl;
+import javax.persistence.criteria.MapAttribute;
+import org.hibernate.query.Query;
+import org.hibernate.query.internal.QueryImpl;
+import org.hibernate.engine.spi.AbstractEntityManagerImpl;
+import org.hibernate.shards.exception.ShardedSessionException;
+import org.hibernate.event.spi.ValidatePreUpdateEventListener;
+import org.hibernate.event.spi.SetMaxResultsEvent;
+import org.hibernate.sql.ast.tree.expression.LengthFunction;
+import org.hibernate.action.internal.EntityAction;
+import org.hibernate.query.sqm.tree.from.AbstractFromImpl;
+import org.hibernate.query.sqm.tree.from.MapAttributeJoin;
+import org.hibernate.query.sqm.tree.from.MapKeyPath;
+import org.hibernate.query.sqm.tree.from.JoinType;
+import org.hibernate.query.sqm.tree.from.Vertex;
+import org.hibernate.query.sqm.tree.from.ExitOperationsCollector;
+import org.hibernate.query.sqm.tree.from.ExitStrategy;
+import org.hibernate.query.sqm.tree.from.Initializor;
+import org.hibernate.query.sqm.tree.from.MapProxy;
+import org.hibernate.query.sqm.tree.from.ListProxy;
+import org.hibernate.query.sqm.tree.from.Pair;
+import org.hibernate.query.sqm.tree.from.Triple;
+import org.hibernate.query.sqm.tree.from.GraphDefiner;
+import org.hibernate.query.sqm.tree.from.CircumventChecksDataVersion;
+import org.hibernate.query.sqm.tree.from.MiddleRelatedComponentMapper;
+import org.hibernate.query.sqm.tree.from.QueryBinder;
+import org.hibernate.query.sqm.tree.from.Executable;
+```

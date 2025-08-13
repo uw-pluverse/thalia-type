@@ -1,0 +1,23 @@
+{
+  "id": 3533894,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3734524,
+  "parentId": 0,
+  "createDate": "Aug 20, 2010",
+  "score": 1,
+  "viewCount": 3363,
+  "body": "\u003cp\u003eI\u0027m using XStream to serialize some objects to XML, and am facing a problem with Enums. The exception I get when I try to serialize the object: \"ObjectAccessException: invalid final field java.lang.Enum.name\".\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eApparently, this is a problem with the reflection API implementation in android: It doesn\u0027t treat final fields correctly. This problem actually existed in past implementations of the official Sun (Oracle) JDK. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCan you confirm/refute this is the problem with Android? Can you suggest any other serialization API that could be used in this situation? \u003c/p\u003e\u0026#xA;",
+  "ownerId": 114919,
+  "lastEditorUserId": 114919,
+  "lastEditDate": "Aug 20, 2010",
+  "lastActivityDate": "Mar 26, 2011",
+  "title": "Serialization problem with Enums at Android",
+  "tags": [
+    "android",
+    "enums",
+    "xstream"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

@@ -1,0 +1,26 @@
+{
+  "id": 1266527,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1266585,
+  "parentId": 0,
+  "createDate": "Aug 12, 2009",
+  "score": 0,
+  "viewCount": 523,
+  "body": "\u003cp\u003eI\u0027ve just started developing Android applications. I\u0027m having a little problem with networking. If I run the following code I get an \"unknown error\" exception message:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport org.apache.http.impl.client.DefaultHttpClient;\u0026#xA;import org.apache.http.client.ClientProtocolException;\u0026#xA;import.org.apache.http.client.methods.HttpGet;\u0026#xA;\u0026#xA;\u0026#xA;import android.app.Activity;\u0026#xA;import android.os.Bundle;\u0026#xA;import android.widget.TextView;\u0026#xA;\u0026#xA;public class Menu extends Activity {\u0026#xA;    /** Called when the activity is first created. */\u0026#xA;    @Override\u0026#xA;   public void onCreate(Bundle savedInstanceState) {\u0026#xA;    super.onCreate(savedInstanceState);\u0026#xA;    setContentView(R.layout.main);\u0026#xA;\u0026#xA;    DefaultHttpClient client \u003d new DefaultHttpClient();\u0026#xA;\u0026#xA;    HttpGet method \u003d new HttpGet(\"http://www.google.com\");\u0026#xA;\u0026#xA;    try {\u0026#xA;        client.execute(method);\u0026#xA;        TextView t \u003d (TextView) findViewById(R.id.myTextView);\u0026#xA;        t.setText(\"Ok\");\u0026#xA;    } catch (ClientProtocolException e) {\u0026#xA;        TextView t \u003d (TextView) findViewById(R.id.myTextView);\u0026#xA;        t.setText(e.getMessage());\u0026#xA;    } catch (IOException e) {\u0026#xA;        TextView t \u003d (TextView) findViewById(R.id.myTextView);\u0026#xA;        t.setText(e.getMessage());\u0026#xA;    }\u0026#xA;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve been lookign up the error and it seems fairly common. It\u0027s a problem with DNS resolution on the emulator. However, I can use the browser on the emulator without a problem and visit any website I want. I\u0027ve also tried replacing the domains with IP addresses without luck.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow can I fix this problem? I\u0027m using Windows Vista and developing in eclipse with the ADT plugin.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 0,
+  "ownerDisplayName": "user130076",
+  "lastEditorUserId": 1777090,
+  "lastEditDate": "Jan 17, 2013",
+  "lastActivityDate": "Jan 17, 2013",
+  "title": "Android - Unknown Error when trying to use networking",
+  "tags": [
+    "android",
+    "eclipse",
+    "exception",
+    "networking",
+    "dns"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

@@ -1,0 +1,22 @@
+{
+  "id": 33088013,
+  "postTypeId": 1,
+  "acceptedAnswerId": 33124116,
+  "parentId": 0,
+  "createDate": "Oct 12, 2015",
+  "score": 1,
+  "viewCount": 2886,
+  "body": "\u003cp\u003eI have the following xml. How do I convert into a java object using xstream. I tried sevral ways but I end up in getting conversionexception. \u0026#xA;Code is below. I don\u0027t have any idea of how to convert to \u003ccode\u003eBookDetails\u003c/code\u003e object.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eXML string:\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    \u0026lt;?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" standalone\u003d\"no\"?\u0026gt;\u0026#xA;    \u0026lt;Books\u0026gt;\u0026#xA;    \u0026lt;bookdetails\u0026gt;\u0026#xA;    \u0026lt;bookId\u0026gt;20\u0026lt;/bookId\u0026gt;\u0026#xA;    \u0026lt;bookName\u0026gt;AAAA\u0026lt;/bookName\u0026gt;\u0026#xA;    \u0026lt;amount\u0026gt;35\u0026lt;/amount\u0026gt;\u0026#xA;    \u0026lt;/bookdetails\u0026gt;\u0026#xA;    \u0026lt;/Books\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eBookDetails class:\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@XStreamAlias(\"bookDetails\")\u0026#xA;public class BookDetails {\u0026#xA;@XStreamAlias(\"bookId\")\u0026#xA;private int bookId;\u0026#xA;@XStreamAlias(\"bookName\")\u0026#xA;private String bookName;\u0026#xA;@XStreamAlias(\"amount\")\u0026#xA;private int amount;\u0026#xA;//getters and setters\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eBooks class:\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@XStreamAlias(\"Books\")\u0026#xA;public class Books{\u0026#xA;\u0026#xA;@XStreamAlias(\"bookDetails\")\u0026#xA;private List\u0026lt;BookDetails\u0026gt; bookDetails\u003dnew ArrayList\u0026lt;BookDetails\u0026gt;();\u0026#xA;}\u0026#xA;\u0026#xA;--------------unmarshall class method----\u0026#xA;\u0026#xA;public BookDetails convertXml(String xml){\u0026#xA;\u0026#xA;            xstream.processAnnotations(Books.class);\u0026#xA;            xstream.processAnnotations(BookDetails.class);\u0026#xA;            xstream.addImplicitCollection(Books.class,\"BookDetails\");\u0026#xA;            return (BookDetails)xstream.fromXML(processOrderXML);\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 5081469,
+  "lastEditorUserId": 4579155,
+  "lastEditDate": "Sep 13, 2018",
+  "lastActivityDate": "Sep 13, 2018",
+  "title": "Convert XMLl to Java object using xstream",
+  "tags": [
+    "xml",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

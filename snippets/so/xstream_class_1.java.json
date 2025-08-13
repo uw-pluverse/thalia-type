@@ -1,0 +1,21 @@
+{
+  "id": 6107965,
+  "postTypeId": 1,
+  "acceptedAnswerId": 33165196,
+  "parentId": 0,
+  "createDate": "May 24, 2011",
+  "score": 8,
+  "viewCount": 1658,
+  "body": "\u003cp\u003eI\u0027m using xstream to process an xml string but some fields of the object have changed between versions, so i\u0027m implementing\u0026#xA;a custom converter. A summary of the field changes is listed below, and only the first two field types are different.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eField    type1      type2\u0026#xA;a        short      String\u0026#xA;b        String     Object\u0026#xA;c        List       List\u0026#xA;d        Object     Object\u0026#xA;.\u0026#xA;.\u0026#xA;.\u0026#xA;x        String     String\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy current converter is implemented to handle each of the fields specifically, which leads to a large number of \u0027else if\u0027 conditions within the unmarshal() method\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage a.b.c.reports;\u0026#xA;\u0026#xA;import com.thoughtworks.xstream.converters.Converter;\u0026#xA;import com.thoughtworks.xstream.converters.MarshallingContext;\u0026#xA;import com.thoughtworks.xstream.converters.UnmarshallingContext;\u0026#xA;import com.thoughtworks.xstream.io.HierarchicalStreamReader;\u0026#xA;import com.thoughtworks.xstream.io.HierarchicalStreamWriter;\u0026#xA;\u0026#xA;public class MyConverter implements Converter {\u0026#xA;\u0026#xA;..\u0026#xA;\u0026#xA;@Override\u0026#xA;public Object unmarshal(HierarchicalStreamReader reader,UnmarshallingContext context) {\u0026#xA;\u0026#xA;    while (reader.hasMoreChildren()) {\u0026#xA;        reader.moveDown();\u0026#xA;        if(reader.getNodeName().equals(\"a\"))\u0026#xA;        {\u0026#xA;            a \u003d reader.getValue();\u0026#xA;        }\u0026#xA;        else if (reader.getNodeName().equals(\"b\")) \u0026#xA;        {\u0026#xA;            b \u003d (Object) context.convertAnother(reader, Object.class);\u0026#xA;        } \u0026#xA;        else if(reader.getNodeName().equals(\"c\"))\u0026#xA;        {\u0026#xA;            a \u003d reader.getValue();\u0026#xA;        }\u0026#xA;        ..\u0026#xA;        ..\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs there a smarter way to delegate the processing of fields who\u0027s types have not changed to the default xstream converter?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 55794,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Oct 16, 2015",
+  "title": "xstream - reusing the default converter in a custom converter",
+  "tags": [
+    "java",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

@@ -1,0 +1,35 @@
+```java
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.EnumSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.SortedSet;
+import java.util.concurrent.ConcurrentHashMap;
+import org.hibernate.engine.spi.Initializor;
+import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.query.QueryBinder;
+import org.hibernate.query.sqm.tree.select.SelectionImplementor;
+import org.hibernate.query.sqm.tree.select.TupleElementImplementor;
+import org.hibernate.query.sqm.tree.select.QueryNode;
+import org.hibernate.query.sqm.tree.select.MapKeyPath;
+import org.hibernate.query.sqm.tree.select.MapAttribute;
+import org.hibernate.query.sqm.tree.select.AttributeImplementor;
+import org.hibernate.query.sqm.tree.select.JoinType;
+import org.hibernate.query.sqm.tree.select.PreCollectionRemoveEventListener;
+import org.hibernate.query.sqm.tree.select.LoadQueryInfluencers;
+import org.hibernate.query.sqm.tree.select.XClass;
+import org.hibernate.query.sqm.tree.select.GraphDefiner;
+import org.hibernate.query.sqm.tree.select.LegacyHiLoAlgorithmOptimizer;
+import org.hibernate.query.sqm.tree.select.IdentifierEqExpression;
+import org.hibernate.query.sqm.tree.select.UserVersionType;
+import org.hibernate.query.sqm.tree.select.PostInsertIdentifierGenerator;
+import org.hibernate.query.sqm.tree.select.SortedSetProxy;
+import org.hibernate.query.sqm.tree.select.SortedMapProxy;
+import org.hibernate.query.sqm.tree.select.MapKeySource;
+import org.hibernate.query.sqm.tree.select.ReferenceType;
+import org.hibernate.query.sqm.tree.select.SetProxy;
+import org.hibernate.query.sqm.tree.select.Pair;
+import org.hibernate.query.sqm.tree.select.CriteriaBuilderImpl;
+```

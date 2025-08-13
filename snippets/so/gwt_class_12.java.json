@@ -1,0 +1,20 @@
+{
+  "id": 1690154,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1701849,
+  "parentId": 0,
+  "createDate": "Nov 6, 2009",
+  "score": 0,
+  "viewCount": 674,
+  "body": "\u003cp\u003eI am new to gwt connector. I was trying a simple example, everything\u0026#xA;works fine except that the connector line is not visible. I can see\u0026#xA;the green points but no line between them. Below is the code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage com.example.connector.client;\u0026#xA;\u0026#xA;import pl.tecna.gwt.connectors.client.Connector;\u0026#xA;import pl.tecna.gwt.connectors.client.Diagram;\u0026#xA;import pl.tecna.gwt.connectors.client.Shape;\u0026#xA;\u0026#xA;import com.google.gwt.core.client.EntryPoint;\u0026#xA;import com.google.gwt.user.client.ui.AbsolutePanel;\u0026#xA;import com.google.gwt.user.client.ui.Label;\u0026#xA;import com.google.gwt.user.client.ui.RootPanel;\u0026#xA;import com.google.gwt.user.client.ui.TextBox;\u0026#xA;import com.google.gwt.user.client.ui.VerticalPanel;\u0026#xA;\u0026#xA;public class Example implements EntryPoint {\u0026#xA;   public void onModuleLoad() {\u0026#xA;\u0026#xA;           AbsolutePanel ap \u003d new AbsolutePanel();\u0026#xA;           ap.setSize(\"600px\", \"600px\");\u0026#xA;           RootPanel.get().add(ap, 10, 10);\u0026#xA;\u0026#xA;           Diagram diagram \u003d new Diagram(ap);\u0026#xA;           Label l \u003d new Label(\"Example\");\u0026#xA;           ap.add(l);\u0026#xA;\u0026#xA;           Connector c \u003d new Connector(50, 80, 100, 100);\u0026#xA;           c.showOnDiagram(diagram);\u0026#xA;\u0026#xA;           Label l1 \u003d new Label(\"Label for VP\");\u0026#xA;           TextBox t1 \u003d new TextBox();\u0026#xA;           t1.setText(\"Hello\");\u0026#xA;           VerticalPanel vp \u003d new VerticalPanel();\u0026#xA;           vp.add(t1);\u0026#xA;           vp.add(l1);\u0026#xA;           ap.add(vp);\u0026#xA;\u0026#xA;           Shape shaperforVP \u003d new Shape(vp);\u0026#xA;           shaperforVP.showOnDiagram(diagram);\u0026#xA;\u0026#xA;   }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ecan anyone please tell me what is going wrong.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThank you.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 166731,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Nov 9, 2009",
+  "title": "gwt-connector: connector line not visible",
+  "tags": [
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

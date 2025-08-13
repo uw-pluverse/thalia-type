@@ -1,0 +1,23 @@
+{
+  "id": 10740221,
+  "postTypeId": 1,
+  "acceptedAnswerId": 10740316,
+  "parentId": 0,
+  "createDate": "May 24, 2012",
+  "score": 0,
+  "viewCount": 9298,
+  "body": "\u003cp\u003eI am trying to parse an XML file to objects using XStream but I am getting this exception:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cblockquote\u003e\u0026#xA;  \u003cp\u003eException in thread \"main\"\u0026#xA;  com.thoughtworks.xstream.mapper.CannotResolveClassException: servers\u0026#xA;    at\u0026#xA;  com.thoughtworks.xstream.mapper.DefaultMapper.realClass(DefaultMapper.java:56)\u0026#xA;    at\u0026#xA;  com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)\u0026#xA;    at\u0026#xA;  com.thoughtworks.xstream.mapper.DynamicProxyMapper.realClass(DynamicProxyMapper.java:55)\u0026#xA;  [...]\u003c/p\u003e\u0026#xA;\u003c/blockquote\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eHere is my XML:\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e  \u0026lt;servers\u0026gt;\u0026#xA;    \u0026lt;server\u0026gt;\u0026#xA;      \u0026lt;ip\u0026gt;10.196.113.27\u0026lt;/ip\u0026gt; \u0026#xA;    \u0026lt;/server\u0026gt;\u0026#xA;    \u0026lt;server\u0026gt;\u0026#xA;      \u0026lt;ip\u0026gt;10.196.113.31\u0026lt;/ip\u0026gt; \u0026#xA;    \u0026lt;/server\u0026gt;\u0026#xA;  \u0026lt;/servers\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eHere is my code:\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class ServerIP {\u0026#xA;    private String ip;\u0026#xA;\u0026#xA;    public String getIp() {\u0026#xA;        return ip;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setIp(String ip) {\u0026#xA;        this.ip \u003d ip;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u0026#xA;public class ServerHandler {\u0026#xA;\u0026#xA;    private String fileName \u003d \"servers.xml\";\u0026#xA;    private String path \u003d \"J:\\\\workspace\\\\LOG730\\\\src\\\\Q3\\\\\";\u0026#xA;    private XStream xstream \u003d new XStream(new DomDriver());\u0026#xA;\u0026#xA;    public void readFromXML() {\u0026#xA;        try {\u0026#xA;            FileInputStream fis \u003d new FileInputStream(path + fileName);\u0026#xA;            ServerIP server \u003d (ServerIP) xstream.fromXML(fis, new ServerIP());\u0026#xA;            System.out.println(\"Host: \" + server.getIp());\u0026#xA;        } catch (FileNotFoundException e) {\u0026#xA;            e.printStackTrace();\u0026#xA;        }\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eThe exception is triggered by this:\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    ServerHandler serverHandler \u003d new ServerHandler();\u0026#xA;    serverHandler.readFromXML();\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 398499,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Sep 5, 2016",
+  "title": "Java XStream CannotResolveClassException",
+  "tags": [
+    "java",
+    "xml",
+    "parsing",
+    "xstream"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

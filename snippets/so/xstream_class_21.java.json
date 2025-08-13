@@ -1,0 +1,22 @@
+{
+  "id": 7608007,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Sep 30, 2011",
+  "score": 1,
+  "viewCount": 1790,
+  "body": "\u003cp\u003eI am trying to find a solution to convert a map into root element attributes using XStream.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI do not think this is possible but here is what I have tried to far.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI created a custom converter and attached it to the root object, in the converter I then get access to the map that I am trying to convert into attributes, I iterate through the map and write the attirbute to the node, using writer.addAttribute(entry.getKey(), entry.getValue()); this does actually write the attributes to the root node e.g. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe problem with this approach is that it does not process the rest of the document, it just stops after processing the map, in order to get this to work I need some method of letting the default converter back in control and finish off the model.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe second solution I have been trying to use is to create a custom converter just for the map its self, the problem with this approach is that I can not get a handle to the root element so I can not write to it, is it possible to access the root element this way?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks,\u0026#xA;Jon\u003c/p\u003e\u0026#xA;",
+  "ownerId": 565539,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Sep 30, 2011",
+  "title": "Xstream Implicit Map As Attributes to Root Element",
+  "tags": [
+    "java",
+    "xml",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

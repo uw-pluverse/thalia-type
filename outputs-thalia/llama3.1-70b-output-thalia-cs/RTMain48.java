@@ -1,0 +1,7 @@
+Here are the necessary import statements:
+
+import java.util.Stack;
+import java.lang.InternalError;
+import java.security.PrivilegedExceptionAction; 
+import java.util.function.LongFunction;
+import java.util.function.IntFunction;

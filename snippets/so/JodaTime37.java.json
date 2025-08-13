@@ -1,0 +1,23 @@
+{
+  "id": 3802893,
+  "postTypeId": 1,
+  "acceptedAnswerId": 17959137,
+  "parentId": 0,
+  "createDate": "Sep 27, 2010",
+  "score": 347,
+  "viewCount": 210514,
+  "body": "\u003cp\u003eHow do I find the difference in Days between two \u003ca href\u003d\"http://www.joda.org/joda-time/\" rel\u003d\"noreferrer\"\u003eJoda-Time\u003c/a\u003e \u003ca href\u003d\"http://www.joda.org/joda-time/apidocs/org/joda/time/DateTime.html\" rel\u003d\"noreferrer\"\u003e\u003ccode\u003eDateTime\u003c/code\u003e\u003c/a\u003e instances?\u0026#xA;With ‘difference in days’ I mean if start is on Monday and end is on Tuesday I expect a return value of 1 regardless of the hour/minute/seconds of the start and end dates.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003ccode\u003eDays.daysBetween(start, end).getDays()\u003c/code\u003e gives me 0 if start is in the evening and end in the morning.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m also having the same issue with other date fields so I was hoping there would be a generic way to \u0027ignore\u0027 the fields of lesser significance. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIn other words, the months between Feb and 4 March would also be 1, as would the hours between 14:45 and 15:12 be. However the hour difference between 14:01 and 14:55 would be 0.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 15355,
+  "lastEditorUserId": 642706,
+  "lastEditDate": "Dec 25, 2014",
+  "lastActivityDate": "Sep 27, 2019",
+  "title": "Number of days between two dates in Joda-Time",
+  "tags": [
+    "java",
+    "date",
+    "jodatime"
+  ],
+  "answerCount": 8,
+  "commentCount": 0,
+  "favoriteCount": 47
+}

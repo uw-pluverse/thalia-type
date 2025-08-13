@@ -1,0 +1,24 @@
+{
+  "id": 2369187,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Mar 3, 2010",
+  "score": 1,
+  "viewCount": 824,
+  "body": "\u003cp\u003eWell its simple, Basically I want to follow GWT\u0027s \"One Page\" paradigm and yet integrate Spring security into the application.\u0026#xA;What i understand that if the cookie is not found in the system, spring will redirect user to a Open id referrer page asking for login else it would simply send my server the user\u0027s open url id.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is what i trid in GWT:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e        final FormPanel formPanel \u003d new FormPanel();\u0026#xA;        RootPanel.get(\"openId\").add(formPanel);\u0026#xA;        VerticalPanel openIdContainer \u003d new VerticalPanel();\u0026#xA;        formPanel.add(openIdContainer);\u0026#xA;\u0026#xA;        TextBox url \u003d new TextBox();\u0026#xA;        url.setText(\"https://www.google.com/accounts/o8/id\");\u0026#xA;        url.setName(\"j_username\");\u0026#xA;        openIdContainer.add(url);\u0026#xA;\u0026#xA;        formPanel.setAction(\"j_spring_openid_security_check\");\u0026#xA;        formPanel.setMethod(FormPanel.METHOD_POST);\u0026#xA;\u0026#xA;        Button btn \u003d new Button(\"Open ID\");\u0026#xA;        btn.addClickListener(new ClickListener() {\u0026#xA;            public void onClick(Widget sender)\u0026#xA;            {\u0026#xA;                formPanel.submit();\u0026#xA;            }\u0026#xA;        });\u0026#xA;        openIdContainer.add(btn);        \u0026#xA;\u0026#xA;        formPanel.addFormHandler(new FormHandler() {\u0026#xA;            public void onSubmit(FormSubmitEvent event)\u0026#xA;            {\u0026#xA;                System.out.println(\"On Submit invoked \" +event.isCancelled());\u0026#xA;            }\u0026#xA;            public void onSubmitComplete(FormSubmitCompleteEvent event)\u0026#xA;            {\u0026#xA;                System.out.println(\"On Submit Complete invoked \" + event.toString());\u0026#xA;            }\u0026#xA;\u0026#xA;        });\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ecorresponding output : \u0026#xA;On Submit invoked false\u0026#xA;On Submit Complete invoked null\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAs I understand, the html received is null. How else should I do it ? GWT 1.5 does not have a simple form (one that indeed refreshes the page on submit) and an input tag with the type as submit.\u0026#xA;Will i have to hard code this into HTML widget ?\u0026#xA;I tried setting another frame as this form panel\u0027s target but still unable to get any fruitful results.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 146182,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Dec 17, 2010",
+  "title": "How to incorporate Spring security using open id into a GWT project",
+  "tags": [
+    "html",
+    "gwt",
+    "openid",
+    "spring-security",
+    "form-submit"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

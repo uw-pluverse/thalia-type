@@ -1,0 +1,21 @@
+{
+  "id": 2182921,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2183065,
+  "parentId": 0,
+  "createDate": "Feb 2, 2010",
+  "score": 2,
+  "viewCount": 2331,
+  "body": "\u003cp\u003eI am new to Joda-Time and was looking at getting the previous working/week day. \u0026#xA;My initial try was done on a Monday and I wanted to get the date for T -1 which will be Friday: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTimeZone zone \u003d DateTimeZone.forID(\"Europe/London\");\u0026#xA;Chronology coptic \u003d GJChronology.getInstance(zone);\u0026#xA;\u0026#xA;DateTime dt \u003d new DateTime(coptic);\u0026#xA;DateTime minusOneDay \u003d dt.minusDays(1);\u0026#xA;\u0026#xA;System.out.println(minusOneDay );\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut as I expected returns the date on Sunday. Does anyone know how to get the previous week day? \u0026#xA;Thanks in advance.. \u003c/p\u003e\u0026#xA;",
+  "ownerId": 21063,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Feb 2, 2010",
+  "title": "Is it possible to get the previous day of the week using Joda-Time?",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 1
+}

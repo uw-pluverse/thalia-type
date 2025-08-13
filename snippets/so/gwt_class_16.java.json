@@ -1,0 +1,23 @@
+{
+  "id": 1795474,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1795566,
+  "parentId": 0,
+  "createDate": "Nov 25, 2009",
+  "score": 1,
+  "viewCount": 3411,
+  "body": "\u003cp\u003eI need to authenticate a user in a page based on the remember me cookie,\u0026#xA;inspired by this site: \u003ca href\u003d\"http://raibledesigns.com/rd/entry/integrating_gwt_with_spring_security\" rel\u003d\"nofollow noreferrer\"\u003eTutorial for checking spring authentication\u003c/a\u003e,\u0026#xA;I came up with a solution for checking the authentication.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eChanges made in my application\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eapplicationContext-security.xml:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;intercept-url pattern\u003d\u0027/**AuthenticationChecker.html\u0027 access\u003d\"ROLE_ADMIN\"/\u0026gt;\u0026#xA;...\u0026#xA;\u0026lt;form-login login-page\u003d\"/Login.html\" authentication-failure-url\u003d\"/Login.html\" always-use-default-target\u003d\"true\" default-target-url\u003d\"/Main.html\"/\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eGwt code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003etry\u0026#xA;{\u0026#xA;    RequestBuilder rb \u003d new RequestBuilder(\u0026#xA;    RequestBuilder.POST, \"AuthenticationChecker.html\");\u0026#xA;            rb.sendRequest(null, new RequestCallback() \u0026#xA;            {\u0026#xA;                public void onError(Request request, Throwable exception)\u0026#xA;                {\u0026#xA;                    RootPanel.get().add(new HTML(\"[error]\" + exception.getMessage()));\u0026#xA;                }\u0026#xA;                public void onResponseReceived(Request request, Response response)\u0026#xA;                {\u0026#xA;                    RootPanel.get()\u0026#xA;                   .add(new HTML(\"[success (\" + response.getStatusCode() + \",\" + response.getStatusText() + \")]\"));\u0026#xA;                }\u0026#xA;            }\u0026#xA;    );\u0026#xA;}\u0026#xA;catch (Exception e)\u0026#xA;{\u0026#xA;    RootPanel.get().add(new HTML(\"Error sending request \" + e.getMessage()));\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAuthenticationChecker.html is a simple blank html page,\u0026#xA;from what I understand, as AuthenticationChecker.html requires role as admin, I should have got a 401 Unauthorized if remember me cookie was not present and a 200 OK if the user was authenticated and his cookie was present.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, the output always shows: [success (200,OK)]\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eTo cross check, i simply typed authenticaionChecker.html (without logging in) and it returned back to Login.html indicating that spring is indeed authenticating the user.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAm I doing something wrong here ?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 146182,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Nov 25, 2009",
+  "title": "using request builder to authenticate user: Not working in spring security",
+  "tags": [
+    "authentication",
+    "gwt",
+    "spring-security",
+    "httpresponse"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

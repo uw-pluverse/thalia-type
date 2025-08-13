@@ -1,0 +1,12 @@
+Here are the necessary import statements:
+
+```java
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.BroadcastReceiver;
+import android.net.Uri;
+import android.util.Log;
+```
+
+Note that I've only included the imports that are actually used in the code.

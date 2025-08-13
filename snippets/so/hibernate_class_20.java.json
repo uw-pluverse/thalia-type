@@ -1,0 +1,24 @@
+{
+  "id": 2371299,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2372954,
+  "parentId": 0,
+  "createDate": "Mar 3, 2010",
+  "score": 1,
+  "viewCount": 301,
+  "body": "\u003cp\u003eThe error I\u0027m receiving is listed \u003ca href\u003d\"http://pastebin.com/5zeMxncH\" rel\u003d\"nofollow noreferrer\"\u003ehere\u003c/a\u003e.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThat\u0027s my HibernateUtil.java\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage com.rosejapan;\u0026#xA;\u0026#xA;import org.hibernate.SessionFactory;\u0026#xA;import org.hibernate.cfg.AnnotationConfiguration;;\u0026#xA;\u0026#xA;public class HibernateUtil\u0026#xA;{\u0026#xA;    private static final SessionFactory sessionFactory;\u0026#xA;\u0026#xA;    static\u0026#xA;    {\u0026#xA;        try\u0026#xA;        {\u0026#xA;            // Create the SessionFactory from hibernate.cfg.xml\u0026#xA;            sessionFactory \u003d new  AnnotationConfiguration().configure().buildSessionFactory();\u0026#xA;        } catch(Throwable e)\u0026#xA;        {\u0026#xA;            System.err.println(\"Initial sessionFactory creation failed.  \" + e);\u0026#xA;            throw new ExceptionInInitializerError(e);\u0026#xA;        }\u0026#xA;    }\u0026#xA;\u0026#xA;    public static SessionFactory getSessionFactory()\u0026#xA;    {\u0026#xA;        return sessionFactory;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eEverything looks all right... I\u0027ve already included \u003cstrong\u003elog4j-boot.jar\u003c/strong\u003e in the CLASSPATH, but didn\u0027t resolved my problem.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 282762,
+  "lastEditorUserId": 70604,
+  "lastEditDate": "May 2, 2010",
+  "lastActivityDate": "Jun 24, 2019",
+  "title": "Error when trying to use hibernate annotations",
+  "tags": [
+    "java",
+    "hibernate",
+    "orm",
+    "log4j"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

@@ -1,0 +1,25 @@
+{
+  "id": 37628,
+  "postTypeId": 1,
+  "acceptedAnswerId": 37632,
+  "parentId": 0,
+  "createDate": "Sep 1, 2008",
+  "score": 2230,
+  "viewCount": 918175,
+  "body": "\u003cp\u003eWhat is reflection, and why is it useful?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m particularly interested in Java, but I assume the principles are the same in any language.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 142,
+  "ownerDisplayName": "Lehane",
+  "lastEditorUserId": 2142577,
+  "lastEditorDisplayName": "Keith",
+  "lastEditDate": "Oct 28, 2015",
+  "lastActivityDate": "Nov 23, 2020",
+  "title": "What is reflection and why is it useful?",
+  "tags": [
+    "java",
+    "reflection",
+    "terminology"
+  ],
+  "answerCount": 22,
+  "commentCount": 7,
+  "favoriteCount": 881
+}

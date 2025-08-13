@@ -1,0 +1,22 @@
+{
+  "id": 1200688,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Jul 29, 2009",
+  "score": 1,
+  "viewCount": 4344,
+  "body": "\u003cp\u003eI\u0027m trying to write a basic application with HTTP GET request. Eclipse validated my code, but when I\u0027m using \u003ccode\u003eIOException\u003c/code\u003e in Android console I\u0027m getting this strange messages:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cblockquote\u003e\u0026#xA;  \u003cp\u003etrouble writing output: null\u003cbr\u003e\u0026#xA;  [2009-07-29 17:22:49 - myapp] Conversion to Dalvik format failed with error 2\u003c/p\u003e\u0026#xA;\u003c/blockquote\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnd my application doesn\u0027t load into the emulator. This is my code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eHttpHost target \u003d new HttpHost(\"google.com\", 80);\u0026#xA;HttpGet get \u003d new HttpGet(\"/\");\u0026#xA;String result \u003d null;\u0026#xA;HttpEntity entity \u003d null;\u0026#xA;HttpClient client \u003d new DefaultHttpClient();\u0026#xA;try {\u0026#xA;    HttpResponse response\u003dclient.execute(target, get);\u0026#xA;    entity \u003d response.getEntity();\u0026#xA;    result \u003d EntityUtils.toString(entity);\u0026#xA;} catch (Exception e) {\u0026#xA;    e.printStackTrace();\u0026#xA;} finally {\u0026#xA;    if (entity!\u003dnull){}\u0026#xA;        try {\u0026#xA;            entity.consumeContent();\u0026#xA;        } catch (IOException e) {}\u0026#xA;}\u0026#xA;return result;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnyone knows what is the problem?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 107977,
+  "lastEditorUserId": 2352344,
+  "lastEditDate": "Nov 27, 2017",
+  "lastActivityDate": "Nov 27, 2017",
+  "title": "Android and IOException - strange error",
+  "tags": [
+    "java",
+    "android"
+  ],
+  "answerCount": 3,
+  "commentCount": 2,
+  "favoriteCount": 1
+}

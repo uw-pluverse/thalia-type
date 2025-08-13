@@ -1,0 +1,27 @@
+```java
+import java.util.Map;
+import javax.persistence.EntityAction;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.MapAttribute;
+import javax.persistence.criteria.Query;
+import javax.persistence.criteria.QueryImpl;
+import javax.persistence.criteria.ShardedSessionException;
+import javax.persistence.criteria.LengthFunction;
+import javax.persistence.criteria.SetMaxResultsEvent;
+import javax.persistence.criteria.Initializor;
+import javax.persistence.criteria.GraphDefiner;
+import javax.persistence.criteria.Pair;
+import javax.persistence.criteria.Triple;
+import javax.persistence.criteria.Vertex;
+import javax.persistence.criteria.ExitOperationsCollector;
+import javax.persistence.criteria.ExitStrategy;
+import javax.persistence.criteria.AbstractFromImpl;
+import javax.persistence.criteria.MapAttributeJoin;
+import javax.persistence.criteria.QueryBinder;
+import javax.persistence.criteria.ValidatePreUpdateEventListener;
+import javax.persistence.criteria.ListProxy;
+import javax.persistence.criteria.MapProxy;
+import javax.persistence.criteria.CircumventChecksDataVersion;
+import javax.persistence.criteria.MiddleRelatedComponentMapper;
+import javax.persistence.criteria.JoinType;
+```

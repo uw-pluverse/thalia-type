@@ -1,0 +1,23 @@
+{
+  "id": 2531687,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2533473,
+  "parentId": 0,
+  "createDate": "Mar 28, 2010",
+  "score": 0,
+  "viewCount": 1690,
+  "body": "\u003cp\u003eI am connecting a MYSQL database through hibernate and i seem to have processes that are not being killed after they are finished in the session. I have called flush and close on each session but when i check the server the last processes are still there with a sleep command. This is a new problem which i am having and was not the case yesterday. Is there any way i can ensure the killng of theses processes when i am done with a session. \u0026#xA;Below is an example of one of my classes.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    public JSONObject check()\u0026#xA;{\u0026#xA;    //creates a new session needed to add elements to a database\u0026#xA;    Session session \u003d null;\u0026#xA;\u0026#xA;    //holds the result of the check in the database\u0026#xA;    JSONObject check \u003d new JSONObject();\u0026#xA;    try{\u0026#xA;        //creates a new session needed to add elements to a database\u0026#xA;        SessionFactory sessionFactory \u003d new Configuration().configure().buildSessionFactory(); \u0026#xA;        session \u003d sessionFactory.openSession();\u0026#xA;\u0026#xA;\u0026#xA;        if (justusername){\u0026#xA;\u0026#xA;            //query created to select a username from user table\u0026#xA;            String hquery \u003d \"Select username from User user Where username \u003d ? \";\u0026#xA;\u0026#xA;            //query created\u0026#xA;            Query query \u003d session.createQuery(hquery);\u0026#xA;\u0026#xA;            //sets the username of the query the values JSONObject contents\u0026#xA;            query.setString(0, username);\u0026#xA;\u0026#xA;            // executes query and adds username string variable \u0026#xA;            String user \u003d (String) query.uniqueResult();\u0026#xA;\u0026#xA;            //checks to see if result is found (null if not found)\u0026#xA;            if (user \u003d\u003d null)\u0026#xA;            {\u0026#xA;                //adds false to Jobject if not found\u0026#xA;                check.put(\"indatabase\", \"false\");\u0026#xA;            }\u0026#xA;            else\u0026#xA;            {\u0026#xA;                check.put(\"indatabase\", \"true\");\u0026#xA;            }\u0026#xA;\u0026#xA;            //adds check to Jobject to say just to check username\u0026#xA;            check.put(\"justusername\", true);\u0026#xA;\u0026#xA;        }\u0026#xA;        else\u0026#xA;        {\u0026#xA;            //query created to select a username and password from user table\u0026#xA;            String hquery \u003d \"Select username from User user Where username \u003d :user and password \u003d :pass \";\u0026#xA;            Query query \u003d session.createQuery(hquery);\u0026#xA;\u0026#xA;            query.setString(\"user\", username);\u0026#xA;            query.setString(\"pass\", password);\u0026#xA;\u0026#xA;            String user \u003d (String) query.uniqueResult();\u0026#xA;\u0026#xA;            if(user \u003d\u003dnull)\u0026#xA;            {\u0026#xA;                check.put(\"indatabase\", false);\u0026#xA;            }\u0026#xA;            else\u0026#xA;            {\u0026#xA;                check.put(\"indatabase\", true);\u0026#xA;            }\u0026#xA;\u0026#xA;            check.put(\"justusername\", false);\u0026#xA;\u0026#xA;        }\u0026#xA;\u0026#xA;\u0026#xA;        }catch(Exception e){\u0026#xA;\u0026#xA;        System.out.println(e.getMessage());\u0026#xA;            //logg.log(Level.WARNING, \" Exception\", e.getMessage());\u0026#xA;\u0026#xA;    }finally{\u0026#xA;    // Actual contact insertion will happen at this step\u0026#xA;\u0026#xA;        session.flush();\u0026#xA;        session.close();\u0026#xA;\u0026#xA;    }\u0026#xA;    //returns Jobject\u0026#xA;    return check;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 244305,
+  "lastEditorUserId": 265143,
+  "lastEditDate": "Mar 28, 2010",
+  "lastActivityDate": "Mar 28, 2010",
+  "title": "Killing Mysql processes staying in sleep command",
+  "tags": [
+    "java",
+    "mysql",
+    "hibernate"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

@@ -1,0 +1,25 @@
+{
+  "id": 1523997,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1524807,
+  "parentId": 0,
+  "createDate": "Oct 6, 2009",
+  "score": 6,
+  "viewCount": 9498,
+  "body": "\u003cp\u003eI\u0027m trying to create a titled border frame in GWT, which results in this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cimg src\u003d\"https://i.stack.imgur.com/fH5DH.png\" alt\u003d\"Legend+Fieldset\"\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis can be done using HTML fieldset and legend tags, such as\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;fieldset\u0026gt; \u0026#xA;    \u0026lt;legend\u0026gt;Connection parameters\u0026lt;/legend\u0026gt;\u0026#xA;    ... the rest ...\u0026#xA;\u0026lt;/fieldset\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI want to create a custom widget in GWT that implements that. I managed to do that, but the problem is that events that happen inside the widget (button click etc) does not get fired although I have added the handler.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy implementation of the widget is as follows:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class TitledPanel extends Widget {\u0026#xA;private Element legend;\u0026#xA;private Widget content \u003d null;\u0026#xA;\u0026#xA;public TitledPanel() {\u0026#xA;    Element fieldset \u003d DOM.createFieldSet();\u0026#xA;    legend \u003d DOM.createLegend();\u0026#xA;    DOM.appendChild(fieldset, legend);\u0026#xA;    setElement(fieldset);\u0026#xA;}\u0026#xA;\u0026#xA;public TitledPanel(String title) {\u0026#xA;    this();\u0026#xA;    setTitle(title);\u0026#xA;}\u0026#xA;\u0026#xA;@Override\u0026#xA;public String getTitle() {\u0026#xA;    return DOM.getInnerHTML(legend);\u0026#xA;}\u0026#xA;\u0026#xA;@Override\u0026#xA;public void setTitle(String html) {\u0026#xA;    DOM.setInnerHTML(legend, html);\u0026#xA;}\u0026#xA;\u0026#xA;public Widget getContent() {\u0026#xA;    return content;\u0026#xA;}\u0026#xA;\u0026#xA;public void setContent(Widget content) {\u0026#xA;    if (this.content !\u003d null) {\u0026#xA;        DOM.removeChild(getElement(), this.content.getElement());\u0026#xA;    }\u0026#xA;\u0026#xA;    this.content \u003d content;\u0026#xA;\u0026#xA;    DOM.appendChild(getElement(), content.getElement());\u0026#xA;}\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDo I need to extend Composite, or need to manually reroute the events, or is there other ways?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 11238,
+  "lastEditorUserId": 1159643,
+  "lastEditDate": "Jun 20, 2015",
+  "lastActivityDate": "Jun 20, 2015",
+  "title": "Titled frame panel for GWT (using FIELDSET and LEGEND html tags)",
+  "tags": [
+    "html",
+    "gwt",
+    "event-handling",
+    "fieldset",
+    "legend"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

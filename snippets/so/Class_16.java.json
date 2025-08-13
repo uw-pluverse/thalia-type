@@ -1,0 +1,24 @@
+{
+  "id": 62289,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Sep 15, 2008",
+  "score": 328,
+  "viewCount": 229506,
+  "body": "\u003cp\u003eHow is it possible to read/write to the Windows registry using Java?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 0,
+  "ownerDisplayName": "Dichkaun",
+  "lastEditorUserId": 452775,
+  "lastEditorDisplayName": "mmyers",
+  "lastEditDate": "Apr 25, 2018",
+  "lastActivityDate": "Feb 5, 2020",
+  "title": "Read/write to Windows registry using Java",
+  "tags": [
+    "java",
+    "registry"
+  ],
+  "answerCount": 24,
+  "commentCount": 2,
+  "favoriteCount": 170
+}

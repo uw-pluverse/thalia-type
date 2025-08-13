@@ -1,0 +1,24 @@
+{
+  "id": 3307330,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4330486,
+  "parentId": 0,
+  "createDate": "Jul 22, 2010",
+  "score": 76,
+  "viewCount": 31353,
+  "body": "\u003cp\u003eI\u0027m parsing third party log files containing date/time using Joda. The date/time is in one of two different formats, depending on the age of the log files I\u0027m parsing.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCurrently I have code like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003etry {\u0026#xA;    return DateTimeFormat.forPattern(\"yyyy/MM/dd HH:mm:ss\").parseDateTime(datePart);\u0026#xA;} catch (IllegalArgumentException e) {\u0026#xA;    return DateTimeFormat.forPattern(\"E, MMM dd, yyyy HH:mm\").parseDateTime(datePart);\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis works but contravenes Joshua Bloch\u0027s advice from Effective Java 2nd Edition (Item 57: Use exceptions only for exceptional conditions). It also makes it hard to determine if an IllegalArgumentException occurs due to a screwed up date/time in a log file.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCan you suggest a nicer approach that doesn\u0027t misuse exceptions?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 2959,
+  "lastEditorUserId": 38896,
+  "lastEditDate": "Jun 15, 2011",
+  "lastActivityDate": "Aug 22, 2013",
+  "title": "Using Joda Date \u0026 Time API to parse multiple formats",
+  "tags": [
+    "java",
+    "parsing",
+    "exception",
+    "jodatime"
+  ],
+  "answerCount": 3,
+  "commentCount": 1,
+  "favoriteCount": 20
+}

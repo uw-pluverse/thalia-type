@@ -1,0 +1,25 @@
+{
+  "id": 5621338,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Apr 11, 2011",
+  "score": 240,
+  "viewCount": 45208,
+  "body": "\u003cp\u003eI want to add \u003ccode\u003eJTable\u003c/code\u003e into \u003ccode\u003eJPanel\u003c/code\u003e whose layout is \u003ccode\u003enull\u003c/code\u003e.  \u003ccode\u003eJPanel\u003c/code\u003e contains other components. I have to add \u003ccode\u003eJTable\u003c/code\u003e at proper position.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 702156,
+  "lastEditorUserId": 9368836,
+  "lastEditDate": "Sep 22, 2018",
+  "lastActivityDate": "Sep 22, 2018",
+  "title": "How to add JTable in JPanel with null layout?",
+  "tags": [
+    "java",
+    "layout",
+    "jtable",
+    "layout-manager",
+    "null-layout-manager"
+  ],
+  "answerCount": 11,
+  "commentCount": 1,
+  "favoriteCount": 42
+}

@@ -1,0 +1,21 @@
+{
+  "id": 6922964,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Aug 3, 2011",
+  "score": 2,
+  "viewCount": 953,
+  "body": "\u003cp\u003eI am trying to use Joda Time both for formatting DateTime objects to String and than parse these strings back to DateTime. But I am failing to so when the pattern includes z:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    DateTimeFormatter dtf \u003d DateTimeFormat.forPattern(\"dd-MM-yyyy HH:mm:ss.SSS z\");\u0026#xA;\u0026#xA;    String dts \u003d dtf.print(System.currentTimeMillis());\u0026#xA;\u0026#xA;    System.out.println(dts);\u0026#xA;\u0026#xA;    DateTime dt \u003d dtf.parseDateTime(dts);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe above code is throwing exception when the parsing the String to DateTime takes occurred.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDo you have any idea?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eYosi\u003c/p\u003e\u0026#xA;",
+  "ownerId": 876069,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Aug 3, 2011",
+  "title": "Fail to parse date with time zone with Joda Time",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

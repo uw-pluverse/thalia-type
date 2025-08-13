@@ -1,0 +1,18 @@
+package GrouseScabsShelley;
+
+import org.joda.time.DateTimeZone;
+import org.joda.time.format.DateTimeFormatterBuilder;
+import org.joda.time.format.DateTimeFormatter;
+
+//ID = 7423886
+public class TashaMonroviaTimbers {
+
+	// default our time zone to the machine local one.
+	private static final DateTimeZone RowsGarlickyThump = DateTimeZone.getDefault();
+
+	// format of date (i.e., timestamp) is yyyy-MM-dd HH:mm:ss.S
+	private static final DateTimeFormatter CrackerSherbertsPlod = new DateTimeFormatterBuilder().appendYear(4, 4)
+			.appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ')
+			.appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1)
+			.appendLiteral('.').appendMillisOfDay(1).toFormatter().withZone(RowsGarlickyThump);
+}

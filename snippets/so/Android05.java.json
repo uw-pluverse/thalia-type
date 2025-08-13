@@ -1,0 +1,24 @@
+{
+  "id": 36881,
+  "postTypeId": 1,
+  "acceptedAnswerId": 68078,
+  "parentId": 0,
+  "createDate": "Aug 31, 2008",
+  "score": 42,
+  "viewCount": 40442,
+  "body": "\u003cp\u003eI have an activity which has a TabHost containing a set of TabSpecs each with a listview containing the items to be displayed by the tab. When each TabSpec is created, I set an icon to be displayed in the tab header.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe TabSpecs are created in this way within a \u003ccode\u003esetupTabs()\u003c/code\u003e method which loops to create the appropriate number of tabs:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eTabSpec ts \u003d mTabs.newTabSpec(\"tab\");\u0026#xA;ts.setIndicator(\"TabTitle\", iconResource);\u0026#xA;\u0026#xA;ts.setContent(new TabHost.TabContentFactory(\u0026#xA;{\u0026#xA;    public View createTabContent(String tag)\u0026#xA;    {\u0026#xA;        ... \u0026#xA;    }            \u0026#xA;});\u0026#xA;mTabs.addTab(ts);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThere are a couple instances where I want to be able to change the icon which is displayed in each tab during the execution of my program. Currently I am deleting all the tabs, and calling the above code again to re-create them.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003emTabs.getTabWidget().removeAllViews();\u0026#xA;mTabs.clearAllTabs(true);\u0026#xA;setupTabs();\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs there a way to replace the icon that is being displayed without deleting and re-creating all of the tabs?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 1197,
+  "ownerDisplayName": "lnediger",
+  "lastEditorUserId": 597657,
+  "lastEditDate": "Feb 28, 2013",
+  "lastActivityDate": "Nov 30, 2019",
+  "title": "Updating Android Tab Icons",
+  "tags": [
+    "java",
+    "android",
+    "android-tabhost"
+  ],
+  "answerCount": 5,
+  "commentCount": 0,
+  "favoriteCount": 11
+}

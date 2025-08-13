@@ -1,0 +1,21 @@
+{
+  "id": 2404359,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2405229,
+  "parentId": 0,
+  "createDate": "Mar 8, 2010",
+  "score": 5,
+  "viewCount": 3877,
+  "body": "\u003cp\u003eI am getting time out from using JsonpRequestBuilder. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe entry point code goes like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e// private static final String SERVER_URL \u003d \"http://localhost:8094/data/view/\";\u0026#xA;private static final String SERVER_URL \u003d \"http://www.google.com/calendar/feeds/developer-calendar@google.com/public/full?alt\u003djson-in-script\u0026amp;callback\u003dinsertAgenda\u0026amp;orderby\u003dstarttime\u0026amp;max-results\u003d15\u0026amp;singleevents\u003dtrue\u0026amp;sortorder\u003dascending\u0026amp;futureevents\u003dtrue\";\u0026#xA;private static final String SERVER_ERROR \u003d \"An error occurred while \"\u0026#xA;        + \"attempting to contact the server. Please check your network \"\u0026#xA;        + \"connection and try again.\";\u0026#xA;\u0026#xA;/**\u0026#xA; * This is the entry point method.\u0026#xA; */\u0026#xA;public void onModuleLoad() {\u0026#xA;\u0026#xA;    JsonpRequestBuilder requestBuilder \u003d new JsonpRequestBuilder();\u0026#xA;    // requestBuilder.setTimeout(10000);\u0026#xA;    requestBuilder.requestObject(SERVER_URL, new Jazz10RequestCallback());\u0026#xA;\u0026#xA;}\u0026#xA;\u0026#xA;class Jazz10RequestCallback implements AsyncCallback\u0026lt;Article\u0026gt; {\u0026#xA;\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public void onFailure(Throwable caught) {\u0026#xA;        Window.alert(\"Failed to send the message: \" + caught.getMessage());     \u0026#xA;    }\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public void onSuccess(Article result) {\u0026#xA;        // TODO Auto-generated method stub\u0026#xA;        Window.alert(result.toString());\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe article class is simply:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport com.google.gwt.core.client.JavaScriptObject;\u0026#xA;\u0026#xA;public class Article extends JavaScriptObject {\u0026#xA;\u0026#xA;\u0026#xA;    protected Article() {};\u0026#xA;\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe gwt page, however, always hit the onFailure() callback and show this alert:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eFailed to send the message. Timeout while calling \u0026lt;url\u0026gt;.\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eFail to see anything on the Eclipse plugin console. I tried the url and it works perfectly.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWould appreciate any tip on debugging technique or suggestion\u003c/p\u003e\u0026#xA;",
+  "ownerId": 58129,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jul 12, 2013",
+  "title": "GWT JsonpRequestBuilder Timeout issue",
+  "tags": [
+    "json",
+    "gwt"
+  ],
+  "answerCount": 4,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

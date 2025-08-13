@@ -1,0 +1,24 @@
+{
+  "id": 8109450,
+  "postTypeId": 1,
+  "acceptedAnswerId": 8109868,
+  "parentId": 0,
+  "createDate": "Nov 13, 2011",
+  "score": 0,
+  "viewCount": 1401,
+  "body": "\u003cp\u003e@Jon Skeet, I downloaded Joda-Time as you recommended in, \u003ca href\u003d\"https://stackoverflow.com/questions/2356672/date-parsing-formating-with-timezone-and-simpledateformat-problem-around-dst-swi\"\u003eDate parsing/formatting with TimeZone and SimpleDateFormat give different results around DST switch\u003c/a\u003e, and added it to my Java EE / JSF project, attempted to use DateTime and DateTimeFormatter, and they are returning the same result as JDK 6 (see below), since it is now Day Light Savings here in EST timezone (US/Eastern).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eORDER #  0739  Trip Date 11/11/2011 to \u003cstrong\u003e11/12/2011\u003c/strong\u003e  Customer # 1004 \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eTrip Date/Time: 11/11/2011 05:00 PM\u0026#xA;Report Date/Time: 11/11/2011 04:45 PM\u0026#xA;\u003cstrong\u003eReturn\u003c/strong\u003e Date/Time: \u003cstrong\u003e11/13/2011 02:00 AM\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCode is as follows:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic String getDateFromDateTime (Date date, Boolean display) throws ParseException {\u0026#xA;\u0026#xA;    /*\u0026#xA;     * SimpleDateFormat working as designed, but pf_ordersController.selected.returnDateTime displaying incorrect date/time\u0026#xA;     * \u0026#xA;     * see below from /orders/pf_View.xhtml\u0026#xA;     * pf_ordersController.selected.returnDateTime (displayed on JSF page) \u003d 11/13/2011 02:00 AM\u0026#xA;     * \u0026#xA;     * ORDER #  0739  Trip Date 11/11/2011 to 11/12/2011  Customer # 1004\u0026#xA;     * \u0026#xA;     * Trip Date/Time: 11/11/2011 05:00 PM  Report Date/Time: 11/11/2011 04:45 PM   Return Date/Time: 11/13/2011 02:00 AM\u0026#xA;     * \u0026#xA;     * orders.returnDateTime (stored in database) \u003d 11/12/2011 21:00:00 (9:00 PM)\u0026#xA;     * SimpleDateFormat converts orders.returnDateTime to 11/12/2011 (working as designed)\u0026#xA;     * \u0026#xA;     * https://stackoverflow.com/questions/2356672/date-parsing-formating-with-timezone-and-simpledateformat-problem-around-dst-swi\u0026#xA;     * \u0026#xA;    DateFormat formatter;\u0026#xA;    String myDate;\u0026#xA;\u0026#xA;    if (display)\u0026#xA;        formatter \u003d new SimpleDateFormat(\"MM/dd/yyyy\");\u0026#xA;    else\u0026#xA;        formatter \u003d new SimpleDateFormat(\"yyyy-MM-dd\");\u0026#xA;\u0026#xA;    myDate \u003d formatter.format(date);\u0026#xA;     * \u0026#xA;     */\u0026#xA;\u0026#xA;    DateTimeFormatter dtFormatter;\u0026#xA;\u0026#xA;    if (display)\u0026#xA;        dtFormatter \u003d DateTimeFormat.forPattern(\"MM/dd/yyyy\");\u0026#xA;    else\u0026#xA;        dtFormatter \u003d DateTimeFormat.forPattern(\"yyyy-MM-dd\");\u0026#xA;\u0026#xA;    DateTime dt \u003d new DateTime(date);\u0026#xA;    String myDate \u003d dt.toString(dtFormatter);\u0026#xA;\u0026#xA;    System.out.println(\"OrderDisplayUtil.java:getDateFromDateTime(\" + date + \", \" + display + \"): \" + \"myDate \u003d \" + myDate);\u0026#xA;\u0026#xA;    return myDate;\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ePlease help.  Thanks.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 933054,
+  "lastEditorUserId": -1,
+  "lastEditDate": "May 23, 2017",
+  "lastActivityDate": "Nov 13, 2011",
+  "title": "JDK and joda-time dateformatter: how to consider day light savings time",
+  "tags": [
+    "java",
+    "jodatime",
+    "date-format",
+    "simpledateformat"
+  ],
+  "answerCount": 1,
+  "commentCount": 4,
+  "favoriteCount": 0
+}

@@ -1,0 +1,21 @@
+{
+  "id": 1629323,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Oct 27, 2009",
+  "score": 0,
+  "viewCount": 791,
+  "body": "\u003cp\u003eMy code is \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e            FormPanel form \u003dnew FormPanel();\u0026#xA;            VerticalPanel holder \u003d new VerticalPanel();\u0026#xA;            holder.add(new Label(\"User ID\"));\u0026#xA;            nameTextBox \u003d new TextBox();\u0026#xA;            nameTextBox.setName(\"userid\");\u0026#xA;            holder.add(nameTextBox);\u0026#xA;\u0026#xA;             submitButton \u003d new Button(\"Submit\");\u0026#xA;             holder.add(submitButton);\u0026#xA;            form.add(holder);\u0026#xA;\u0026#xA;            submitButton.addClickListener(new ClickListener() {\u0026#xA;\u0026#xA;            @Override\u0026#xA;            public void onClick(Widget sender) {\u0026#xA;                    form.submit();\u0026#xA;            }\u0026#xA;\u0026#xA;            });\u0026#xA;\u0026#xA;            form.addFormHandler(new FormHandler() {\u0026#xA;                    public void onSubmit(FormSubmitEvent event) {\u0026#xA;\u0026#xA;\u0026#xA;           }\u0026#xA;\u0026#xA;           public void onSubmitComplete(FormSubmitCompleteEvent event) {\u0026#xA;\u0026#xA;        }\u0026#xA;      });\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut when i submit form i get error \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e[ERROR] Uncaught exception escaped\u0026#xA;com.google.gwt.core.client.JavaScriptException: (TypeError): form.submit is not a function\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eplease tell me the right way..\u003c/p\u003e\u0026#xA;",
+  "ownerId": 196480,
+  "lastEditorUserId": 196480,
+  "lastEditDate": "Oct 31, 2009",
+  "lastActivityDate": "Oct 31, 2009",
+  "title": "Form submition error in GWT",
+  "tags": [
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 4,
+  "favoriteCount": 0
+}

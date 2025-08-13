@@ -1,0 +1,23 @@
+{
+  "id": 1182620,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Jul 25, 2009",
+  "score": 4,
+  "viewCount": 7238,
+  "body": "\u003cp\u003eI have a View that I would like a TextView to pop up over when an event occurs. I have done this before (a long time ago) but can\u0027t remember how I did it...\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy code is for the View element. Upon adding the TextView, I would like it to show over the top of the View.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class test extends View {\u0026#xA;    public test(Context context) {\u0026#xA;        super(context);\u0026#xA;        setBackgroundColor(Color.RED);\u0026#xA;    }\u0026#xA;\u0026#xA;    TextView tv;\u0026#xA;\u0026#xA;    public void adText(TextView tv){\u0026#xA;        this.tv \u003dtv;\u0026#xA;        tv.setVisibility(tv.VISIBLE);\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 0,
+  "ownerDisplayName": "Dawson",
+  "lastEditorUserId": 496830,
+  "lastEditDate": "Mar 9, 2011",
+  "lastActivityDate": "Jan 23, 2012",
+  "title": "Android TextView on top of a View",
+  "tags": [
+    "android",
+    "view"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

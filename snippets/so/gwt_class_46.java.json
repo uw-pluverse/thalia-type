@@ -1,0 +1,21 @@
+{
+  "id": 3358063,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3358563,
+  "parentId": 0,
+  "createDate": "Jul 28, 2010",
+  "score": 0,
+  "viewCount": 274,
+  "body": "\u003cp\u003eI\u0027m new to GWT, and having an issue getting the result of an AJAX call to show up in my Dialog box. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI set up my dialog box, Vpanel, and response label here:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e   VerticalPanel eventDetailWindow \u003d new VerticalPanel();\u0026#xA;\u0026#xA;   final DialogBox dialogBox2 \u003d new DialogBox();\u0026#xA;   dialogBox2.setText(\"Event Detail\");\u0026#xA;   dialogBox2.setAnimationEnabled(true);\u0026#xA;\u0026#xA;   final HTML serverResponse3 \u003d new HTML(\"\u0026lt;b\u0026gt; ok, this is working\u0026lt;/b\u0026gt;\");\u0026#xA;   serverResponse3.addStyleName(\"detailView\");\u0026#xA;\u0026#xA;   eventDetailWindow.add(serverResponse3);\u0026#xA;   eventDetailWindow.addStyleName(\"detailWindow\");\u0026#xA;   dialogBox2.setWidget(eventDetailWindow);\u0026#xA;   RootPanel.get(\"detailWindow\").add(eventDetailWindow);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThen, in the onSuccess method I have this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003edialogBox2.setText(\"Remote Procedure Call\");\u0026#xA;serverResponse3.setHTML(result);\u0026#xA;dialogBox2.center();\u0026#xA;closeButton.setFocus(true);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, when it fires, the response shows up on the page, not in the dialog box and the dialog box is empty. It looks like it\u0027s set up the same as the starter project - which works fine..\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCan someone help me out...?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 462307,
+  "lastEditorUserId": 462307,
+  "lastEditDate": "Jul 28, 2010",
+  "lastActivityDate": "Jul 29, 2010",
+  "title": "GWT/JAVA - Getting an AJAX call into a dialog box",
+  "tags": [
+    "gwt"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

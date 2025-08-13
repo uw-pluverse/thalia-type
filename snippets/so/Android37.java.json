@@ -1,0 +1,23 @@
+{
+  "id": 1111980,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1116717,
+  "parentId": 0,
+  "createDate": "Jul 10, 2009",
+  "score": 525,
+  "viewCount": 234021,
+  "body": "\u003cp\u003eMy program does some network activity in a background thread. Before starting, it pops up a progress dialog. The dialog is dismissed on the handler. This all works fine, except when screen orientation changes while the dialog is up (and the background thread is going). At this point the app either crashes, or deadlocks, or gets into a weird stage where the app does not work at all until all the threads have been killed.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow can I handle the screen orientation change gracefully?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe sample code below matches roughly what my real program does:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class MyAct extends Activity implements Runnable {\u0026#xA;    public ProgressDialog mProgress;\u0026#xA;\u0026#xA;    // UI has a button that when pressed calls send\u0026#xA;\u0026#xA;    public void send() {\u0026#xA;         mProgress \u003d ProgressDialog.show(this, \"Please wait\", \u0026#xA;                      \"Please wait\", \u0026#xA;                      true, true);\u0026#xA;        Thread thread \u003d new Thread(this);\u0026#xA;        thread.start();\u0026#xA;    }\u0026#xA;\u0026#xA;    public void run() {\u0026#xA;        Thread.sleep(10000);\u0026#xA;        Message msg \u003d new Message();\u0026#xA;        mHandler.sendMessage(msg);\u0026#xA;    }\u0026#xA;\u0026#xA;    private final Handler mHandler \u003d new Handler() {\u0026#xA;        @Override\u0026#xA;        public void handleMessage(Message msg) {\u0026#xA;            mProgress.dismiss();\u0026#xA;        }\u0026#xA;    };\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eStack:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eE/WindowManager(  244): Activity MyAct has leaked window com.android.internal.policy.impl.PhoneWindow$DecorView@433b7150 that was originally added here\u0026#xA;E/WindowManager(  244): android.view.WindowLeaked: Activity MyAct has leaked window com.android.internal.policy.impl.PhoneWindow$DecorView@433b7150 that was originally added here\u0026#xA;E/WindowManager(  244):     at android.view.ViewRoot.\u0026lt;init\u0026gt;(ViewRoot.java:178)\u0026#xA;E/WindowManager(  244):     at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:147)\u0026#xA;E/WindowManager(  244):     at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:90)\u0026#xA;E/WindowManager(  244):     at android.view.Window$LocalWindowManager.addView(Window.java:393)\u0026#xA;E/WindowManager(  244):     at android.app.Dialog.show(Dialog.java:212)\u0026#xA;E/WindowManager(  244):     at android.app.ProgressDialog.show(ProgressDialog.java:103)\u0026#xA;E/WindowManager(  244):     at android.app.ProgressDialog.show(ProgressDialog.java:91)\u0026#xA;E/WindowManager(  244):     at MyAct.send(MyAct.java:294)\u0026#xA;E/WindowManager(  244):     at MyAct$4.onClick(MyAct.java:174)\u0026#xA;E/WindowManager(  244):     at android.view.View.performClick(View.java:2129)\u0026#xA;E/WindowManager(  244):     at android.view.View.onTouchEvent(View.java:3543)\u0026#xA;E/WindowManager(  244):     at android.widget.TextView.onTouchEvent(TextView.java:4664)\u0026#xA;E/WindowManager(  244):     at android.view.View.dispatchTouchEvent(View.java:3198)\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have tried to dismiss the progress dialog in onSaveInstanceState, but that just prevents an immediate crash. The background thread is still going, and the UI is in partially drawn state. Need to kill the whole app before it starts working again.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 62596,
+  "lastEditorUserId": 844882,
+  "lastEditDate": "Jan 15, 2014",
+  "lastActivityDate": "Jan 8, 2021",
+  "title": "How to handle screen orientation change when progress dialog and background thread active?",
+  "tags": [
+    "android",
+    "android-activity",
+    "android-dialog"
+  ],
+  "answerCount": 28,
+  "commentCount": 5,
+  "favoriteCount": 247
+}

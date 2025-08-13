@@ -1,0 +1,290 @@
+Android03.java://ID = 26362
+Android04.java://ID = 151777
+Android05.java://ID = 36881
+Android06.java://ID = 263507
+Android07.java://ID = 288044
+Android08.java://ID = 442496
+Android09.java://ID = 522800
+Android10.java://ID = 526524
+Android11.java://ID = 531324
+Android12.java://ID = 549451
+Android13.java://ID = 559902
+Android14.java://ID = 576513
+Android15.java://ID = 587917
+Android16.java://ID = 631238
+Android17.java://ID = 669764
+Android18.java://ID = 724419
+Android19.java://ID = 738817
+Android21.java://ID = 775188
+Android22.java://ID = 866769
+Android23.java://ID = 885641
+Android24.java://ID = 896889
+Android25.java://ID = 901057
+Android26.java://ID = 904376
+Android27.java://ID = 982386
+Android29.java://ID = 992508
+Android30.java://ID = 992880
+Android31.java://ID = 993137
+Android32.java://ID = 1032912
+Android33.java://ID = 1048739
+Android34.java://ID = 1062476
+Android36.java://ID = 1105141
+Android37.java://ID = 1111980
+Android38.java://ID = 1118447
+Android39.java://ID = 1153920
+Android40.java://ID= 1163812
+Android41.java://ID = 1182620
+Android42.java://ID = 1188346
+Android43.java://ID = 1200688
+Android44.java://ID = 1204012
+Android45.java://ID = 1215817
+Android46.java://ID = 1254832
+Android47.java://ID = 1266527
+Android48.java://ID = 1305388
+Android49.java://ID = 1325576
+Android50.java://ID = 1352950
+Class_10.java:URL: http://stackoverflow.com/questions/85190/how-does-the-java-for-each-loop-work
+Class_11.java:URL: http://stackoverflow.com/questions/2885173/how-do-i-create-a-file-and-write-to-a-file-in-java
+Class_12.java:URL: http://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-string-to-java-util-date
+Class_13.java:URL: http://stackoverflow.com/questions/7143287/how-to-best-position-swing-guis
+Class_14.java:URL: http://stackoverflow.com/questions/160970/how-do-i-invoke-a-java-method-when-given-the-method-name-as-a-string
+Class_15.java:URL: http://stackoverflow.com/questions/2265503/why-do-i-need-to-override-the-equals-and-hashcode-methods-in-java
+Class_16.java:URL: http://stackoverflow.com/questions/62289/read-write-to-windows-registry-using-java
+Class_17.java:URL: http://stackoverflow.com/questions/4772425/change-date-format-in-a-java-string
+Class_18.java:URL: http://stackoverflow.com/questions/37628/what-is-reflection-and-why-is-it-useful
+Class_19.java:URL: http://stackoverflow.com/questions/1519736/random-shuffling-of-an-array
+Class_1.java: URL: http://stackoverflow.com/questions/41553382/draw-on-top-of-an-applet-inside-a-frame
+Class_20.java:URL: http://stackoverflow.com/questions/10367698/java-multiple-file-transfer-over-socket
+Class_21.java:URL: http://stackoverflow.com/questions/5853879/swing-obtain-image-of-jframe
+Class_22.java:URL: http://stackoverflow.com/questions/4637215/can-a-progress-bar-be-used-in-a-class-outside-main
+Class_2.java: URL: http://stackoverflow.com/questions/5621338/how-to-add-jtable-in-jpanel-with-null-layout
+Class_3.java: URL: http://stackoverflow.com/questions/153724/how-to-round-a-number-to-n-decimal-places-in-java
+Class_4.java: URL: http://stackoverflow.com/questions/3481828/how-to-split-a-string-in-java
+Class_5.java: URL: http://stackoverflow.com/questions/109383/sort-a-mapkey-value-by-values-java
+Class_6.java: URL: http://stackoverflow.com/questions/3066590/gui-not-working-after-rewriting-to-mvc
+Class_7.java: URL: http://stackoverflow.com/questions/2784514/sort-arraylist-of-custom-objects-by-property
+Class_8.java: URL: http://stackoverflow.com/questions/3422673/evaluating-a-math-expression-given-in-string-formy
+Class_9.java: URL: http://stackoverflow.com/questions/2839321/connect-java-to-a-mysql-database
+gwt_class_10.java://ID = 1629323
+gwt_class_11.java://ID = 1651138
+gwt_class_12.java://ID = 1690154
+gwt_class_13.java://ID = 1692017
+gwt_class_14.java://ID = 1738530
+gwt_class_15.java://ID = 1760182
+gwt_class_16.java://ID = 1795474
+gwt_class_17.java://ID = 1881173
+gwt_class_18.java://ID = 2013169
+gwt_class_19.java://ID = 2155194
+gwt_class_1.java://ID = 831168
+gwt_class_20.java://ID = 2166506
+gwt_class_21.java://ID = 2214891
+gwt_class_22.java://ID = 2237142
+gwt_class_23.java://ID = 2279782
+gwt_class_24.java://ID = 2284635
+gwt_class_25.java://ID = 2302014
+gwt_class_26.java://ID = 2369187
+gwt_class_27.java://ID = 2385802
+gwt_class_28.java://ID = 2389999
+gwt_class_29.java://ID = 2404359
+gwt_class_2.java://ID = 971712
+gwt_class_31.java://ID = 2475886
+gwt_class_32.java://ID = 2482222
+gwt_class_33.java://ID = 2483024
+gwt_class_34.java://ID = 2598154
+gwt_class_35.java://ID = 2669065
+gwt_class_36.java://ID = 2679247
+gwt_class_37.java://ID = 2680739
+gwt_class_38.java://ID = 2764988
+gwt_class_39.java://ID = 2822667
+gwt_class_3.java://ID = 988217
+gwt_class_40.java://ID = 2868845
+gwt_class_41.java://ID = 2937126
+gwt_class_42.java://ID = 2987127
+gwt_class_43.java://ID = 3138621
+gwt_class_44.java://ID = 3313553
+gwt_class_45.java://ID = 3353405
+gwt_class_46.java://ID = 3358063
+gwt_class_47.java://ID = 3618678
+gwt_class_48.java://ID = 3635828
+gwt_class_49.java://ID = 3954392
+gwt_class_4.java://ID = 1318732
+gwt_class_50.java://ID = 3969102
+gwt_class_5.java://ID = 1482513
+gwt_class_6.java://ID = 1523997
+gwt_class_7.java://ID = 1539885
+gwt_class_8.java://ID = 1606513
+gwt_class_9.java://ID = 1624218
+hibernate_class_10.java://ID = 1262298
+hibernate_class_11.java://ID = 1310603
+hibernate_class_12.java://ID = 1443590
+hibernate_class_13.java://ID = 1483026
+hibernate_class_14.java://ID = 1483026
+hibernate_class_15.java://ID = 1561543
+hibernate_class_17.java://ID = 1938476
+hibernate_class_18.java://ID = 2029301
+hibernate_class_19.java://ID = 2182950
+hibernate_class_1.java://ID = 520902
+hibernate_class_20.java://ID = 2371299
+hibernate_class_21.java://ID = 2458774
+hibernate_class_22.java://ID = 2531687
+hibernate_class_23.java://ID = 2724147
+hibernate_class_24.java://ID = 2768511
+hibernate_class_25.java://ID = 2931936
+hibernate_class_26.java://ID = 2931936
+hibernate_class_27.java://3022098
+hibernate_class_28.java://ID = 3182759
+hibernate_class_29.java://ID = 3184069
+hibernate_class_2.java://ID = 643700
+hibernate_class_30.java://ID = 3204328
+hibernate_class_31.java://ID = 3218631
+hibernate_class_32.java://ID = 3287351
+hibernate_class_33.java://ID = 3332212
+hibernate_class_34.java://ID = 3332212
+hibernate_class_35.java://ID = 3509824
+hibernate_class_36.java://ID = 3513366
+hibernate_class_37.java://ID = 3534854
+hibernate_class_38.java://ID = 3556392
+hibernate_class_39.java://ID = 3573479
+hibernate_class_3.java://ID = 906241
+hibernate_class_40.java://ID = 3681045
+hibernate_class_41.java://ID = 3713829
+hibernate_class_42.java://ID = 3754253
+hibernate_class_43.java://ID = 3816385
+hibernate_class_44.java://ID = 3853106
+hibernate_class_45.java://ID = 4001795
+hibernate_class_46.java://ID = 4302983
+hibernate_class_47.java://ID = 4323066
+hibernate_class_48.java://ID = 4346254
+hibernate_class_49.java://ID = 4530572
+hibernate_class_4.java://ID = 970573
+hibernate_class_50.java://ID = 4562711
+hibernate_class_5.java://ID = 1080766
+hibernate_class_6.java://ID = 1116268
+hibernate_class_7.java://ID = 1205820
+hibernate_class_8.java://ID = 1212669
+hibernate_class_9.java://ID = 1262298
+JodaTime01.java://ID = 1714300
+JodaTime02.java://ID = 581581
+JodaTime03.java://ID = 2092883
+JodaTime04.java://ID = 2112214
+JodaTime05.java://ID = 2182921
+JodaTime06.java://ID = 2780967
+JodaTime07.java://ID = 3329469
+JodaTime08.java://ID = 4034388
+JodaTime09.java://ID = 4057816
+JodaTime10.java://ID = 4268472
+JodaTime11.java://ID = 4498274
+JodaTime12.java://ID = 4540144
+JodaTime13.java://	ID = 4585883
+JodaTime14.java://ID = 4675241
+JodaTime15.java://5451152
+JodaTime16.java://ID = 6387723
+JodaTime17.java://ID = 6922964
+JodaTime18.java://ID = 7423886
+JodaTime19.java://ID = 7471775
+JodaTime20.java://ID = 7807271
+JodaTime21.java://ID = 7868105
+JodaTime22.java://ID = 8109450
+JodaTime23.java://ID = 8321537
+JodaTime24.java://ID = 8525863
+JodaTime25.java://ID = 8654398
+JodaTime26.java://ID = 9122641
+JodaTime27.java://ID = 9202872
+JodaTime28.java://ID = 9313151
+JodaTime29.java://ID = 9485667
+JodaTime30.java://ID = 9503771
+JodaTime31.java://ID = 9543331
+JodaTime32.java://ID = 9598675
+JodaTime33.java://ID = 9961480
+JodaTime34.java://ID = 10106143
+JodaTime35.java://ID = 10135278
+JodaTime36.java://ID = 10154428
+JodaTime37.java://ID=3802893
+JodaTime38.java://20331163
+JodaTime39.java://12851934
+JodaTime40.java://3299972
+JodaTime41.java://id=41452661
+JodaTime42.java://id=9711454
+JodaTime43.java://id = 3307330
+JodaTime44.java://id = 1440557
+JodaTime45.java://id = 5059663
+JodaTime46.java://id=16461361
+JodaTime47.java://id = 1327229
+JodaTime48.java://id = 5622194
+JodaTime49.java://ID = 8746084
+JodaTime50.java://id = 3772945
+xstream_class_10.java://ID=2008043
+xstream_class_11.java://ID=1791178
+xstream_class_12.java://ID = 1791178
+xstream_class_13.java://ID=1372467
+xstream_class_14.java://ID = 3533894
+xstream_class_15.java://ID=328832
+xstream_class_16.java://ID = 5377380
+xstream_class_17.java://ID=2045290
+xstream_class_18.java://ID=23816525
+xstream_class_19.java://11484532
+xstream_class_1.java://ID = 6107965
+xstream_class_20.java://ID = 3623546
+xstream_class_21.java://ID=7608007
+xstream_class_22.java://Id=17616142
+xstream_class_23.java://2456470
+xstream_class_24.java://ID=2456909
+xstream_class_25.java://12672541
+xstream_class_26.java://ID=17871210
+xstream_class_27.java://Id=6825271
+xstream_class_28.java://ID=25098261
+xstream_class_29.java://Id=14440011
+xstream_class_2.java://ID = 7491195
+xstream_class_30.java://ID = 34206426
+xstream_class_31.java://http://www.studytrails.com/java/xml/xstream/xstream-xml-to-java/
+xstream_class_32.java://http://www.programcreek.com/java-api-examples/index.php?api=com.thoughtworks.xstream.XStream
+xstream_class_33.java://http://www.programcreek.com/java-api-examples/index.php?api=com.thoughtworks.xstream.XStream
+xstream_class_34.java://http://www.programcreek.com/java-api-examples/index.php?source_dir=cloudbees-api-client-master/cloudbees-api-client/src/main/java/com/cloudbees/api/config/ConfigParameters.java
+xstream_class_35.java://http://www.programcreek.com/java-api-examples/index.php?source_dir=sandboxes-master/sandbox-xstream/src/test/java/tryanderror/xstream/EntsoeStyleConverter_Test.java
+xstream_class_36.java://29466312
+xstream_class_37.java://http://www.dreamincode.net/forums/topic/240464-xstream-attribute-and-values-not-clear/
+xstream_class_38.java://ID=33088013
+xstream_class_39.java://ID = 26862650
+xstream_class_3.java://ID = 836805
+xstream_class_40.java://ID = 39005622
+xstream_class_41.java://ID=40922380
+xstream_class_42.java://ID=30288175
+xstream_class_43.java://https://developmentality.wordpress.com/2010/07/13/xstream-introduction-and-java-collections-serialization-problem-workaround/
+xstream_class_44.java://http://xstream.10960.n7.nabble.com/java-lang-StackOverflowError-while-converting-an-object-to-XML-td5107.html
+xstream_class_4.java://ID = 2195369
+xstream_class_5.java://ID = 3143234
+xstream_class_6.java://ID = 3642820
+xstream_class_7.java://ID = 6810856
+xstream_class_8.java://ID = 8604244
+xstream_class_9.java://ID = 10740221
+
+//grep -m1 '^//\|URL:' *.java > soids.txt
+import os
+import json
+
+file_to_id = {}
+for file in os.listdir():
+        if not file.endswith(".java"):
+                continue
+        file_to_id[file] = ""
+
+with open("soids.txt") as f:
+        for line in f:
+                if line.strip() == "":
+                        break
+                nameentrypair = line.split(sep=":",maxsplit=1)
+                name = nameentrypair[0]
+                entry = nameentrypair[1].replace(" ", "").strip()
+                if entry.startswith("//"):
+                        entry = entry[2:].strip()
+                if entry[:3].lower() == "id=":
+                        entry = entry[3:]
+                if entry[:4].lower() == "url:":
+                        entry = entry[4:]
+                if entry[:len("http://stackoverflow.com/questions/")].lower() == "http://stackoverflow.com/questions/":
+                        entry = entry[len("http://stackoverflow.com/questions/"):]
+                        entry = entry.split(sep="/",maxsplit=1)[0]
+                file_to_id[name] = entry
+
+with open("soids.json", 'w') as json_file:
+    json.dump(file_to_id, json_file, indent = 4, sort_keys=True)

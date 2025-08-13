@@ -1,0 +1,23 @@
+{
+  "id": 831168,
+  "postTypeId": 1,
+  "acceptedAnswerId": 893624,
+  "parentId": 0,
+  "createDate": "May 6, 2009",
+  "score": 4,
+  "viewCount": 15461,
+  "body": "\u003cp\u003eThis is probably a really simple thing, but I don\u0027t know how to implement the following. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage mods.client.resultSelector;\u0026#xA;\u0026#xA;import com.google.gwt.event.dom.client.MouseDownEvent;\u0026#xA;import com.google.gwt.event.dom.client.MouseDownHandler;\u0026#xA;import com.google.gwt.user.client.ui.AbsolutePanel;\u0026#xA;import com.google.gwt.user.client.ui.Composite;\u0026#xA;\u0026#xA;public class MousyAbsolutePanel extends Composite implements MouseDownHandler {\u0026#xA;\u0026#xA;    AbsolutePanel abs \u003d new AbsolutePanel();\u0026#xA;\u0026#xA;    public MousyAbsolutePanel(int width){\u0026#xA;        System.out.println(\"MousyAbsolutePanel being created with width:\" + width);\u0026#xA;        initWidget(abs);\u0026#xA;        abs.setWidth(String.valueOf(width));\u0026#xA;        abs.setHeight(\"100%\");\u0026#xA;        abs.setStyleName(\"mousyAbsolutePanel\");\u0026#xA;    }\u0026#xA;\u0026#xA;    public void onMouseDown(MouseDownEvent event) {\u0026#xA;        System.out.println(\"onMouseDown()\");\u0026#xA;    }\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI want to have what is effectively a absolutePanel that can accept mouse events. However, within the Composite object I don\u0027t know how to tie the the handler I have written (the onMouseDown() thing) with the abs variable. To put it succinctly, I want the abs AbsolutePanel to respond when it is clicked upon, but AbsolutePanels do not naturally accept click events. How do I go about doing this?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eApologies in advance if this is stupid simple, but I just don\u0027t quite know how to implement this behavior, and I have not seen it mentioned in the searches I have done.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 21317,
+  "lastEditorUserId": 21317,
+  "lastEditDate": "May 6, 2009",
+  "lastActivityDate": "Apr 5, 2011",
+  "title": "How to add event handlers to composite panels in GWT 1.6",
+  "tags": [
+    "gwt",
+    "handlers",
+    "event-handling"
+  ],
+  "answerCount": 4,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

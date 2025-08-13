@@ -1,0 +1,25 @@
+{
+  "id": 1443590,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1444935,
+  "parentId": 0,
+  "createDate": "Sep 18, 2009",
+  "score": 1,
+  "viewCount": 5373,
+  "body": "\u003cp\u003eI run following working code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    Session session \u003d null;\u0026#xA;\u0026#xA;    try {\u0026#xA;\u0026#xA;        SessionFactory sessionFactory \u003d new Configuration().configure()\u0026#xA;                .buildSessionFactory();\u0026#xA;        session \u003d sessionFactory.openSession();\u0026#xA;\u0026#xA;        String id \u003d (String) FacesContext.getCurrentInstance()\u0026#xA;                .getExternalContext().getRequestParameterMap().get(\u0026#xA;                        \"storeId\");\u0026#xA;\u0026#xA;        Transaction t \u003d session.beginTransaction();\u0026#xA;\u0026#xA;        stores \u003d getStores();\u0026#xA;\u0026#xA;        for (Store store : stores) {\u0026#xA;            if (store.getId() \u003d\u003d Integer.parseInt(id)) {\u0026#xA;                session.delete(store);\u0026#xA;            }\u0026#xA;        }\u0026#xA;        t.commit();\u0026#xA;    } catch (Exception e) {\u0026#xA;    } finally {\u0026#xA;        session.close();\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen i try redo this code to use Hibernate template, i go unending request to DB:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    HibernateTemplate template \u003d new HibernateTemplate();\u0026#xA;    template .setSessionFactory(sessionFactory);\u0026#xA;\u0026#xA;    stores \u003d template.find(\"from Stores\");\u0026#xA;\u0026#xA;    for (Store store : stores) {\u0026#xA;      if (store.getId() \u003d\u003d Integer.parseInt(id)) {\u0026#xA;        template.delete(store);\u0026#xA;}}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eLooks like transaction is not closed.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow could I close transaction this case? And is it will better at all to use Hibernate template approach instead of session approach showed at first code?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 170830,
+  "lastEditorUserId": 170830,
+  "lastEditDate": "Jun 18, 2015",
+  "lastActivityDate": "Jun 18, 2015",
+  "title": "Hibernate template close transaction",
+  "tags": [
+    "java",
+    "hibernate",
+    "spring",
+    "session",
+    "transactions"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

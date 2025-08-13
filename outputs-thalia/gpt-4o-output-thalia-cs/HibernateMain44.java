@@ -1,0 +1,35 @@
+```java
+import java.util.EnumSet;
+import java.util.SortedMap;
+import java.util.SortedSet;
+import javax.persistence.criteria.CriteriaBuilderImpl;
+import javax.persistence.criteria.MapAttribute;
+import javax.persistence.criteria.SelectionImplementor;
+import org.hibernate.engine.spi.LoadQueryInfluencers;
+import org.hibernate.event.spi.PreCollectionRemoveEventListener;
+import org.hibernate.persister.entity.EntityManagerFactoryImpl;
+import org.hibernate.tuple.IdentifierEqExpression;
+import org.hibernate.tuple.PostInsertIdentifierGenerator;
+import org.hibernate.tuple.UserVersionType;
+import org.hibernate.type.descriptor.java.ReferenceType;
+import org.hibernate.usertype.LegacyHiLoAlgorithmOptimizer;
+import org.hibernate.usertype.XClass;
+import org.hibernate.usertype.spi.Initializor;
+import org.hibernate.usertype.spi.SetProxy;
+import org.hibernate.usertype.spi.SortedMapProxy;
+import org.hibernate.usertype.spi.SortedSetProxy;
+import org.hibernate.usertype.spi.TupleElementImplementor;
+import org.hibernate.usertype.spi.ValidatePreUpdateEventListener;
+import org.hibernate.usertype.spi.MapKeySource;
+import org.hibernate.usertype.spi.MapKeyPath;
+import org.hibernate.usertype.spi.MapAttributeJoin;
+import org.hibernate.usertype.spi.Pair;
+import org.hibernate.usertype.spi.QueryBinder;
+import org.hibernate.usertype.spi.AttributeImplementor;
+import org.hibernate.usertype.spi.GraphDefiner;
+import org.hibernate.usertype.spi.JoinType;
+import org.hibernate.usertype.spi.MiddleRelatedComponentMapper;
+import org.hibernate.usertype.spi.Option;
+import org.hibernate.usertype.spi.ConcurrentReferenceHashMap;
+import org.hibernate.usertype.spi.LiteralNode;
+```

@@ -1,0 +1,23 @@
+{
+  "id": 2458774,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Mar 16, 2010",
+  "score": 2,
+  "viewCount": 2352,
+  "body": "\u003cp\u003eI\u0027m trying do save data to database by help of Hibernate , in Java. But when ı run codes , ı had lot of problems. Can anyone help me about that?\u0026#xA;Thanks...\u003c/p\u003e\u0026#xA;\u0026#xA;\u003ch2\u003eMy code:\u003c/h2\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage org.ultimania.model;\u0026#xA;\u0026#xA;import org.hibernate.Session;\u0026#xA;import org.hibernate.SessionFactory;\u0026#xA;import org.hibernate.Transaction;\u0026#xA;import org.hibernate.cfg.Configuration;\u0026#xA;\u0026#xA;public class Test {\u0026#xA;\u0026#xA; public static void main(String[] args) {\u0026#xA;  Session session \u003d null;\u0026#xA;  SessionFactory sessionFactory \u003d new Configuration().configure().buildSessionFactory();\u0026#xA;  session \u003d sessionFactory.openSession();\u0026#xA;  Transaction transaction \u003d session.getTransaction();\u0026#xA;\u0026#xA;  BusinessCard card \u003d new BusinessCard();\u0026#xA;  card.setId(1);\u0026#xA;  card.setName(\"Özgür\");\u0026#xA;  card.setDescription(\"Acıklama\");\u0026#xA;\u0026#xA;  try{\u0026#xA;  transaction.begin();\u0026#xA;  session.save(card);\u0026#xA;  transaction.commit();\u0026#xA;  } catch(Exception e){\u0026#xA;   e.printStackTrace();\u0026#xA;  }\u0026#xA;  finally{\u0026#xA;   session.close();\u0026#xA;  }\u0026#xA; }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003chr\u003e\u0026#xA;\u0026#xA;\u003cp\u003eProblems :\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eSLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\u0026#xA;SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\u0026#xA;\u0026#xA;Exception in thread \"main\" java.lang.NoClassDefFoundError:\u0026#xA;org/slf4j/impl/StaticLoggerBinder\u0026#xA; at org.slf4j.LoggerFactory.getSingleton(LoggerFactory.java:223)\u0026#xA; at org.slf4j.LoggerFactory.bind(LoggerFactory.java:120)\u0026#xA; at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:111)\u0026#xA; at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:269)\u0026#xA; at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:242)\u0026#xA; at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:255)\u0026#xA; at org.hibernate.cfg.Configuration.\u0026lt;clinit\u0026gt;(Configuration.java:152)\u0026#xA; at org.ultimania.model.Test.main(Test.java:14)\u0026#xA;Caused by: java.lang.ClassNotFoundException: org.slf4j.impl.StaticLoggerBinder\u0026#xA; at java.net.URLClassLoader$1.run(Unknown Source)\u0026#xA; at java.security.AccessController.doPrivileged(Native Method)\u0026#xA; at java.net.URLClassLoader.findClass(Unknown Source)\u0026#xA; at java.lang.ClassLoader.loadClass(Unknown Source)\u0026#xA; at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)\u0026#xA; at java.lang.ClassLoader.loadClass(Unknown Source)\u0026#xA; ... 8 more\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 295238,
+  "lastEditorUserId": 181915,
+  "lastEditDate": "Mar 16, 2010",
+  "lastActivityDate": "Mar 17, 2010",
+  "title": "Problems when data save on database by Hibernate",
+  "tags": [
+    "java",
+    "hibernate",
+    "slf4j"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

@@ -1,0 +1,24 @@
+{
+  "id": 669764,
+  "postTypeId": 1,
+  "acceptedAnswerId": 675920,
+  "parentId": 0,
+  "createDate": "Mar 21, 2009",
+  "score": 79,
+  "viewCount": 101970,
+  "body": "\u003cp\u003eI am creating a server in .NET and a client application for Android. I would like to implement an authentication method which sends username and password to server and a server sends back a session string.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m not familiar with WCF so I would really appreciate your help.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIn java I\u0027ve written the following method:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eprivate void Login()\u0026#xA;{\u0026#xA;  HttpClient httpClient \u003d new DefaultHttpClient();\u0026#xA;  try\u0026#xA;  {\u0026#xA;      String url \u003d \"http://192.168.1.5:8000/Login?username\u003dtest\u0026amp;password\u003dtest\";\u0026#xA;\u0026#xA;    HttpGet method \u003d new HttpGet( new URI(url) );\u0026#xA;    HttpResponse response \u003d httpClient.execute(method);\u0026#xA;    if ( response !\u003d null )\u0026#xA;    {\u0026#xA;      Log.i( \"login\", \"received \" + getResponse(response.getEntity()) );\u0026#xA;    }\u0026#xA;    else\u0026#xA;    {\u0026#xA;      Log.i( \"login\", \"got a null response\" );\u0026#xA;    }\u0026#xA;  } catch (IOException e) {\u0026#xA;    Log.e( \"error\", e.getMessage() );\u0026#xA;  } catch (URISyntaxException e) {\u0026#xA;    Log.e( \"error\", e.getMessage() );\u0026#xA;  }\u0026#xA;}\u0026#xA;\u0026#xA;private String getResponse( HttpEntity entity )\u0026#xA;{\u0026#xA;  String response \u003d \"\";\u0026#xA;\u0026#xA;  try\u0026#xA;  {\u0026#xA;    int length \u003d ( int ) entity.getContentLength();\u0026#xA;    StringBuffer sb \u003d new StringBuffer( length );\u0026#xA;    InputStreamReader isr \u003d new InputStreamReader( entity.getContent(), \"UTF-8\" );\u0026#xA;    char buff[] \u003d new char[length];\u0026#xA;    int cnt;\u0026#xA;    while ( ( cnt \u003d isr.read( buff, 0, length - 1 ) ) \u0026gt; 0 )\u0026#xA;    {\u0026#xA;      sb.append( buff, 0, cnt );\u0026#xA;    }\u0026#xA;\u0026#xA;      response \u003d sb.toString();\u0026#xA;      isr.close();\u0026#xA;  } catch ( IOException ioe ) {\u0026#xA;    ioe.printStackTrace();\u0026#xA;  }\u0026#xA;\u0026#xA;  return response;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut on the server side so far I haven\u0027t figured out anything.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI would be really thankful if anyone could explain how to create an appropriate method string Login(string username, string password) with appropriate App.config settings and Interface with appropriate [OperationContract] signature in order to read these two parameters from client and reply with session string.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks!\u003c/p\u003e\u0026#xA;",
+  "ownerId": 22996,
+  "ownerDisplayName": "niko",
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Feb 25, 2015",
+  "title": "How to Consume WCF Service with Android",
+  "tags": [
+    ".net",
+    "android",
+    "wcf",
+    "rest"
+  ],
+  "answerCount": 5,
+  "commentCount": 1,
+  "favoriteCount": 60
+}

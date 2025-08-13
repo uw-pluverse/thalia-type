@@ -1,0 +1,25 @@
+{
+  "id": 587917,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1279574,
+  "parentId": 0,
+  "createDate": "Feb 25, 2009",
+  "score": 69,
+  "viewCount": 70139,
+  "body": "\u003cp\u003eI am trying to launch an Intent to send an email. All of that works, but when I try to actually send the email a couple \u0027weird\u0027 things happen.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ehere is code \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eIntent sendIntent \u003d new Intent(Intent.ACTION_SEND);\u0026#xA;sendIntent.setType(\"image/jpeg\");\u0026#xA;sendIntent.putExtra(Intent.EXTRA_SUBJECT, \"Photo\");\u0026#xA;sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(\"file://sdcard/dcim/Camera/filename.jpg\"));\u0026#xA;sendIntent.putExtra(Intent.EXTRA_TEXT, \"Enjoy the photo\");\u0026#xA;startActivity(Intent.createChooser(sendIntent, \"Email:\"));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo if I launch using the Gmail menu context It shows the attachment, lets me type who the email is to, and edit the body \u0026amp; subject. No big deal. I hit send, and it sends. The only thing is the attachment does NOT get sent.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo. I figured, why not try it w/ the Email menu context (for my backup email account on my phone). It shows the attachment, but no text at all in the body or subject. When I send it, the attachment sends correctly. That would lead me to believe something is quite wrong. Do I need a new permission in the Manifest launch an intent to send email w/ attachment? What am I doing wrong?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 393258,
+  "ownerDisplayName": "Chrispix",
+  "lastEditorUserId": 1832221,
+  "lastEditDate": "Apr 13, 2015",
+  "lastActivityDate": "Nov 7, 2016",
+  "title": "Trying to attach a file from SD Card to email",
+  "tags": [
+    "android",
+    "email",
+    "attachment",
+    "android-intent"
+  ],
+  "answerCount": 13,
+  "commentCount": 1,
+  "favoriteCount": 39
+}

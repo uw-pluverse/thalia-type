@@ -1,0 +1,27 @@
+{
+  "id": 526524,
+  "postTypeId": 1,
+  "acceptedAnswerId": 526604,
+  "parentId": 0,
+  "createDate": "Feb 8, 2009",
+  "score": 49,
+  "viewCount": 85079,
+  "body": "\u003cp\u003eHow to get the time from a Chronometer? I tried getText, getFormat, getBase, etc, but none of them could work.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eExample code snippet:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eChronometer t \u003d (Chronometer)findViewById(R.id.toptime);\u0026#xA;long time \u003d SystemClock.elapsedRealtime()-t.getBase();\u0026#xA;Log.d(null,\"Was: \"+time); //time is not the proper time for some reason - it is a random number between 0 and 50\u0026#xA;t.setBase(SystemClock.elapsedRealtime());\u0026#xA;t.start();\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 764272,
+  "ownerDisplayName": "Isaac Waller",
+  "lastEditorUserId": 6910862,
+  "lastEditorDisplayName": "Isaac Waller",
+  "lastEditDate": "Jul 8, 2017",
+  "lastActivityDate": "Jul 8, 2017",
+  "title": "Android - Get time of chronometer widget",
+  "tags": [
+    "android",
+    "time",
+    "view",
+    "widget",
+    "chronometer"
+  ],
+  "answerCount": 7,
+  "commentCount": 1,
+  "favoriteCount": 24
+}

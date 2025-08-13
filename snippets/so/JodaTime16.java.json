@@ -1,0 +1,22 @@
+{
+  "id": 6387723,
+  "postTypeId": 1,
+  "acceptedAnswerId": 6422173,
+  "parentId": 0,
+  "createDate": "Jun 17, 2011",
+  "score": 3,
+  "viewCount": 4935,
+  "body": "\u003cp\u003e\u003cbr\u003e\u0026#xA;I\u0027m using joda-time (1.6.2) on a project and one of the things I\u0027m doing is getting the difference between a predicted time and an actual time.  Sometimes this difference is positive, sometimes negative.  While the appropriate approach may be to use a \u003ccode\u003eDuration\u003c/code\u003e rather than a \u003ccode\u003ePeriod\u003c/code\u003e, using a \u003ccode\u003ePeriodFormatter\u003c/code\u003e to display the result led me a question about the PeriodFormatterBuilder class.  As an example:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTime d1 \u003d new DateTime(2011, 6, 17, 13, 13, 5, 0) ;\u0026#xA;DateTime d2 \u003d new DateTime(2011, 6, 17, 10, 17, 3, 0) ;\u0026#xA;\u0026#xA;Period negativePeriod \u003d new Period(d1, d2);\u0026#xA;Period positivePeriod \u003d new Period(d2, d1);\u0026#xA;\u0026#xA;PeriodFormatter pf \u003d new PeriodFormatterBuilder()\u0026#xA;    .minimumPrintedDigits(2)\u0026#xA;    .appendHours()\u0026#xA;    .appendSuffix(\":\")\u0026#xA;    .rejectSignedValues(true) // Does this do anything?\u0026#xA;    .appendMinutes()\u0026#xA;    .appendSuffix(\":\")\u0026#xA;    .appendSeconds()\u0026#xA;    .toFormatter();\u0026#xA;\u0026#xA;System.out.printf(\"Negative Period: %s\\n\", pf.print(negativePeriod));\u0026#xA;System.out.printf(\"Positive Period: %s\\n\", pf.print(positivePeriod));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe output of this is:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eNegative Period: -02:-56:-02\u0026#xA;Positive Period: 02:56:02\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI understand that \u003ccode\u003ePeriod\u003c/code\u003e stores each component of its date and time separately, but to me, the expected behavior  of the \u003ccode\u003e.rejectSignedValues(true)\u003c/code\u003e method for building a \u003ccode\u003eFormatter\u003c/code\u003e would be to only show the \u003ccode\u003e-\u003c/code\u003e sign for only the first element like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eNegative Period: -02:56:02\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAm I misunderstanding the API, or is this a bug?  JodaStephen?  Anyone?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe work around to display what I want is not hard, but I\u0027m just curious about the Builder approach.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks,\u003cbr\u003e\u0026#xA;-Manuel\u003c/p\u003e\u0026#xA;",
+  "ownerId": 800243,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Feb 21, 2017",
+  "title": "Displaying \"negative\" time periods with Joda-Time PeriodFormatter",
+  "tags": [
+    "java",
+    "jodatime",
+    "periodformatter"
+  ],
+  "answerCount": 2,
+  "commentCount": 3,
+  "favoriteCount": 0
+}

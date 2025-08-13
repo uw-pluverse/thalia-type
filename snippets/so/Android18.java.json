@@ -1,0 +1,22 @@
+{
+  "id": 724419,
+  "postTypeId": 1,
+  "acceptedAnswerId": 726143,
+  "parentId": 0,
+  "createDate": "Apr 7, 2009",
+  "score": 6,
+  "viewCount": 6498,
+  "body": "\u003cp\u003eI have two activities running: \u003cem\u003emainActivity\u003c/em\u003e and \u003cem\u003echildActivity\u003c/em\u003e. Whenever the user clicks in the button in \u003cem\u003emainActivity\u003c/em\u003e, the \u003cem\u003echildActivity\u003c/em\u003e is launched. What I want to do is this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen the active activity is the \u003cem\u003echildActivity\u003c/em\u003e and the user \u003cstrong\u003eclicks the home button then relaunch the application\u003c/strong\u003e, I want to see the \u003cem\u003echildActivity\u003c/em\u003e \u003cstrong\u003einstead of\u003c/strong\u003e \u003cem\u003emainActivity\u003c/em\u003e that is launched. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI had some suggestions actually work arounds. I tried to manipulate onStart, onRestart, onResume, onStop, onDestroy events. But, they didn\u0027t fully solve the problem. There should be a smart way out there. Thank you.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eEdit: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThank you for the answer, Soonil. The case you said is happening when the activity is called from recent activities window. (the window opened when you long press the home button) However; This is not happening when you open it from home screen. (like opening from start) I don\u0027t think my code has a specific problem to generate this error. Because, I created a test project and tried standalone before sending the question and faced the same problem. Anyhow, here is the test code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class MainActivity extends Activity implements OnClickListener {\u0026#xA;    /** Called when the activity is first created. */\u0026#xA;    @Override\u0026#xA;    public void onCreate(Bundle savedInstanceState) {\u0026#xA;        super.onCreate(savedInstanceState);\u0026#xA;        setContentView(R.layout.main);\u0026#xA;        this.setTitle(\"MainActivity\");\u0026#xA;\u0026#xA;        ((Button) findViewById(R.id.btnChildActivity)).setOnClickListener(this);\u0026#xA;    }\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public void onClick(View arg0) {\u0026#xA;        // TODO Auto-generated method stub\u0026#xA;        startActivity(new Intent(this, ChildActivity.class));\u0026#xA;    }\u0026#xA;\u0026#xA;}\u0026#xA;\u0026#xA;public class ChildActivity extends Activity {\u0026#xA;    /** Called when the activity is first created. */\u0026#xA;    @Override\u0026#xA;    public void onCreate(Bundle savedInstanceState) {\u0026#xA;        super.onCreate(savedInstanceState);\u0026#xA;        setContentView(R.layout.main2);\u0026#xA;        this.setTitle(\"ChildActivity\");\u0026#xA;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 40929,
+  "lastEditorUserId": 40929,
+  "lastEditDate": "Apr 7, 2009",
+  "lastActivityDate": "Oct 8, 2010",
+  "title": "Android: Restoring the active Activity while resuming the application",
+  "tags": [
+    "android",
+    "android-activity"
+  ],
+  "answerCount": 2,
+  "commentCount": 5,
+  "favoriteCount": 5
+}

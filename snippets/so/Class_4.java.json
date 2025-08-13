@@ -1,0 +1,23 @@
+{
+  "id": 3481828,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3481842,
+  "parentId": 0,
+  "createDate": "Aug 14, 2010",
+  "score": 1730,
+  "viewCount": 4101538,
+  "body": "\u003cp\u003eI have a string, \u003ccode\u003e\"004-034556\"\u003c/code\u003e, that I want to split into two strings:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003estring1\u003d\"004\";\u0026#xA;string2\u003d\"034556\";\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThat means the first string will contain the characters before \u003ccode\u003e\u0027-\u0027\u003c/code\u003e, and the second string will contain the characters after \u003ccode\u003e\u0027-\u0027\u003c/code\u003e. I also want to check if the string has \u003ccode\u003e\u0027-\u0027\u003c/code\u003e in it. If not, I will throw an exception. How can I do this?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 303459,
+  "lastEditorUserId": 3614215,
+  "lastEditDate": "Feb 29, 2020",
+  "lastActivityDate": "Jan 21, 2021",
+  "title": "How to split a string in Java",
+  "tags": [
+    "java",
+    "string",
+    "split"
+  ],
+  "answerCount": 35,
+  "commentCount": 0,
+  "favoriteCount": 411
+}

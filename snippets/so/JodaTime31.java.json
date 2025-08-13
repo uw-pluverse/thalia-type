@@ -1,0 +1,22 @@
+{
+  "id": 9543331,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Mar 3, 2012",
+  "score": 4,
+  "viewCount": 7983,
+  "body": "\u003cp\u003eI wanted to get the number of weeks and months between two date range in Java. For ex., \u0026#xA;Start Date: 03/01/2012\u0026#xA;End Date:   03/05/2012\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSince the two dates fall in two different weeks I want the result to be 2 instead of 0. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSecond part of the problem is: \u0026#xA;Start Date: 02/29/2012\u0026#xA;End Date: 03/01/2012\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eNumber of months in between should be 2. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have been searching online regarding this and lot of people have recommended using Joda Date time in Java. So I gave it a shot. I was able to get the weeks working but I am not sure if this is the right way. Here is what I am doing to get the week duration:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    DateTime s \u003d new DateTime(Long.parseLong(\"1330573027000\")); // 2012-02-29\u0026#xA;    DateTime e \u003d new DateTime(Long.parseLong(\"1331005027000\")); // 2012-03-05   \u0026#xA;\u0026#xA;    Weeks weeks \u003d Weeks.weeksBetween(s, e).plus(1);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis returns 1, when I am expecting 2 since two dates are in different weeks. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eFor months duration I tried to follow the same but it returns 0 but I want it to return 2 since the two dates are in two different months. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCould someone please point me in right direction?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks!\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eEdit:\u003c/strong\u003e \u0026#xA;I think I got one way of doing it, please let me know if it looks right:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    DateTime start \u003d new DateTime(Long.parseLong(\"1330659427000\"));\u0026#xA;    DateTime start \u003d new DateTime(Long.parseLong(\"1331005027000\"));\u0026#xA;\u0026#xA;    DateTime finalStart \u003d start.dayOfWeek().withMinimumValue();\u0026#xA;    DateTime finalEnd   \u003d end.dayOfWeek().withMaximumValue();\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnd then get the difference between finalStart and finalEnd. Does this looks correct?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eEdit2\u003c/strong\u003e \u0026#xA;Updated the end time\u003c/p\u003e\u0026#xA;",
+  "ownerId": 916075,
+  "lastEditorUserId": 916075,
+  "lastEditDate": "Mar 3, 2012",
+  "lastActivityDate": "Jun 17, 2014",
+  "title": "Week between two dates Java + Joda Time",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 7,
+  "favoriteCount": 1
+}

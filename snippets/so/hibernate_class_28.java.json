@@ -1,0 +1,24 @@
+{
+  "id": 3182759,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3185432,
+  "parentId": 0,
+  "createDate": "Jul 5, 2010",
+  "score": 0,
+  "viewCount": 789,
+  "body": "\u003cp\u003eI am creating a website that will have articles; each article will have comments. These comments will be stored in a \"comment\" table with a field called \"parent_id\" that is a foreign key to the field \"id\" in the same table. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI am hoping to use Hibernate to recursively grab all of the comments for a specific article. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere is my Entity:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport java.io.Serializable;\u0026#xA;import java.util.ArrayList;\u0026#xA;import java.util.List;\u0026#xA;import javax.persistence.Column;\u0026#xA;import javax.persistence.Entity;\u0026#xA;import javax.persistence.GeneratedValue;\u0026#xA;import javax.persistence.GenerationType;\u0026#xA;import javax.persistence.Id;\u0026#xA;import javax.persistence.JoinColumn;\u0026#xA;import javax.persistence.ManyToOne;\u0026#xA;import javax.persistence.OneToMany;\u0026#xA;import org.hibernate.annotations.IndexColumn;\u0026#xA;\u0026#xA;@Entity\u0026#xA;public class Comment implements Serializable {\u0026#xA;    @Id\u0026#xA;    @GeneratedValue(strategy\u003dGenerationType.AUTO)\u0026#xA;    private int id;\u0026#xA;    @ManyToOne\u0026#xA;    @JoinColumn(name\u003d\"user_id\")\u0026#xA;    private User user;\u0026#xA;    @OneToMany(targetEntity\u003dComment.class)\u0026#xA;    @JoinColumn(name\u003d\"parent_id\")\u0026#xA;    @IndexColumn(name\u003d\"id\", base\u003d0)\u0026#xA;    private List\u0026lt;Comment\u0026gt; comments \u003d new ArrayList\u0026lt;Comment\u0026gt;();\u0026#xA;    @Column(name\u003d\"article_id\", length\u003d10)\u0026#xA;    private int articleId;\u0026#xA;    @Column(name\u003d\"text\", length\u003d8192)\u0026#xA;    private String text;\u0026#xA;\u0026#xA;    public int getArticleId() {\u0026#xA;        return articleId;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setArticleId(int articleId) {\u0026#xA;        this.articleId \u003d articleId;\u0026#xA;    }\u0026#xA;\u0026#xA;    public int getId() {\u0026#xA;        return id;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setId(int id) {\u0026#xA;        this.id \u003d id;\u0026#xA;    }\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;    public String getText() {\u0026#xA;        return text;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setText(String text) {\u0026#xA;        this.text \u003d text;\u0026#xA;    }\u0026#xA;\u0026#xA;    public User getUser() {\u0026#xA;        return user;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setUser(User user) {\u0026#xA;        this.user \u003d user;\u0026#xA;    }\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public String toString() {\u0026#xA;        return \"Comment [\" + \"articleId \" + articleId + \" \" + \"id \" + id + \" \"  + \"text \" + text + \" \" + \"]\";\u0026#xA;    }\u0026#xA;\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe code is \"kinda\" working, however, when all of the comments are retrieved the \"child\" list of comments contains the same number of elements as there are total comments (if that makes sense. For instance, assume I have only three comments in the table for article with id number 1... this article with 2 comments, and one of the comments has a child comment.. the array with the child comment has 3 entries, the first 2 are null and the last is the child comment. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs this code correct?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 54356,
+  "lastEditorUserId": 70604,
+  "lastEditDate": "Jul 6, 2010",
+  "lastActivityDate": "Mar 16, 2011",
+  "title": "How to create an @Entity with a parent/child relationship",
+  "tags": [
+    "java",
+    "mysql",
+    "hibernate",
+    "orm"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

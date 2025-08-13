@@ -1,0 +1,23 @@
+{
+  "id": 896889,
+  "postTypeId": 1,
+  "acceptedAnswerId": 906458,
+  "parentId": 0,
+  "createDate": "May 22, 2009",
+  "score": 6,
+  "viewCount": 19263,
+  "body": "\u003cp\u003eI\u0027m developing an application for the android OS, I\u0027m just starting, but I can\u0027t get the GPS on the emulator to work.\u0026#xA;I\u0027ve read on the internet that you need to send a geo fix to the emulator in order to enable the gps locationProvider. I\u0027m both using the DDMS and telnet to try to send it, but logcat never tells me the it recived a new fix, and my apolication still sees the gps as disabled \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ehere\u0027s my code\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage eu.mauriziopz.gps;\u0026#xA;\u0026#xA;import java.util.Iterator;\u0026#xA;import java.util.List;\u0026#xA;\u0026#xA;import android.app.Activity;\u0026#xA;import android.content.Context;\u0026#xA;import android.location.LocationManager;\u0026#xA;import android.os.Bundle;\u0026#xA;import android.util.Log;\u0026#xA;\u0026#xA;public class ggps extends Activity {\u0026#xA;    /** Called when the activity is first created. */\u0026#xA;    @Override\u0026#xA;    public void onCreate(Bundle savedInstanceState) {\u0026#xA;        super.onCreate(savedInstanceState);\u0026#xA;        setContentView(R.layout.main);\u0026#xA;\u0026#xA;        LocationManager l \u003d(LocationManager) getSystemService(Context.LOCATION_SERVICE);\u0026#xA;        List\u0026lt;String\u0026gt; li \u003d l.getAllProviders();\u0026#xA;        for (Iterator\u0026lt;String\u0026gt; iterator \u003d li.iterator(); iterator.hasNext();) {\u0026#xA;            String string \u003d  iterator.next();\u0026#xA;            Log.d(\"gps\", string);\u0026#xA;        }\u0026#xA;        if (l.getLastKnownLocation(\"gps\")\u003d\u003dnull)\u0026#xA;            Log.d(\"gps\", \"null\");   \u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve read that the DDMS may not work properly on a non english OS, but telnet should work!\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eupdate: the gps is enabled in the settings\u003c/p\u003e\u0026#xA;",
+  "ownerId": 61996,
+  "lastEditorUserId": 147141,
+  "lastEditDate": "Oct 7, 2009",
+  "lastActivityDate": "Oct 24, 2012",
+  "title": "GPS on emulator doesn\u0027t get the geo fix - Android",
+  "tags": [
+    "android",
+    "eclipse",
+    "gps"
+  ],
+  "answerCount": 4,
+  "commentCount": 2,
+  "favoriteCount": 3
+}

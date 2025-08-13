@@ -1,0 +1,37 @@
+```java
+import java.util.Map;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.JoinType;
+import org.hibernate.service.spi.HibernateService;
+import org.hibernate.query.Query;
+import org.hibernate.query.QueryResultsRegionAdapter;
+import org.hibernate.metamodel.spi.MetamodelImplementor;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
+import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.internal.AbstractEntityManagerImpl;
+import org.hibernate.internal.CriteriaBuilderImpl;
+import org.hibernate.internal.QueryImpl;
+import org.hibernate.internal.util.collections.Pair;
+import org.hibernate.internal.util.collections.Triple;
+import org.hibernate.internal.util.collections.TupleElementImplementor;
+import org.hibernate.internal.util.collections.MapAttribute;
+import org.hibernate.internal.util.collections.MapAttributeJoin;
+import org.hibernate.internal.util.collections.GlobalConfiguration;
+import org.hibernate.internal.util.collections.WhenClause;
+import org.hibernate.internal.util.collections.StatisticsServiceMBean;
+import org.hibernate.internal.util.collections.MiddleSimpleComponentMapper;
+import org.hibernate.internal.util.collections.ExitOperationsCollector;
+import org.hibernate.internal.util.collections.FirstNonNullResultExitStrategy;
+import org.hibernate.internal.util.collections.LegacyHiLoAlgorithmOptimizer;
+import org.hibernate.internal.util.collections.RevisionTypeAuditExpression;
+import org.hibernate.internal.util.collections.ValidatePreUpdateEventListener;
+import org.hibernate.internal.util.collections.Renderable;
+import org.hibernate.internal.util.collections.Shard;
+import org.hibernate.internal.util.collections.MapKeyPath;
+import org.hibernate.internal.util.collections.SelectParser;
+import org.hibernate.internal.util.collections.Vertex;
+import org.hibernate.internal.util.collections.TupleElementImplementor;
+import org.hibernate.internal.util.collections.Assert;
+import org.hibernate.internal.util.collections.AssertionFailure;
+```

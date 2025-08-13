@@ -1,0 +1,22 @@
+{
+  "id": 2885173,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2885224,
+  "parentId": 0,
+  "createDate": "May 21, 2010",
+  "score": 1427,
+  "viewCount": 2929553,
+  "body": "\u003cp\u003eWhat\u0027s the simplest way to \u003ca href\u003d\"https://docs.oracle.com/javase/tutorial/essential/io/file.html\" rel\u003d\"nofollow noreferrer\"\u003ecreate and write to a (text) file in Java\u003c/a\u003e?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 57643,
+  "lastEditorUserId": 1536976,
+  "lastEditDate": "Jan 27, 2021",
+  "lastActivityDate": "Jan 27, 2021",
+  "title": "How do I create a file and write to it?",
+  "tags": [
+    "java",
+    "file-io"
+  ],
+  "answerCount": 33,
+  "commentCount": 0,
+  "favoriteCount": 344
+}

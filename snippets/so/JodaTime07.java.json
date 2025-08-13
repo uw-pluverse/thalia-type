@@ -1,0 +1,22 @@
+{
+  "id": 3329469,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3329484,
+  "parentId": 0,
+  "createDate": "Jul 25, 2010",
+  "score": 4,
+  "viewCount": 18641,
+  "body": "\u003cp\u003eI want to get the difference between two Java Date objects. I\u0027ve used Joda-Time library. But the problem is that I\u0027m getting the Days greater difference than that of actual day difference. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere\u0027s my code snippet:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateFormat formatter \u003d new SimpleDateFormat(\"mm/dd/yyyy\");\u0026#xA;\u0026#xA;Date someDate\u003dnew Date();\u0026#xA;Date today \u003d Calendar.getInstance().getTime();\u0026#xA;\u0026#xA;try     {\u0026#xA;    someDate \u003d formatter.parse(\"06/22/2010\");\u0026#xA;}\u0026#xA;catch(ParseException pe)    {\u0026#xA;    System.out.println(\"Parser Exception\");\u0026#xA;}\u0026#xA;\u0026#xA;int days \u003d Days.daysBetween(new DateTime(someDate), new DateTime(today)).getDays();\u0026#xA;\u0026#xA;System.out.println(\" Days Between \" + someDate + \" : \" + today + \" - \" + days);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere\u0027s my output:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e Days Between Fri Jan 22 00:06:00 IST 2010 : Sun Jul 25 19:27:01 IST 2010 - 184\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere, Why does it takes \"06/22/2010\" as Jan 22? Does anyone face similar problem? \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHelp me friends.. Thanx in advance..\u003c/p\u003e\u0026#xA;",
+  "ownerId": 377775,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Aug 17, 2014",
+  "title": "Difference in Days between two Java dates?",
+  "tags": [
+    "java",
+    "jodatime",
+    "datediff"
+  ],
+  "answerCount": 5,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

@@ -1,0 +1,24 @@
+{
+  "id": 2182950,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Feb 2, 2010",
+  "score": 8,
+  "viewCount": 21732,
+  "body": "\u003cp\u003eMorning.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI need to add indexing in hibernate entity. As I know it is possible to do using @Index annotation to specify index for separate column but I need an index for several fields of entity.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve googled and found jboss annotation @Table, that allows to do this (by specification). But (I don\u0027t know why) this functionality doesn\u0027t work. May be jboss version is lower than necessary, or maybe I don\u0027t understant how to use this annotation, but... complex index is not created. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhy index may not be created?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ejboss version 4.2.3.GA\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eEntity example:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage somepackage;\u0026#xA;import org.hibernate.annotations.Index;\u0026#xA;\u0026#xA;import javax.persistence.Column;\u0026#xA;import javax.persistence.Entity;\u0026#xA;import javax.persistence.GeneratedValue;\u0026#xA;import javax.persistence.Id;\u0026#xA;\u0026#xA;@Entity\u0026#xA;@org.hibernate.annotations.Table(appliesTo \u003d House.TABLE_NAME,\u0026#xA;    indexes \u003d {\u0026#xA;            @Index(name \u003d \"IDX_XDN_DFN\",\u0026#xA;                    columnNames \u003d {House.XDN, House.DFN}\u0026#xA;            )\u0026#xA;    }\u0026#xA;)\u0026#xA;\u0026#xA;public class House {\u0026#xA;    public final static String TABLE_NAME \u003d \"house\";\u0026#xA;    public final static String XDN \u003d \"xdn\";\u0026#xA;    public final static String DFN \u003d \"dfn\";\u0026#xA;\u0026#xA;    @Id\u0026#xA;    @GeneratedValue\u0026#xA;    private long Id;\u0026#xA;\u0026#xA;    @Column(name \u003d XDN)\u0026#xA;    private long xdn;\u0026#xA;\u0026#xA;    @Column(name \u003d DFN)\u0026#xA;    private long dfn;\u0026#xA;\u0026#xA;    @Column\u0026#xA;    private String address;\u0026#xA;\u0026#xA;    public long getId() {\u0026#xA;        return Id;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setId(long id) {\u0026#xA;        this.Id \u003d id;\u0026#xA;    }\u0026#xA;\u0026#xA;    public long getXdn() {\u0026#xA;        return xdn;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setXdn(long xdn) {\u0026#xA;        this.xdn \u003d xdn;\u0026#xA;    }\u0026#xA;\u0026#xA;    public long getDfn() {\u0026#xA;        return dfn;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setDfn(long dfn) {\u0026#xA;        this.dfn \u003d dfn;\u0026#xA;    }\u0026#xA;\u0026#xA;    public String getAddress() {\u0026#xA;        return address;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setAddress(String address) {\u0026#xA;        this.address \u003d address;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen jboss/hibernate tries to create table \"house\" it throws following exception:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eReason: org.hibernate.AnnotationException: @org.hibernate.annotations.Table references an unknown table: house\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 217771,
+  "lastEditorUserId": 70604,
+  "lastEditDate": "May 1, 2010",
+  "lastActivityDate": "May 1, 2010",
+  "title": "How to define index by several columns in hibernate entity?",
+  "tags": [
+    "java",
+    "hibernate",
+    "orm",
+    "jboss"
+  ],
+  "answerCount": 3,
+  "commentCount": 4,
+  "favoriteCount": 4
+}

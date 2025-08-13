@@ -1,0 +1,34 @@
+```java
+import java.util.Map;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Query;
+import javax.persistence.criteria.MapAttribute;
+import javax.persistence.criteria.AbstractEntityManagerImpl;
+import javax.persistence.criteria.QueryBinder;
+import javax.persistence.criteria.TypeSwitch;
+import javax.persistence.criteria.NoOpValueHandler;
+import javax.persistence.criteria.Pair;
+import javax.persistence.criteria.Triple;
+import javax.persistence.criteria.LiteralExpression;
+import javax.persistence.criteria.WildcardType;
+import javax.persistence.criteria.ExitOperationsCollector;
+import javax.persistence.criteria.ExitStrategy;
+import javax.persistence.criteria.Shard;
+import javax.persistence.criteria.ShardOperation;
+import javax.persistence.criteria.SupportsIdentityColumns;
+import javax.persistence.criteria.IllegalDereferenceException;
+import javax.persistence.criteria.ResinTransactionManagerLookup;
+import javax.persistence.criteria.InformixDialect;
+import javax.persistence.criteria.QueryImpl;
+import javax.persistence.criteria.NamedParameterSource;
+import javax.persistence.criteria.JoinType;
+import javax.persistence.criteria.WhenClause;
+import javax.persistence.criteria.Initializor;
+import javax.persistence.criteria.MapProxy;
+import javax.persistence.criteria.ExpressionImplementor;
+import javax.persistence.criteria.MapAttributeJoin;
+import javax.persistence.criteria.PessimisticReadSelectLockingStrategy;
+import javax.persistence.criteria.ValidatePreUpdateEventListener;
+import javax.persistence.criteria.MiddleRelatedComponentMapper;
+```

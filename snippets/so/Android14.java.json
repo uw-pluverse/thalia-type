@@ -1,0 +1,26 @@
+{
+  "id": 576513,
+  "postTypeId": 1,
+  "acceptedAnswerId": 576562,
+  "parentId": 0,
+  "createDate": "Feb 23, 2009",
+  "score": 71,
+  "viewCount": 78832,
+  "body": "\u003cp\u003eI am having problems downloading a binary file (video) in my app from the internet. In Quicktime, If I download it directly it works fine but through my app somehow it get\u0027s messed up (even though they look exactly the same in a text editor). Here is a example:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    URL u \u003d new URL(\"http://www.path.to/a.mp4?video\");\u0026#xA;    HttpURLConnection c \u003d (HttpURLConnection) u.openConnection();\u0026#xA;    c.setRequestMethod(\"GET\");\u0026#xA;    c.setDoOutput(true);\u0026#xA;    c.connect();\u0026#xA;    FileOutputStream f \u003d new FileOutputStream(new File(root,\"Video.mp4\"));\u0026#xA;\u0026#xA;\u0026#xA;    InputStream in \u003d c.getInputStream();\u0026#xA;\u0026#xA;    byte[] buffer \u003d new byte[1024];\u0026#xA;    int len1 \u003d 0;\u0026#xA;    while ( (len1 \u003d in.read(buffer)) \u0026gt; 0 ) {\u0026#xA;         f.write(buffer);\u0026#xA;    }\u0026#xA;    f.close();\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 764272,
+  "ownerDisplayName": "Isaac Waller",
+  "lastEditorUserId": 764272,
+  "lastEditDate": "Dec 31, 2009",
+  "lastActivityDate": "Feb 26, 2015",
+  "title": "Android download binary file problems",
+  "tags": [
+    "java",
+    "android",
+    "download",
+    "httpurlconnection",
+    "fileoutputstream"
+  ],
+  "answerCount": 6,
+  "commentCount": 0,
+  "favoriteCount": 47
+}

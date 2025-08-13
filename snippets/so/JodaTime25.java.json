@@ -1,0 +1,21 @@
+{
+  "id": 8654398,
+  "postTypeId": 1,
+  "acceptedAnswerId": 8654440,
+  "parentId": 0,
+  "createDate": "Dec 28, 2011",
+  "score": 0,
+  "viewCount": 127,
+  "body": "\u003cp\u003eI am trying to calculate the number of days between two dates like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic static int getDaysBetweenTwoDates(final LocalDateTime oldDate,\u0026#xA;        final LocalDateTime newDate) {\u0026#xA;    System.out.println(\"--Calculate days between: \" + oldDate.toString()\u0026#xA;            + \"-\u0026gt;\" + newDate);\u0026#xA;    Days days \u003d Days.daysBetween(new DateMidnight(oldDate.toDateTime()),\u0026#xA;            new DateMidnight(newDate.toDateTime()));\u0026#xA;    System.out.println(\"----DIFF: \" + days.size());\u0026#xA;    return days.size();\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWell, I can\u0027t understand why between 10th December and 28th December it returns \"1\" as result:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e--Calculate days between: 2011-12-10T00:00:00.000-\u0026gt;2011-12-28T12:01:07.577\u0026#xA;----DIFF: 1\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDo you see any reason?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eUpdate: I\u0027ve also tried to keep it simple but it still does not work:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDays days \u003d Days.daysBetween(oldDate, newDate);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 174349,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Dec 28, 2011",
+  "title": "Why daysBetween is wrong here?",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

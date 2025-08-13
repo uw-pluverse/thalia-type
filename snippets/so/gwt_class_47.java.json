@@ -1,0 +1,24 @@
+{
+  "id": 3618678,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Sep 1, 2010",
+  "score": 1,
+  "viewCount": 1074,
+  "body": "\u003cp\u003eI have the following code.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport com.google.gwt.core.client.EntryPoint;\u0026#xA;import com.google.gwt.user.client.ui.UIObject;\u0026#xA;import com.google.gwt.dom.client.Style.Unit;\u0026#xA;import com.google.gwt.user.client.ui.HTML;\u0026#xA;import com.google.gwt.user.client.ui.LayoutPanel;\u0026#xA;import com.google.gwt.user.client.ui.RootLayoutPanel;\u0026#xA;import com.google.gwt.user.client.ui.Widget;\u0026#xA;\u0026#xA;public class LayoutPanelExample implements EntryPoint{\u0026#xA;    @Override\u0026#xA;     public void onModuleLoad() {\u0026#xA;         Widget childone \u003d new HTML(\"left\"),childtwo\u003dnew HTML(\"right\");\u0026#xA;         LayoutPanel p \u003d new LayoutPanel();\u0026#xA;         p.add(childone);\u0026#xA;         p.add(childtwo);\u0026#xA;         p.setWidgetLeftWidth(childone, 0, PCT, 50, PCT);\u0026#xA;         p.setWidgetRightWidth(childtwo, 0, PCT, 50, PCT);\u0026#xA;         RootLayoutPanel rp \u003d RootLayoutPanel.get();\u0026#xA;         rp.add(p);\u0026#xA;     }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut it shows me this error:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eC:\\XAMPP\\xampp\\htdocs\\LayoutPanelExample\\src\\java\\LayoutPanelExample.java:19: cannot find symbol\u0026#xA;symbol  : variable PCT\u0026#xA;location: class LayoutPanelExample\u0026#xA;     p.setWidgetLeftWidth(childone, 0, PCT, 50, PCT);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut I have seen on the Internet that it is possible to declare PCT like this. Should I import some addition header or what to do?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 466534,
+  "lastEditorUserId": 63550,
+  "lastEditDate": "Oct 30, 2011",
+  "lastActivityDate": "Oct 30, 2011",
+  "title": "Importing enums in GWT",
+  "tags": [
+    "java",
+    "gwt",
+    "enums",
+    "import"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

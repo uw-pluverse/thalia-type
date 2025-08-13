@@ -1,0 +1,22 @@
+{
+  "id": 904376,
+  "postTypeId": 1,
+  "acceptedAnswerId": 908617,
+  "parentId": 0,
+  "createDate": "May 24, 2009",
+  "score": 2,
+  "viewCount": 7896,
+  "body": "\u003cp\u003eI have a parent \u003ccode\u003eScrollView\u003c/code\u003e with a child view. When the user presses the back button, I want the child view to handle the event. I have tried a couple of things but none of them seem to work. Pressing the back button kills the activity.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class GameScrollView extends ScrollView{\u0026#xA;\u0026#xA;     public GameScrollView(Context context) {\u0026#xA;          super(context);\u0026#xA;     }\u0026#xA;     @Override\u0026#xA;     public boolean onInterceptTouchEvent (MotionEvent ev){\u0026#xA;          return false;\u0026#xA;\u0026#xA;     }\u0026#xA;     @Override\u0026#xA;     public boolean onKeyDown (int keyCode, KeyEvent event){\u0026#xA;          return false;\u0026#xA;\u0026#xA;     }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ein the child view I have the following code\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class GameView extends View implements OnTouchListener, onKeyListener{\u0026#xA;\u0026#xA;     public boolean onKey(View v, int keyCode, KeyEvent event){\u0026#xA;          if(keyCode \u003d\u003d KeyEvent.KEYCODE_BACK){\u0026#xA;                    //do stuff\u0026#xA;          }\u0026#xA;          invalidate();\u0026#xA;          return true;        \u0026#xA;     }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIn the \u003ccode\u003eScrollView\u003c/code\u003e I have also tried overriding the \u003ccode\u003edispatchKeyEvent\u003c/code\u003emethod to return false, but that did not work either. What am I doing wrong here?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks!\u003c/p\u003e\u0026#xA;",
+  "ownerId": 98778,
+  "lastEditorUserId": 5782490,
+  "lastEditDate": "Sep 9, 2016",
+  "lastActivityDate": "Sep 9, 2016",
+  "title": "Opening childview back from scrollview",
+  "tags": [
+    "android",
+    "android-scrollview"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

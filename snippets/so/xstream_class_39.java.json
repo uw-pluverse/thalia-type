@@ -1,0 +1,25 @@
+{
+  "id": 26862650,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Nov 11, 2014",
+  "score": 1,
+  "viewCount": 281,
+  "body": "\u003cp\u003eNow I am using \u003ccode\u003exStream\u003c/code\u003e to parse a object into xml-format String. What I hope is that when I parse xml I can do something I want to according to different fileds, say if I encounter filed A, I will add CDATA Block before it, when I encounter filed B, I will make it into upper case, something like this, and here is what I am doing now.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic static String textMessageToXml(ResponseTextMessage textMsg){\u0026#xA;    xstream.alias(\"xml\", textMsg.getClass());\u0026#xA;    return xstream.toXML(textMsg);\u0026#xA;}  \u0026#xA;\u0026#xA;private static XStream xstream \u003d new XStream(new XppDriver() {\u0026#xA;        @Override\u0026#xA;        public HierarchicalStreamWriter createWriter(Writer out) {  \u0026#xA;            return new PrettyPrintWriter(out) {  \u0026#xA;                // Add CDATA block  \u0026#xA;                boolean cdata \u003d ...;//I need to add cdata for some fields only  \u0026#xA;                boolean isNeedUpper\u003d...;//only some will need this\u0026#xA;\u0026#xA;                protected void writeText(QuickWriter writer, String text) {  \u0026#xA;                    if (cdata) {  \u0026#xA;                        writer.write(\"\u0026lt;![CDATA[\");  \u0026#xA;                        writer.write(text);  \u0026#xA;                        writer.write(\"]]\u0026gt;\");  \u0026#xA;                    } else if (isNeedUpper){  \u0026#xA;                        writer.write(text.toUpperCase());  \u0026#xA;                    }  \u0026#xA;                    else writer.write(text);\u0026#xA;                }  \u0026#xA;            };  \u0026#xA;        }  \u0026#xA;    });\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 2087628,
+  "lastEditorUserId": 2087628,
+  "lastEditDate": "Nov 11, 2014",
+  "lastActivityDate": "Nov 11, 2014",
+  "title": "How to control parsing xml using xStream?",
+  "tags": [
+    "java",
+    "xml",
+    "xml-parsing",
+    "marshalling",
+    "xstream"
+  ],
+  "answerCount": 0,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

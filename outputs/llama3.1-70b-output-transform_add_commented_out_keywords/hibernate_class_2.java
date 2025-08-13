@@ -1,0 +1,17 @@
+Here are the necessary import statements:
+
+```java
+import javax.persistence.Cache;
+import javax.persistence.CacheConcurrencyStrategy;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import java.io.Serializable;
+import java.util.List;
+```
+
+Note that I've excluded the `CascadeType` import since it's already imported statically.

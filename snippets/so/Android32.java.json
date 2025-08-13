@@ -1,0 +1,22 @@
+{
+  "id": 1032912,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Jun 23, 2009",
+  "score": 23,
+  "viewCount": 43652,
+  "body": "\u003cp\u003eI would like to create a video recorder and so far haven\u0027t figured out how to set parameters in order to successfully go through MediaRecorder.prepare() method.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eExecuting the following method\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic void start() throws IOException{\u0026#xA;    String state \u003d android.os.Environment.getExternalStorageState();\u0026#xA;    if(!state.equals(Environment.MEDIA_MOUNTED))\u0026#xA;    {\u0026#xA;        throw new IOException(\"SD card is not mounted. It is \" + state + \".\");\u0026#xA;    }\u0026#xA;    File directory \u003d new File(path).getParentFile();\u0026#xA;    if(!directory.exists() \u0026amp;\u0026amp; !directory.mkdirs())\u0026#xA;    {\u0026#xA;        throw new IOException(\"Path to file could not be created.\");\u0026#xA;    }\u0026#xA;\u0026#xA;    recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);\u0026#xA;    recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);\u0026#xA;    recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);\u0026#xA;    recorder.setVideoFrameRate(15);\u0026#xA;    recorder.setVideoSize(176, 144);\u0026#xA;    recorder.setOutputFile(path);\u0026#xA;    recorder.prepare();\u0026#xA;    recorder.start();\u0026#xA;    this.state \u003d VideoRecorderState.STATE_RECORDING;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eit throws an exception on line \u003ccode\u003erecorder.prepare().\u003c/code\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow to set parameters in order to be able to capture video?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 22996,
+  "lastEditorUserId": 1033581,
+  "lastEditDate": "Dec 6, 2018",
+  "lastActivityDate": "Dec 6, 2018",
+  "title": "How to capture video in Android?",
+  "tags": [
+    "android",
+    "video-capture"
+  ],
+  "answerCount": 7,
+  "commentCount": 1,
+  "favoriteCount": 19
+}

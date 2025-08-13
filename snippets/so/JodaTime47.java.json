@@ -1,0 +1,24 @@
+{
+  "id": 1327229,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1327331,
+  "parentId": 0,
+  "createDate": "Aug 25, 2009",
+  "score": 54,
+  "viewCount": 36557,
+  "body": "\u003cp\u003eThis snippet of code always parses the date into the current timezone, and not into the timezone in the string being parsed.     \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003efinal DateTimeFormatter df \u003d DateTimeFormat\u0026#xA;        .forPattern(\"EEE MMM dd HH:mm:ss \u0027GMT\u0027Z yyyy\");\u0026#xA;final DateTime dateTime \u003d df\u0026#xA;        .parseDateTime(\"Mon Aug 24 12:36:46 GMT+1000 2009\");\u0026#xA;System.out.println(\"dateTime \u003d \" + dateTime);\u0026#xA;// outputs dateTime \u003d 2009-08-24T04:36:46.000+02:00\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIt outputs:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003edateTime \u003d 2009-08-24T04:36:46.000+02:00\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ewhereas I expect:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003edateTime \u003d 2009-08-24T04:36:46.000+10:00\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny ideas what I\u0027m doing wrong?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 2959,
+  "lastEditorUserId": 356895,
+  "lastEditDate": "May 27, 2015",
+  "lastActivityDate": "May 27, 2015",
+  "title": "How can I parse a date including timezone with Joda Time",
+  "tags": [
+    "java",
+    "datetime",
+    "timezone",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 6
+}

@@ -1,0 +1,23 @@
+{
+  "id": 9711454,
+  "postTypeId": 1,
+  "acceptedAnswerId": 9711483,
+  "parentId": 0,
+  "createDate": "Mar 14, 2012",
+  "score": 111,
+  "viewCount": 58275,
+  "body": "\u003cp\u003eI need to get the first date (as \u003ccode\u003eorg.joda.time.LocalDate\u003c/code\u003e) of a month and the last one. Getting the first is trivial, but getting the last seems to need some logic as months have different length and February length even varies over years. Is there a mechanism for this already built in to JodaTime or should I implement it myself?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 274627,
+  "lastEditorUserId": 274627,
+  "lastEditDate": "Mar 14, 2012",
+  "lastActivityDate": "Aug 11, 2018",
+  "title": "How to get the last date of a particular month with JodaTime?",
+  "tags": [
+    "java",
+    "scala",
+    "jodatime"
+  ],
+  "answerCount": 4,
+  "commentCount": 1,
+  "favoriteCount": 16
+}

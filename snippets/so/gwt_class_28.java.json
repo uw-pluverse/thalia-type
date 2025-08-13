@@ -1,0 +1,24 @@
+{
+  "id": 2389999,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2390445,
+  "parentId": 0,
+  "createDate": "Mar 5, 2010",
+  "score": 1,
+  "viewCount": 3465,
+  "body": "\u003cp\u003eI am trying out GWT in this \u0027configuration\u0027:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e1) I have written a server backend in python which will produce json output (running at localhot:8094)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e2) I have written a very simple GWT app that will use RequestBuilder to set GET to the python server (in development mode of the GWT eclipse plugin, it is accessible via \u003ca href\u003d\"http://127.0.0.1:8888/test.html\" rel\u003d\"nofollow noreferrer\"\u003ehttp://127.0.0.1:8888/test.html\u003c/a\u003e)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe code is simply\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e/**\u0026#xA; * Entry point classes define \u0026lt;code\u0026gt;onModuleLoad()\u0026lt;/code\u0026gt;.\u0026#xA; */\u0026#xA;public class Test implements EntryPoint {\u0026#xA;    /**\u0026#xA;     * The message displayed to the user when the server cannot be reached or\u0026#xA;     * returns an error.\u0026#xA;     */\u0026#xA;\u0026#xA;    private static final String SERVER_URL \u003d \"http://localhost:8094\";\u0026#xA;    private static final String SERVER_ERROR \u003d \"An error occurred while \"\u0026#xA;            + \"attempting to contact the server. Please check your network \"\u0026#xA;            + \"connection and try again.\";\u0026#xA;\u0026#xA;    /**\u0026#xA;     * This is the entry point method.\u0026#xA;     */\u0026#xA;    public void onModuleLoad() {\u0026#xA;\u0026#xA;        RequestBuilder requestBuilder \u003d new RequestBuilder(RequestBuilder.GET, SERVER_URL);\u0026#xA;        try {\u0026#xA;            requestBuilder.sendRequest(null, new Jazz10RequestCallback());\u0026#xA;        } catch (RequestException e) {\u0026#xA;            Window.alert(\"Failed to send the message: \" \u0026#xA;                    + e.getMessage());\u0026#xA;        }\u0026#xA;\u0026#xA;    }\u0026#xA;\u0026#xA;    class Jazz10RequestCallback implements RequestCallback{\u0026#xA;\u0026#xA;        public void onError(Request request, Throwable exception) {\u0026#xA;                // never reach here\u0026#xA;        Window.alert(\"Failed to send the message: \"\u0026#xA;                    + exception.getMessage());\u0026#xA;\u0026#xA;        }\u0026#xA;\u0026#xA;        public void onResponseReceived(Request request, Response response) {\u0026#xA;            // render output\u0026#xA;            Window.alert(response.getText());\u0026#xA;\u0026#xA;        }\u0026#xA;\u0026#xA;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever the alert always comes from onResponseReceived and display nothing (empty string I suppose)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI can reach my python server alright and download the json via the browser. But I cannot see any request hitting the server from GWT.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have ensured that \"inherits name\u003d\u0027com.google.gwt.http.HTTP\" is in the gwt.xml file\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eQuestions are:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e1) Is it same site policy restriction at work here? I would expect Exception (and hence the fail message), but it did not happen\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e2) If it is indeed the same site policy issue, what is the easiest way to deploy the GWT scripts from the python backend? The eclipse gwt plugin produces some artifact in the war subdirectory. Is it sufficient to copy these files to some static directory of my python backend?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 58129,
+  "lastEditorUserId": 181497,
+  "lastEditDate": "Mar 5, 2010",
+  "lastActivityDate": "Jun 27, 2010",
+  "title": "GWT Request Builder problem (same site policy issue?)",
+  "tags": [
+    "python",
+    "json",
+    "gwt",
+    "same-origin-policy"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

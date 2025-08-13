@@ -1,0 +1,37 @@
+```java
+import java.util.EnumSet;
+import java.util.SortedMap;
+import java.util.SortedSet;
+import javax.persistence.criteria.CriteriaBuilderImpl;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Selection;
+import org.hibernate.engine.spi.EntityManagerFactoryImpl;
+import org.hibernate.event.spi.PreCollectionRemoveEventListener;
+import org.hibernate.loader.plan.spi.LoadQueryInfluencers;
+import org.hibernate.persister.entity.QueryBinder;
+import org.hibernate.sql.ast.tree.expression.IdentifierEqExpression;
+import org.hibernate.sql.ast.tree.from.AttributeImplementor;
+import org.hibernate.sql.ast.tree.from.MapAttribute;
+import org.hibernate.sql.ast.tree.from.MapAttributeJoin;
+import org.hibernate.sql.ast.tree.from.MapKeyPath;
+import org.hibernate.sql.ast.tree.from.MapKeySource;
+import org.hibernate.sql.ast.tree.from.SelectionImplementor;
+import org.hibernate.sql.ast.tree.from.TupleElementImplementor;
+import org.hibernate.sql.ast.tree.from.UserVersionType;
+import org.hibernate.sql.ast.tree.predicate.LiteralNode;
+import org.hibernate.sql.ast.tree.predicate.ReferenceType;
+import org.hibernate.sql.ast.tree.predicate.SetProxy;
+import org.hibernate.sql.ast.tree.predicate.SortedMapProxy;
+import org.hibernate.sql.ast.tree.predicate.SortedSetProxy;
+import org.hibernate.sql.ast.tree.predicate.Initializor;
+import org.hibernate.sql.ast.tree.predicate.PostInsertIdentifierGenerator;
+import org.hibernate.sql.ast.tree.predicate.JoinType;
+import org.hibernate.sql.ast.tree.predicate.Option;
+import org.hibernate.sql.ast.tree.predicate.Pair;
+import org.hibernate.sql.ast.tree.predicate.MiddleRelatedComponentMapper;
+import org.hibernate.sql.ast.tree.predicate.ValidatePreUpdateEventListener;
+import org.hibernate.sql.ast.tree.predicate.LegacyHiLoAlgorithmOptimizer;
+import org.hibernate.sql.ast.tree.predicate.ConcurrentReferenceHashMap;
+import org.hibernate.sql.ast.tree.predicate.GraphDefiner;
+import org.hibernate.sql.ast.tree.predicate.XClass;
+```

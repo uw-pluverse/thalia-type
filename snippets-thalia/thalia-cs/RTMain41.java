@@ -1,0 +1,48 @@
+package src.purl;
+
+import java.nio.channels.IllegalBlockingModeException;
+import java.awt.peer.ContainerPeer;
+import java.beans.beancontext.BeanContextChildComponentProxy;
+import java.util.AbstractMap.SimpleImmutableEntry;
+import java.lang.instrument.ClassFileTransformer;
+import java.util.Map.Entry;
+import java.util.Map;
+import java.lang.management.MemoryMXBean;
+import java.nio.channels.UnsupportedAddressTypeException;
+import java.util.concurrent.PriorityBlockingQueue;
+import java.util.concurrent.ConcurrentSkipListMap;
+import java.lang.management.CompilationMXBean;
+import java.util.SortedMap;
+import java.util.HashMap;
+import java.util.TreeMap;
+import java.nio.BufferUnderflowException;
+import java.util.Comparator;
+
+class Main {
+  static public final <S extends IllegalBlockingModeException, C extends ContainerPeer, Z extends BeanContextChildComponentProxy> void test() throws Exception {
+    String refunded = new SimpleImmutableEntry<String, ClassFileTransformer>((Entry<? extends String, ? extends ClassFileTransformer>) null).getKey();
+    Map<? extends MemoryMXBean, ? extends UnsupportedAddressTypeException> cronin = (Map<? extends MemoryMXBean, ? extends UnsupportedAddressTypeException>) null;
+    Object cropping = new PriorityBlockingQueue<Object>(-72).take();
+    UnsupportedAddressTypeException rod = new ConcurrentSkipListMap<UnsupportedAddressTypeException, CompilationMXBean>((SortedMap<UnsupportedAddressTypeException, ? extends CompilationMXBean>) null).higherKey((UnsupportedAddressTypeException) null);
+    UnsupportedAddressTypeException gonna = new HashMap<MemoryMXBean, UnsupportedAddressTypeException>(new TreeMap<Map<? extends MemoryMXBean, ? extends UnsupportedAddressTypeException>, BufferUnderflowException>((Comparator<? super Map<? extends MemoryMXBean, ? extends UnsupportedAddressTypeException>>) null).descendingKeySet().headSet(cronin).first()).getOrDefault(cropping, rod);
+    Error glut = new InternalError(refunded, gonna);
+    
+  }
+}
+
+interface Function0<R> {
+  public R apply();
+}
+
+interface Function1<A1, R> {
+  public R apply(A1 a1);
+}
+
+interface Function2<A1, A2, R> {
+  public R apply(A1 a1, A2 a2);
+}
+
+interface Function3<A1, A2, A3, R> {
+  public R apply(A1 a1, A2 a2, A3 a3);
+}
+

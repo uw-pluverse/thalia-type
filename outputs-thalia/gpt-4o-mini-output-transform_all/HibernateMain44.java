@@ -1,0 +1,33 @@
+```java
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaBuilderImpl;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.criteria.Selection;
+import javax.persistence.criteria.JoinType;
+import java.util.EnumSet;
+import java.util.SortedSet;
+import java.util.SortedMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import org.hibernate.engine.spi.Initializor;
+import org.hibernate.engine.spi.PreCollectionRemoveEventListener;
+import org.hibernate.engine.spi.AttributeImplementor;
+import org.hibernate.engine.spi.LoadQueryInfluencers;
+import org.hibernate.engine.spi.QueryBinder;
+import org.hibernate.engine.spi.MapKeySource;
+import org.hibernate.engine.spi.MapKeyPath;
+import org.hibernate.engine.spi.GraphDefiner;
+import org.hibernate.engine.spi.UserVersionType;
+import org.hibernate.engine.spi.PostInsertIdentifierGenerator;
+import org.hibernate.engine.spi.TupleElementImplementor;
+import org.hibernate.engine.spi.ReferenceType;
+import org.hibernate.engine.spi.LegacyHiLoAlgorithmOptimizer;
+import org.hibernate.engine.spi.IdentifierEqExpression;
+import org.hibernate.engine.spi.MiddleRelatedComponentMapper;
+import org.hibernate.engine.spi.ValidatePreUpdateEventListener;
+import org.hibernate.engine.spi.SortedMapProxy;
+import org.hibernate.engine.spi.SortedSetProxy;
+import org.hibernate.engine.spi.Pair;
+import org.hibernate.engine.spi.SetProxy;
+```

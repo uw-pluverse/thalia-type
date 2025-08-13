@@ -1,0 +1,22 @@
+{
+  "id": 40922380,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Dec 1, 2016",
+  "score": 1,
+  "viewCount": 538,
+  "body": "\u003cp\u003eI am using \u003ca href\u003d\"http://x-stream.github.io/tutorial.html\" rel\u003d\"nofollow noreferrer\"\u003eXStream\u003c/a\u003e to convert XML string to Java Object.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have a huge set of data but I am posting the minimal code below:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eXStream xstream \u003d new XStream(new StaxDriver());\u0026#xA;xstream.alias(\"data\", DetList.class);\u0026#xA;xstream.alias(\"i\", Details.class);\u0026#xA;String s \u003d new String(\"\u0026lt;data\u0026gt;\\n\"\u0026#xA;           +\"\\t\u0026lt;i Name\u003d\u0027asia\u0027 type\u003d\u0027continent\u0027 id\u003d\u002711\u0027\u0026gt;\u0026lt;/i\u0026gt;\\n\"\u0026#xA;           +\"\\t\u0026lt;i Name\u003d\u0027africa\u0027 type\u003d\u0027continent\u0027 id\u003d\u002712\u0027\u0026gt;\u0026lt;/i\u0026gt;\\n\"\u0026#xA;           +\"\\t\u0026lt;i Name\u003d\u0027japan\u0027 type\u003d\u0027country\u0027 id\u003d\u002713\u0027\u0026gt;\u0026lt;/i\u0026gt;\\n\"\u0026#xA;           +\"\u0026lt;/data\u0026gt;\");\u0026#xA;System.out.println(s);\u0026#xA;DetList data \u003d (DetList) xstream.fromXML(s);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen I debug, \u003cstrong\u003edata\u003c/strong\u003e is always \u003cstrong\u003enull\u003c/strong\u003e.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere is my DetList class:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class DetList {\u0026#xA;    private List\u0026lt;Details\u0026gt; detlist;\u0026#xA;\u0026#xA;    public List\u0026lt;Details\u0026gt; getDetlist() {\u0026#xA;        return detlist;\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setDetlist(List\u0026lt;Details\u0026gt; detlist) {\u0026#xA;        this.detlist \u003d detlist;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnd my Details class:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class Details {\u0026#xA;\u0026#xA;    private String Name;\u0026#xA;    private String type;\u0026#xA;    private String id;\u0026#xA;\u0026#xA;    //Getters and Setters are here.\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003edata\u003c/strong\u003e is null which is supposed to contain the list of \u003cstrong\u003ei\u003c/strong\u003e.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow can I get it to work?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 4094260,
+  "lastEditorUserId": 4094260,
+  "lastEditDate": "Dec 1, 2016",
+  "lastActivityDate": "Dec 2, 2016",
+  "title": "Java XStream convert XML to Object",
+  "tags": [
+    "java",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 6,
+  "favoriteCount": 0
+}

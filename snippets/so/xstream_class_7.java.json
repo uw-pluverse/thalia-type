@@ -1,0 +1,22 @@
+{
+  "id": 6810856,
+  "postTypeId": 1,
+  "acceptedAnswerId": 8942126,
+  "parentId": 0,
+  "createDate": "Jul 25, 2011",
+  "score": 0,
+  "viewCount": 1617,
+  "body": "\u003cp\u003eI think I may of \"zoomed in\" too much with my XStream work, but I\u0027m trying to marshall an XML stream, which contains a variety of large complex objects, and each of these objects tends to have lots of tags such as :\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;name type\u003d\"string\"\u0026gt;My Name\u0026lt;/name\u0026gt;\u0026#xA;\u0026lt;speed type\u003d\"dice\"\u0026gt;2d6\u0026lt;/speed\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo I created a \"TypedString\" object, to wrap up the concept of a string with a type attribute, like so:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport com.thoughtworks.xstream.annotations.XStreamAsAttribute;\u0026#xA;public class TypedString {\u0026#xA;    @XStreamAsAttribute\u0026#xA;    private String type;\u0026#xA;    private String value;\u0026#xA;\u0026#xA;    public TypedString(String type, String value) {\u0026#xA;        this.type \u003d type;\u0026#xA;        this.value \u003d value;\u0026#xA;    }\u0026#xA;    // getters omitted \u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eNow, I know this must be missing something - as how can I get the \"value\" variable set using the contents of the tag (e.g. for the first example shown above, type would be \"string\" and value would be \"My Name\").\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI wrote a brief unit test for this :\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class TypedStringTest {\u0026#xA;    private XStream xStream;\u0026#xA;\u0026#xA;    @Before\u0026#xA;    public void setUp() {\u0026#xA;        xStream \u003d new XStream();\u0026#xA;        xStream.processAnnotations(TypedString.class);\u0026#xA;        xStream.alias(\"name\", TypedString.class);\u0026#xA;    }\u0026#xA;\u0026#xA;    @Test\u0026#xA;    public void testBasicUnmarshalling() {\u0026#xA;        TypedString typedString \u003d (TypedString) xStream.fromXML(\"\u0026lt;name type\u003d\\\"string\\\"\u0026gt;Name\u0026lt;/name\u0026gt;\");\u0026#xA;        assertEquals(\"string\", typedString.getType());\u0026#xA;        assertEquals(\"Name\", typedString.getValue());\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhich fails on the second assertion.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs there an annotation I need to add to the TypedString class to get it working ? Or have I really zoomed in too far here (e.g. should this all be done on annotations in the class containing these tags ?). The @XStreamAsAttribute annotation didn\u0027t look like it could be used from the parent tag - it needed to be defined on the object representing the tag in applied to, from what I could tell. Hence I made what is otherwise a glorified String, which I feel XStream should be marshalling without my implicit assistance.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIn a nutshell, where have I got lost ?!\u003c/p\u003e\u0026#xA;",
+  "ownerId": 82663,
+  "lastEditorUserId": 82663,
+  "lastEditDate": "Jul 25, 2011",
+  "lastActivityDate": "Jul 2, 2015",
+  "title": "Reading contents of tag with XStream",
+  "tags": [
+    "annotations",
+    "xstream"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

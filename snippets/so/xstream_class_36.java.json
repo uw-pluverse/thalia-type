@@ -1,0 +1,22 @@
+{
+  "id": 29466312,
+  "postTypeId": 1,
+  "acceptedAnswerId": 29843086,
+  "parentId": 0,
+  "createDate": "Apr 6, 2015",
+  "score": 0,
+  "viewCount": 1262,
+  "body": "\u003cp\u003eI  want to serialize the class using xstream with the help of addImplicitMap method available in it. Class will look like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eclass MapTest{\u0026#xA;private Map\u0026lt;String, String\u0026gt; mapList;\u0026#xA;\u0026#xA;public MapTest() {\u0026#xA;\u0026#xA;    mapList\u003d new HashMap\u0026lt;String, String\u0026gt;();\u0026#xA;}\u0026#xA;\u0026#xA;public void setServicesHealth(String id, String name) {\u0026#xA;    map.put(id, name);\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI tried like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eclass MapTestMain{\u0026#xA;public static void main(String args[]){ \u0026#xA;MapTest services \u003d new MapTest();\u0026#xA;services.setServicesHealth(\"ID01\", \"Jack\");\u0026#xA;services.setServicesHealth(\"ID02\", \"Neil);\u0026#xA;\u0026#xA;    XStream stream \u003d new XStream(new StaxDriver());\u0026#xA;    stream.alias(\"MapTest\", MapTest.class);\u0026#xA;    stream.addImplicitMap(MapTest.class, \"map\", \"id\", String.class, \"name\");\u0026#xA;    String xmlStr \u003d stream.toXML(services);\u0026#xA;    System.out.println(xmlStr);\u0026#xA;  }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut I\u0027m not getting the correct output. My expected output is like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;?xml version\u003d\"1.0\" ?\u0026gt;\u0026#xA;\u0026lt;MapTest\u0026gt;\u0026#xA; \u0026lt;id\u0026gt;Started\u0026lt;/id\u0026gt;\u0026#xA; \u0026lt;name\u0026gt;Started\u0026lt;/name\u0026gt;\u0026#xA;\u0026lt;/MapTest\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eKindly help me out...\u003c/p\u003e\u0026#xA;",
+  "ownerId": 4370315,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Apr 27, 2015",
+  "title": "How to use addImplicitMap method of Xstream?",
+  "tags": [
+    "java",
+    "xml",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

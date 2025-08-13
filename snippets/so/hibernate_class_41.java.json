@@ -1,0 +1,23 @@
+{
+  "id": 3713829,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3713847,
+  "parentId": 0,
+  "createDate": "Sep 15, 2010",
+  "score": 16,
+  "viewCount": 15466,
+  "body": "\u003cp\u003eI saw few examples over internet of Hibernate using \u003ccode\u003etransaction.commit()\u003c/code\u003e for select statements. Below is the example code.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic static List\u0026lt;?\u0026gt; list(Class\u0026lt;?\u0026gt; className,int start,int limit,SearchFilter[] searchFilter){\u0026#xA;    Session session \u003d HibernateUtil.getSessionFactory().openSession();\u0026#xA;    Transaction transaction \u003d null; \u0026#xA;\u0026#xA;    try {\u0026#xA;        transaction \u003d session.beginTransaction();\u0026#xA;\u0026#xA;        Criteria criteria \u003d session.createCriteria(className);\u0026#xA;        criteria.setFirstResult(start);\u0026#xA;        criteria.setMaxResults(limit);\u0026#xA;\u0026#xA;        for(SearchFilter sf : searchFilter){\u0026#xA;            String[] values \u003d sf.getValue();\u0026#xA;            if(values !\u003d null){\u0026#xA;                if(values.length \u003d\u003d 1) {\u0026#xA;                    criteria.add(Restrictions.eq(sf.getField(), values[0]));\u0026#xA;                }else{\u0026#xA;                    criteria.add(Restrictions.in(sf.getField(), values));\u0026#xA;                }\u0026#xA;            }\u0026#xA;        }\u0026#xA;\u0026#xA;        List\u0026lt;?\u0026gt; Objects \u003d criteria.list();\u0026#xA;        transaction.commit();\u0026#xA;\u0026#xA;        return Objects;\u0026#xA;    }catch (Exception e) {\u0026#xA;        transaction.rollback();\u0026#xA;        e.printStackTrace();\u0026#xA;    }finally{\u0026#xA;        session.close();\u0026#xA;    }\u0026#xA;\u0026#xA;    return null;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhy do we do beginning and committing a transaction for select statement?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 238569,
+  "lastEditorUserId": 3885376,
+  "lastEditDate": "Dec 28, 2015",
+  "lastActivityDate": "Dec 28, 2015",
+  "title": "Select using hibernate",
+  "tags": [
+    "java",
+    "hibernate",
+    "orm"
+  ],
+  "answerCount": 4,
+  "commentCount": 0,
+  "favoriteCount": 6
+}

@@ -1,0 +1,36 @@
+```java
+import java.util.List;
+import java.util.EnumSet;
+import org.springframework.util.ConcurrentReferenceHashMap;
+import java.lang.reflect.Type;
+import java.util.concurrent.ConcurrentMap;
+import org.hibernate.cache.spi.ConcurrentSecondLevelCacheStatisticsImpl;
+import org.hibernate.engine.spi.NativeSQLQueryNonScalarReturn;
+import org.hibernate.engine.spi.ToOneFkSecondPass;
+import org.hibernate.event.spi.PostDeleteEventListener;
+import org.hibernate.internal.util.collections.Pair;
+import org.hibernate.internal.util.collections.Triple;
+import org.hibernate.mapping.PropertyAuditOrder;
+import org.hibernate.query.spi.AbstractAuditQuery;
+import org.hibernate.query.spi.AuditOrder;
+import org.hibernate.query.spi.AuditQuery;
+import org.hibernate.query.spi.RevisionsOfEntityQuery;
+import org.hibernate.query.spi.TypeSwitch;
+import org.hibernate.query.spi.TypeVariable;
+import org.hibernate.query.spi.Initializor;
+import org.hibernate.query.spi.AbstractCollectionInitializor;
+import org.hibernate.query.spi.AbstractTupleElement;
+import org.hibernate.query.spi.CountProjection;
+import org.hibernate.query.spi.ExitOperationsCollector;
+import org.hibernate.query.spi.ExitStrategy;
+import org.hibernate.query.spi.FirstNonNullResultExitStrategy;
+import org.hibernate.query.spi.GraphDefiner;
+import org.hibernate.query.spi.ListProxy;
+import org.hibernate.query.spi.NoOpValueHandler;
+import org.hibernate.query.spi.ParallelShardAccessStrategy;
+import org.hibernate.query.spi.ReferenceType;
+import org.hibernate.query.spi.SortedMapProxy;
+import org.hibernate.query.spi.Ejb3ConfigurationObjectFactory;
+import org.hibernate.query.spi.ObjectNameNormalizer;
+import org.hibernate.query.spi.Option;
+```

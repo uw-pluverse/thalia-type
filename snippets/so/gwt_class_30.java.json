@@ -1,0 +1,21 @@
+{
+  "id": 2465385,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2465428,
+  "parentId": 0,
+  "createDate": "Mar 17, 2010",
+  "score": 0,
+  "viewCount": 635,
+  "body": "\u003cp\u003eI want to access the text elements inside this textbox in GWT from the main method (where I call it like this)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDialogBox aBox \u003d  newCandidatePop.buildNewElecPopup();\u0026#xA;    aBox.center();\u0026#xA;    aBox.getWidget();\u0026#xA;\u0026#xA;    MiscUiTools.newCandidateHandler(aBox.firstName, aBox.surName);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ein \u003ccode\u003enewCandidateHandler\u003c/code\u003e i want to attach a click handler to the two text boxes\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, the above doesnt quite work - I cant get access to the aBox.firstName elements because they are static methods -- I am wondering what is best practice, how would you code something like this up? \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003estatic TextBox firstName \u003d new TextBox();\u0026#xA;    static TextBox surName \u003d new TextBox();\u0026#xA;    static DialogBox box;\u0026#xA;\u0026#xA;//  public newCandidatePop() {\u0026#xA;//      box \u003d buildNewElecPopup();\u0026#xA;//  }\u0026#xA;\u0026#xA;    static public DialogBox buildNewElecPopup() {\u0026#xA;\u0026#xA;        DialogBox box \u003d new DialogBox();\u0026#xA;        box.setAutoHideEnabled(true);\u0026#xA;\u0026#xA;        box.setText(\"Add a New Candidate\");\u0026#xA;        box.setAnimationEnabled(true);\u0026#xA;        box.setGlassEnabled(true);\u0026#xA;\u0026#xA;        Grid dialogGrid \u003d new Grid(2, 3);\u0026#xA;        dialogGrid.setPixelSize(250 , 125);\u0026#xA;        dialogGrid.setCellPadding(10);\u0026#xA;        dialogGrid.setWidget(0, 0, new HTML(\"\u0026lt;strong\u0026gt;First Name\u0026lt;/strong\u0026gt;\"));\u0026#xA;        dialogGrid.setWidget(0, 1, firstName);\u0026#xA;\u0026#xA;        dialogGrid.setWidget(1, 0, new HTML(\"\u0026lt;strong\u0026gt;Surname\u0026lt;/strong\u0026gt;\"));\u0026#xA;        dialogGrid.setWidget(1, 1, surName);\u0026#xA;\u0026#xA;        box.add(dialogGrid);\u0026#xA;\u0026#xA;    return box;\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 264875,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Mar 17, 2010",
+  "title": "accessing widgets inside a GWT element",
+  "tags": [
+    "java",
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

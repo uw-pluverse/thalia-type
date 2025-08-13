@@ -1,0 +1,22 @@
+{
+  "id": 866769,
+  "postTypeId": 1,
+  "acceptedAnswerId": 867828,
+  "parentId": 0,
+  "createDate": "May 15, 2009",
+  "score": 131,
+  "viewCount": 201175,
+  "body": "\u003cp\u003eI\u0027m making an Android app, and need to call the phone\u0027s contact list. I need to call the contacts list function, pick a contact, then return to my app with the contact\u0027s name. Here\u0027s the code I got on the internet, but it doesnt work.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport android.app.ListActivity;\u0026#xA;import android.content.Intent;\u0026#xA;import android.database.Cursor;\u0026#xA;import android.os.Bundle;\u0026#xA;import android.provider.Contacts.People;\u0026#xA;import android.view.View;\u0026#xA;import android.widget.ListAdapter;\u0026#xA;import android.widget.ListView;\u0026#xA;import android.widget.SimpleCursorAdapter;\u0026#xA;import android.widget.TextView;\u0026#xA;\u0026#xA;public class Contacts extends ListActivity {\u0026#xA;\u0026#xA;    private ListAdapter mAdapter;\u0026#xA;    public TextView pbContact;\u0026#xA;    public static String PBCONTACT;\u0026#xA;    public static final int ACTIVITY_EDIT\u003d1;\u0026#xA;    private static final int ACTIVITY_CREATE\u003d0;\u0026#xA;\u0026#xA;    // Called when the activity is first created. \u0026#xA;    @Override\u0026#xA;    public void onCreate(Bundle icicle) {\u0026#xA;        super.onCreate(icicle);\u0026#xA;        Cursor C \u003d getContentResolver().query(People.CONTENT_URI, null, null, null, null);\u0026#xA;        startManagingCursor(C);\u0026#xA;\u0026#xA;        String[] columns \u003d new String[] {People.NAME};\u0026#xA;        int[] names \u003d new int[] {R.id.row_entry};\u0026#xA;\u0026#xA;        mAdapter \u003d new SimpleCursorAdapter(this, R.layout.mycontacts, C, columns, names);\u0026#xA;        setListAdapter(mAdapter);\u0026#xA;    } // end onCreate()\u0026#xA;    // Called when contact is pressed\u0026#xA;    @Override\u0026#xA;    protected void onListItemClick(ListView l, View v, int position, long id) {\u0026#xA;        super.onListItemClick(l, v, position, id);\u0026#xA;\u0026#xA;        Cursor C \u003d (Cursor) mAdapter.getItem(position);\u0026#xA;        PBCONTACT \u003d C.getString(C.getColumnIndex(People.NAME));\u0026#xA;\u0026#xA;        // RHS 05/06\u0026#xA;        //pbContact \u003d (TextView) findViewById(R.id.myContact);\u0026#xA;        //pbContact.setText(new StringBuilder().append(\"b\"));\u0026#xA;\u0026#xA;        Intent i \u003d new Intent(this, NoteEdit.class);\u0026#xA;        startActivityForResult(i, ACTIVITY_CREATE);\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 90883,
+  "lastEditorUserId": 1288,
+  "lastEditDate": "May 14, 2011",
+  "lastActivityDate": "Mar 15, 2018",
+  "title": "How to call Android contacts list?",
+  "tags": [
+    "android",
+    "contacts"
+  ],
+  "answerCount": 13,
+  "commentCount": 3,
+  "favoriteCount": 112
+}

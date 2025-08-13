@@ -1,0 +1,21 @@
+{
+  "id": 10154428,
+  "postTypeId": 1,
+  "acceptedAnswerId": 10154926,
+  "parentId": 0,
+  "createDate": "Apr 14, 2012",
+  "score": 1,
+  "viewCount": 965,
+  "body": "\u003cp\u003eI\u0027ve got a whole bunch of duration string I want to convert to a Period with Jodatime\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI tried the ISOPeriodFormat:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003ePeriodFormatter pf \u003d new   PeriodFormatterBuilder().append(ISOPeriodFormat.standard()).toFormatter();\u0026#xA;\u0026#xA;Period period \u003d pf.parsePeriod(\"PT01H00M\");\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut this comes back with the following error:\u0026#xA;java.lang.IllegalArgumentException: Invalid format: \"PT01H00M\" is malformed at \"01H00M\"\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhat is the correct way for converting this string to a Period?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 182395,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Apr 14, 2012",
+  "title": "Convert duration PT01H00M to a Period with Jodatime",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

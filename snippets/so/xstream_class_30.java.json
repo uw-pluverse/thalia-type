@@ -1,0 +1,23 @@
+{
+  "id": 34206426,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Dec 10, 2015",
+  "score": 0,
+  "viewCount": 1346,
+  "body": "\u003cp\u003eI have some xml that looks like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;document\u0026gt;\u0026#xA;    \u0026lt;item name\u003d\"id\"\u0026gt;some value\u0026lt;/item\u0026gt;\u0026#xA;    \u0026lt;item name\u003d\"first-name\"\u0026gt;some value\u0026lt;/item\u0026gt;\u0026#xA;    \u0026lt;item name\u003d\"last-name\"\u0026gt;some value\u0026lt;/item\u0026gt;\u0026#xA;    \u0026lt;item name\u003d\"address\"\u0026gt;some value\u0026lt;/item\u0026gt;\u0026#xA;    \u0026lt;item name\u003d\"zip\"\u0026gt;some value\u0026lt;/item\u0026gt;\u0026#xA;\u0026lt;/document\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ePOJO:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@XStreamAlias(\"document\")\u0026#xA;public class Doc{\u0026#xA;    private String id;\u0026#xA;    private String firstName;\u0026#xA;    private String lastName;\u0026#xA;    private String address;\u0026#xA;    private String zip;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eEDIT:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe issue I am facing is that there are duplicate \u003ccode\u003e\u0026lt;item\u0026gt;\u003c/code\u003e tags causing xstream to throw an exception.  I am looking for a way to pull out the \u003ccode\u003eid\u003c/code\u003e,\u003ccode\u003efirst-name\u003c/code\u003e,\u003ccode\u003elast-name\u003c/code\u003e, etc attributes from the \u003ccode\u003eitem\u003c/code\u003e element\u003c/p\u003e\u0026#xA;",
+  "ownerId": 1413756,
+  "lastEditorUserId": 1413756,
+  "lastEditDate": "Dec 11, 2015",
+  "lastActivityDate": "Dec 14, 2015",
+  "title": "XStream and parse xml attributes",
+  "tags": [
+    "java",
+    "xml",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

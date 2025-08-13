@@ -1,0 +1,26 @@
+{
+  "id": 549451,
+  "postTypeId": 1,
+  "acceptedAnswerId": 37389179,
+  "parentId": 0,
+  "createDate": "Feb 14, 2009",
+  "score": 100,
+  "viewCount": 47253,
+  "body": "\u003cp\u003eI\u0027m trying to create an activity that presents some data to the user. The data is such that it can be divided into \u0027words\u0027, each being a widget, and sequence of \u0027words\u0027 would form the data (\u0027sentence\u0027?), the ViewGroup widget containing the words. As space required for all \u0027words\u0027 in a \u0027sentence\u0027 would exceed the available horizontal space on the display, I would like to wrap these \u0027sentences\u0027 as you would a normal piece of text.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe following code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class WrapTest extends Activity {\u0026#xA;    /** Called when the activity is first created. */\u0026#xA;    @Override\u0026#xA;    public void onCreate(Bundle savedInstanceState) {\u0026#xA;        super.onCreate(savedInstanceState);\u0026#xA;        LinearLayout l \u003d new LinearLayout(this);\u0026#xA;        LinearLayout.LayoutParams lp \u003d new LinearLayout.LayoutParams(\u0026#xA;                LinearLayout.LayoutParams.FILL_PARENT,\u0026#xA;                LinearLayout.LayoutParams.WRAP_CONTENT);\u0026#xA;        LinearLayout.LayoutParams mlp \u003d new LinearLayout.LayoutParams(\u0026#xA;                new ViewGroup.MarginLayoutParams(\u0026#xA;                        LinearLayout.LayoutParams.WRAP_CONTENT,\u0026#xA;                        LinearLayout.LayoutParams.WRAP_CONTENT));\u0026#xA;        mlp.setMargins(0, 0, 2, 0);\u0026#xA;\u0026#xA;        for (int i \u003d 0; i \u0026lt; 10; i++) {\u0026#xA;            TextView t \u003d new TextView(this);\u0026#xA;            t.setText(\"Hello\");\u0026#xA;            t.setBackgroundColor(Color.RED);\u0026#xA;            t.setSingleLine(true);\u0026#xA;            l.addView(t, mlp);\u0026#xA;        }\u0026#xA;\u0026#xA;        setContentView(l, lp);\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eyields something like the left picture, but I would want a layout presenting the same widgets like in the right one.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cimg src\u003d\"https://fnord.se/android/01-have.png\" alt\u003d\"non-wrapping\"\u003e  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cimg src\u003d\"https://fnord.se/android/01-want.png\" alt\u003d\"wrapping\"\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs there such a layout or combination of layouts and parameters, or do I have to implement my own ViewGroup for this?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 2010,
+  "ownerDisplayName": "Henrik Gustafsson",
+  "lastEditorUserId": 1318946,
+  "lastEditorDisplayName": "Henrik Gustafsson",
+  "lastEditDate": "Dec 25, 2018",
+  "lastActivityDate": "Feb 9, 2021",
+  "title": "Line-breaking widget layout for Android",
+  "tags": [
+    "java",
+    "android",
+    "user-interface",
+    "layout"
+  ],
+  "answerCount": 13,
+  "commentCount": 0,
+  "favoriteCount": 59
+}

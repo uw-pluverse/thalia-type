@@ -1,0 +1,23 @@
+{
+  "id": 2937126,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2937831,
+  "parentId": 0,
+  "createDate": "May 30, 2010",
+  "score": 11,
+  "viewCount": 16933,
+  "body": "\u003cp\u003eI am creating a simple project that will allow me to upload and download files using gwt. i am having trouble with the downloading of files that are on my server. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eFor the file upload i used \u003ca href\u003d\"http://code.google.com/p/gwtupload/\" rel\u003d\"noreferrer\"\u003ehttp://code.google.com/p/gwtupload/\u003c/a\u003e and followed the instructions there. My file is stored on the server outside of the website container(on the hard drive), \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eNow when it comes to the downloading of a file, i want a user to press a download button and whatever item is currently selected will download. i dont really know how this will be done\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ei know i need a download servlet\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class DownloadAttachmentServlet extends HttpServlet {\u0026#xA;\u0026#xA;@Override\u0026#xA;protected void doPost(HttpServletRequest req, HttpServletResponse resp)\u0026#xA;        throws ServletException, IOException {\u0026#xA;    // TODO Auto-generated method stub\u0026#xA;    super.doGet(req, resp);\u0026#xA;}\u0026#xA;\u0026#xA;@Override\u0026#xA;protected void doGet(HttpServletRequest req, HttpServletResponse resp)\u0026#xA;        throws ServletException, IOException {\u0026#xA;\u0026#xA;    String fileName \u003d (String) req.getSession().getAttribute(\"fileName\");\u0026#xA;\u0026#xA;    YFUser user \u003d (YFUser) req.getSession().getAttribute(TestServiceImpl.SESSION_USER);\u0026#xA;    if (user \u003d\u003d null)\u0026#xA;        throw new ServletException(\"Invalid Session\");\u0026#xA;\u0026#xA;    InputStream in \u003d null;\u0026#xA;    OutputStream out \u003d resp.getOutputStream();\u0026#xA;\u0026#xA;    FileInputStream fIn \u003d new FileInputStream(fileName);\u0026#xA;    byte[] buffer \u003d new byte[4096];\u0026#xA;    int length;\u0026#xA;    while ((length \u003d in.read(buffer)) \u0026gt; 0){\u0026#xA;        out.write(buffer, 0, length);\u0026#xA;    }\u0026#xA;    in.close();\u0026#xA;    out.flush();\u0026#xA;\u0026#xA;}\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003efor the moment i will just pass a fileName string to retrieve the file for testing\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003enow i am lost at what to do on the client side, i have a simple\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class DownloadFilePanel extends Composite {\u0026#xA;\u0026#xA;\u0026#xA;public DownloadFilePanel(final YFUser user , final String fileName){\u0026#xA;\u0026#xA;    final Element downloadIframe \u003d RootPanel.get(\"__download\").getElement();\u0026#xA;\u0026#xA;    VerticalPanel content \u003d new VerticalPanel();\u0026#xA;    content.add(new Label(\"Download For this File : \" + fileName));\u0026#xA;\u0026#xA;    Button button \u003d new Button(\"Download\");\u0026#xA;    button.addClickHandler(new ClickHandler(){\u0026#xA;        @Override\u0026#xA;        public void onClick(ClickEvent event) {\u0026#xA;            // i do not know what to do here\u0026#xA;    });\u0026#xA;            content.add(button);\u0026#xA;    initWidget(content);\u0026#xA;\u0026#xA;\u0026#xA;}\u0026#xA;\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eabove is a simple widget that will supply a panel that will allow for the download of a file based on a fileName\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eas you can see above,  i do not know what to do to be able to download the file\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eis there any one that can point me in the right direction?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 286630,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "May 30, 2010",
+  "title": "How to use GWT when downloading Files with a Servlet?",
+  "tags": [
+    "java",
+    "gwt",
+    "servlets",
+    "download"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 4
+}

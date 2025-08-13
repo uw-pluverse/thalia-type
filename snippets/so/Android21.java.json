@@ -1,0 +1,25 @@
+{
+  "id": 775188,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Apr 21, 2009",
+  "score": 16,
+  "viewCount": 89555,
+  "body": "\u003cp\u003eI have an application that will have 5-15 buttons depending on what is available from a backend.  How do I define the proper GridView layout files to include an array of buttons that will each have different text and other attributes?  Each button will essentially add an item to a cart, so the onClick code will be the same except for the item it adds to the cart.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow can I define an array so I can add a variable number of buttons, but still reference each of them by a unique ID?  I\u0027ve seen examples of the \u003ca href\u003d\"http://developer.android.com/guide/samples/ApiDemos/res/values/arrays.html\" rel\u003d\"noreferrer\"\u003earrays.xml\u003c/a\u003e, but they have created an array of strings that are pre-set.  I need a way to create an object and not have the text defined in the layout or arrays xml file.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eUpdate - Added info about adding to a GridView\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI want to add this to a GridView, so calling the [addView method](\u003ca href\u003d\"http://developer.android.com/reference/android/widget/AdapterView.html#addView(android.view.View,%20int)\" rel\u003d\"noreferrer\"\u003ehttp://developer.android.com/reference/android/widget/AdapterView.html#addView(android.view.View,%20int)\u003c/a\u003e results in an UnsupportedOperationException.  I can do the following:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eImageButton b2 \u003d new ImageButton(getApplicationContext());\u0026#xA;b2.setBackgroundResource(R.drawable.img_3);\u0026#xA;android.widget.LinearLayout container \u003d (android.widget.LinearLayout) findViewById(R.id.lay);\u0026#xA;container.addView(b2);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut that doesn\u0027t layout the buttons in a grid like I would like.  Can this be done in a GridView?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 4555,
+  "lastEditorUserId": 750613,
+  "lastEditDate": "Jun 22, 2012",
+  "lastActivityDate": "Sep 12, 2019",
+  "title": "Add an array of buttons to a GridView in an Android application",
+  "tags": [
+    "android",
+    "arrays",
+    "button",
+    "dynamic",
+    "android-gridview"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 6
+}

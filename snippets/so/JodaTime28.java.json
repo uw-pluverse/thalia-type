@@ -1,0 +1,22 @@
+{
+  "id": 9313151,
+  "postTypeId": 1,
+  "acceptedAnswerId": 9319030,
+  "parentId": 0,
+  "createDate": "Feb 16, 2012",
+  "score": 7,
+  "viewCount": 13903,
+  "body": "\u003cp\u003eI need to check if a date(in string) exists in array list. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have two dates, first i need to generate date ranges between these two dates and store them in an Array. This is what I am doing. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTimeFormatter dateFromatter\u003d DateTimeFormat.forPattern(\"MM/dd/yyyy\");\u0026#xA;\u0026#xA;DateTime startDate\u003d formatter.parseDateTime(\"01/02/2012\");\u0026#xA;DateTime endDate\u003d formatter.parseDateTime(\"01/31/2012\");\u0026#xA;\u0026#xA; List\u0026lt;LocalDate\u0026gt; dates \u003d new ArrayList\u0026lt;LocalDate\u0026gt;();\u0026#xA;\u0026#xA;\u0026#xA;  int days \u003d Days.daysBetween(startDate, endDate).getDays();\u0026#xA;  for (int i\u003d0; i \u0026lt; days; i++) {\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is where i am getting problem. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eType mismatch: cannot convert from DateTime to LocalDate\u0026#xA;\u0026#xA;\u0026gt;   LocalDate listOfDates \u003d\u0026#xA;\u0026gt; startDate.withFieldAdded(DurationFieldType.days(), i);\u0026#xA;\u0026gt; dates.add(listOfDates);\u0026#xA;\u0026#xA;  }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 1104121,
+  "lastEditorUserId": 231290,
+  "lastEditDate": "Feb 16, 2012",
+  "lastActivityDate": "Apr 26, 2012",
+  "title": "Generate Date ranges in JodaTime",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

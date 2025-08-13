@@ -1,0 +1,23 @@
+{
+  "id": 1254832,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1258012,
+  "parentId": 0,
+  "createDate": "Aug 10, 2009",
+  "score": 0,
+  "viewCount": 7870,
+  "body": "\u003cp\u003eHow to get EditText\u0027s value from sub-Activity? With a condition that if I click back button on the phone, there\u0027s no error in Sub-Activity?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is my \u003cstrong\u003eSub-Activity\u003c/strong\u003e code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    public class SBooksSearch extends Activity {\u0026#xA;    private EditText mTextSearch;   \u0026#xA;    @Override\u0026#xA;    protected void onCreate(Bundle savedInstanceState) {\u0026#xA;        // TODO Auto-generated method stub\u0026#xA;        super.onCreate(savedInstanceState);     \u0026#xA;        setContentView(R.layout.sbooks_search); \u0026#xA;\u0026#xA;        mTextSearch \u003d (EditText)findViewById(R.id.edit_search);     \u0026#xA;        Button searchButton \u003d (Button)findViewById(R.id.btn_search);        \u0026#xA;\u0026#xA;        searchButton.setOnClickListener(new View.OnClickListener(){\u0026#xA;            public void onClick(View v){                \u0026#xA;                Intent data \u003d new Intent();             \u0026#xA;                data.putExtra(SBooksDbAdapter.KEY_TITLE_RAW, mTextSearch.getText().toString());         \u0026#xA;                setResult(RESULT_OK, data);\u0026#xA;                finish();\u0026#xA;            }\u0026#xA;        });\u0026#xA;    }   \u0026#xA;\u0026#xA;    @Override\u0026#xA;    protected void onSaveInstanceState(Bundle outState){\u0026#xA;        super.onSaveInstanceState(outState);        \u0026#xA;    }\u0026#xA;    @Override\u0026#xA;    protected void onPause(){\u0026#xA;        super.onPause();\u0026#xA;\u0026#xA;    }\u0026#xA;    @Override\u0026#xA;    protected void onResume(){\u0026#xA;        super.onResume();       \u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is my \u003cstrong\u003eActivity-Result:\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@Override\u0026#xA;protected void onActivityResult(int requestCode, int resultCode, Intent intent){\u0026#xA;super.onActivityResult(requestCode, resultCode, intent);        \u0026#xA;switch(requestCode){\u0026#xA;case ACTIVITY_SEARCH:\u0026#xA;Bundle extras \u003d getIntent().getExtras();\u0026#xA;mTitleRaw \u003d extras !\u003d null ? extras.getString(SBooksDbAdapter.KEY_TITLE_RAW) : null;            \u0026#xA;     if(mTitleRaw!\u003dnull){\u0026#xA;      Cursor cursor \u003d mDbHelper.searchData(mTitleRaw);\u0026#xA;\u0026#xA;    String[] from \u003d new String[]{ SBooksDbAdapter.KEY_ROWID,\u0026#xA;                        SBooksDbAdapter.KEY_TITLE, SBooksDbAdapter.KEY_LYRICS };\u0026#xA;        int[] to \u003d new int[]{ R.id.id, R.id.title, R.id.lyrics };\u0026#xA;        SimpleCursorAdapter adapter \u003d \u0026#xA;                    new SimpleCursorAdapter(this, R.layout.sbooks_row, cursor, from, to );\u0026#xA;           setListAdapter(adapter);\u0026#xA;            }           \u0026#xA;           break;\u0026#xA;        }\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 152286,
+  "lastEditorUserId": 2617352,
+  "lastEditDate": "Dec 19, 2013",
+  "lastActivityDate": "Dec 19, 2013",
+  "title": "Get EditText\u0027s value from sub Activity",
+  "tags": [
+    "android",
+    "android-activity",
+    "android-edittext"
+  ],
+  "answerCount": 1,
+  "commentCount": 4,
+  "favoriteCount": 0
+}

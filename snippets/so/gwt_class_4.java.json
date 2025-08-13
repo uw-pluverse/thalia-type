@@ -1,0 +1,22 @@
+{
+  "id": 1318732,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Aug 23, 2009",
+  "score": 0,
+  "viewCount": 512,
+  "body": "\u003cp\u003eThis is some very simple code that I\u0027m using to try showing a VerticalSplitPanel, but the widgets I add don\u0027t show. The divider thing of VerticalSplitPanels does show however the widgets I add don\u0027t.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCode:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class MyView extends Composite\u0026#xA;{\u0026#xA;    private VerticalSplitPanel mainPanel\u003dnew VerticalSplitPanel();\u0026#xA;\u0026#xA;    public CountryFilterView()\u0026#xA;    {               \u0026#xA;\u0026#xA;        mainPanel.setSize(\"100%\", \"100%\");\u0026#xA;        mainPanel.setSplitPosition(\"50%\");\u0026#xA;        // Add some content\u0026#xA;        String randomText \u003d \"This is some text to show how the contents on either \"\u0026#xA;            + \"side of the splitter flow.   \"\u0026#xA;            + \"This is some text to show how the contents on either \"\u0026#xA;            + \"side of the splitter flow.   \"\u0026#xA;            + \"This is some text to show how the contents on either \"\u0026#xA;            + \"side of the splitter flow.   \";\u0026#xA;        mainPanel.setTopWidget(new HTML(randomText));\u0026#xA;        mainPanel.setBottomWidget(new HTML(randomText));\u0026#xA;        initWidget(mainPanel);\u0026#xA;    }\u0026#xA;} \u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAm I doing something wrong, or is VerticalPanel just very annoyingly buggy?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 49153,
+  "lastEditorUserId": 5849,
+  "lastEditDate": "Dec 14, 2009",
+  "lastActivityDate": "Dec 16, 2009",
+  "title": "VerticalSplitPanel doesn\u0027t show widgets in GWT",
+  "tags": [
+    "java",
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

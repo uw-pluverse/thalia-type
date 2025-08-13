@@ -1,0 +1,22 @@
+{
+  "id": 2112214,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3039453,
+  "parentId": 0,
+  "createDate": "Jan 21, 2010",
+  "score": 0,
+  "viewCount": 1980,
+  "body": "\u003cp\u003eCurrently I have a function which can take the start time and end time of one day, and calculate the difference between the two, giving me the hours worked in a day. What I would like to do is be able to get the hours worked for 7 days, and return a grand total, while remaining with the display format (HH:mm).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy function for a single day\u0027s total:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003ePeriod p \u003d new Period(this.startTime[dayIndex], this.endTime[dayIndex]);\u0026#xA;long hours \u003d p.getHours();\u0026#xA;long minutes \u003d p.getMinutes();\u0026#xA;\u0026#xA;String format \u003d String.format(\"%%0%dd\", 2);//Ensures that the minutes will always display as two digits.\u0026#xA;\u0026#xA;return Long.toString(hours)+\":\"+String.format(format, minutes);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ethis.startTime[] \u0026amp; this.endTime[] are both arrays of DateTime objects.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny suggestions?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 194901,
+  "lastEditorUserId": 194901,
+  "lastEditDate": "Jun 14, 2010",
+  "lastActivityDate": "Nov 21, 2012",
+  "title": "JodaTime Calculate total hours worked in a week",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

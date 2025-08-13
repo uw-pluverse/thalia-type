@@ -1,0 +1,23 @@
+{
+  "id": 1048739,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Jun 26, 2009",
+  "score": 4,
+  "viewCount": 24162,
+  "body": "\u003cblockquote\u003e\u0026#xA;  \u003cp\u003e\u003cstrong\u003ePossible Duplicate:\u003c/strong\u003e\u003cbr\u003e\u0026#xA;  \u003ca href\u003d\"https://stackoverflow.com/questions/7942378/android-camera-will-not-work-startpreview-fails\"\u003eAndroid Camera will not work. startPreview fails\u003c/a\u003e  \u003c/p\u003e\u0026#xA;\u003c/blockquote\u003e\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;\u003cp\u003eI am trying to set a camera preview in a custom SurfaceView but I get an exception each time I execute the initialization method.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBelow is the code for camera preview initialization:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eprivate void init(Context context)\u0026#xA;{\u0026#xA;    setFocusable(true);\u0026#xA;    mRecording \u003d false;\u0026#xA;    fileRW \u003d new FileReaderWriter();\u0026#xA;    frameCount \u003d 0;\u0026#xA;    if(mCamera \u003d\u003d null)\u0026#xA;    {\u0026#xA;        mCamera \u003d Camera.open();\u0026#xA;    }\u0026#xA;    Parameters parameters \u003d mCamera.getParameters();\u0026#xA;    parameters.setPictureFormat(PixelFormat.JPEG);\u0026#xA;    mCamera.setParameters(parameters);\u0026#xA;    try {\u0026#xA;        mCamera.setPreviewDisplay(surfaceHolder);\u0026#xA;    } catch (IOException e) {\u0026#xA;        // TODO Auto-generated catch block\u0026#xA;        e.printStackTrace();\u0026#xA;    }\u0026#xA;    mCamera.startPreview();\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ethe line \u003ccode\u003emCamera.setPreviewDisplay(surfaceHolder);\u003c/code\u003e throws an exception (\u003ccode\u003esetPreviewDisplay failed\u003c/code\u003e) each time I try to execute the method.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDoes anyone know what could be wrong? I would really appreciate any of your help.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks!`\u003c/p\u003e\u0026#xA;",
+  "ownerId": 22996,
+  "lastEditorUserId": -1,
+  "lastEditDate": "May 23, 2017",
+  "lastActivityDate": "Nov 4, 2011",
+  "title": "Camera.setPreviewDisplay() throws Exception",
+  "tags": [
+    "android",
+    "camera"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 6,
+  "closedDate": "Nov 4, 2011"
+}

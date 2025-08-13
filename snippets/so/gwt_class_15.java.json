@@ -1,0 +1,22 @@
+{
+  "id": 1760182,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1763814,
+  "parentId": 0,
+  "createDate": "Nov 19, 2009",
+  "score": 1,
+  "viewCount": 1465,
+  "body": "\u003cp\u003eThe following code\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    RequestBuilder builder \u003d new RequestBuilder(RequestBuilder.GET, URL.encode(\"http://localhost:8080/xxxx/yyyy\"));\u0026#xA;\u0026#xA;try {\u0026#xA;          Request request \u003d builder.sendRequest(null, new RequestCallback() {\u0026#xA;            public void onError(Request request, Throwable exception) {\u0026#xA;            }\u0026#xA;\u0026#xA;            public void onResponseReceived(Request request, Response response) {\u0026#xA;            }\u0026#xA;\u0026#xA;          });\u0026#xA;        } catch (RequestException e) {\u0026#xA;          possiblePages.clear(); possiblePages.addItem(\"could not connect to server\");        \u0026#xA;        }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWritten in GWT/Java compiles to javascript that gives the following error (shown in firebug)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003esyntax error\u0026#xA;[Break on this error] begin\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\"begin\" is the first line of the text file that is returned from the url, so I see where it is getting it from, but why is it being treated as JavaScript?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 183889,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Nov 19, 2009",
+  "title": "gwt request (via RequestBuilder) causing response to be treated as JavaScript",
+  "tags": [
+    "javascript",
+    "ajax",
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

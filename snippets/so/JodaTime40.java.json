@@ -1,0 +1,23 @@
+{
+  "id": 3299972,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3300078,
+  "parentId": 0,
+  "createDate": "Jul 21, 2010",
+  "score": 81,
+  "viewCount": 193094,
+  "body": "\u003cp\u003eI need to find the \u003cstrong\u003enumber of days between two dates\u003c/strong\u003e: one is from a report and one is the current date. My snippet:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e  int age\u003dcalculateDifference(agingDate, today);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere \u003ccode\u003ecalculateDifference\u003c/code\u003e is a private method, \u003ccode\u003eagingDate\u003c/code\u003e and \u003ccode\u003etoday\u003c/code\u003e are \u003ccode\u003eDate\u003c/code\u003e objects, just for your clarification. I\u0027ve followed two articles from a Java forum, \u003ca href\u003d\"http://forums.sun.com/thread.jspa?messageID\u003d1714945#1714945\" rel\u003d\"nofollow noreferrer\"\u003eThread 1\u003c/a\u003e / \u003ca href\u003d\"http://forums.sun.com/thread.jspa?messageID\u003d2292039#2292039\" rel\u003d\"nofollow noreferrer\"\u003eThread 2\u003c/a\u003e. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIt works fine in a standalone program although when I include this into my logic to read from the report I get an unusual difference in values. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhy is it happening and how can I fix it?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eEDIT :\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m getting a greater number of days compared to the actual amount of Days.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic static int calculateDifference(Date a, Date b)\u0026#xA;{\u0026#xA;    int tempDifference \u003d 0;\u0026#xA;    int difference \u003d 0;\u0026#xA;    Calendar earlier \u003d Calendar.getInstance();\u0026#xA;    Calendar later \u003d Calendar.getInstance();\u0026#xA;\u0026#xA;    if (a.compareTo(b) \u0026lt; 0)\u0026#xA;    {\u0026#xA;        earlier.setTime(a);\u0026#xA;        later.setTime(b);\u0026#xA;    }\u0026#xA;    else\u0026#xA;    {\u0026#xA;        earlier.setTime(b);\u0026#xA;        later.setTime(a);\u0026#xA;    }\u0026#xA;\u0026#xA;    while (earlier.get(Calendar.YEAR) !\u003d later.get(Calendar.YEAR))\u0026#xA;    {\u0026#xA;        tempDifference \u003d 365 * (later.get(Calendar.YEAR) - earlier.get(Calendar.YEAR));\u0026#xA;        difference +\u003d tempDifference;\u0026#xA;\u0026#xA;        earlier.add(Calendar.DAY_OF_YEAR, tempDifference);\u0026#xA;    }\u0026#xA;\u0026#xA;    if (earlier.get(Calendar.DAY_OF_YEAR) !\u003d later.get(Calendar.DAY_OF_YEAR))\u0026#xA;    {\u0026#xA;        tempDifference \u003d later.get(Calendar.DAY_OF_YEAR) - earlier.get(Calendar.DAY_OF_YEAR);\u0026#xA;        difference +\u003d tempDifference;\u0026#xA;\u0026#xA;        earlier.add(Calendar.DAY_OF_YEAR, tempDifference);\u0026#xA;    }\u0026#xA;\u0026#xA;    return difference;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eNote :\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eUnfortunately, none of the answers helped me solve the problem. I\u0027ve accomplished \u003ca href\u003d\"https://stackoverflow.com/questions/3329469/difference-in-days-between-two-java-dates\"\u003ethis problem\u003c/a\u003e with the help of \u003ca href\u003d\"http://sourceforge.net/projects/joda-time/files/joda-time/\" rel\u003d\"nofollow noreferrer\"\u003eJoda-time\u003c/a\u003e library.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 377775,
+  "lastEditorUserId": -1,
+  "lastEditDate": "May 23, 2017",
+  "lastActivityDate": "Jul 13, 2016",
+  "title": "Difference in days between two dates in Java?",
+  "tags": [
+    "java",
+    "jodatime",
+    "datediff"
+  ],
+  "answerCount": 19,
+  "commentCount": 3,
+  "favoriteCount": 14
+}

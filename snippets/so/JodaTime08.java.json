@@ -1,0 +1,23 @@
+{
+  "id": 4034388,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4034752,
+  "parentId": 0,
+  "createDate": "Oct 27, 2010",
+  "score": 1,
+  "viewCount": 741,
+  "body": "\u003cp\u003eHow come this test I wrote fails in jodatime 1.6.2? Is it a bug?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@Test\u0026#xA; public void testIfJodaTimePeriodsHandlesPeriodTypesOtherThanMinutesAndHours() {\u0026#xA;  long twentyDaysInMillis \u003d TimeUnit.MILLISECONDS.convert(20, TimeUnit.DAYS);\u0026#xA;  Period twoWeeks \u003d new Period(twentyDaysInMillis, PeriodType.weeks());\u0026#xA;  Assert.assertEquals(2, twoWeeks.getWeeks()); \u0026#xA;// twoWeeks.getWeeks() actually returns 0!!\u0026#xA; }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eFYI, Periods with all PeriodTypes only fills in the fields for minutes and hours, even if the millis passed to the constructor amounts to more than 25 hours. This is counterintuitive.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 488944,
+  "lastEditorUserId": 38896,
+  "lastEditDate": "Jun 15, 2011",
+  "lastActivityDate": "Jun 15, 2011",
+  "title": "Bug in jodatime Period?",
+  "tags": [
+    "java",
+    "jodatime",
+    "period"
+  ],
+  "answerCount": 1,
+  "commentCount": 1,
+  "favoriteCount": 1
+}

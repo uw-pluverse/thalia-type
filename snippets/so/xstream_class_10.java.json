@@ -1,0 +1,23 @@
+{
+  "id": 2008043,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2322565,
+  "parentId": 0,
+  "createDate": "Jan 5, 2010",
+  "score": 13,
+  "viewCount": 14018,
+  "body": "\u003cp\u003eHow do I remove the \u003cem\u003eclass\u003d”Something ”\u003c/em\u003e attributes in Xstream .   \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI use Xstream with annotations \u003c/p\u003e\u0026#xA;",
+  "ownerId": 113247,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Aug 24, 2016",
+  "title": "Xstream: removing class attribute",
+  "tags": [
+    "java",
+    "attributes",
+    "annotations",
+    "xstream"
+  ],
+  "answerCount": 5,
+  "commentCount": 2,
+  "favoriteCount": 3
+}

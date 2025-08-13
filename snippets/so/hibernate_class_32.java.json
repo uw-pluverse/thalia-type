@@ -1,0 +1,24 @@
+{
+  "id": 3287351,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3291225,
+  "parentId": 0,
+  "createDate": "Jul 20, 2010",
+  "score": 2,
+  "viewCount": 2533,
+  "body": "\u003cp\u003eI\u0027m using hibernate with \u003cstrong\u003ehbm2ddl.auto\u003dupdate\u003c/strong\u003e so that it\u0027ll automatically generate my oracle tables for me (i\u0027ve no intention of learning oracle\u0027s sql).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo far, so good, until now i\u0027m trying to get it to create an index. As far as i can tell, i\u0027ve made my annotations correctly:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage data;\u0026#xA;import javax.persistence.*;\u0026#xA;import org.hibernate.annotations.Index;\u0026#xA;\u0026#xA;@Entity\u0026#xA;@Table(name\u003d\"log_entries\")\u0026#xA;@org.hibernate.annotations.Table(appliesTo\u003d\"log_entries\",\u0026#xA;    indexes \u003d { @Index(name\u003d\"idx\", columnNames \u003d {\"job\", \"version\", \"schedule\", \"dttmRun\", \"pid\" } ) } )\u0026#xA;public class LogEntry {\u0026#xA;  @Id @GeneratedValue\u0026#xA;  Long id;\u0026#xA;  String job;\u0026#xA;  String version;\u0026#xA;  String schedule;\u0026#xA;  String dttmRun;\u0026#xA;  int pid;\u0026#xA;  String command;\u0026#xA;  int duration;\u0026#xA;\u0026#xA;  // getters and setters...\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen i drop the table and restart my app, it creates the table but not the index. Any ideas?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 59198,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jul 21, 2010",
+  "title": "Hibernate will not make indexes when creating tables from annotations",
+  "tags": [
+    "java",
+    "oracle",
+    "hibernate",
+    "annotations",
+    "indexing"
+  ],
+  "answerCount": 1,
+  "commentCount": 5,
+  "favoriteCount": 0
+}

@@ -1,0 +1,35 @@
+```java
+import java.math.BigInteger;
+import java.util.List;
+import org.hibernate.query.sqm.tree.select.AuditQuery;
+import org.hibernate.query.sqm.tree.select.AbstractAuditQuery;
+import org.hibernate.query.sqm.tree.select.CountProjection;
+import org.hibernate.query.sqm.tree.select.GraphDefiner;
+import org.hibernate.query.sqm.tree.select.ListProxy;
+import org.hibernate.query.sqm.tree.select.NativeSQLQueryNonScalarReturn;
+import org.hibernate.query.sqm.tree.select.RevisionsOfEntityQuery;
+import org.hibernate.query.sqm.tree.select.ToOneFkSecondPass;
+import org.hibernate.query.sqm.tree.select.AuditOrder;
+import org.hibernate.query.sqm.tree.select.ExitOperationsCollector;
+import org.hibernate.query.sqm.tree.select.ExitStrategy;
+import org.hibernate.query.sqm.tree.select.Initializor;
+import org.hibernate.query.sqm.tree.select.Pair;
+import org.hibernate.query.sqm.tree.select.PropertyAuditOrder;
+import org.hibernate.query.sqm.tree.select.TypeSwitch;
+import org.hibernate.query.sqm.tree.select.Triple;
+import org.hibernate.query.sqm.tree.select.NoOpValueHandler;
+import org.hibernate.query.sqm.tree.select.FirstNonNullResultExitStrategy;
+import org.hibernate.cache.internal.ConcurrentSecondLevelCacheStatisticsImpl;
+import org.hibernate.cache.internal.ConcurrentReferenceHashMap;
+import org.hibernate.cache.spi.access.ParallelShardAccessStrategy;
+import org.hibernate.cache.spi.access.ReferenceType;
+import org.hibernate.cache.spi.access.AbstractCollectionInitializor;
+import org.hibernate.cache.spi.access.AbstractTupleElement;
+import org.hibernate.cache.spi.access.Ejb3ConfigurationObjectFactory;
+import org.hibernate.cache.spi.access.ObjectNameNormalizer;
+import org.hibernate.cache.spi.access.SortedMapProxy;
+import org.hibernate.cache.spi.access.TypeVariable;
+import org.hibernate.cache.spi.access.DisplayableNode;
+import org.hibernate.cache.spi.access.Float;
+import org.hibernate.cache.spi.access.Integer;
+```

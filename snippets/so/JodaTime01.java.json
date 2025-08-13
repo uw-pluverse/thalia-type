@@ -1,0 +1,22 @@
+{
+  "id": 1714300,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1714381,
+  "parentId": 0,
+  "createDate": "Nov 11, 2009",
+  "score": 13,
+  "viewCount": 12551,
+  "body": "\u003cp\u003eI\u0027m using the \u003ca href\u003d\"http://www.joda.org/joda-time/\" rel\u003d\"nofollow noreferrer\"\u003eJoda time\u003c/a\u003e (1.6) libraries and it keeps returning DateTime objects with the wrong time zone, British Summer Time instead of GMT.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy Windows workstation (running JDK 1.6.0_16) thinks it\u0027s in GMT and if I get the default time zone from the JDK date/time classes it is correct (GMT). I get the same behaviour on our Linux servers as well. I thought it could be an error in the time zone database files in Joda so I rebuilt the jar with the latest database but with no change. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport java.util.TimeZone;\u0026#xA;import org.joda.time.DateTime;\u0026#xA;import org.joda.time.DateTimeZone;\u0026#xA;import org.joda.time.LocalTime;\u0026#xA;import org.joda.time.format.DateTimeFormatter;\u0026#xA;import org.joda.time.format.ISODateTimeFormat;\u0026#xA;\u0026#xA;public class TimeZoneTest {\u0026#xA;\u0026#xA;    public static void main(String[] args) {                \u0026#xA;        DateTimeFormatter timeParser \u003d ISODateTimeFormat.timeParser();\u0026#xA;        TimeZone timeZone \u003d TimeZone.getDefault();\u0026#xA;        System.out.println(timeZone.getID()); // \"Europe/London\"\u0026#xA;        System.out.println(timeZone.getDisplayName()); // \"Greenwich Mean Time\"\u0026#xA;\u0026#xA;        DateTimeZone defaultTimeZone \u003d DateTimeZone.getDefault();\u0026#xA;        System.out.println(defaultTimeZone.getID()); //\"Europe/London\"\u0026#xA;        System.out.println(defaultTimeZone.getName(0L)); //\"British Summer Time\"\u0026#xA;\u0026#xA;        DateTime currentTime \u003d new DateTime();\u0026#xA;        DateTimeZone currentZone \u003d currentTime.getZone();\u0026#xA;        System.out.println(currentZone.getID()); //\"Europe/London\"\u0026#xA;        System.out.println(currentZone.getName(0L)); //\"British Summer Time\"            \u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDebugging through the static initialiser in \u003ccode\u003eorg.joda.time.DateTimeZone\u003c/code\u003e I see that the \u003ccode\u003eSystem.getProperty(\"user.timezone\")\u003c/code\u003e call gives \u003ccode\u003e\"Europe/London\"\u003c/code\u003e as expected.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 208549,
+  "lastEditorUserId": 38896,
+  "lastEditDate": "Aug 16, 2013",
+  "lastActivityDate": "Aug 16, 2013",
+  "title": "Joda Time gives wrong time zone",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 3
+}

@@ -1,0 +1,25 @@
+{
+  "id": 992508,
+  "postTypeId": 1,
+  "acceptedAnswerId": 992557,
+  "parentId": 0,
+  "createDate": "Jun 14, 2009",
+  "score": 6,
+  "viewCount": 8987,
+  "body": "\u003cp\u003eHello I am trying to use a service to control a wakelock so I can permanently leave the screen on when my application is running. I create the wakelock and activate it in onCreate() and release it in onDestroy() however I get the error \"wl cannot be resolved\". Can someone explain how I can get over this? Code below:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class WakeLockService extends Service {\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public IBinder onBind(Intent arg0) {\u0026#xA;        // TODO Auto-generated method stub\u0026#xA;        return null;\u0026#xA;    }  \u0026#xA;    @Override\u0026#xA;    public void onCreate() {\u0026#xA;        PowerManager pm \u003d (PowerManager) getSystemService(Context.POWER_SERVICE);\u0026#xA;        PowerManager.WakeLock wl \u003d pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, \"My Tag\");\u0026#xA;        wl.acquire();\u0026#xA;    }\u0026#xA;    @Override\u0026#xA;    public void onDestroy() {\u0026#xA;        wl.release();\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 122547,
+  "lastEditorUserId": 1777090,
+  "lastEditDate": "Jan 17, 2013",
+  "lastActivityDate": "Apr 3, 2015",
+  "title": "Using a wakelock in a service Android 1.5",
+  "tags": [
+    "java",
+    "android",
+    "android-service",
+    "android-wake-lock",
+    "android-1.5-cupcake"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 4
+}

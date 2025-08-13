@@ -1,0 +1,24 @@
+{
+  "id": 1760204,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1761099,
+  "parentId": 0,
+  "createDate": "Nov 19, 2009",
+  "score": 0,
+  "viewCount": 3870,
+  "body": "\u003cp\u003ei\u0027m trying to use hibernate in a struts2 example using the struts2 full hibernate plugin (\u003ca href\u003d\"http://code.google.com/p/full-hibernate-plugin-for-struts2\" rel\u003d\"nofollow noreferrer\"\u003ehttp://code.google.com/p/full-hibernate-plugin-for-struts2\u003c/a\u003e).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve placed all the Jars in my lib folder:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eantlr-2.7.6.jar\u0026#xA;commons-collections-3.1.jar\u0026#xA;commons-fileupload-1.2.1.jar\u0026#xA;commons-io-1.3.2.jar\u0026#xA;commons-lang-2.3.jar\u0026#xA;commons-logging-1.0.4.jar\u0026#xA;commons-logging-api-1.1.jar\u0026#xA;dom4j-1.6.1.jar\u0026#xA;freemarker-2.3.15.jar\u0026#xA;hibernate3.jar\u0026#xA;javassist-3.9.0.GA.jar\u0026#xA;jta-1.1.jar\u0026#xA;jtds-1.2.4.jar\u0026#xA;log4j-1.2.15.jar\u0026#xA;ognl-2.7.3.jar\u0026#xA;slf4j-api-1.5.8.jar\u0026#xA;slf4j-log4j12-1.5.8.jar\u0026#xA;spring-beans-2.5.6.jar\u0026#xA;spring-context-2.5.6.jar\u0026#xA;spring-core-2.5.6.jar\u0026#xA;spring-test-2.5.6.jar\u0026#xA;spring-web-2.5.6.jar\u0026#xA;struts2-core-2.1.8.jar\u0026#xA;struts2-fullhibernatecore-plugin-1.5-GA.jar\u0026#xA;struts2-spring-plugin-2.1.8.jar\u0026#xA;xwork-core-2.1.6.jar\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnd here is the code to my action class:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage sample;\u0026#xA;import org.hibernate.Session;\u0026#xA;import data.*;\u0026#xA;import java.util.*;\u0026#xA;\u0026#xA;public class Events {\u0026#xA;  org.hibernate.Session hibernateSession;\u0026#xA;\u0026#xA;  public void setHibernateSession(org.hibernate.Session hibernateSession) throws Exception {\u0026#xA;    this.hibernateSession \u003d hibernateSession;\u0026#xA;  }\u0026#xA;  public void sethibernateSession(org.hibernate.Session hibernateSession) throws Exception {\u0026#xA;    this.hibernateSession \u003d hibernateSession;\u0026#xA;  }\u0026#xA;\u0026#xA;  @SuppressWarnings(\"unchecked\")\u0026#xA;  public String execute() {\u0026#xA;\u0026#xA;    List\u0026lt;Event\u0026gt; events \u003d hibernateSession.createQuery(\"from Event\").list();\u0026#xA;\u0026#xA;    for (Event theEvent : events) {\u0026#xA;      // blah blah...\u0026#xA;    }\u0026#xA;\u0026#xA;    return \"success\";\u0026#xA;  }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve supposedly configured the full hibernate plugin to inject the hibernate session into my action class, with this configuration in the struts.xml:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" ?\u0026gt;\u0026#xA;\u0026lt;!DOCTYPE struts PUBLIC\u0026#xA;    \"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN\"\u0026#xA;    \"http://struts.apache.org/dtds/struts-2.0.dtd\"\u0026gt;\u0026#xA;\u0026lt;struts\u0026gt;\u0026#xA;  \u0026lt;constant name\u003d\"hibernatePlugin.sessionTarget\" value\u003d\"hibernateSession\" /\u0026gt;\u0026#xA;  \u0026lt;constant name\u003d\"hibernatePlugin.transactionTarget\" value\u003d\"hibernateTransaction\" /\u0026gt;\u0026#xA;  ..etc..\u0026#xA;\u0026lt;/struts\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut my action class always falls over when it tries to access the hibernateSession variable, it is always null. So the dependency injection is failing it seems.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny ideas why?\u0026#xA;Please help, thanks a lot.\u0026#xA;Also ask if you need to see any other config files.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 59198,
+  "lastEditorUserId": 573032,
+  "lastEditDate": "Jan 24, 2013",
+  "lastActivityDate": "Jan 24, 2013",
+  "title": "Dependency Injection failing - hibernate with struts2 using the full-hibernate-plugin",
+  "tags": [
+    "java",
+    "hibernate",
+    "struts2",
+    "struts2-s2hibernate"
+  ],
+  "answerCount": 1,
+  "commentCount": 9,
+  "favoriteCount": 0
+}

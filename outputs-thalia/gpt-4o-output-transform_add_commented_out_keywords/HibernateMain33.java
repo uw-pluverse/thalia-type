@@ -1,0 +1,33 @@
+```java
+import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
+import java.util.EnumSet;
+import java.util.List;
+import org.hibernate.cache.spi.ConcurrentSecondLevelCacheStatisticsImpl;
+import org.hibernate.cfg.Ejb3ConfigurationObjectFactory;
+import org.hibernate.engine.spi.ObjectNameNormalizer;
+import org.hibernate.event.spi.PostDeleteEventListener;
+import org.hibernate.query.NativeSQLQueryNonScalarReturn;
+import org.hibernate.query.sqm.tree.domain.AbstractTupleElement;
+import org.hibernate.transform.AuditQuery;
+import org.hibernate.transform.CountProjection;
+import org.hibernate.transform.DisplayableNode;
+import org.hibernate.transform.ExitOperationsCollector;
+import org.hibernate.transform.ExitStrategy;
+import org.hibernate.transform.FirstNonNullResultExitStrategy;
+import org.hibernate.transform.GraphDefiner;
+import org.hibernate.transform.Initializor;
+import org.hibernate.transform.ListProxy;
+import org.hibernate.transform.NoOpValueHandler;
+import org.hibernate.transform.Pair;
+import org.hibernate.transform.ParallelShardAccessStrategy;
+import org.hibernate.transform.PropertyAuditOrder;
+import org.hibernate.transform.RevisionsOfEntityQuery;
+import org.hibernate.transform.SortedMapProxy;
+import org.hibernate.transform.ToOneFkSecondPass;
+import org.hibernate.transform.Triple;
+import org.hibernate.transform.TypeSwitch;
+import org.hibernate.type.AbstractAuditQuery;
+import org.hibernate.type.ReferenceType;
+import org.springframework.util.ConcurrentReferenceHashMap;
+```
