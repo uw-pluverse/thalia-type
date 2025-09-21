@@ -1,0 +1,22 @@
+{
+  "id": 9202872,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Feb 8, 2012",
+  "score": 0,
+  "viewCount": 93,
+  "body": "\u003cp\u003eI\u0027m making a info graph of my emails.\u0026#xA;It goes quite well but things are more confusing then they have to be, for example if i want to get the amount of emails someone sended me in a month then i use this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003efor (Person p : AL_persons) {\u0026#xA;  for (int y \u003d firstYear; y \u0026lt;\u003d lastYear; y++) {\u0026#xA;    for (int m \u003d 1; m \u0026lt;\u003d 12; m++) {\u0026#xA;      ArrayList\u0026lt;Email\u0026gt; emailThatMonth \u003d new ArrayList\u0026lt;Email\u0026gt;();\u0026#xA;      for (Email e : p.emails) {\u0026#xA;        if (e.date.year().get() \u003d\u003d y\u0026#xA;          \u0026amp;\u0026amp; e.date.monthOfYear().get() \u003d\u003d m) {\u0026#xA;          emailThatMonth.add(e);\u0026#xA;        }\u0026#xA;      }\u0026#xA;      if (emailThatMonth.size() \u0026gt; maxEmailsMonth)\u0026#xA;        maxEmailsMonth \u003d emailThatMonth.size();\u0026#xA;    }\u0026#xA;  }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI want to improve that so i can get it far more easy,\u0026#xA;I was thinking of storing the first day of every month, so i can re use that.\u0026#xA;(not tested code from here on)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e  ArrayList\u0026lt;DateTime\u0026gt; monthStarts \u003d new ArrayList\u0026lt;DateTime\u0026gt;();\u0026#xA;\u0026#xA;  for (int y \u003d firstYear; y \u0026lt;\u003d lastYear; y++) {\u0026#xA;    for (int m \u003d 1; m \u0026lt;\u003d 12; m++) {\u0026#xA;      monthStarts.add(new LocalDate(y+\"-\"+m+\"-01\"));\u0026#xA;    }\u0026#xA;  }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThen to get the emails i could use a submap:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e  for(DateTime ld : monthStarts) {\u0026#xA;    ArrayList\u0026lt;Email\u0026gt; emailThatMonth \u003d emails.submap(ld, ld.plusMonths(1));\u0026#xA;  }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI think this should work, however it\u0027s quite some work (not that i mind that), i just wanted to know what you guys think of it, to see if someone has tips or other ideas to deal with it.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003enote, i use joda time (and i love it)\u003c/p\u003e\u0026#xA;",
+  "ownerId": 1022707,
+  "lastEditorUserId": 1022707,
+  "lastEditDate": "Feb 10, 2012",
+  "lastActivityDate": "Feb 10, 2012",
+  "title": "submap a period of time",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 1,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

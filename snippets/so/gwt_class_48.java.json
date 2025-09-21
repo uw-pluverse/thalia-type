@@ -1,0 +1,20 @@
+{
+  "id": 3635828,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Sep 3, 2010",
+  "score": 1,
+  "viewCount": 654,
+  "body": "\u003cp\u003ei have following code\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage org.david.client;\u0026#xA;import com.google.gwt.core.client.EntryPoint;\u0026#xA;import com.google.gwt.event.logical.shared.BeforeSelectionEvent;\u0026#xA;import com.google.gwt.event.logical.shared.BeforeSelectionHandler;\u0026#xA;import com.google.gwt.event.logical.shared.SelectionEvent;\u0026#xA;import com.google.gwt.event.logical.shared.SelectionHandler;\u0026#xA;import com.google.gwt.user.client.Window;\u0026#xA;import com.google.gwt.user.client.ui.TabBar;\u0026#xA;public class TabBar1  implements EntryPoint{\u0026#xA;    @Override\u0026#xA;    public void onModuleLoad(){\u0026#xA;        TabBar bar\u003dnew TabBar();\u0026#xA;        bar.addTab(\"foo\");\u0026#xA;        bar.addTab(\"bar\");\u0026#xA;        bar.addTab(\"baz\");\u0026#xA;         bar.addSelectionHandler(new SelectionHandler(){\u0026#xA;\u0026#xA;             public void onSelection(SelectionEvent event){\u0026#xA;                 //let user know what you just did\u0026#xA;                 Window.alert(\"you clicked tab\"+event.getSelectedItem());\u0026#xA;             }\u0026#xA;\u0026#xA;         });\u0026#xA;        // Just for fun, let\u0027s disallow selection of \u0027bar\u0027.\u0026#xA;         bar.addBeforeSelectionHandler(new BeforeSelectionHandler() {\u0026#xA;          public void onBeforeSelection(BeforeSelectionEvent event) {\u0026#xA;       if (event.getItem().intValue() \u003d\u003d 1) {\u0026#xA;          event.cancel();\u0026#xA;                }\u0026#xA;            }\u0026#xA;\u0026#xA;\u0026#xA;         });\u0026#xA;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut i have following errors\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eompiling 1 source file to C:\\XAMPP\\xampp\\htdocs\\TabBar1\\build\\web\\WEB-INF\\classes\u0026#xA;C:\\XAMPP\\xampp\\htdocs\\TabBar1\\src\\java\\org\\david\\client\\TabBar1.java:28: cannot find symbol\u0026#xA;symbol  : method intValue()\u0026#xA;location: class java.lang.Object\u0026#xA;       if (event.getItem().intValue() \u003d\u003d 1) {\u0026#xA;Note: C:\\XAMPP\\xampp\\htdocs\\TabBar1\\src\\java\\org\\david\\client\\TabBar1.java uses unchecked or unsafe operations.\u0026#xA;Note: Recompile with -Xlint:unchecked for details.\u0026#xA;1 error\u0026#xA;C:\\XAMPP\\xampp\\htdocs\\TabBar1\\nbproject\\build-impl.xml:518: The following error occurred while executing this line:\u0026#xA;C:\\XAMPP\\xampp\\htdocs\\TabBar1\\nbproject\\build-impl.xml:248: Compile failed; see the compiler error output for details.\u0026#xA;BUILD FAILED (total time: 0 seconds)\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eplease help\u003c/p\u003e\u0026#xA;",
+  "ownerId": 457458,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Sep 3, 2010",
+  "title": "GWT implementation",
+  "tags": [
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

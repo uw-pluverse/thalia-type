@@ -1,0 +1,24 @@
+{
+  "id": 531324,
+  "postTypeId": 1,
+  "acceptedAnswerId": 531465,
+  "parentId": 0,
+  "createDate": "Feb 10, 2009",
+  "score": 13,
+  "viewCount": 15233,
+  "body": "\u003cp\u003eI am having an issue calculating distance using the \u003ccode\u003eLocation.distanceTo\u003c/code\u003e method.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eprivate class MyLocationOverlay1 extends MyLocationOverlay {\u0026#xA;    @Override\u0026#xA;    public void drawMyLocation(Canvas canvas, MapView mapView, Location lastFix, GeoPoint myLocation, long when) \u0026#xA;        super.drawMyLocation(canvas,mapView,lastFix,myLocation,when);\u0026#xA;\u0026#xA;        Location bLocation \u003d new Location(\"reverseGeocoded\");\u0026#xA;        bLocation.setLatitude(FindList.gpslat);           // Value \u003d 3.294391E7\u0026#xA;        bLocation.setLongitude(FindList.gpslong);         // Value \u003d -9.6564615E7\u0026#xA;        Location aLocation \u003d new Location(\"reverseGeocoded\");\u0026#xA;        aLocation.setLatitude(myLocation.getLatitudeE6());   // Value \u003d 3.2946164E7\u0026#xA;        aLocation.setLongitude(myLocation.getLongitudeE6()); // Value \u003d -9.6505141E7\u0026#xA;        aLocation.set(aLocation);    // Don\u0027t think I need this   \u0026#xA;        bLocation.set(bLocation);    // Don\u0027t think I need this either\u0026#xA;\u0026#xA;        int distance \u003d (int)aLocation.distanceTo(bLocation);  // Value \u003d 12637795 ???\u0026#xA;        String str \u003d \" (\" + String.valueOf(distance) + \" meters)\";\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCan someone tell my why my distance calculation is showing 12,637,795 Meters?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 393258,
+  "ownerDisplayName": "Chrispix",
+  "lastEditorUserId": 2219237,
+  "lastEditDate": "Apr 13, 2017",
+  "lastActivityDate": "Apr 13, 2017",
+  "title": "Android : Location.distanceTo not working correctly?",
+  "tags": [
+    "android",
+    "location",
+    "distance"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 3
+}

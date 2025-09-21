@@ -1,0 +1,24 @@
+{
+  "id": 85190,
+  "postTypeId": 1,
+  "acceptedAnswerId": 85206,
+  "parentId": 0,
+  "createDate": "Sep 17, 2008",
+  "score": 1557,
+  "viewCount": 2658555,
+  "body": "\u003cp\u003eConsider:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eList\u0026lt;String\u0026gt; someList \u003d new ArrayList\u0026lt;String\u0026gt;();\u0026#xA;// add \"monkey\", \"donkey\", \"skeleton key\" to someList\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003efor (String item : someList) {\u0026#xA;    System.out.println(item);\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhat would the equivalent \u003ccode\u003efor\u003c/code\u003e loop look like without using the \u003cem\u003efor each\u003c/em\u003e syntax?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 5074,
+  "ownerDisplayName": "Jay R.",
+  "lastEditorUserId": 5074,
+  "lastEditDate": "Feb 23, 2018",
+  "lastActivityDate": "Jan 26, 2021",
+  "title": "How does the Java \u0027for each\u0027 loop work?",
+  "tags": [
+    "java",
+    "foreach",
+    "syntactic-sugar"
+  ],
+  "answerCount": 27,
+  "commentCount": 3,
+  "favoriteCount": 345
+}

@@ -1,0 +1,17 @@
+Here are the necessary import statements:
+
+```java
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.WindowAdapter;
+import java.awt.WindowEvent;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.event.WindowListener;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import javax.swing.JApplet;
+```

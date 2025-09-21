@@ -1,0 +1,21 @@
+{
+  "id": 2780967,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2781040,
+  "parentId": 0,
+  "createDate": "May 6, 2010",
+  "score": 3,
+  "viewCount": 2385,
+  "body": "\u003cp\u003eI\u0027m implementing a count-down using Joda Time. I only need a display accuracy of seconds.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever when printing the time, the seconds are displayed as full seconds, so when the count down reaches, for example, 900ms, then \"0\" seconds is printed, but as a count-down it would make more sense to display \"1\" second, until the time actually reaches 0ms.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eExample:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003evoid printDuration(Duration d) {\u0026#xA;  System.out.println(\u0026#xA;    d.toPeriod(PeriodType.time()).toString(\u0026#xA;      new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()\u0026#xA;    )\u0026#xA;  );\u0026#xA;}\u0026#xA;\u0026#xA;printDuration(new Duration(5000)); // Prints \"5\" \u003d\u0026gt; OK\u0026#xA;printDuration(new Duration(4900)); // Prints \"4\" \u003d\u0026gt; need \"5\"\u0026#xA;printDuration(new Duration(1000)); // Prints \"1\" \u003d\u0026gt; OK\u0026#xA;printDuration(new Duration(900));  // Prints \"0\" \u003d\u0026gt; need \"1\"\u0026#xA;printDuration(new Duration(0));    // Prints \"0\" \u003d\u0026gt; OK\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBasically I need to the seconds to be display rounded up from milliseconds and not rounded down. Is there a way to achieve this with Joda without needing to write my own formatter?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 318493,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "May 6, 2010",
+  "title": "Rounding up milliseconds when printing with Joda Time",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

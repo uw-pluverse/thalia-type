@@ -1,0 +1,25 @@
+{
+  "id": 153724,
+  "postTypeId": 1,
+  "acceptedAnswerId": 153785,
+  "parentId": 0,
+  "createDate": "Sep 30, 2008",
+  "score": 1332,
+  "viewCount": 1744766,
+  "body": "\u003cp\u003eWhat I would like is a method to convert a double to a string which rounds using the half-up method - i.e. if the decimal to be rounded is 5, it always rounds up to the next number. This is the standard method of rounding most people expect in most situations.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI also would like only significant digits to be displayed - i.e. there should not be any trailing zeroes.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI know one method of doing this is to use the \u003ccode\u003eString.format\u003c/code\u003e method:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eString.format(\"%.5g%n\", 0.912385);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ereturns:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e0.91239\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ewhich is great, however it always displays numbers with 5 decimal places even if they are not significant: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eString.format(\"%.5g%n\", 0.912300);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ereturns:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e0.91230\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnother method is to use the \u003ccode\u003eDecimalFormatter\u003c/code\u003e:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDecimalFormat df \u003d new DecimalFormat(\"#.#####\");\u0026#xA;df.format(0.912385);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ereturns:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e0.91238\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever as you can see this uses half-even rounding. That is it will round down if the previous digit is even. What I\u0027d like is this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e0.912385 -\u0026gt; 0.91239\u0026#xA;0.912300 -\u0026gt; 0.9123\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhat is the best way to achieve this in Java?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 12149,
+  "lastEditorUserId": 11895423,
+  "lastEditorDisplayName": "Blair Conrad",
+  "lastEditDate": "Nov 11, 2019",
+  "lastActivityDate": "Jan 19, 2021",
+  "title": "How to round a number to n decimal places in Java",
+  "tags": [
+    "java",
+    "decimal",
+    "rounding",
+    "digits"
+  ],
+  "answerCount": 36,
+  "commentCount": 0,
+  "favoriteCount": 347
+}

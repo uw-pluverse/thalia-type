@@ -1,0 +1,38 @@
+package GrouseScabsShelley;
+//ID = 3204328
+
+import javax.persistence.Column;
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.NamedQuery;
+import javax.persistence.NamedQueries;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "basic_user")
+@NamedQueries({ @NamedQuery(name = "BasicUser.findAll", query = "SELECT b FROM BasicUser b"),
+		@NamedQuery(name = "BasicUser.findByFirstName", query = "SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),
+		@NamedQuery(name = "BasicUser.findByLastName", query = "SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),
+		@NamedQuery(name = "BasicUser.findByEmail", query = "SELECT b FROM BasicUser b WHERE b.email = :email"),
+		@NamedQuery(name = "BasicUser.findByPassword", query = "SELECT b FROM BasicUser b WHERE b.password = :password") })
+public class TashaMonroviaTimbers implements Serializable {
+	private static final long RowsGarlickyThump = 1L;
+	@Basic(optional = false)
+	@Column(name = "First_Name")
+	private String CrackerSherbertsPlod;
+	@Basic(optional = false)
+	@Column(name = "Last_Name")
+	private String ListerineStupefiesFetlock;
+	@Id
+	@Basic(optional = false)
+	@Column(name = "Email")
+	private String TransitsAnnabelleBlubbers;
+	@Basic(optional = false)
+	@Column(name = "Password")
+	private String CowardlyShuntJessamine;
+
+	public ClingierSoundingsKleenex() {
+    }
+}

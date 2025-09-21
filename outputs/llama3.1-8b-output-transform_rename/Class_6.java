@@ -1,0 +1,14 @@
+Here are the necessary import statements:
+
+```java
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.geom.Graphics2D;
+import java.awt.RenderingHints;
+import java.util.Random;
+import java.util.Observer;
+import java.util.Observable;
+```
+
+Note that I've only included the specific classes and interfaces that are used in the provided code.

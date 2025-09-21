@@ -1,0 +1,25 @@
+{
+  "id": 442496,
+  "postTypeId": 1,
+  "acceptedAnswerId": 442590,
+  "parentId": 0,
+  "createDate": "Jan 14, 2009",
+  "score": 18,
+  "viewCount": 19921,
+  "body": "\u003cp\u003eCan anybody tell my why this doesn\u0027t work in the Android emulator? From the browser I have access and the server is internal. All I can think of is that I\u0027m missing some configuration on my app so it can access the network layer.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003etry {\u0026#xA;    InetAddress server \u003d Inet4Address.getByName(\"thehost\");\u0026#xA;    //Doesn\u0027t work either\u0026#xA;    //or InetAddress server2 \u003d Inet4Address.getByAddress(new String(\"192.168.1.30\").getBytes());\u0026#xA;\u0026#xA;    if(server.isReachable(5000)){\u0026#xA;        Log.d(TAG, \"Ping!\");\u0026#xA;    }\u0026#xA;\u0026#xA;    Socket clientsocket \u003d new Socket(server, 8080);\u0026#xA;} catch (UnknownHostException e) {\u0026#xA;    Log.e(TAG, \"Server Not Found\");\u0026#xA;} catch (IOException e) {\u0026#xA;    Log.e(TAG, \"Couldn\u0027t open socket\");\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eThrows an UnknownHostException\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks\u003c/p\u003e\u0026#xA;",
+  "ownerId": 48869,
+  "ownerDisplayName": "Ubersoldat",
+  "lastEditorUserId": 750613,
+  "lastEditDate": "Jun 28, 2012",
+  "lastActivityDate": "Jun 28, 2012",
+  "title": "Android HTTP Connection",
+  "tags": [
+    "java",
+    "android",
+    "sockets",
+    "network-programming"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

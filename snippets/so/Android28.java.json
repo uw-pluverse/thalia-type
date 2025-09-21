@@ -1,0 +1,22 @@
+{
+  "id": 987072,
+  "postTypeId": 1,
+  "acceptedAnswerId": 987503,
+  "parentId": 0,
+  "createDate": "Jun 12, 2009",
+  "score": 480,
+  "viewCount": 303122,
+  "body": "\u003cp\u003eIn an Android app, is there anything wrong with the following approach:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class MyApp extends android.app.Application {\u0026#xA;\u0026#xA;    private static MyApp instance;\u0026#xA;\u0026#xA;    public MyApp() {\u0026#xA;        instance \u003d this;\u0026#xA;    }\u0026#xA;\u0026#xA;    public static Context getContext() {\u0026#xA;        return instance;\u0026#xA;    }\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eand pass it everywhere (e.g. SQLiteOpenHelper) where context is required (and not leaking of course)?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 15187,
+  "lastEditorUserId": 267542,
+  "lastEditDate": "Mar 4, 2010",
+  "lastActivityDate": "Jun 14, 2019",
+  "title": "Using Application context everywhere?",
+  "tags": [
+    "android",
+    "android-context"
+  ],
+  "answerCount": 9,
+  "commentCount": 12,
+  "favoriteCount": 193
+}

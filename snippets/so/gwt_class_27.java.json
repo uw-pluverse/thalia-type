@@ -1,0 +1,23 @@
+{
+  "id": 2385802,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Mar 5, 2010",
+  "score": 0,
+  "viewCount": 2346,
+  "body": "\u003cpre\u003e\u003ccode\u003efinal Button sendButton \u003d new Button(\"Send\");\u0026#xA;sendButton.getElement().setId(\"button\");\u0026#xA;RootPanel.get().getElement().appendChild(sendButton.getElement());\u0026#xA;\u0026#xA;NodeList buttonElement \u003d Document.get().getElementsByTagName(\"button\");\u0026#xA;if(buttonElement !\u003d null \u0026amp;\u0026amp; buttonElement.getLength() \u0026gt; 0){\u0026#xA;buttonElement.getItem(0).setNodeValue(\"Changed\");\u0026#xA;}else{\u0026#xA;GWT.log(\"Can\u0027t select button\");\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ewhen i use getElementById(), it is OK, but the getElementsbyTagName() method doesn\u0027t work. \u0026#xA;this means i can\u0027t make the RPC service return html string response, and attach event at client. i am a little confused here, how to program in GWT? i mean what should RPC service return to client, BO? if return BO, i need to serialize BO, and create elements to construct the dom tree. it is a bother, so any idea to use template in GWT?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 195144,
+  "lastEditorUserId": 83406,
+  "lastEditDate": "Mar 5, 2010",
+  "lastActivityDate": "Mar 5, 2010",
+  "title": "Why element.getElementsByTagName() can\u0027t select the node dynamicly added?",
+  "tags": [
+    "gwt",
+    "templates",
+    "getelementsbytagname"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

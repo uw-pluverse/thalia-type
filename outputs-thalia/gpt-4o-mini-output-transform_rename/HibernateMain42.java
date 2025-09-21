@@ -1,0 +1,31 @@
+```java
+import java.util.Map;
+import java.util.SortedMap;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.JoinType;
+import org.hibernate.boot.model.naming.NamingStrategyHelper;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
+import org.hibernate.metamodel.spi.MappingNotFoundException;
+import org.hibernate.query.QueryBinder;
+import org.hibernate.tuple.entity.CompositeNestedGeneratedValueGenerator;
+import org.hibernate.tuple.entity.DefaultComponentSafeNamingStrategy;
+import org.hibernate.tuple.entity.DiscriminatorType;
+import org.hibernate.tuple.entity.Vertex;
+import org.hibernate.tuple.entity.MapKeyPath;
+import org.hibernate.tuple.entity.PluralJoin;
+import org.hibernate.tuple.entity.Triple;
+import org.hibernate.tuple.entity.LiteralNode;
+import org.hibernate.tuple.entity.LiteralExpression;
+import org.hibernate.tuple.entity.AuditReader;
+import org.hibernate.tuple.entity.Shard;
+import org.hibernate.tuple.entity.ShardOperation;
+import org.hibernate.tuple.entity.SortedMapProxy;
+import org.hibernate.tuple.entity.Initializor;
+import org.hibernate.tuple.entity.AbstractTupleElement;
+import org.hibernate.tuple.entity.MapAttribute;
+import org.hibernate.tuple.entity.ValueVisitor;
+import org.hibernate.tuple.entity.MapAttributeJoin;
+import org.hibernate.tuple.entity.WebSphereExtendedJTATransactionLookup;
+import org.hibernate.tuple.entity.Dom4jComponentTuplizer;
+import org.hibernate.tuple.entity.OracleJoinFragment;
+```

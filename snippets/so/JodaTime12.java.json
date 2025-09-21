@@ -1,0 +1,22 @@
+{
+  "id": 4540144,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4540195,
+  "parentId": 0,
+  "createDate": "Dec 27, 2010",
+  "score": 9,
+  "viewCount": 7950,
+  "body": "\u003cp\u003eI\u0027m trying to add some minutes to a date using plusMinutes, but it just doesn\u0027t add anything at all:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere\u0027s the code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    String currentDate ;\u0026#xA;    SimpleDateFormat myFormat \u003d new SimpleDateFormat(\"dd/MM/yyyy HH:mm\");\u0026#xA;    Date date1\u003d null;\u0026#xA;    DateTime dt;\u0026#xA;\u0026#xA;    currentDate \u003d\"27/12/2010 11:29\" ;\u0026#xA;\u0026#xA;    try {\u0026#xA;           date1\u003d myFormat.parse(currentDate);\u0026#xA;\u0026#xA;        } catch (ParseException ex) {\u0026#xA;\u0026#xA;        ex.printStackTrace();\u0026#xA;\u0026#xA;    }\u0026#xA;    dt \u003d new DateTime(date1);\u0026#xA;    dt.plusMinutes(30);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 0,
+  "ownerDisplayName": "user531743",
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Mar 7, 2018",
+  "title": "Problem adding minutes with plusMinutes",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 4,
+  "commentCount": 1,
+  "favoriteCount": 1
+}

@@ -1,0 +1,23 @@
+{
+  "id": 993137,
+  "postTypeId": 1,
+  "acceptedAnswerId": 993641,
+  "parentId": 0,
+  "createDate": "Jun 14, 2009",
+  "score": 5,
+  "viewCount": 7447,
+  "body": "\u003cp\u003eHello I am trying to implement a wake lock for an application.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003ePowerManager pm \u003d (PowerManager) getSystemService(Context.POWER_SERVICE);\u0026#xA;PowerManager.WakeLock wl \u003d pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, \"My Tag\");\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIt seems to force close when defining the \u003ccode\u003ePowerManager\u003c/code\u003e shown in the code above. Whats going wrong?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 122547,
+  "lastEditorUserId": 3265095,
+  "lastEditDate": "May 4, 2014",
+  "lastActivityDate": "May 4, 2014",
+  "title": "Android wake lock force close",
+  "tags": [
+    "android",
+    "android-wake-lock",
+    "powermanager"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 3
+}

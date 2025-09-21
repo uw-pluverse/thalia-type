@@ -1,0 +1,21 @@
+{
+  "id": 3969102,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Oct 19, 2010",
+  "score": 1,
+  "viewCount": 574,
+  "body": "\u003cp\u003ei try to add child in uibinder\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ei get error\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ein a text-only context. Perhaps you are trying to use unescaped HTML where text is required, as in a HasText widget? Element \u003ccode\u003e\u0026lt;package:ListItem.....\u003c/code\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003emy parent look like below\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class ListItem extends ComplexPanel implements HasText, HasHTML, HasClickHandlers, HasKeyDownHandlers, HasBlurHandlers {\u0026#xA;    HandlerRegistration clickHandler;\u0026#xA;\u0026#xA;    public ListItem() {\u0026#xA;        setElement(DOM.createElement(\"LI\"));\u0026#xA;    }\u0026#xA;\u0026#xA;    public void add(Widget w) {\u0026#xA;        super.add(w, getElement());\u0026#xA;    }\u0026#xA;\u0026#xA;    public void insert(Widget w, int beforeIndex) {\u0026#xA;        super.insert(w, getElement(), beforeIndex, true);\u0026#xA;    }\u0026#xA;\u0026#xA;    public String getText() {\u0026#xA;        return DOM.getInnerText(getElement());\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setText(String text) {\u0026#xA;        DOM.setInnerText(getElement(), (text \u003d\u003d null) ? \"\" : text);\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setId(String id) {\u0026#xA;        DOM.setElementAttribute(getElement(), \"id\", id);\u0026#xA;    }\u0026#xA;\u0026#xA;    public String getHTML() {\u0026#xA;        return DOM.getInnerHTML(getElement());\u0026#xA;    }\u0026#xA;\u0026#xA;    public void setHTML(String html) {\u0026#xA;        DOM.setInnerHTML(getElement(), (html \u003d\u003d null) ? \"\" : html);\u0026#xA;    }\u0026#xA;\u0026#xA;    public HandlerRegistration addClickHandler(ClickHandler handler) {\u0026#xA;        return addDomHandler(handler, ClickEvent.getType());\u0026#xA;    }\u0026#xA;\u0026#xA;    public HandlerRegistration addKeyDownHandler(KeyDownHandler handler) {\u0026#xA;        return addDomHandler(handler, KeyDownEvent.getType());\u0026#xA;    }\u0026#xA;\u0026#xA;    public HandlerRegistration addBlurHandler(BlurHandler handler) {\u0026#xA;        return addDomHandler(handler, BlurEvent.getType());\u0026#xA;    }\u0026#xA;\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ecan explain what the error mean?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 108869,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Oct 19, 2010",
+  "title": "uibinder widget add child fail",
+  "tags": [
+    "gwt",
+    "uibinder"
+  ],
+  "answerCount": 0,
+  "commentCount": 3,
+  "favoriteCount": 1
+}

@@ -1,0 +1,23 @@
+{
+  "id": 3772945,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3773073,
+  "parentId": 0,
+  "createDate": "Sep 22, 2010",
+  "score": 57,
+  "viewCount": 27267,
+  "body": "\u003cpre\u003e\u003ccode\u003e30 days hath September,\u0026#xA;   April, June and November,\u0026#xA; All the rest have 31,\u0026#xA;   Excepting February alone\u0026#xA;(And that has 28 days clear,\u0026#xA;   With 29 in each leap year).\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCan I obtain this info anagrammatically?\u0026#xA;(I don\u0027t mean the poem, of course)\u003c/p\u003e\u0026#xA;",
+  "ownerId": 28802,
+  "lastEditorUserId": 6011197,
+  "lastEditDate": "Jan 4, 2018",
+  "lastActivityDate": "Jan 4, 2018",
+  "title": "How do I obtain the number of days within a given month using Joda-Time?",
+  "tags": [
+    "java",
+    "datetime",
+    "jodatime"
+  ],
+  "answerCount": 4,
+  "commentCount": 1,
+  "favoriteCount": 7
+}

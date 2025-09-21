@@ -1,0 +1,21 @@
+{
+  "id": 9503771,
+  "postTypeId": 1,
+  "acceptedAnswerId": 9503824,
+  "parentId": 0,
+  "createDate": "Feb 29, 2012",
+  "score": 10,
+  "viewCount": 13961,
+  "body": "\u003cp\u003eI ran into a strange issue. Here is a snippet of code that describes it:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTimeZone dtz \u003d DateTimeZone.forOffsetHours(0);\u0026#xA;\u0026#xA;DateTime dt \u003d new DateTime(dtz);\u0026#xA;\u0026#xA;System.out.println(dt);\u0026#xA;System.out.println(dt.toDate());\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ethe output is:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e2012-02-29T17:24:39.055Z\u0026#xA;Wed Feb 29 19:24:39 EET 2012\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m located UTC+2, but this action is supposed to create a java.util.Date object which is initialized for UTC time. What am I missing?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 917432,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jul 26, 2013",
+  "title": "Joda time\u0027s DateTime converted to java.util.Date strange issue",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 3,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

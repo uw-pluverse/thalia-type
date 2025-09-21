@@ -1,0 +1,23 @@
+{
+  "id": 992880,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1013733,
+  "parentId": 0,
+  "createDate": "Jun 14, 2009",
+  "score": 9,
+  "viewCount": 18319,
+  "body": "\u003cp\u003eI\u0027m trying to call a RESTful web service from an Android application using the following method:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eHttpHost target \u003d new HttpHost(\"http://\" + ServiceWrapper.SERVER_HOST,ServiceWrapper.SERVER_PORT);\u0026#xA;HttpGet get \u003d new HttpGet(\"/list\");\u0026#xA;String result \u003d null;\u0026#xA;HttpEntity entity \u003d null;\u0026#xA;HttpClient client \u003d new DefaultHttpClient();\u0026#xA;try {\u0026#xA;    HttpResponse response \u003d client.execute(target, get);\u0026#xA;    entity \u003d response.getEntity();\u0026#xA;    result \u003d EntityUtils.toString(entity);\u0026#xA;} catch (Exception e) {\u0026#xA;    e.printStackTrace();\u0026#xA;} finally {\u0026#xA;    if (entity!\u003dnull)\u0026#xA;        try {\u0026#xA;            entity.consumeContent();\u0026#xA;        } catch (IOException e) {}\u0026#xA;}\u0026#xA;return result;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI can browse to address and see the xml results using the Android Emulator browser and from my machine. I have given my app the INTERNET permission. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m developing with eclipse.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve seen it mentioned that I might need to configure a proxy but since the web service I\u0027m calling is on port 80 this shouldn\u0027t matter should it? I can call the method with the browser.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny ideas?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 4950,
+  "lastEditorUserId": 3995261,
+  "lastEditDate": "Aug 3, 2016",
+  "lastActivityDate": "Jan 9, 2017",
+  "title": "Unresolved Host Exception Android",
+  "tags": [
+    "java",
+    "android",
+    "rest"
+  ],
+  "answerCount": 4,
+  "commentCount": 2,
+  "favoriteCount": 10
+}

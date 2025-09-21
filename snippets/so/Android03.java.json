@@ -1,0 +1,25 @@
+{
+  "id": 26362,
+  "postTypeId": 1,
+  "acceptedAnswerId": 46766,
+  "parentId": 0,
+  "createDate": "Aug 25, 2008",
+  "score": 57,
+  "viewCount": 24449,
+  "body": "\u003cp\u003eHas anyone managed to use \u003ccode\u003eItemizedOverlays\u003c/code\u003e in Android Beta 0.9? I can\u0027t get it to work, but I\u0027m not sure if I\u0027ve done something wrong or if this functionality isn\u0027t yet available. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve been trying to use the \u003ccode\u003eItemizedOverlay\u003c/code\u003e and \u003ccode\u003eOverlayItem\u003c/code\u003e classes. Their intended purpose is to simulate map markers (as seen in Google Maps Mashups) but I\u0027ve had problems getting them to appear on the map.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI can add my own custom overlays using a similar technique, it\u0027s just the \u003ccode\u003eItemizedOverlays\u003c/code\u003e that don\u0027t work.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eOnce I\u0027ve implemented my own \u003ccode\u003eItemizedOverlay\u003c/code\u003e (and overridden \u003ccode\u003ecreateItem\u003c/code\u003e), creating a new instance of my class seems to work (I can extract \u003ccode\u003eOverlayItems\u003c/code\u003e from it) but adding it to a map\u0027s \u003ccode\u003eOverlay\u003c/code\u003e list doesn\u0027t make it appear as it should.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is the code I use to add the \u003ccode\u003eItemizedOverlay\u003c/code\u003e class as an \u003ccode\u003eOverlay\u003c/code\u003e on to my \u003ccode\u003eMapView\u003c/code\u003e.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e// Add the ItemizedOverlay to the Map\u0026#xA;private void addItemizedOverlay() {\u0026#xA;  Resources r \u003d getResources();\u0026#xA;  MapView mapView \u003d (MapView)findViewById(R.id.mymapview);\u0026#xA;  List\u0026lt;Overlay\u0026gt; overlays \u003d mapView.getOverlays();\u0026#xA;\u0026#xA;  MyItemizedOverlay markers \u003d new MyItemizedOverlay(r.getDrawable(R.drawable.icon));\u0026#xA;  overlays.add(markers);\u0026#xA;\u0026#xA;  OverlayItem oi \u003d markers.getItem(0);\u0026#xA;  markers.setFocus(oi);\u0026#xA;  mapView.postInvalidate();\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhere \u003ccode\u003eMyItemizedOverlay\u003c/code\u003e is defined as:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class MyItemizedOverlay extends ItemizedOverlay\u0026lt;OverlayItem\u0026gt; {\u0026#xA;  public MyItemizedOverlay(Drawable defaultMarker) {\u0026#xA;    super(defaultMarker);\u0026#xA;    populate();\u0026#xA;  }\u0026#xA;\u0026#xA;  @Override\u0026#xA;  protected OverlayItem createItem(int index) {\u0026#xA;    Double lat \u003d (index+37.422006)*1E6;\u0026#xA;    Double lng \u003d -122.084095*1E6;\u0026#xA;    GeoPoint point \u003d new GeoPoint(lat.intValue(), lng.intValue());\u0026#xA;\u0026#xA;    OverlayItem oi \u003d new OverlayItem(point, \"Marker\", \"Marker Text\");\u0026#xA;    return oi;\u0026#xA;  }\u0026#xA;\u0026#xA;  @Override\u0026#xA;  public int size() {\u0026#xA;    return 5;\u0026#xA;  } \u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 822,
+  "ownerDisplayName": "Reto Meier",
+  "lastEditorUserId": 10221765,
+  "lastEditDate": "Apr 20, 2019",
+  "lastActivityDate": "Nov 16, 2019",
+  "title": "Using ItemizedOverlay and OverlayItem In Android Beta 0.9",
+  "tags": [
+    "java",
+    "android",
+    "overlay",
+    "android-mapview"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 21
+}

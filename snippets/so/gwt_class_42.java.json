@@ -1,0 +1,22 @@
+{
+  "id": 2987127,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2987193,
+  "parentId": 0,
+  "createDate": "Jun 7, 2010",
+  "score": 2,
+  "viewCount": 2156,
+  "body": "\u003cp\u003ei dunno if the question is already ask, but i couldn\u0027t find it... i\u0027m searching a way to mock my view in order to test my presenter ? i try to use mockito for the view, and set it in the presenter, but in result in presenter, when i call presenter.getDisplay() (the getter for the view) all of my widget is null ? as i believe it\u0027s normal mockito will not mock the widget.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ei\u0027m 100% sure i mistaken something but i couldnt find it. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ethanks for your enlightement :)\u003c/p\u003e\u0026#xA;",
+  "ownerId": 359281,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jul 15, 2010",
+  "title": "GWT and Mock the view in MVP pattern",
+  "tags": [
+    "gwt",
+    "junit",
+    "mockito"
+  ],
+  "answerCount": 3,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

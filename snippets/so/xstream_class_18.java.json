@@ -1,0 +1,24 @@
+{
+  "id": 23816525,
+  "postTypeId": 1,
+  "acceptedAnswerId": 23837042,
+  "parentId": 0,
+  "createDate": "May 22, 2014",
+  "score": 3,
+  "viewCount": 6763,
+  "body": "\u003cp\u003eI have the following entity:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@XStreamAlias(\"entity\")\u0026#xA;public class MapTestEntity {\u0026#xA;\u0026#xA;    @XStreamAsAttribute\u0026#xA;    public Map\u0026lt;String, String\u0026gt; myMap \u003d new HashMap\u0026lt;\u0026gt;();\u0026#xA;\u0026#xA;    @XStreamAsAttribute\u0026#xA;    public String myText;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI use it with xstream like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eMapTestEntity e \u003d new MapTestEntity();\u0026#xA;e.myText \u003d \"Foo\";\u0026#xA;e.myMap.put(\"firstname\", \"homer\");\u0026#xA;e.myMap.put(\"lastname\", \"simpson\");\u0026#xA;\u0026#xA;XStream xstream \u003d new XStream(new PureJavaReflectionProvider());\u0026#xA;xstream.processAnnotations(MapTestEntity.class);\u0026#xA;System.out.println(xstream.toXML(e));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eand get the following xml:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;entity myText\u003d\"Foo\"\u0026gt;\u0026#xA;  \u0026lt;myMap\u0026gt;\u0026#xA;    \u0026lt;entry\u0026gt;\u0026#xA;      \u0026lt;string\u0026gt;lastname\u0026lt;/string\u0026gt;\u0026#xA;      \u0026lt;string\u0026gt;simpson\u0026lt;/string\u0026gt;\u0026#xA;    \u0026lt;/entry\u0026gt;\u0026#xA;    \u0026lt;entry\u0026gt;\u0026#xA;      \u0026lt;string\u0026gt;firstname\u0026lt;/string\u0026gt;\u0026#xA;      \u0026lt;string\u0026gt;homer\u0026lt;/string\u0026gt;\u0026#xA;    \u0026lt;/entry\u0026gt;\u0026#xA;  \u0026lt;/myMap\u0026gt;\u0026#xA;\u0026lt;/entity\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut I need to map the \u003ccode\u003eHashMap\u003c/code\u003e to attributes in xml like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;entity myText\u003d\"Foo\" lastname\u003d\"simpson\" firstname\u003d\"homer\" /\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow can I do that with XStream? Can I use a custom converter or mapper or something like that? TIA!!\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e(Of course my code needs to be ensure that are no duplicates in xml attributes.)\u003c/p\u003e\u0026#xA;",
+  "ownerId": 1869090,
+  "lastEditorUserId": 1869090,
+  "lastEditDate": "May 22, 2014",
+  "lastActivityDate": "Sep 2, 2016",
+  "title": "How to map an Hashmap to key-value-attributes in XML using xstream",
+  "tags": [
+    "java",
+    "xml",
+    "map",
+    "xstream"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

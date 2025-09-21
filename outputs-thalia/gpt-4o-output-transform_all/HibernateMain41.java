@@ -1,0 +1,34 @@
+```java
+import java.util.Map;
+import org.hibernate.engine.spi.HibernateService;
+import org.hibernate.engine.spi.QueryResultsRegionAdapter;
+import org.hibernate.engine.spi.GlobalConfiguration;
+import org.hibernate.engine.spi.RevisionTypeAuditExpression;
+import org.hibernate.engine.spi.StatisticsServiceMBean;
+import org.hibernate.engine.spi.Shard;
+import org.hibernate.engine.spi.ShardOperation;
+import org.hibernate.engine.spi.TupleElementImplementor;
+import org.hibernate.engine.spi.ExitOperationsCollector;
+import org.hibernate.engine.spi.FirstNonNullResultExitStrategy;
+import org.hibernate.engine.spi.JoinType;
+import org.hibernate.engine.spi.LegacyHiLoAlgorithmOptimizer;
+import org.hibernate.engine.spi.ValidatePreUpdateEventListener;
+import org.hibernate.engine.spi.QueryBinder;
+import org.hibernate.engine.spi.MapAttribute;
+import org.hibernate.engine.spi.MapAttributeJoin;
+import org.hibernate.engine.spi.Renderable;
+import org.hibernate.engine.spi.WhenClause;
+import org.hibernate.engine.spi.Vertex;
+import org.hibernate.engine.spi.Expression;
+import org.hibernate.engine.spi.C;
+import org.hibernate.engine.spi.Pair;
+import org.hibernate.engine.spi.Triple;
+import org.hibernate.engine.spi.QueryImpl;
+import org.hibernate.engine.spi.CriteriaBuilderImpl;
+import org.hibernate.engine.spi.AbstractEntityManagerImpl;
+import org.hibernate.engine.spi.SelectParser;
+import org.hibernate.engine.spi.AssertionFailure;
+import org.hibernate.engine.spi.MiddleSimpleComponentMapper;
+import org.hibernate.engine.spi.MiddleRelatedComponentMapper;
+import org.hibernate.engine.spi.MapKeyPath;
+```

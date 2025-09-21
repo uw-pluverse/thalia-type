@@ -1,0 +1,24 @@
+{
+  "id": 25098261,
+  "postTypeId": 1,
+  "acceptedAnswerId": 25098804,
+  "parentId": 0,
+  "createDate": "Aug 2, 2014",
+  "score": 1,
+  "viewCount": 2883,
+  "body": "\u003cp\u003eI\u0027m converting XML to a Java Map with XStream. Each time I solve one problem, I run into another. Incredibly frustrating. Anyways, the XML looks something like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" ?\u0026gt;\u0026#xA;    \u0026lt;root\u0026gt;\u0026#xA;        \u0026lt;Durapipe type\u003d\"int\"\u0026gt;1\u0026lt;/Durapipe\u0026gt;\u0026#xA;        \u0026lt;EXPLAIN type\u003d\"int\"\u0026gt;2\u0026lt;/EXPLAIN\u0026gt;\u0026#xA;        \u0026lt;woods type\u003d\"int\"\u0026gt;2\u0026lt;/woods\u0026gt;\u0026#xA;        \u0026lt;hanging type\u003d\"int\"\u0026gt;3\u0026lt;/hanging\u0026gt;\u0026#xA;        \u0026lt;hastily type\u003d\"int\"\u0026gt;2\u0026lt;/hastily\u0026gt;\u0026#xA;        \u0026lt;localized type\u003d\"int\"\u0026gt;1\u0026lt;/localized\u0026gt;\u0026#xA;        \u0026lt;Schuster type\u003d\"int\"\u0026gt;5\u0026lt;/Schuster\u0026gt;\u0026#xA;        ....\u0026#xA;    \u0026lt;/root\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe Java in my main that I\u0027m using to implement this looks like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eXStream xstream \u003d new XStream();\u0026#xA;    Map\u0026lt;String, Integer\u0026gt; englishCorpusProbDist; \u0026#xA;    xstream.registerConverter(new MapEntryConverter());\u0026#xA;    englishCorpusProbDist \u003d (Map\u0026lt;String, Integer\u0026gt;)xstream.fromXML(new File(\"locationOnMyComputer/frequencies.xml\"));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe MapEntryConverter class that I\u0027ve created looks like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class MapEntryConverter implements Converter {\u0026#xA;  public class java {\u0026#xA;\u0026#xA;    }\u0026#xA;\u0026#xA;public boolean canConvert(Class clazz) {\u0026#xA;    return Map.class.isAssignableFrom(clazz);\u0026#xA;  }\u0026#xA;\u0026#xA;  public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {\u0026#xA;    Map\u0026lt;String, Integer\u0026gt; map \u003d (Map\u0026lt;String, Integer\u0026gt;) value;\u0026#xA;    for (Map.Entry\u0026lt;String, Integer\u0026gt; entry : map.entrySet()) {\u0026#xA;      writer.startNode(entry.getKey().toString());\u0026#xA;      writer.setValue(entry.getValue().toString());\u0026#xA;      writer.endNode();\u0026#xA;    }\u0026#xA;  }\u0026#xA;\u0026#xA;  public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {\u0026#xA;    Map\u0026lt;String, Integer\u0026gt; map \u003d new HashMap\u0026lt;String, Integer\u0026gt;();\u0026#xA;\u0026#xA;    while (reader.hasMoreChildren()) {\u0026#xA;      reader.moveDown();\u0026#xA;      map.put(reader.getNodeName(), new Integer(reader.getValue()));\u0026#xA;      reader.moveUp();\u0026#xA;    }\u0026#xA;    return map;\u0026#xA;  }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAt the moment I\u0027m getting the following exception: \"Exception in thread \"main\" com.thoughtworks.xstream.mapper.CannotResolveClassException: root\".\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCan anyone explain why this is and how I could fix this?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis question seemed like it might have the answer, but I think we\u0027re using different implementations: \u003ca href\u003d\"https://stackoverflow.com/questions/21283052/com-thoughtworks-xstream-mapper-cannotresolveclassexception\"\u003ecom.thoughtworks.xstream.mapper.CannotResolveClassException\u003c/a\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny help would be greatly appreciated. Thanks in advance!\u003c/p\u003e\u0026#xA;",
+  "ownerId": 3246779,
+  "lastEditorUserId": -1,
+  "lastEditDate": "May 23, 2017",
+  "lastActivityDate": "Oct 24, 2014",
+  "title": "Converting XML to Java Map\u003cString, Integer\u003e with XStream",
+  "tags": [
+    "java",
+    "xml",
+    "map",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

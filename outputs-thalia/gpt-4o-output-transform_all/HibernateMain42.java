@@ -1,0 +1,36 @@
+```java
+import org.hibernate.tuple.component.Dom4jComponentTuplizer;
+import org.hibernate.sql.ordering.antlr.NodeSupport.LiteralNode;
+import org.hibernate.sql.join.OracleJoinFragment;
+import org.hibernate.query.criteria.internal.CriteriaBuilderImpl;
+import org.hibernate.engine.transaction.jta.platform.internal.WebSphereExtendedJTATransactionLookup;
+import org.hibernate.tuple.component.CompositeNestedGeneratedValueGenerator;
+import org.hibernate.cfg.DefaultComponentSafeNamingStrategy;
+import org.hibernate.envers.AuditReader;
+import org.hibernate.shards.Shard;
+import org.hibernate.shards.strategy.exit.ShardOperation;
+import org.hibernate.query.criteria.internal.expression.LiteralExpression;
+import org.hibernate.query.criteria.internal.expression.function.AbstractTupleElement;
+import org.hibernate.query.criteria.internal.path.MapAttributeJoin;
+import org.hibernate.query.criteria.internal.path.PluralJoin;
+import org.hibernate.query.criteria.internal.path.MapAttribute;
+import org.hibernate.event.spi.ValidatePreUpdateEventListener;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException.SortedMapProxy;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException.SortedMapProxy.Triple;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException.SortedMapProxy.Triple.Vertex;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException.SortedMapProxy.Triple.Vertex.NamingStrategyHelper;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException.SortedMapProxy.Triple.Vertex.NamingStrategyHelper.GraphDefiner;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException.SortedMapProxy.Triple.Vertex.NamingStrategyHelper.GraphDefiner.Class;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException.SortedMapProxy.Triple.Vertex.NamingStrategyHelper.GraphDefiner.Class.QueryBinder;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute.MapKeyPath.MiddleRelatedComponentMapper.ValueVisitor.QueryBinder.DiscriminatorType.Initializor.SortedMap.AuditConfiguration.MappingNotFoundException.SortedMapProxy.Triple.Vertex.NamingStrategyHelper.GraphDefiner.Class.QueryBinder.JoinType;
+```

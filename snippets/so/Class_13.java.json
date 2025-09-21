@@ -1,0 +1,23 @@
+{
+  "id": 7143287,
+  "postTypeId": 1,
+  "acceptedAnswerId": 7143398,
+  "parentId": 0,
+  "createDate": "Aug 22, 2011",
+  "score": 128,
+  "viewCount": 25009,
+  "body": "\u003cp\u003eIn \u003ca href\u003d\"https://stackoverflow.com/questions/7142609/can-i-get-the-right-jcomponent-size-before-its-shown/7142653#7142653\"\u003eanother thread\u003c/a\u003e I stated that I liked to center my GUIs by doing something like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eJFrame frame \u003d new JFrame(\"Foo\");\u0026#xA;frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\u0026#xA;frame.getContentPane().add(new HexagonGrid());\u0026#xA;frame.pack();\u0026#xA;frame.setLocationRelativeTo(null);\u0026#xA;frame.setVisible(true);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut Andrew Thompson had a different opinion, to instead call\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eframe.pack();\u0026#xA;frame.setLocationByPlatform(true);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eand inquiring minds want to know why?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 522444,
+  "lastEditorUserId": -1,
+  "lastEditDate": "May 23, 2017",
+  "lastActivityDate": "Mar 22, 2020",
+  "title": "How to best position Swing GUIs?",
+  "tags": [
+    "java",
+    "swing",
+    "user-interface"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 40
+}

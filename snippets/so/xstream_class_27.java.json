@@ -1,0 +1,21 @@
+{
+  "id": 6825271,
+  "postTypeId": 1,
+  "acceptedAnswerId": 11768002,
+  "parentId": 0,
+  "createDate": "Jul 26, 2011",
+  "score": 1,
+  "viewCount": 1713,
+  "body": "\u003cp\u003eI am using XStream to convert a Java class which has fields of the type java.util.Map. I have a converter for java.util.Map which displays the key of the Map as an xml element and the value of the map as the value for the xml element. I have registered the converter using registerConverter method. When I perform the marshalling, I get the following output.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;cart account_id\u003d\"123\" shift_id\u003d\"456\" account_postings_id\u003d\"641\"\u0026gt;\u0026#xA;  \u0026lt;supervisor_id\u0026gt;555\u0026lt;/supervisor_id\u0026gt;\u0026#xA;  \u0026lt;payments\u0026gt;\u0026#xA;    \u0026lt;map sequence\u003d\"1\"\u0026gt;\u0026#xA;      \u0026lt;amount\u0026gt;123.45\u0026lt;/amount\u0026gt;\u0026#xA;      \u0026lt;billing_method\u0026gt;12345\u0026lt;/billing_method\u0026gt;\u0026#xA;      \u0026lt;form\u0026gt;card\u0026lt;/form\u0026gt;\u0026#xA;      \u0026lt;delivery_mode\u0026gt;Q\u0026lt;/delivery_mode\u0026gt;\u0026#xA;    \u0026lt;/map\u0026gt;\u0026#xA;    \u0026lt;map sequence\u003d\"2\"\u0026gt;\u0026#xA;      \u0026lt;amount\u0026gt;123.45\u0026lt;/amount\u0026gt;\u0026#xA;      \u0026lt;person_id\u0026gt;2333\u0026lt;/person_id\u0026gt;\u0026#xA;      \u0026lt;form\u0026gt;cash\u0026lt;/form\u0026gt;\u0026#xA;      \u0026lt;delivery_mode\u0026gt;Q\u0026lt;/delivery_mode\u0026gt;\u0026#xA;     \u0026lt;/map\u0026gt;\u0026#xA;  \u0026lt;/payments\u0026gt;\u0026#xA;  \u0026lt;items\u0026gt;\u0026#xA;    \u0026lt;map sequence\u003d\"3\"\u0026gt;\u0026#xA;      \u0026lt;amount\u0026gt;1.00\u0026lt;/amount\u0026gt;\u0026#xA;      \u0026lt;type\u0026gt;pay_toll\u0026lt;/type\u0026gt;\u0026#xA;      \u0026lt;toll_id\u0026gt;1234\u0026lt;/toll_id\u0026gt;\u0026#xA;    \u0026lt;/map\u0026gt;\u0026#xA;  \u0026lt;/items\u0026gt;\u0026#xA;\u0026lt;/cart\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eInstead of the map tags appearing, I would want to use different tags based on the field name in the class. For example, the Payments list will have tag name payment and the Items list will have a tag name item for each Map element.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow do we dynamically set alias based on field in the same class?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e-Anand\u003c/p\u003e\u0026#xA;",
+  "ownerId": 736610,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Aug 2, 2012",
+  "title": "XStream different alias for same class (Map.class) for different fields",
+  "tags": [
+    "xml-serialization",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

@@ -1,0 +1,23 @@
+{
+  "id": 16461361,
+  "postTypeId": 1,
+  "acceptedAnswerId": 16461451,
+  "parentId": 0,
+  "createDate": "May 9, 2013",
+  "score": 85,
+  "viewCount": 65894,
+  "body": "\u003cp\u003eI have date \u003ccode\u003eWed May 08 00:00:00 GMT+06:30 2013\u003c/code\u003e. I add one day into it by using \u003ca href\u003d\"https://www.joda.org/joda-time/\" rel\u003d\"noreferrer\"\u003eJoda-Time\u003c/a\u003e \u003ca href\u003d\"https://www.joda.org/joda-time/apidocs/org/joda/time/DateTime.html\" rel\u003d\"noreferrer\"\u003eDateTime\u003c/a\u003e like this.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTime dateTime \u003d new DateTime(date);\u0026#xA;dateTime.plusDays(1);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen I print dateTime, I got this date \u003ccode\u003e2013-05-08T00:00:00.000+06:30\u003c/code\u003e. The joda date time didn\u0027t add one day. I haven\u0027t found any error.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks\u003c/p\u003e\u0026#xA;",
+  "ownerId": 1156041,
+  "lastEditorUserId": 38896,
+  "lastEditDate": "Jan 8, 2020",
+  "lastActivityDate": "Jan 8, 2020",
+  "title": "Add one day into Joda-Time DateTime",
+  "tags": [
+    "java",
+    "datetime",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 4,
+  "favoriteCount": 2
+}

@@ -1,0 +1,22 @@
+{
+  "id": 2279782,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2296469,
+  "parentId": 0,
+  "createDate": "Feb 17, 2010",
+  "score": 1,
+  "viewCount": 2069,
+  "body": "\u003cp\u003eI need to upload a file in GWT in the background, ie. not from a visual widget.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eFor this I\u0027ve found the RequestBuilder class, but little documentation on how to use it for upload purposes.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe file content I need to upload is 100% plaintext.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy code so far looks like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003efinal String filename \u003d UUID.randomUUID().toString() + \".txt\";\u0026#xA;\u0026#xA;RequestBuilder rb \u003d new RequestBuilder(RequestBuilder.POST, \"http://localhost/upload\");\u0026#xA;rb.setRequestData(selected.getBody()); // getBody() is plain-text\u0026#xA;rb.setHeader(\"Content-Type\", \"application/x-www-form-urlencodeddata\");\u0026#xA;rb.setCallback(new RequestCallback() {\u0026#xA;    @Override\u0026#xA;    public void onResponseReceived(Request request, Response response) {\u0026#xA;        w.setUrl(\"http://localhost/magic.html?hide\u003dstatus\u0026amp;open\u003d\" + filename);\u0026#xA;        w.show();\u0026#xA;        w.maximize();                            \u0026#xA;    }\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public void onError(Request request, Throwable exception) {\u0026#xA;        exception.printStackTrace();\u0026#xA;    }\u0026#xA;});\u0026#xA;\u0026#xA;// Checked Exceptions sucks *sigh*\u0026#xA;try {\u0026#xA;    rb.send();\u0026#xA;}\u0026#xA;catch (RequestException e) {\u0026#xA;    e.printStackTrace();\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI hope someone can give me some pointers towards solving this issue, thanks!\u003c/p\u003e\u0026#xA;",
+  "ownerId": 95309,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Feb 20, 2010",
+  "title": "File Upload with RequestBuilder",
+  "tags": [
+    "java",
+    "gwt",
+    "jakarta-ee"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

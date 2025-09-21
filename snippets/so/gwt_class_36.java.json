@@ -1,0 +1,24 @@
+{
+  "id": 2679247,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4581317,
+  "parentId": 0,
+  "createDate": "Apr 20, 2010",
+  "score": 3,
+  "viewCount": 1858,
+  "body": "\u003cp\u003eThis post concerns only IE.\u0026#xA;The last line of the following code is causing the issue.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    int width \u003d 200;\u0026#xA;    int height \u003d 200;\u0026#xA;    int overHeight \u003d 40;\u0026#xA;\u0026#xA;    AbsolutePanel absPanel \u003d new AbsolutePanel();\u0026#xA;    absPanel.setSize(width + \"px\", height + \"px\");      \u0026#xA;\u0026#xA;    SimplePanel underPanel \u003d new SimplePanel();\u0026#xA;    underPanel.setWidth(width + \"px\");\u0026#xA;    underPanel.setHeight(height + \"px\");\u0026#xA;    underPanel.getElement().getStyle().setBackgroundColor(\"red\");           \u0026#xA;\u0026#xA;    SimplePanel overPanel \u003d new SimplePanel();\u0026#xA;    overPanel.setWidth(width + \"px\");\u0026#xA;    overPanel.setHeight(overHeight + \"px\");\u0026#xA;    overPanel.getElement().getStyle().setBackgroundColor(\"black\");\u0026#xA;    //Setting the IE opacity to 20% on the black element in order to obtain the see through effect.\u0026#xA;    overPanel.getElement().getStyle().setProperty(\"filter\", \"alpha(opacity\u003d20)\"); \u0026#xA;\u0026#xA;    absPanel.add(underPanel, 0, 0);\u0026#xA;    absPanel.add(overPanel, 0, 0);\u0026#xA;\u0026#xA;    RootPanel.get(\"test\").add(absPanel);\u0026#xA;\u0026#xA;    //The next line causes the problem. \u0026#xA;    absPanel.getElement().getStyle().setProperty(\"filter\", \"alpha(opacity\u003d100)\");\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo basically this code should display a red square of 200px by 200px (see underPanel in the code) and on top of it a black rectangle of 200px by 40px (see overPanel in the code). However the black rectangle is partially see through since its transparency is set to 20%, therefore it should appear in red, but of a darker red than the rectangle sitting under since it is actually a faded black item.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSome rendering problem occurs because of the last line of code that sets the opacity of the containing AbsolutePanel to 100% (which in theory should not affect the visual result). Indeed in that case the panel lying over remains still see through but straight through the background colour of the page! It\u0027s like if the panel sitting under was not there at all...\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny ideas?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is under GWT 2.0 and IE7.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 321797,
+  "lastEditorUserId": 321797,
+  "lastEditDate": "Apr 21, 2010",
+  "lastActivityDate": "Dec 17, 2011",
+  "title": "GWT : Internet Explorer transparency issue",
+  "tags": [
+    "css",
+    "internet-explorer",
+    "gwt",
+    "transparency"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

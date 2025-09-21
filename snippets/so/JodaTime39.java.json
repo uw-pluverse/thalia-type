@@ -1,0 +1,22 @@
+{
+  "id": 12851934,
+  "postTypeId": 1,
+  "acceptedAnswerId": 12852039,
+  "parentId": 0,
+  "createDate": "Oct 12, 2012",
+  "score": 143,
+  "viewCount": 118583,
+  "body": "\u003cp\u003eBelow is the method I wrote: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic List\u0026lt;Map\u0026lt;String, Object\u0026gt;\u0026gt; loadNotYetInEmployee(int shift, Date date,\u0026#xA;        int transitionVal, String type, User user) {\u0026#xA;\u0026#xA;    DateTime datetime \u003d new DateTime(date);\u0026#xA;    datetime \u003d datetime\u0026#xA;            .plus(Period.minutes(shiftTiming.getSession1InTime()));\u0026#xA;\u0026#xA;    List\u0026lt;Map\u0026lt;String, Object\u0026gt;\u0026gt; result \u003d new ArrayList\u0026lt;Map\u0026lt;String, Object\u0026gt;\u0026gt;();\u0026#xA;\u0026#xA;    sql \u003d SqlMapUtils.getSql(\"attendance.attendancestatus.latein\",\u0026#xA;            parameters);\u0026#xA;    result \u003d getJdbcTemplate().queryForList(sql);\u0026#xA;    for (int i \u003d 0; i \u0026lt; result.size(); i++) {\u0026#xA;        Date punchInTime \u003d (Date) result.get(i).get(\"punchtime\");\u0026#xA;        DateTime punchTime \u003d new DateTime(punchInTime);\u0026#xA;    }\u0026#xA;    return result;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eNow from my method you can see I have a \u003ca href\u003d\"http://www.joda.org/joda-time/\" rel\u003d\"noreferrer\"\u003eJoda-Time\u003c/a\u003e \u003ca href\u003d\"http://www.joda.org/joda-time/apidocs/org/joda/time/DateTime.html\" rel\u003d\"noreferrer\"\u003eDateTime\u003c/a\u003e object in object named \u003ccode\u003edatetime\u003c/code\u003e and from my result I am getting one timestamp which I am converting to jodatime \u003ccode\u003epunchTime\u003c/code\u003e. Now I want to find out the diff between these two dates, how do I do that?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 820340,
+  "lastEditorUserId": 4348556,
+  "lastEditDate": "Mar 21, 2019",
+  "lastActivityDate": "Mar 21, 2019",
+  "title": "How to find difference between two Joda-Time DateTimes in minutes",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 4,
+  "commentCount": 3,
+  "favoriteCount": 25
+}

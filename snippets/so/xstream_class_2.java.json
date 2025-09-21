@@ -1,0 +1,22 @@
+{
+  "id": 7491195,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Sep 20, 2011",
+  "score": 1,
+  "viewCount": 3064,
+  "body": "\u003cp\u003eI am trying to read in an xml file and store its contents as an object for later use.  I can reproduce a similar object using the toXML() method and providing sample data however when I call fromXML() on the same object I get an error.  The problem is I have multiple instances of fiels.  The xml looks something like this...\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;House\u0026gt;   \u0026#xA;  \u0026lt;Address\u0026gt;\u0026#xA;    \u0026lt;Number\u0026gt;1234\u0026lt;/Number\u0026gt;\u0026#xA;    \u0026lt;Street\u0026gt;Sample St.\u0026lt;/Street\u0026gt;\u0026#xA;    \u0026lt;City\u0026gt;Sample City\u0026lt;/City\u0026gt;\u0026#xA;  \u0026lt;/Address\u0026gt;\u0026#xA;  \u0026lt;Resident\u0026gt;\u0026#xA;    \u0026lt;Name\u0026gt;Joe\u0026lt;/Name\u0026gt;\u0026#xA;    \u0026lt;Age\u0026gt;38\u0026lt;/Age\u0026gt;\u0026#xA;    \u0026lt;Profession\u0026gt;\u0026#xA;      \u0026lt;Title\u0026gt;Engineer\u0026lt;/Title\u0026gt;\u0026#xA;      \u0026lt;Title\u0026gt;Developer\u0026lt;/Title\u0026gt;\u0026#xA;    \u0026lt;/Profession\u0026gt;\u0026#xA;  \u0026lt;/Resident\u0026gt;\u0026#xA;  \u0026lt;Resident\u0026gt;\u0026#xA;    \u0026lt;Name\u0026gt;Cathy\u0026lt;/Name\u0026gt;\u0026#xA;    \u0026lt;Age\u0026gt;35\u0026lt;/Age\u0026gt;\u0026#xA;    \u0026lt;Profession\u0026gt;\u0026#xA;      \u0026lt;Title\u0026gt;Engineer\u0026lt;/Title\u0026gt;\u0026#xA;      \u0026lt;Title\u0026gt;Developer\u0026lt;/Title\u0026gt;\u0026#xA;    \u0026lt;/Profession\u0026gt;\u0026#xA;  \u0026lt;/Resident\u0026gt;\u0026#xA;\u0026lt;/House\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo in this example there are two residents and they each have two job titles.  I tried defining these tags as arraylists in the constructors\u0027 for their respective classes but that didn\u0027t seem to work.  This works fine if I only have one instance of  Resident or Title etc.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere is the Java code (copied from comment below): \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eXStream xstream \u003d new XStream(new DomDriver()); \u0026#xA;FileReader fin \u003d new FileReader(\"path_to_file.xml\"); \u0026#xA;BufferedReader br \u003d new BufferedReader(fin); \u0026#xA;\u0026#xA;while(br.ready())\u0026#xA;{ \u0026#xA;  str +\u003d br.readLine() + \"\\n\"; \u0026#xA;} \u0026#xA;\u0026#xA;House house \u003d (House)xstream.fromXML(str);\u0026#xA;\u0026#xA;\u0026#xA;import java.util.ArrayList;\u0026#xA;\u0026#xA;\u0026#xA;public class House {\u0026#xA;\u0026#xA;private Address Address;\u0026#xA;private ArrayList\u0026lt;Resident\u0026gt; Resident;\u0026#xA;\u0026#xA;public House(Address address, ArrayList\u0026lt;Resident\u0026gt; resident) {\u0026#xA;\u0026#xA;    Address \u003d address;\u0026#xA;    Resident \u003d resident;\u0026#xA;}\u0026#xA;\u0026#xA;public Address getAddress() {\u0026#xA;    return Address;\u0026#xA;}\u0026#xA;\u0026#xA;public void setAddress(Address address) {\u0026#xA;    Address \u003d address;\u0026#xA;}\u0026#xA;\u0026#xA;public ArrayList\u0026lt;Resident\u0026gt; getResident() {\u0026#xA;    return Resident;\u0026#xA;}\u0026#xA;\u0026#xA;public void setResident(ArrayList\u0026lt;Resident\u0026gt; resident) {\u0026#xA;    Resident \u003d resident;\u0026#xA;}\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 955593,
+  "lastEditorUserId": 955593,
+  "lastEditDate": "Sep 20, 2011",
+  "lastActivityDate": "Sep 20, 2011",
+  "title": "Deserializing xml with duplicate entries using xstream",
+  "tags": [
+    "java",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 4,
+  "favoriteCount": 0
+}

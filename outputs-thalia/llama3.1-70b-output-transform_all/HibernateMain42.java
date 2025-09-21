@@ -1,0 +1,55 @@
+import java.util.Map;
+import java.util.SortedMap;
+
+import org.hibernate.boot.model.naming.NamingStrategyHelper;
+import org.hibernate.boot.model.relational.Database;
+import org.hibernate.dialect.identity.IdentityColumnSupportImpl;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
+import org.hibernate.hql.ast.tree.FromClause;
+import org.hibernate.hql.ast.tree.FromElement;
+import org.hibernate.hql.ast.tree.JoinType;
+import org.hibernate.hql.ast.tree.MapKeyPath;
+import org.hibernate.hql.ast.tree MiddleRelatedComponentMapper;
+import org.hibernate.hql.ast.tree.QueryBinder;
+import org.hibernate.hql.ast.tree.ValidatePreUpdateEventListener;
+import org.hibernate.jpa.criteria.CriteriaBuilderImpl;
+import org.hibernate.jpa.criteria.compile.impl.FromImplementor;
+import org.hibernate.jpa.criteria.expression.LiteralExpression;
+import org.hibernate.jpa.criteria.expression.TupleElement;
+import org.hibernate.jpa.criteria.path.PluralAttributePath;
+import org.hibernate.jpa.criteria.path.SingularAttributePath;
+import org.hibernate.jpa.criteria.spi.AbstractTupleElement;
+import org.hibernate.jpa.criteria.spi.CriteriaBuilderImpl;
+import org.hibernate.jpa.criteria.spi.FromImplementor;
+import org.hibernate.jpa.criteria.spi.LiteralExpression;
+import org.hibernate.jpa.criteria.spi.TupleElement;
+import org.hibernate.mapping.Component;
+import org.hibernate.persister.entity.EntityPersister;
+import org.hibernate.sql.JoinFragment;
+import org.hibernate.sql.JoinType;
+import org.hibernate.sql.Select;
+import org.hibernate.type.BasicTypeRegistry;
+import org.hibernate.type.descriptor.java.JavaTypeDescriptor;
+import org.hibernate.usertype.UserType;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.From;
+import javax.persistence.criteria.JoinType;
+import javax.persistence.criteria.Path;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import javax.persistence.metamodel.Attribute;
+import javax.persistence.metamodel.EntityType;
+import javax.persistence.metamodel.ManagedType;
+import javax.persistence.metamodel.Metamodel;
+import javax.persistence.metamodel.PluralAttribute;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+import javax.persistence.metamodel.Type;
+
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.tree.DefaultElement;
+
+import oracle.jdbc.OracleDriver;

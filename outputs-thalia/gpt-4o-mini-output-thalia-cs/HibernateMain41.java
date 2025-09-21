@@ -1,0 +1,30 @@
+```java
+import src.araguaya.RevisionTypeAuditExpression;
+import src.araguaya.HibernateService;
+import src.araguaya.AbstractEntityManagerImpl;
+import java.util.Map;
+import src.araguaya.CriteriaBuilderImpl;
+import src.araguaya.QueryImpl;
+import src.araguaya.StatisticsServiceMBean;
+import src.araguaya.MiddleSimpleComponentMapper;
+import src.araguaya.Shard;
+import src.araguaya.Triple;
+import src.araguaya.SelectParser;
+import src.araguaya.Pair;
+import src.araguaya.Expression;
+import src.araguaya.Vertex;
+import src.araguaya.MapKeyPath;
+import src.araguaya.WhenClause;
+import src.araguaya.GlobalConfiguration;
+import src.araguaya.LegacyHiLoAlgorithmOptimizer;
+import src.araguaya.ValidatePreUpdateEventListener;
+import src.araguaya.QueryBinder;
+import src.araguaya.ExitOperationsCollector;
+import src.araguaya.TupleElementImplementor;
+import src.araguaya.FirstNonNullResultExitStrategy;
+import src.araguaya.Renderable;
+import src.araguaya.MapAttributeJoin;
+import src.araguaya.JoinType;
+import src.araguaya.AssertionFailure;
+import src.araguaya.QueryResultsRegionAdapter;
+```

@@ -1,0 +1,23 @@
+{
+  "id": 2155194,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2160631,
+  "parentId": 0,
+  "createDate": "Jan 28, 2010",
+  "score": 1,
+  "viewCount": 15153,
+  "body": "\u003cp\u003ei want to place a some buttons in the center of a panel, but doesn\u0027t work. Here my code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eimport com.extjs.gxt.ui.client.widget.HorizontalPanel;\u0026#xA;import com.extjs.gxt.ui.client.widget.Label;\u0026#xA;import com.extjs.gxt.ui.client.widget.LayoutContainer;\u0026#xA;import com.extjs.gxt.ui.client.widget.VerticalPanel;\u0026#xA;import com.extjs.gxt.ui.client.widget.button.Button;\u0026#xA;import com.google.gwt.core.client.EntryPoint;\u0026#xA;import com.google.gwt.user.client.ui.HasAlignment;\u0026#xA;import com.google.gwt.user.client.ui.RootPanel;\u0026#xA;\u0026#xA;private void addStartupBox() {\u0026#xA;    VerticalPanel boxPanel \u003d setBoxSize();      \u0026#xA;    com.google.gwt.user.client.ui.Label title \u003d createBoxTitle(\"Prüfungen\");        \u0026#xA;\u0026#xA;    // Create second panel for the content of a box     \u0026#xA;    com.google.gwt.user.client.ui.VerticalPanel boxContent \u003d new com.google.gwt.user.client.ui.VerticalPanel();\u0026#xA;    boxContent.setSpacing(10);\u0026#xA;    boxContent.setHorizontalAlignment(com.google.gwt.user.client.ui.VerticalPanel.ALIGN_CENTER);\u0026#xA;\u0026#xA;    // Create content for the box\u0026#xA;    Button but1 \u003d new Button(\"A\");\u0026#xA;    but1.setPixelSize(280, 25);     \u0026#xA;\u0026#xA;    Button but2 \u003d new Button(\"B\");\u0026#xA;    but2.setPixelSize(280, 25);\u0026#xA;\u0026#xA;    Button but3 \u003d new Button(\"C\");\u0026#xA;    but3.setPixelSize(280, 25);\u0026#xA;\u0026#xA;    // Add buttons to boxContent\u0026#xA;    boxContent.add(but1);\u0026#xA;    boxContent.add(but2);\u0026#xA;    boxContent.add(but3);\u0026#xA;\u0026#xA;    // Add title and boxContent to boxPanel     \u0026#xA;    boxPanel.add(title);\u0026#xA;    boxPanel.add(boxContent);\u0026#xA;\u0026#xA;    RootPanel.get(\"boxPanelContainer\").add(boxPanel);\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ethe result is: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003ca href\u003d\"http://tinyurl.com/ycs2q4o\" rel\u003d\"nofollow noreferrer\"\u003ehere http://tinyurl.com/ycs2q4o\u003c/a\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eand the buttons are left aligned. after that I\u0027ve tryied it this way: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eboxContent.setHorizontalAlignment(HasAlignment.ALIGN_CENTER);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut the buttons are still left aligned. my last idea was to use the ExtGWT Vertical Panel with this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eboxContent.setHorizontalAlign(HorizontalAlignment.CENTER);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut unfortunately also doesn\u0027t work. can someone tell me, what i\u0027m doing wrong?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 115201,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jan 29, 2010",
+  "title": "Horizontal align problem",
+  "tags": [
+    "gwt",
+    "panel",
+    "center",
+    "gxt"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

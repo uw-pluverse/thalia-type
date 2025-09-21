@@ -1,0 +1,34 @@
+```java
+import java.util.Map;
+import java.util.SortedMap;
+import javax.persistence.criteria.JoinType;
+import javax.persistence.metamodel.MapAttribute;
+import org.hibernate.boot.model.naming.DefaultComponentSafeNamingStrategy;
+import org.hibernate.boot.model.naming.NamingStrategyHelper;
+import org.hibernate.cfg.beanvalidation.ValidatePreUpdateEventListener;
+import org.hibernate.criterion.CriteriaBuilderImpl;
+import org.hibernate.dialect.OracleJoinFragment;
+import org.hibernate.envers.AuditReader;
+import org.hibernate.envers.configuration.internal.AuditConfiguration;
+import org.hibernate.hql.internal.ast.tree.LiteralNode;
+import org.hibernate.loader.plan.build.internal.spaces.CompositeNestedGeneratedValueGenerator;
+import org.hibernate.persister.entity.AbstractTupleElement;
+import org.hibernate.persister.entity.Dom4jComponentTuplizer;
+import org.hibernate.persister.entity.DiscriminatorType;
+import org.hibernate.persister.entity.MappingNotFoundException;
+import org.hibernate.persister.entity.MiddleRelatedComponentMapper;
+import org.hibernate.persister.entity.Shard;
+import org.hibernate.persister.entity.ShardOperation;
+import org.hibernate.persister.entity.Vertex;
+import org.hibernate.persister.entity.Initializor;
+import org.hibernate.persister.entity.MapKeyPath;
+import org.hibernate.persister.entity.PluralJoin;
+import org.hibernate.persister.entity.QueryBinder;
+import org.hibernate.persister.entity.SortedMapProxy;
+import org.hibernate.persister.entity.Triple;
+import org.hibernate.persister.entity.ValueVisitor;
+import org.hibernate.persister.entity.WebSphereExtendedJTATransactionLookup;
+import org.hibernate.persister.entity.LiteralExpression;
+import org.hibernate.persister.entity.MapAttributeJoin;
+import org.hibernate.persister.entity.GraphDefiner;
+```

@@ -1,0 +1,22 @@
+{
+  "id": 2669065,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2669959,
+  "parentId": 0,
+  "createDate": "Apr 19, 2010",
+  "score": 5,
+  "viewCount": 2480,
+  "body": "\u003cp\u003eI have a FlowPanel that I\u0027m trying to animate back and forth like an iphone nav.  (See \u003ca href\u003d\"https://stackoverflow.com/questions/2639125/easy-gwt-animations\"\u003ethis\u003c/a\u003e post for my original question on how to do this)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo I have it \"working\" with the code shown below.  I say working in quotes because I\u0027m finding that my final position of my scroller is not precise and always changes when scrolling.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe GWT.log always says the actual values I\u0027m looking for, so for instance with the call below to scrollTo, my GWT.log says:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cblockquote\u003e\u0026#xA;  \u003cp\u003eScrollStart: 0 scrollStop: -246\u003c/p\u003e\u0026#xA;\u003c/blockquote\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut when I actually analyze the element in fireBug, its css, left position is never exactly -246px.  Sometimes it\u0027s off by as much as 10px so my panel has just stopped scrolling before being finished.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe worst part is that this nav animates back and forth, so subsequent clicks can really throw it off, and I need pixel perfect positioning otherwise the whole things looks off.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI don\u0027t even know where to start with debugging this other than what I\u0027ve already done.  Any tips are appreciated.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eEDIT: Additional logging information:\u003c/strong\u003e\u003cbr\u003e\u0026#xA;Logging inside the onUpdate shows this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eUpdating: progress: 0.09319577524960648 position: -22.926160711403195\u0026#xA;Updating: progress: 0.1328387452821571 position: -32.67833133941065\u0026#xA;Updating: progress: 0.609071620698271 position: -149.83161869177468\u0026#xA;Updating: progress: 0.7269952498697734 position: -178.84083146796425\u0026#xA;Updating: progress: 0.9852532367342712 position: -242.37229623663072\u0026#xA;AnimationComplete: final scrollStart/scrollStop: 0/-246\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhy does it end at 0.98 % ???  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cem\u003eCode to call animation\u003c/em\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003escroller \u003d new Scroller();\u0026#xA;scroller.scrollTo(-246,400);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cem\u003eAnimation Code\u003c/em\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class Scroller extends Animation {\u0026#xA;\u0026#xA;    private FlowPanel scroller;\u0026#xA;    private final Element e;\u0026#xA;\u0026#xA;    public Scroller(){\u0026#xA;        scroller \u003d new FlowPanel();\u0026#xA;        e \u003d scroller.getElement();\u0026#xA;    }\u0026#xA;\u0026#xA;    public void scrollTo(int position, int milliseconds) {\u0026#xA;\u0026#xA;        scrollStart \u003d e.getOffsetLeft();\u0026#xA;        scrollStop \u003d position;\u0026#xA;\u0026#xA;        GWT.log(\"ScrollStart: \" + scrollStart + \" scrollStop: \" + scrollStop);\u0026#xA;        run(milliseconds);\u0026#xA;    }\u0026#xA;\u0026#xA;    @Override\u0026#xA;    protected void onUpdate(double progress) {\u0026#xA;        double position \u003d scrollStart + (progress * (scrollStop - scrollStart));\u0026#xA;        e.getStyle().setLeft(position, Style.Unit.PX);\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 74389,
+  "lastEditorUserId": -1,
+  "lastEditDate": "May 23, 2017",
+  "lastActivityDate": "Apr 19, 2010",
+  "title": "GWT Animation final value is not respected",
+  "tags": [
+    "gwt",
+    "gwt-animation"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

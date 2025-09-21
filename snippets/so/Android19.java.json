@@ -1,0 +1,24 @@
+{
+  "id": 738817,
+  "postTypeId": 1,
+  "acceptedAnswerId": 759517,
+  "parentId": 0,
+  "createDate": "Apr 10, 2009",
+  "score": 11,
+  "viewCount": 57075,
+  "body": "\u003cp\u003eI have images displayed in a GridView as in \u003ca href\u003d\"http://developer.android.com/guide/tutorials/views/hello-gridview.html\" rel\u003d\"nofollow noreferrer\"\u003ethis tutorial\u003c/a\u003e.  I want to be able to click on a single image and do other events and I need to know what image was clicked.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDo I have to add imageView.onKeyDown(keyCode, event) in the ImageAdapter class?  Here is the code as it currently exists:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@Override\u0026#xA;public View getView(int position, View convertView, ViewGroup parent) {\u0026#xA;  ImageView imageView;\u0026#xA;  if (convertView \u003d\u003d null) {  \u0026#xA;    // if it\u0027s not recycled, initialize some attributes\u0026#xA;    imageView \u003d new ImageView(mContext);\u0026#xA;    imageView.setLayoutParams(new GridView.LayoutParams(85, 85));\u0026#xA;    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);\u0026#xA;    imageView.setPadding(8, 8, 8, 8);\u0026#xA;    //does this need imageView.onKeyDown(keyCode, event)?\u0026#xA;  } \u0026#xA;  else {\u0026#xA;    imageView \u003d (ImageView) convertView;\u0026#xA;  }\u0026#xA;\u0026#xA;  imageView.setImageResource(mThumbIds[position]);\u0026#xA;  return imageView;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow will it indicate what image was clicked? How do I create the proper handler?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 4555,
+  "lastEditorUserId": 1765573,
+  "lastEditDate": "Jul 19, 2013",
+  "lastActivityDate": "Jul 19, 2013",
+  "title": "Create a clickable image in a GridView in Android",
+  "tags": [
+    "java",
+    "android",
+    "android-gridview",
+    "clickable-image"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 5
+}

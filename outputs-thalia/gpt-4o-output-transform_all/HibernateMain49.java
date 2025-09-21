@@ -1,0 +1,30 @@
+```java
+import org.hibernate.query.internal.AbstractEntityManagerImpl;
+import org.hibernate.query.internal.QueryImpl;
+import org.hibernate.query.criteria.internal.CriteriaBuilderImpl;
+import org.hibernate.query.Query;
+import org.hibernate.query.internal.QueryImpl;
+import org.hibernate.metamodel.model.domain.spi.MapAttribute;
+import org.hibernate.event.spi.ValidatePreUpdateEventListener;
+import org.hibernate.query.internal.Initializor;
+import org.hibernate.query.internal.NoOpValueHandler;
+import org.hibernate.query.internal.SortedMapProxy;
+import org.hibernate.query.internal.LiteralExpression;
+import org.hibernate.query.internal.AbstractCollectionInitializor;
+import org.hibernate.query.criteria.internal.expression.LiteralExpression;
+import org.hibernate.query.criteria.internal.expression.PluralAttributeJoinSupport;
+import org.hibernate.query.criteria.internal.expression.MapAttributeJoin;
+import org.hibernate.query.criteria.internal.expression.LiteralNode;
+import org.hibernate.query.criteria.internal.expression.MapKeyPath;
+import org.hibernate.query.criteria.internal.expression.FirstNonNullResultExitStrategy;
+import org.hibernate.query.criteria.internal.expression.ExitOperationsCollector;
+import org.hibernate.query.criteria.internal.expression.Shard;
+import org.hibernate.query.criteria.internal.expression.ShardOperation;
+import org.hibernate.query.criteria.internal.expression.StringHelper;
+import org.hibernate.query.criteria.internal.expression.QueryBinder;
+import org.hibernate.query.criteria.internal.expression.JoinType;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Map.Entry;
+import java.util.Map.Entry;
+```

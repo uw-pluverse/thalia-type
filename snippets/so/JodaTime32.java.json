@@ -1,0 +1,22 @@
+{
+  "id": 9598675,
+  "postTypeId": 1,
+  "acceptedAnswerId": 9598758,
+  "parentId": 0,
+  "createDate": "Mar 7, 2012",
+  "score": 4,
+  "viewCount": 231,
+  "body": "\u003cp\u003eTZ on my comp is GMT+5.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e  final DateTime date1 \u003d dtf.parseDateTime(\"1979-04-29\");\u0026#xA;  final DateTime date2 \u003d dtf.parseDateTime(\"1979-05-12\");\u0026#xA;  final DateTime date3 \u003d dtf.parseDateTime(\"1979-04-02\");\u0026#xA;  final DateTime date4 \u003d dtf.parseDateTime(\"1979-04-15\");\u0026#xA;  System.err.println(date1.toString());\u0026#xA;  System.err.println(date2.toString());\u0026#xA;  System.err.println(date3.toString());\u0026#xA;  System.err.println(date4.toString());\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eOutput is  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e1979-04-29T00:00:00.000-05:00\u0026#xA;1979-05-12T00:00:00.000-04:00\u0026#xA;1979-04-02T00:00:00.000-05:00\u0026#xA;1979-04-15T00:00:00.000-05:00  \u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e-04? Why?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIf add  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTimeZone.setDefault(DateTimeZone.forID(\"Etc/GMT+5\"));  \u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebefore, then output will be  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e1979-04-29T00:00:00.000-05:00\u0026#xA;1979-05-12T00:00:00.000-05:00\u0026#xA;1979-04-02T00:00:00.000-05:00\u0026#xA;1979-04-15T00:00:00.000-05:00 \u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 1143825,
+  "lastEditorUserId": 62130,
+  "lastEditDate": "Mar 7, 2012",
+  "lastActivityDate": "Mar 7, 2012",
+  "title": "Confusing time zones when parsing dates in Joda Time",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 1,
+  "commentCount": 3,
+  "favoriteCount": 0
+}

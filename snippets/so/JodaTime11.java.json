@@ -1,0 +1,22 @@
+{
+  "id": 4498274,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4498499,
+  "parentId": 0,
+  "createDate": "Dec 21, 2010",
+  "score": 18,
+  "viewCount": 10113,
+  "body": "\u003cp\u003eFrom \u003ca href\u003d\"http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html\" rel\u003d\"noreferrer\"\u003eDateTimeFormatter javadoc\u003c/a\u003e:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cblockquote\u003e\u0026#xA;  \u003cp\u003eZone names: Time zone names (\u0027z\u0027) cannot be parsed. \u003c/p\u003e\u0026#xA;\u003c/blockquote\u003e\u0026#xA;\u0026#xA;\u003cp\u003eTherefore timezone parsing like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eSystem.out.println(new SimpleDateFormat(\"EEE MMM dd HH:mm:ss z yyyy\").parse(\"Fri Nov 11 12:13:14 JST 2010\"));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ecannot be done in Joda:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTimeFormatter dtf \u003d DateTimeFormat.forPattern(\"EEE MMM dd HH:mm:ss z yyyy\");\u0026#xA;System.out.println(dtf.parseDateTime(\"Fri Nov 11 12:13:14 JST 2010\"));\u0026#xA;//Exception in thread \"main\" java.lang.IllegalArgumentException: Invalid format: \"Fri Nov 11 12:13:14 JST 2010\" is malformed at \"JST 2010\"\u0026#xA;//at org.joda.time.format.DateTimeFormatter.parseDateTime(DateTimeFormatter.java:673)\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 185723,
+  "lastEditorUserId": 38896,
+  "lastEditDate": "Aug 16, 2013",
+  "lastActivityDate": "Dec 19, 2013",
+  "title": "Why Joda DateTimeFormatter cannot parse timezone names (\u0027z\u0027)",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 3,
+  "commentCount": 3,
+  "favoriteCount": 4
+}

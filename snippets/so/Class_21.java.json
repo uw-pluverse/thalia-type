@@ -1,0 +1,25 @@
+{
+  "id": 5853879,
+  "postTypeId": 1,
+  "acceptedAnswerId": 5853992,
+  "parentId": 0,
+  "createDate": "May 2, 2011",
+  "score": 62,
+  "viewCount": 37337,
+  "body": "\u003cp\u003eHow do I obtain a \u003ccode\u003ejava.awt.Image\u003c/code\u003e of a JFrame?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI want to obtain a screen shot of a \u003ccode\u003eJFrame\u003c/code\u003e (for later use within my application). This is presently accomplished using the robot to take a screen shot specifying the coordinates and dimensions of the \u003ccode\u003eJFrame\u003c/code\u003e involved.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, I believe that there is a better way: Swing components, by default, render themselves as images into a double buffer prior to painting themselves onto the screen.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs there a way to obtain these images from the component?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 194982,
+  "lastEditorUserId": 418556,
+  "lastEditDate": "Apr 6, 2013",
+  "lastActivityDate": "Jul 31, 2015",
+  "title": "Swing: Obtain Image of JFrame",
+  "tags": [
+    "java",
+    "image",
+    "swing",
+    "screenshot",
+    "jframe"
+  ],
+  "answerCount": 1,
+  "commentCount": 2,
+  "favoriteCount": 33
+}

@@ -1,0 +1,22 @@
+{
+  "id": 982386,
+  "postTypeId": 1,
+  "acceptedAnswerId": 983777,
+  "parentId": 0,
+  "createDate": "Jun 11, 2009",
+  "score": 6,
+  "viewCount": 59945,
+  "body": "\u003cp\u003eI\u0027m following the example on the android tutorial about the GridView, but instead of showing image, i want to just simple show some text using a TextView. it turns out seems to be harder than i thought. it might seems like this is totally unnecessary and it doesn\u0027t have a valid use case, but i\u0027m trying this out to just get myself familiar with the sdk. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eso my code is pretty much the same as the GridView example in \u003ca href\u003d\"http://developer.android.com/guide/tutorials/views/hello-gridview.html\" rel\u003d\"nofollow noreferrer\"\u003ehttp://developer.android.com/guide/tutorials/views/hello-gridview.html\u003c/a\u003e, but instead of using a ImageAdapter, i created a dummy adapter like following:  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class MyAdapter extends BaseAdapter {\u0026#xA;\u0026#xA;    private Context context;\u0026#xA;    private String[] texts \u003d {\"aaa\", \"bbb\", \"ccc\", \"ddd\", \"eee\", \"fff\", \"eee\", \"hhh\", \"iii\"};\u0026#xA;\u0026#xA;    public MyAdapter(Context context) {\u0026#xA;        this.context \u003d context;\u0026#xA;    }\u0026#xA;\u0026#xA;    public int getCount() {\u0026#xA;        return 9;\u0026#xA;    }\u0026#xA;\u0026#xA;    public Object getItem(int position) {\u0026#xA;        return null;\u0026#xA;    }\u0026#xA;\u0026#xA;    public long getItemId(int position) {\u0026#xA;        return 0;\u0026#xA;    }\u0026#xA;\u0026#xA;    public View getView(int position, View convertView, ViewGroup parent) {\u0026#xA;        TextView tv;\u0026#xA;        if (convertView \u003d\u003d null) {\u0026#xA;            tv \u003d new TextView(context);\u0026#xA;            tv.setLayoutParams(new GridView.LayoutParams(85, 85));\u0026#xA;        }\u0026#xA;        else {\u0026#xA;            tv \u003d (TextView) convertView;\u0026#xA;        }\u0026#xA;\u0026#xA;            tv.setText(texts[position]);\u0026#xA;        return tv;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eit all seems valid to me, but running this gives me nothing on the screen. and there\u0027s no error message. there are some selectable/clickable (invisible) blocks if i click them, but the text is obvious not shown. i wonder is my layout doesn\u0027t have the android:text causing this problem? or anything else?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eany feedback will be appreciated and thanks for your help!\u003c/p\u003e\u0026#xA;",
+  "ownerId": 121476,
+  "lastEditorUserId": 881229,
+  "lastEditDate": "Jun 13, 2014",
+  "lastActivityDate": "Mar 21, 2019",
+  "title": "Android: Simple GridView that displays text in the grids",
+  "tags": [
+    "java",
+    "android"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 3
+}

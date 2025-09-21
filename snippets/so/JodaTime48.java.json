@@ -1,0 +1,22 @@
+{
+  "id": 5622194,
+  "postTypeId": 1,
+  "acceptedAnswerId": 5622245,
+  "parentId": 0,
+  "createDate": "Apr 11, 2011",
+  "score": 75,
+  "viewCount": 45080,
+  "body": "\u003cp\u003eI need to test a function that whose result will depend on current time (using Joda time\u0027s \u003ccode\u003eisBeforeNow()\u003c/code\u003e, it so happens).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic boolean isAvailable() {\u0026#xA;    return (this.someDate.isBeforeNow());\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs it possible to stub/mock out the system time with (using Mockito, for example) so that I can reliably test the function?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 70350,
+  "lastEditorUserId": 2564509,
+  "lastEditDate": "Mar 25, 2020",
+  "lastActivityDate": "Mar 25, 2020",
+  "title": "Time dependent unit tests",
+  "tags": [
+    "java",
+    "junit"
+  ],
+  "answerCount": 5,
+  "commentCount": 3,
+  "favoriteCount": 19
+}

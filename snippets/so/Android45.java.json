@@ -1,0 +1,21 @@
+{
+  "id": 1215817,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Aug 1, 2009",
+  "score": 4,
+  "viewCount": 4492,
+  "body": "\u003cp\u003eI know how to implement this issue by Menuifest.xml, see also:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003ca href\u003d\"http://groups.google.com/group/android-developers/browse_thread/thread/62a514363c751464/feecc033d0265606?lnk\u003dgst\u0026amp;q\u003dintentfilter+share#feecc033d0265606\" rel\u003d\"nofollow noreferrer\"\u003eGoogle Android Developer Group related issue\u003c/a\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut my question is how to add share menu of Gallery by java code not Menuifest.xml.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy code is as below:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class MyActivity extends Activity {\u0026#xA;\u0026#xA;private static final String TAG \u003d \"MyActivity\";\u0026#xA;\u0026#xA;@Override\u0026#xA;public void onCreate(Bundle savedInstanceState) {\u0026#xA;    super.onCreate(savedInstanceState);\u0026#xA;\u0026#xA;    IntentFilter intentFilter \u003d new IntentFilter();\u0026#xA;    intentFilter.addAction(Intent.ACTION_SEND);\u0026#xA;    intentFilter.addCategory(Intent.CATEGORY_DEFAULT);\u0026#xA;    try {\u0026#xA;        intentFilter.addDataType(\"image/*\");\u0026#xA;    } catch (MalformedMimeTypeException e) {\u0026#xA;        Log.e(TAG, e.toString());\u0026#xA;    }\u0026#xA;\u0026#xA;    Intent x \u003d registerReceiver(new BroadcastReceiver() {\u0026#xA;        public void onReceive(Context context, Intent intent) { \u0026#xA;            Log.d(TAG, \"Received intent \"+intent);\u0026#xA;            intent.setComponent(new ComponentName(context, Uploader.class));\u0026#xA;            startActivity(intent);\u0026#xA;        }\u0026#xA;        }, intentFilter);\u0026#xA;\u0026#xA;    if (x\u003d\u003dnull)\u0026#xA;        Log.i(TAG, \"failed to regist a receiver\");\u0026#xA;    else\u0026#xA;        Log.i(TAG, \"registed a receiver successfully\");\u0026#xA;    // ...\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut registerReceiver always return null, and there is no menu added to Gallery\u0027s Share.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThank you.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnthony Xu\u003c/p\u003e\u0026#xA;",
+  "ownerId": 148835,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jun 18, 2010",
+  "title": "How to add share menu item to Gallery by code",
+  "tags": [
+    "android",
+    "intentfilter"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

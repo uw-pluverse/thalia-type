@@ -1,11 +1,11 @@
 # ThaliaType
 
-A new, unseen dataset for evaluating type inference for code snippets. 
+A framework for generating new, unseen dataset for evaluating type inference for code snippets. 
 
 ### Requirements to Run
 
 - Python 3.8+
-- Linux System (tested on Fedora 40)
+- Linux System (tested on Fedora 42)
 - Bash
 - Java 8 and Java 11
 - Maven
@@ -13,6 +13,7 @@ A new, unseen dataset for evaluating type inference for code snippets.
 
 ### Building the Project
 
+To generate code snippets, please build the project and install the dependencies described below.
 ```bash
 python -m venv venv-folder
 source ./venv-folder/bin/activate
@@ -21,32 +22,22 @@ mvn package
 antlr4 -Dlanguage=Python3 Java8Lexer.g4
 ```
 
-### Unzipping the Dataset and Results
-
-To keep ThaliaType from becoming part of the training dataset for LLMs, 
-the generated code snippets are kept in a password protected zip.
-Please email the authors for the password.
-
-```bash
-unzip snippets-and-outputs.zip
-```
-
 ### Key File Explanation
 
 - `transform_*.py` files implements the transformations and transforms the files from the input folder to the output folder.
 - `summarize_table.py` creates the tables in the paper.
-- `analyze_*.py` files implements the analysis and is called by `summarize_table.py`.
+  - `analyze_*.py` files implements the analysis and is called by `summarize_table.py`.
 - `infer_repl.py` passes the input to the given model for type inference. This helper script is useful for testing new prompts. OpenAI key is required if a GPT model is selected.
 - `snippets/` folder contains the original and transformed code snippets from StatType-SO.
 - `snippets-thalia/` folder contains the generated and transformed code snippets from ThaliaType.
-- `reduce-perses-output/` folder contains the reduction results.
 - `outputs/` folder contains the results for running type inference on StatType-SO and variants.
 - `outputs-thalia/` folder contains the results for running type inference on ThaliaType and variants.
 
 ### Generate new ThaliaType Code Snippets
 
+Future evaluations should use a newly generated set of code snippets
 ```bash
-./run_all.bash # set the folder for the jars with variable JAR_FOLDER
+./generate_thaliatype.bash # Generates 300 new code snippets into ./snippets-thalia folder
 ```
 
 ### Create Transformed Code Snippets
@@ -79,19 +70,46 @@ For these scripts and below, some system env can be set to aid execution.
 ./RQ12-openai.bash
 ```
 
-### Run Reduction in Parallel
-
+### Results
 ```bash
-seq 200 | parallel -j 10 --delay 2 ./reduction-openai-so.bash
-seq 200 | parallel -j 10 --delay 2 ./reduction-openai-thalia.bash
+snippets
+├── so                                        # StatType-SO code snippets
+├── transform_add_commented_out_keywords      # StatType-SO with comment transformation
+├── transform_all                             # StatType-SO with all transformations
+├── transform_lowering                        # StatType-SO with lowering transformation
+└── transform_rename                          # StatType-SO with variable rename transformation
+snippets-thalia
+├── thalia-cs                                 # ThaliaType code snippets
+├── transform_add_commented_out_keywords      # ThaliaType with comment transformation
+├── transform_all                             # ThaliaType with all transformations
+├── transform_lowering                        # ThaliaType with lowering transformation
+└── transform_rename                          # ThaliaType with variable rename transformation
+outputs
+├── {model}-output-so                         # model's StatType-SO inference result
+├── {model}-output-transform_add_commented_out_keywords # model's StatType-SO comment transformation result
+├── {model}-output-transform_all              # model's StatType-SO all transformations result
+├── {model}-output-transform_lowering         # model's StatType-SO lowering transformation result
+└── {model}-output-transform_rename           # model's StatType-SO variable rename transformation result
+outputs-thalia
+├── {model}-output-thalia-cs                  # model's ThaliaType inference result
+├── {model}-output-transform_add_commented_out_keywords # model's ThaliaType comment transformation result
+├── {model}-output-transform_all              # model's ThaliaType all transformations result
+├── {model}-output-transform_lowering         # model's ThaliaType lowering transformation result
+└── {model}-output-transform_rename           # model's ThaliaType variable rename transformation result
 ```
 
 ### Expected Dependencies
 
+Instructions for installing thalia and our doc2json script to extract API information from given jars
 ```bash
-wget https://github.com/uw-pluverse/perses/releases/download/v2.0/perses_deploy.jar
 unzip doc2json-master.zip
 mv doc2json-master doc2json
 git clone https://github.com/hephaestus-compiler-project/thalia
 pip install ./thalia
 ```
+
+### Advanced: Generate code snippets using different jars
+
+1. Place additional jars and dependencies into the `jars` folder.
+2. Edit `generate_thaliatype.bash` to specify the jars the generated code snippets will target.
+3. Run the edited `generate_thaliatype.bash`

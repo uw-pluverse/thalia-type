@@ -1,0 +1,35 @@
+```java
+import java.util.EnumSet;
+import java.util.SortedMap;
+import java.util.SortedSet;
+import org.hibernate.engine.spi.EntityManagerFactoryImpl;
+import org.hibernate.engine.spi.LoadQueryInfluencers;
+import org.hibernate.event.spi.PreCollectionRemoveEventListener;
+import org.hibernate.id.PostInsertIdentifierGenerator;
+import org.hibernate.persister.entity.QueryBinder;
+import org.hibernate.query.criteria.internal.CriteriaBuilderImpl;
+import org.hibernate.query.criteria.internal.expression.LiteralNode;
+import org.hibernate.query.criteria.internal.path.MapAttributeJoin;
+import org.hibernate.query.criteria.internal.path.MapKeyPath;
+import org.hibernate.query.criteria.internal.path.MapKeySource;
+import org.hibernate.query.criteria.internal.selection.SelectionImplementor;
+import org.hibernate.sql.ast.tree.expression.IdentifierEqExpression;
+import org.hibernate.sql.ast.tree.from.JoinType;
+import org.hibernate.sql.results.graph.TupleElementImplementor;
+import org.hibernate.tuple.AttributeImplementor;
+import org.hibernate.type.descriptor.java.EnumType;
+import org.hibernate.type.descriptor.java.ReferenceType;
+import org.hibernate.type.descriptor.java.UserVersionType;
+import org.springframework.util.ConcurrentReferenceHashMap;
+import org.springframework.util.ConcurrentReferenceHashMap.ReferenceType;
+import org.springframework.util.ConcurrentReferenceHashMap.Option;
+import org.springframework.util.ConcurrentReferenceHashMap.SortedMapProxy;
+import org.springframework.util.ConcurrentReferenceHashMap.SortedSetProxy;
+import org.springframework.util.ConcurrentReferenceHashMap.SetProxy;
+import org.springframework.util.ConcurrentReferenceHashMap.Pair;
+import org.springframework.util.ConcurrentReferenceHashMap.Initializor;
+import org.springframework.util.ConcurrentReferenceHashMap.MapAttribute;
+import org.springframework.util.ConcurrentReferenceHashMap.MiddleRelatedComponentMapper;
+import org.springframework.util.ConcurrentReferenceHashMap.ValidatePreUpdateEventListener;
+import org.springframework.util.ConcurrentReferenceHashMap.LegacyHiLoAlgorithmOptimizer;
+```

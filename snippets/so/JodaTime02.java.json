@@ -1,0 +1,24 @@
+{
+  "id": 581581,
+  "postTypeId": 1,
+  "acceptedAnswerId": 581598,
+  "parentId": 0,
+  "createDate": "Feb 24, 2009",
+  "score": 4,
+  "viewCount": 8721,
+  "body": "\u003cp\u003eIs it possible to get the previous and next DST transition timestamp with the Java Calendar/Date/TimeZone API?\u003cbr/\u003e\u0026#xA;With \u003ccode\u003eJoda-Time\u003c/code\u003e I can write:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateMidnight today \u003d new DateMidnight(2009, 2, 24);\u0026#xA;DateTimeZone zone \u003d today.getZone();\u0026#xA;\u0026#xA;DateTime previousTransition \u003d\u0026#xA;    new DateTime(zone.previousTransition(today.getMillis()));\u0026#xA;// 2008-10-26T02:59:59.999+02:00 for Europe/Berlin\u0026#xA;System.out.println(previousTransition);\u0026#xA;\u0026#xA;DateTime nextTransition \u003d\u0026#xA;    new DateTime(zone.nextTransition(today.getMillis()));\u0026#xA;// 2009-03-29T03:00:00.000+02:00 for Europe/Berlin\u0026#xA;System.out.println(nextTransition);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs there way to do this with the standard Java APIs?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 49786,
+  "ownerDisplayName": "Ludwig Wensauer",
+  "lastEditorUserId": 56285,
+  "lastEditorDisplayName": "Gortok",
+  "lastEditDate": "Sep 10, 2009",
+  "lastActivityDate": "May 5, 2017",
+  "title": "Find DST transition timestamp with java.util.TimeZone",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 4,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

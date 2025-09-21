@@ -1,0 +1,37 @@
+```java
+import java.lang.Exception;
+import java.lang.Object;
+import java.lang.String;
+import java.util.Map;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.MapAttribute;
+import org.hibernate.query.Query;
+import org.hibernate.query.internal.QueryImpl;
+import org.hibernate.query.spi.QueryImplementor;
+import org.hibernate.query.criteria.internal.CriteriaBuilderImpl;
+import org.hibernate.query.criteria.internal.expression.LiteralExpression;
+import org.hibernate.query.criteria.internal.path.MapAttributeJoin;
+import org.hibernate.query.criteria.internal.path.MapKeyPath;
+import org.hibernate.query.criteria.internal.predicate.WhenClause;
+import org.hibernate.query.criteria.internal.compile.QueryBinder;
+import org.hibernate.query.criteria.internal.compile.ShardOperation;
+import org.hibernate.query.criteria.internal.compile.Shard;
+import org.hibernate.query.criteria.internal.compile.Initializor;
+import org.hibernate.query.criteria.internal.compile.JoinType;
+import org.hibernate.query.criteria.internal.compile.NamedParameterSource;
+import org.hibernate.query.criteria.internal.compile.PessimisticReadSelectLockingStrategy;
+import org.hibernate.query.criteria.internal.compile.ResinTransactionManagerLookup;
+import org.hibernate.query.criteria.internal.compile.ValidatePreUpdateEventListener;
+import org.hibernate.query.criteria.internal.compile.WildcardType;
+import org.hibernate.query.criteria.internal.compile.TypeSwitch;
+import org.hibernate.query.criteria.internal.compile.ExitOperationsCollector;
+import org.hibernate.query.criteria.internal.compile.ExitStrategy;
+import org.hibernate.query.criteria.internal.compile.IllegalDereferenceException;
+import org.hibernate.query.criteria.internal.compile.NoOpValueHandler;
+import org.hibernate.query.criteria.internal.compile.Pair;
+import org.hibernate.query.criteria.internal.compile.Triple;
+import org.hibernate.query.criteria.internal.compile.MiddleRelatedComponentMapper;
+import org.hibernate.query.criteria.internal.compile.SupportsIdentityColumns;
+import org.hibernate.query.criteria.internal.compile.InformixDialect;
+import org.hibernate.query.criteria.internal.compile.AbstractEntityManagerImpl;
+```

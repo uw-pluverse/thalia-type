@@ -1,0 +1,22 @@
+{
+  "id": 3353405,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3353832,
+  "parentId": 0,
+  "createDate": "Jul 28, 2010",
+  "score": -2,
+  "viewCount": 47,
+  "body": "\u003cp\u003ei have following  code\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage e.vogella.gwt.helloworld;\u0026#xA;import com.google.gwt.core.client.EntryPoint;\u0026#xA;import com.google.gwt.event.dom.client.ClickEvent;\u0026#xA;import com.google.gwt.event.dom.client.ClickHandler;\u0026#xA;import com.google.gwt.user.client.Window;\u0026#xA;import com.google.gwt.user.client.ui.Button;\u0026#xA;import com.google.gwt.user.client.ui.Label;\u0026#xA;import com.google.gwt.user.client.ui.RootPanel;\u0026#xA;\u0026#xA;\u0026#xA;public class HelloGwt  implements EntryPoint{\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public void onModuleLoad(){\u0026#xA;        Label label\u003dnew Label(\"hello world\");\u0026#xA;        Button button\u003dnew Button(\"say something\");\u0026#xA;        button.addClickHandler(new ClickHandler(){\u0026#xA;     @Override\u0026#xA;     public void onClick (ClickEvent event){\u0026#xA;         Window.alert(\"hello again\");\u0026#xA;\u0026#xA;            }\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;        });\u0026#xA;\u0026#xA;    RootPanel.get().add(label);\u0026#xA;    RootPanel.get().add(button);\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ehow make such that it gives me output on screen when i click run does not show me output\u003c/p\u003e\u0026#xA;",
+  "ownerId": 466534,
+  "lastEditorUserId": 228171,
+  "lastEditDate": "Jul 28, 2010",
+  "lastActivityDate": "Jul 28, 2010",
+  "title": "question about GwT",
+  "tags": [
+    "eclipse",
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

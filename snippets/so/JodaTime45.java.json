@@ -1,0 +1,22 @@
+{
+  "id": 5059663,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Feb 20, 2011",
+  "score": 56,
+  "viewCount": 21268,
+  "body": "\u003cp\u003eUsing Joda 1.6.2 with Android\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe following code hangs for about 15 seconds. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTime dt \u003d new DateTime();\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eOriginally posted this post \u0026#xA;\u003ca href\u003d\"https://stackoverflow.com/questions/4542867/android-java-joda-date-is-slow-in-eclipse-emulator\"\u003eAndroid Java - Joda Date is slow in Eclipse/Emulator -\u003c/a\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eJust tried it again and its still not any better.  Does anyone else have this problem or know how to fix it?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 528130,
+  "lastEditorUserId": -1,
+  "lastEditDate": "May 23, 2017",
+  "lastActivityDate": "May 21, 2019",
+  "title": "Android Java - Joda Date is slow",
+  "tags": [
+    "android",
+    "jodatime"
+  ],
+  "answerCount": 11,
+  "commentCount": 0,
+  "favoriteCount": 30
+}

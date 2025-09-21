@@ -1,0 +1,23 @@
+{
+  "id": 4675241,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4675295,
+  "parentId": 0,
+  "createDate": "Jan 12, 2011",
+  "score": 2,
+  "viewCount": 16369,
+  "body": "\u003cp\u003eUsing \u003ca href\u003d\"http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html\" rel\u003d\"nofollow\"\u003eJoda Time\u0027s pattern syntax\u003c/a\u003e below, this input string:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eSunday, January 09, 2011 6:15:00 PM\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebecomes this datetime:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e2011-01-09T06:15:00.000Z\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCode:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eString start \u003d \"Sunday, January 09, 2011 6:15:00 PM\";\u0026#xA;\u0026#xA;DateTimeFormatter parser1 \u003d \u0026#xA;DateTimeFormat.forPattern(\"EEEE, MMMM dd, yyyy H:mm:ss aa\");\u0026#xA;\u0026#xA;DateTime startTime \u003d parser1.parseDateTime(start);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs this format pattern incorrect? If not, what are the \u003ccode\u003eT\u003c/code\u003e and \u003ccode\u003eZ\u003c/code\u003e doing inside the DateTime output?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e2011-01-09T06:15:00.000Z\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 559894,
+  "lastEditorUserId": 38896,
+  "lastEditDate": "Aug 16, 2013",
+  "lastActivityDate": "Dec 15, 2016",
+  "title": "Is my Joda Time format pattern incorrect to produce a `T` and `Z` inside the parsed DateTime output?",
+  "tags": [
+    "java",
+    "jodatime",
+    "date-format"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

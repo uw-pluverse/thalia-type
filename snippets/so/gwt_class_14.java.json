@@ -1,0 +1,21 @@
+{
+  "id": 1738530,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1738950,
+  "parentId": 0,
+  "createDate": "Nov 15, 2009",
+  "score": 3,
+  "viewCount": 3597,
+  "body": "\u003cp\u003eI need to get the content from url (\u003ca href\u003d\"http://myweb.com/test.php\" rel\u003d\"nofollow noreferrer\"\u003ehttp://myweb.com/test.php\u003c/a\u003e) using Google Web Toolkit (GWT)\u0026#xA;I\u0027ve tried this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eGWT:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    RequestBuilder rb \u003d new RequestBuilder(RequestBuilder.GET, \u0026#xA;\"http://myweb.com/test.php?id\u003d65472\");\u0026#xA;     try {\u0026#xA;        rb.sendRequest(null, new RequestCallback() {\u0026#xA;             public void onError(final Request request, final Throwable exception) {\u0026#xA;                 Window.alert(exception.getMessage());\u0026#xA;             }\u0026#xA;             public void onResponseReceived(final Request request, final Response response) {\u0026#xA;                 //do something\u0026#xA;                 GWT.log(\"response: (\" + response.getText() + \")\", null);\u0026#xA;             }\u0026#xA;        });\u0026#xA;     } catch (final Exception e) {\u0026#xA;             Window.alert(e.getMessage());\u0026#xA;     }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ePHP:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;?php\u0026#xA;\u0026#xA;$var1 \u003d $_GET[\"id\"];\u0026#xA;echo \"The id is: \".$var1;\u0026#xA;\u0026#xA;?\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut it always returns empty -\u003e response();\u003c/p\u003e\u0026#xA;",
+  "ownerId": 162266,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Nov 21, 2009",
+  "title": "Get content from url with GWT",
+  "tags": [
+    "php",
+    "gwt"
+  ],
+  "answerCount": 2,
+  "commentCount": 2,
+  "favoriteCount": 1
+}

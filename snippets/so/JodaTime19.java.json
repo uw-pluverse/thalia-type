@@ -1,0 +1,22 @@
+{
+  "id": 7471775,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Sep 19, 2011",
+  "score": 6,
+  "viewCount": 2700,
+  "body": "\u003cp\u003eIs it possible to determine wether two rigth-unbounded intervals (intervals with one boundary at infinity) overlap or not?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve tried this (and other similar variations):\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eInstant now \u003d new Instant(new Date().getTime());\u0026#xA;Interval i2 \u003d new Interval(now, (ReadableInstant) null);\u0026#xA;Interval i1 \u003d new Interval(now, (ReadableInstant) null);\u0026#xA;boolean overlapping \u003d i2.overlaps(i1);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut according to the docs, using \u003ccode\u003enull\u003c/code\u003e as a second parameter means \"now\" instead of \"infinity\".\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eEDIT\u003c/strong\u003e: I\u0027ve found \u003ca href\u003d\"http://joda-interest.219941.n2.nabble.com/unbounded-intervals-tp4839992p4851375.html\" rel\u003d\"noreferrer\"\u003ethis answer\u003c/a\u003e in the mailing list, so it seems to be impossible with  Joda. I am now looking for alternative implementations.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 12388,
+  "lastEditorUserId": 12388,
+  "lastEditDate": "Sep 19, 2011",
+  "lastActivityDate": "Oct 4, 2018",
+  "title": "Compare right-unbounded time intervals with joda-lib",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 3,
+  "commentCount": 2,
+  "favoriteCount": 2
+}

@@ -1,0 +1,24 @@
+{
+  "id": 2784514,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2784576,
+  "parentId": 0,
+  "createDate": "May 6, 2010",
+  "score": 1195,
+  "viewCount": 1151065,
+  "body": "\u003cp\u003eI read about sorting ArrayLists using a Comparator but in all of the examples people used \u003ccode\u003ecompareTo\u003c/code\u003e which according to some research is a method for Strings.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI wanted to sort an ArrayList of custom objects by one of their properties: a Date object\u0026#xA;(\u003ccode\u003egetStartDay()\u003c/code\u003e). Normally I compare them by \u003ccode\u003eitem1.getStartDate().before(item2.getStartDate())\u003c/code\u003e so I was wondering whether I could write something like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class CustomComparator {\u0026#xA;    public boolean compare(Object object1, Object object2) {\u0026#xA;        return object1.getStartDate().before(object2.getStartDate());\u0026#xA;    }\u0026#xA;}\u0026#xA;\u0026#xA;public class RandomName {\u0026#xA;    ...\u0026#xA;    Collections.sort(Database.arrayList, new CustomComparator);\u0026#xA;    ...\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 253387,
+  "lastEditorUserId": 584674,
+  "lastEditDate": "Jan 27, 2016",
+  "lastActivityDate": "Jul 17, 2020",
+  "title": "Sort ArrayList of custom Objects by property",
+  "tags": [
+    "java",
+    "sorting",
+    "date",
+    "comparator"
+  ],
+  "answerCount": 29,
+  "commentCount": 2,
+  "favoriteCount": 344
+}

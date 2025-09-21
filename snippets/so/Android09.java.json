@@ -1,0 +1,26 @@
+{
+  "id": 522800,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1804776,
+  "parentId": 0,
+  "createDate": "Feb 7, 2009",
+  "score": 19,
+  "viewCount": 38474,
+  "body": "\u003cp\u003eFor my Android application there is a timer that measures how much time has passed. Ever 100 milliseconds I update my TextView with some text like \"Score: 10 Time: 100.10 seconds\". But, I find the TextView only updates the first few times. The application is still very responsive, but the label will not update. I tried to call .invalidate(), but it still does not work. I don\u0027t know if there is some way to fix this, or a better widget to use.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere is a example of my code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003efloat seconds;\u0026#xA;java.util.Timer gametimer;\u0026#xA;void updatecount() { TextView t \u003d (TextView)findViewById(R.id.topscore);\u0026#xA;t.setText(\"Score: 10 - Time: \"+seconds+\" seconds\");\u0026#xA;t.postInvalidate();\u0026#xA;}\u0026#xA;public void onCreate(Bundle sis) {\u0026#xA;... Load the UI, etc...\u0026#xA;  gametimer.schedule(new TimerTask() { public void run() {\u0026#xA;     seconds+\u003d0.1; updatecount();\u0026#xA;} }, 100, 100);\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 764272,
+  "ownerDisplayName": "Isaac Waller",
+  "lastEditorUserId": 764272,
+  "lastEditorDisplayName": "Isaac Waller",
+  "lastEditDate": "Jan 14, 2010",
+  "lastActivityDate": "Nov 14, 2016",
+  "title": "Android TextView Timer",
+  "tags": [
+    "java",
+    "android",
+    "timer",
+    "textview"
+  ],
+  "answerCount": 4,
+  "commentCount": 0,
+  "favoriteCount": 4
+}

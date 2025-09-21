@@ -1,0 +1,23 @@
+{
+  "id": 2201925,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2202300,
+  "parentId": 0,
+  "createDate": "Feb 4, 2010",
+  "score": 710,
+  "viewCount": 659190,
+  "body": "\u003cp\u003eI am trying to convert an \u003ca href\u003d\"http://en.wikipedia.org/wiki/ISO_8601\" rel\u003d\"noreferrer\"\u003eISO 8601\u003c/a\u003e formatted String to a \u003ccode\u003ejava.util.Date\u003c/code\u003e. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI found the pattern \u003ccode\u003eyyyy-MM-dd\u0027T\u0027HH:mm:ssZ\u003c/code\u003e to be ISO8601-compliant if used with a Locale (compare sample).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, using the \u003ccode\u003ejava.text.SimpleDateFormat\u003c/code\u003e, I cannot convert the correctly formatted String \u003ccode\u003e2010-01-01T12:00:00+01:00\u003c/code\u003e. I have to convert it first to \u003ccode\u003e2010-01-01T12:00:00+0100\u003c/code\u003e, without the colon. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo, the current solution is\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre class\u003d\"lang-java prettyprint-override\"\u003e\u003ccode\u003eSimpleDateFormat ISO8601DATEFORMAT \u003d new SimpleDateFormat(\"yyyy-MM-dd\u0027T\u0027HH:mm:ssZ\", Locale.GERMANY);\u0026#xA;String date \u003d \"2010-01-01T12:00:00+01:00\".replaceAll(\"\\\\+0([0-9]){1}\\\\:00\", \"+0$100\");\u0026#xA;System.out.println(ISO8601DATEFORMAT.parse(date));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ewhich obviously isn\u0027t that nice. Am I missing something or is there a better solution?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003chr\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eAnswer\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks to JuanZe\u0027s comment, I found the \u003ca href\u003d\"http://www.joda.org/joda-time/\" rel\u003d\"noreferrer\"\u003eJoda-Time\u003c/a\u003e magic, it is also \u003ca href\u003d\"http://johannburkard.de/blog/programming/java/date-time-parsing-formatting-joda-time.html\" rel\u003d\"noreferrer\"\u003edescribed here\u003c/a\u003e.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo, the solution is\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre class\u003d\"lang-java prettyprint-override\"\u003e\u003ccode\u003eDateTimeFormatter parser2 \u003d ISODateTimeFormat.dateTimeNoMillis();\u0026#xA;String jtdate \u003d \"2010-01-01T12:00:00+01:00\";\u0026#xA;System.out.println(parser2.parseDateTime(jtdate));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eOr more simply, use the default parser via the constructor:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre class\u003d\"lang-java prettyprint-override\"\u003e\u003ccode\u003eDateTime dt \u003d new DateTime( \"2010-01-01T12:00:00+01:00\" ) ;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eTo me, this is nice.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 157229,
+  "lastEditorUserId": 3001970,
+  "lastEditDate": "Jul 12, 2018",
+  "lastActivityDate": "Oct 26, 2020",
+  "title": "Converting ISO 8601-compliant String to java.util.Date",
+  "tags": [
+    "java",
+    "date",
+    "iso8601"
+  ],
+  "answerCount": 30,
+  "commentCount": 13,
+  "favoriteCount": 198
+}

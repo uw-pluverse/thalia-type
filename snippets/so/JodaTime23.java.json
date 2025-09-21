@@ -1,0 +1,22 @@
+{
+  "id": 8321537,
+  "postTypeId": 1,
+  "acceptedAnswerId": 8345323,
+  "parentId": 0,
+  "createDate": "Nov 30, 2011",
+  "score": 7,
+  "viewCount": 6175,
+  "body": "\u003cp\u003eIs there an elegant way to find the nearest day of the week for a given date using JodaTime? I initially thought \u003ccode\u003esetCopy()\u003c/code\u003e would be it, but this sets the day to the particular day \u003cem\u003ein the same week\u003c/em\u003e. Thus, if \u003ccode\u003eld\u003c/code\u003e is \u003ccode\u003e2011-11-27\u003c/code\u003e and \u003ccode\u003eday\u003c/code\u003e is \"Monday\" the following function returns \u003ccode\u003e2011-11-21\u003c/code\u003e, and not \u003ccode\u003e2011-11-28\u003c/code\u003e as I want.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    // Note that \"day\" can be _any_ day of the week, not just weekdays.\u0026#xA;    LocalDate getNearestDayOfWeek(LocalDate ld, String day) {\u0026#xA;        return ld.dayOfWeek().setCopy(day);\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eDesired output for various inputs:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e2011-12-04, Monday    \u003d\u0026gt; 2011-12-05\u0026#xA;2011-12-04, Tuesday   \u003d\u0026gt; 2011-12-06\u0026#xA;2011-12-04, Wednesday \u003d\u0026gt; 2011-12-07\u0026#xA;2011-12-04, Thursday  \u003d\u0026gt; 2011-12-01\u0026#xA;2011-12-04, Friday    \u003d\u0026gt; 2011-12-02\u0026#xA;2011-12-04, Saturday  \u003d\u0026gt; 2011-12-03\u0026#xA;2011-12-04, Sunday    \u003d\u0026gt; 2011-12-04\u0026#xA;\u0026#xA;2011-12-05, Monday    \u003d\u0026gt; 2011-12-05\u0026#xA;2011-12-05, Tuesday   \u003d\u0026gt; 2011-12-06\u0026#xA;2011-12-05, Wednesday \u003d\u0026gt; 2011-12-07\u0026#xA;2011-12-05, Thursday  \u003d\u0026gt; 2011-12-08\u0026#xA;2011-12-05, Friday    \u003d\u0026gt; 2011-12-02\u0026#xA;2011-12-05, Saturday  \u003d\u0026gt; 2011-12-03\u0026#xA;2011-12-05, Sunday    \u003d\u0026gt; 2011-12-04\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBelow is a work-around I came up with that works for the particular constraints in my current situation, but I\u0027d love to get help find a completely generic solution that works always.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    LocalDate getNearestDayOfWeek(LocalDate ld, String day) {\u0026#xA;        LocalDate target \u003d ld.dayOfWeek().setCopy(day);\u0026#xA;        if (ld.getDayOfWeek() \u0026gt; DateTimeConstants.SATURDAY) {\u0026#xA;            target \u003d target.plusWeeks(1);\u0026#xA;        }\u0026#xA;        return target;\u0026#xA;    }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 5950,
+  "lastEditorUserId": 5950,
+  "lastEditDate": "Dec 5, 2011",
+  "lastActivityDate": "Apr 5, 2018",
+  "title": "How to find nearest week day for an arbitrary date?",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 5,
+  "commentCount": 5,
+  "favoriteCount": 0
+}

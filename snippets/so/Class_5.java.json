@@ -1,0 +1,27 @@
+{
+  "id": 109383,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Sep 20, 2008",
+  "score": 1707,
+  "viewCount": 1464828,
+  "body": "\u003cp\u003eI am relatively new to Java, and often find that I need to sort a \u003ccode\u003eMap\u0026lt;Key, Value\u0026gt;\u003c/code\u003e on the values.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSince the values are not unique, I find myself converting the \u003ccode\u003ekeySet\u003c/code\u003e into an \u003ccode\u003earray\u003c/code\u003e, and sorting that array through \u003cstrong\u003earray sort\u003c/strong\u003e with a \u003cstrong\u003ecustom comparator\u003c/strong\u003e that sorts on the value associated with the key.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs there an easier way?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 9466,
+  "ownerDisplayName": "Abe",
+  "lastEditorUserId": 452775,
+  "lastEditorDisplayName": "Dave L.",
+  "lastEditDate": "Feb 24, 2018",
+  "lastActivityDate": "Jan 27, 2021",
+  "title": "Sort a Map\u003cKey, Value\u003e by values",
+  "tags": [
+    "java",
+    "sorting",
+    "dictionary",
+    "collections"
+  ],
+  "answerCount": 59,
+  "commentCount": 5,
+  "favoriteCount": 625,
+  "communityOwnedDate": "May 30, 2012"
+}

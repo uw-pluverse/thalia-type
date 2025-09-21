@@ -1,0 +1,21 @@
+{
+  "id": 901057,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "May 23, 2009",
+  "score": 1,
+  "viewCount": 6105,
+  "body": "\u003cp\u003eHi I am new to android and I have a problem in creating a database.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class database extends ListActivity {\u0026#xA;    /** Called when the activity is first created. */\u0026#xA;    private final String MY_DATABASE_NAME \u003d \"myCoolUserDB.db\";\u0026#xA;    private final String MY_DATABASE_TABLE \u003d \"t_Users\"; \u0026#xA;    Context c;\u0026#xA;    @Override\u0026#xA;    public void onCreate(Bundle savedInstanceState) {\u0026#xA;        super.onCreate(savedInstanceState);\u0026#xA;        ArrayList\u0026lt;String\u0026gt; results \u003d new ArrayList\u0026lt;String\u0026gt;();\u0026#xA;        setContentView(R.layout.main);\u0026#xA;        SQLiteDatabase mydb\u003dnull;\u0026#xA;        try\u0026#xA;        {\u0026#xA;            mydb.openOrCreateDatabase(MY_DATABASE_NAME,  null);\u0026#xA;\u0026#xA;        } catch(Exception e){}\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen I run this code it throws a run time exception.  Please help me.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 111436,
+  "lastEditorUserId": 8331,
+  "lastEditDate": "May 23, 2009",
+  "lastActivityDate": "Aug 4, 2017",
+  "title": "Problem in creating a database in SQLite in Android",
+  "tags": [
+    "android"
+  ],
+  "answerCount": 4,
+  "commentCount": 1,
+  "favoriteCount": 1
+}

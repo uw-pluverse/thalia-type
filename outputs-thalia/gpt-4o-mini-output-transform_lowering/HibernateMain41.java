@@ -1,0 +1,29 @@
+```java
+import java.util.Map;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Query;
+import org.hibernate.service.spi.HibernateService;
+import org.hibernate.query.criteria.internal.QueryImpl;
+import org.hibernate.internal.AbstractEntityManagerImpl;
+import org.hibernate.metamodel.mapping.MapAttribute;
+import org.hibernate.query.sqm.tree.select.SelectParser;
+import org.hibernate.query.sqm.tree.from.Vertex;
+import org.hibernate.query.sqm.tree.predicate.WhenClause;
+import org.hibernate.query.sqm.tree.predicate.QueryResultsRegionAdapter;
+import org.hibernate.query.sqm.tree.predicate.Shard;
+import org.hibernate.query.sqm.tree.predicate.StatisticsServiceMBean;
+import org.hibernate.query.sqm.tree.predicate.Triple;
+import org.hibernate.query.sqm.tree.predicate.Pair;
+import org.hibernate.query.sqm.tree.predicate.LegacyHiLoAlgorithmOptimizer;
+import org.hibernate.query.sqm.tree.predicate.GlobalConfiguration;
+import org.hibernate.query.sqm.tree.predicate.JoinType;
+import org.hibernate.query.sqm.tree.predicate.FirstNonNullResultExitStrategy;
+import org.hibernate.query.sqm.tree.predicate.ExitOperationsCollector;
+import org.hibernate.query.sqm.tree.predicate.TupleElementImplementor;
+import org.hibernate.query.sqm.tree.predicate.MapKeyPath;
+import org.hibernate.query.sqm.tree.predicate.ValidatePreUpdateEventListener;
+import org.hibernate.query.sqm.tree.predicate.AssertionFailure;
+import org.hibernate.query.sqm.tree.predicate.MiddleSimpleComponentMapper;
+import org.hibernate.query.sqm.tree.predicate.C;
+```

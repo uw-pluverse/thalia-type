@@ -1,0 +1,20 @@
+{
+  "id": 3138621,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3139147,
+  "parentId": 0,
+  "createDate": "Jun 29, 2010",
+  "score": 3,
+  "viewCount": 3448,
+  "body": "\u003cp\u003eI wrote a widget like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class GroupLbl extends Composite implements ClickHandler, MouseOutHandler {\u0026#xA;private Label lbl;\u0026#xA;private GroupLblHandler lblHandler \u003d null;\u0026#xA;private HorizontalPanel hp;\u0026#xA;\u0026#xA;public void onClick(ClickEvent event) {\u0026#xA;    hp.setStyleName(\"background-GroupLbl\");\u0026#xA;\u0026#xA;    if (event.getSource().equals(folder) || event.getSource().equals(lbl)) {\u0026#xA;\u0026#xA;     lblHandler.onGroupLabelSelect(this);\u0026#xA; }\u0026#xA;}\u0026#xA;\u0026#xA;public GroupLbl(String title, GroupLblHandler handler) {\u0026#xA;\u0026#xA;    hp.add(lbl);\u0026#xA;    lblHandler \u003d handler;\u0026#xA;    if (handler !\u003d null) {\u0026#xA;        lbl.addClickHandler(this);\u0026#xA;\u0026#xA;    }\u0026#xA;    initWidget(hp);\u0026#xA;}\u0026#xA;\u0026#xA;\u0026#xA;@Override\u0026#xA;public Widget getWidget() {\u0026#xA;    return hp;\u0026#xA;}\u0026#xA;\u0026#xA;\u0026#xA;\u0026#xA;public void onMouseOut(MouseOutEvent event) {\u0026#xA;    hp.removeStyleName(\"background-GroupLbl\");\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e}\u0026#xA;I use this widget in my form,when the user click on one of INSTANCE of widget the stylename should be assign to this  and when the user click on other the stylename should assign to that and the first shoud remove the style name I implemented mouseouthandler but it doese not work,the style set the bgcolor to hp so the user understand which grouplbl he/she has selected.what shoul I do(It is part of my code)? tnx and excuse me for my bad english !!!\u003c/p\u003e\u0026#xA;",
+  "ownerId": 169037,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jun 29, 2010",
+  "title": "Adding style and removing style to a widget in gwt",
+  "tags": [
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

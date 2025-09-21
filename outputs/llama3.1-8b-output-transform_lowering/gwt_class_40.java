@@ -1,0 +1,9 @@
+Here are the necessary import statements:
+
+```java
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.LayoutContainer;
+```
+
+Note that I've only included imports for types used in the provided code. The `var` keyword is not a type, so it doesn't require an import statement.

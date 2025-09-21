@@ -1,0 +1,22 @@
+{
+  "id": 5377380,
+  "postTypeId": 1,
+  "acceptedAnswerId": 5752881,
+  "parentId": 0,
+  "createDate": "Mar 21, 2011",
+  "score": 20,
+  "viewCount": 17039,
+  "body": "\u003cp\u003eI have a large XML document that I want to convert to a Java bean. It has a lot of tags and attributes, but I\u0027m interested only in a handful of those. Unfurtounately, it seems that XStream forces you to declare a property in that bean for each and every tag that may ever be in that XML. Is there a way around this?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 6533,
+  "lastEditorUserId": 6533,
+  "lastEditDate": "Apr 17, 2013",
+  "lastActivityDate": "Apr 22, 2018",
+  "title": "How to make XStream skip unmapped tags when parsing XML?",
+  "tags": [
+    "xml",
+    "xstream"
+  ],
+  "answerCount": 5,
+  "commentCount": 0,
+  "favoriteCount": 9
+}

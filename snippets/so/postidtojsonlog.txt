@@ -1,0 +1,60 @@
+>mvn package
+>mvn assembly:single
+>java -cp target/so-extract-1.0-SNAPSHOT-jar-with-dependencies.jar com.pluverse.PostIdToJsonApp soids_fixed.json
+
+java.lang.NumberFormatException: For input string: "https://developer.aliyun.com/ask/271290"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: https://developer.aliyun.com/ask/271290
+Cannot find post: 2764988
+Cannot find post: 3509824
+java.lang.NumberFormatException: For input string: "http://www.studytrails.com/java/xml/xstream/xstream-xml-to-java/"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: http://www.studytrails.com/java/xml/xstream/xstream-xml-to-java/
+java.lang.NumberFormatException: For input string: "http://www.programcreek.com/java-api-examples/index.php?api=com.thoughtworks.xstream.XStream"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: http://www.programcreek.com/java-api-examples/index.php?api=com.thoughtworks.xstream.XStream
+java.lang.NumberFormatException: For input string: "http://www.programcreek.com/java-api-examples/index.php?api=com.thoughtworks.xstream.XStream"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: http://www.programcreek.com/java-api-examples/index.php?api=com.thoughtworks.xstream.XStream
+java.lang.NumberFormatException: For input string: "http://www.programcreek.com/java-api-examples/index.php?source_dir=cloudbees-api-client-master/cloudbees-api-client/src/main/java/com/cloudbees/api/config/ConfigParameters.java"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: http://www.programcreek.com/java-api-examples/index.php?source_dir=cloudbees-api-client-master/cloudbees-api-client/src/main/java/com/cloudbees/api/config/ConfigParameters.java
+java.lang.NumberFormatException: For input string: "http://www.programcreek.com/java-api-examples/index.php?source_dir=sandboxes-master/sandbox-xstream/src/test/java/tryanderror/xstream/EntsoeStyleConverter_Test.java"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: http://www.programcreek.com/java-api-examples/index.php?source_dir=sandboxes-master/sandbox-xstream/src/test/java/tryanderror/xstream/EntsoeStyleConverter_Test.java
+java.lang.NumberFormatException: For input string: "http://www.dreamincode.net/forums/topic/240464-xstream-attribute-and-values-not-clear/"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: http://www.dreamincode.net/forums/topic/240464-xstream-attribute-and-values-not-clear/
+java.lang.NumberFormatException: For input string: "https://developmentality.wordpress.com/2010/07/13/xstream-introduction-and-java-collections-serialization-problem-workaround/"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: https://developmentality.wordpress.com/2010/07/13/xstream-introduction-and-java-collections-serialization-problem-workaround/
+java.lang.NumberFormatException: For input string: "http://xstream.10960.n7.nabble.com/java-lang-StackOverflowError-while-converting-an-object-to-XML-td5107.html"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+        at java.base/java.lang.Integer.parseInt(Integer.java:652)
+        at java.base/java.lang.Integer.parseInt(Integer.java:770)
+        at com.pluverse.PostIdToJsonApp.main(PostIdToJsonApp.java:75)
+Cannot parse postId: http://xstream.10960.n7.nabble.com/java-lang-StackOverflowError-while-converting-an-object-to-XML-td5107.html

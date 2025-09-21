@@ -1,0 +1,25 @@
+{
+  "id": 1372467,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1375691,
+  "parentId": 0,
+  "createDate": "Sep 3, 2009",
+  "score": 4,
+  "viewCount": 4168,
+  "body": "\u003cp\u003eI want to have short names for classes, now i can do it with aliases\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eXStream x \u003d new XStream();\u0026#xA;x.alias(\"dic\", Dic.class);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut i have to define alias manually for every class, is there any way to configure xstream to do it automatically?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 30453,
+  "lastEditorUserId": 21234,
+  "lastEditDate": "Sep 3, 2009",
+  "lastActivityDate": "Aug 24, 2016",
+  "title": "XStream short dynamic aliases",
+  "tags": [
+    "java",
+    "dynamic",
+    "automation",
+    "alias",
+    "xstream"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

@@ -1,0 +1,23 @@
+{
+  "id": 3642820,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3642960,
+  "parentId": 0,
+  "createDate": "Sep 4, 2010",
+  "score": 3,
+  "viewCount": 10776,
+  "body": "\u003cp\u003ePreviously, to \u003cstrong\u003eread\u003c/strong\u003e XML in UTF-8 encoding through xstream, I am using DomDriver as follow :\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eXStream xStream \u003d new XStream(new DomDriver(\"UTF-8\"));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, later I realize this is VERY slow. I use the following way :\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003ca href\u003d\"https://stackoverflow.com/questions/3623546/optimize-loading-speed-of-xstream\"\u003eOptimize loading speed of xstream\u003c/a\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis works fine at least.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, later, I realize the same technique cannot be applied to write XML. I will get all ??? characters.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is the last workable code using DomDriver during \u003cstrong\u003ewrite\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic static boolean toXML(Object object, File file) {\u0026#xA;    XStream xStream \u003d new XStream(new DomDriver(\"UTF-8\"));\u0026#xA;    OutputStream outputStream \u003d null;\u0026#xA;\u0026#xA;    try {\u0026#xA;        outputStream \u003d new FileOutputStream(file);\u0026#xA;        xStream.toXML(object, outputStream);\u0026#xA;    }\u0026#xA;    catch (Exception exp) {\u0026#xA;        log.error(null, exp);\u0026#xA;        return false;\u0026#xA;    }\u0026#xA;    finally {\u0026#xA;        if (false \u003d\u003d close(outputStream)) {\u0026#xA;            return false;\u0026#xA;        }\u0026#xA;        outputStream \u003d null;\u0026#xA;    }\u0026#xA;\u0026#xA;    return true;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe above code works fine. In order to match with the \u003cstrong\u003eread\u003c/strong\u003e method which doesn\u0027t use DomDriver, I change the code to\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic static boolean toXML(Object object, File file) {\u0026#xA;    XStream xStream \u003d new XStream();\u0026#xA;    OutputStream outputStream \u003d null;\u0026#xA;    Writer writer \u003d null;\u0026#xA;\u0026#xA;    try {\u0026#xA;        outputStream \u003d new FileOutputStream(file);\u0026#xA;        writer \u003d new OutputStreamWriter(outputStream, Charset.forName(\"UTF-8\"));\u0026#xA;        xStream.toXML(object, outputStream);\u0026#xA;    }\u0026#xA;    catch (Exception exp) {\u0026#xA;        log.error(null, exp);\u0026#xA;        return false;\u0026#xA;    }\u0026#xA;    finally {\u0026#xA;        if (false \u003d\u003d close(writer)) {\u0026#xA;            return false;\u0026#xA;        }\u0026#xA;        if (false \u003d\u003d close(outputStream)) {\u0026#xA;            return false;\u0026#xA;        }\u0026#xA;        writer \u003d null;\u0026#xA;        outputStream \u003d null;\u0026#xA;    }\u0026#xA;\u0026#xA;    return true;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis time, all my Chinese characters changes to ???\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMay I know anything I had done wrong?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 72437,
+  "lastEditorUserId": -1,
+  "lastEditDate": "May 23, 2017",
+  "lastActivityDate": "Sep 4, 2010",
+  "title": "xstream - correct way to save XML in UTF-8",
+  "tags": [
+    "java",
+    "xml",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 1,
+  "favoriteCount": 2
+}

@@ -1,0 +1,22 @@
+{
+  "id": 4585883,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4586046,
+  "parentId": 0,
+  "createDate": "Jan 3, 2011",
+  "score": 4,
+  "viewCount": 9351,
+  "body": "\u003cp\u003eI thought I understand it, but apparently I don\u0027t. Can you help me make these unit tests pass?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@Test\u0026#xA;public void second() {\u0026#xA;    assertEquals(\"00:00:01\", OurDateTimeFormatter.format(1000));\u0026#xA;}\u0026#xA;\u0026#xA;@Test\u0026#xA;public void minute() {\u0026#xA;    assertEquals(\"00:01:00\", OurDateTimeFormatter.format(1000 * 60));\u0026#xA;}\u0026#xA;\u0026#xA;@Test\u0026#xA;public void hour() {\u0026#xA;    assertEquals(\"01:00:00\", OurDateTimeFormatter.format(1000 * 60 * 60));\u0026#xA;}\u0026#xA;\u0026#xA;@Test\u0026#xA;public void almostMidnight() {\u0026#xA;    final int secondsInDay \u003d 60 * 60 * 24;\u0026#xA;    assertEquals(\"23:59:59\", OurDateTimeFormatter.format(1000 * (secondsInDay - 1)));\u0026#xA;}\u0026#xA;\u0026#xA;@Test\u0026#xA;public void twoDaysAndAHalf() {\u0026#xA;    final int secondsInDay \u003d 60 * 60 * 24;\u0026#xA;    assertEquals(\"12:00:00 and 2 days\", OurDateTimeFormatter.format(1000 * secondsInDay * 5 / 2));\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhere the actual code is here:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class OurDateTimeFormatter {\u0026#xA;    public OurDateTimeFormatter() {\u0026#xA;    }\u0026#xA;\u0026#xA;    private static final PeriodFormatter dateFormat \u003d new PeriodFormatterBuilder()\u0026#xA;            .appendDays()\u0026#xA;            .appendSuffix(\" day\", \" days\")\u0026#xA;            .appendSeparator(\" \")\u0026#xA;            .appendHours()\u0026#xA;            .appendSeparator(\":\")\u0026#xA;            .appendMinutes().minimumPrintedDigits(2)\u0026#xA;            .appendSeparator(\":\")\u0026#xA;            .appendSeconds().minimumPrintedDigits(2)\u0026#xA;            .toFormatter();\u0026#xA;\u0026#xA;\u0026#xA;    public static String format(long millis) {\u0026#xA;        return dateFormat.print(new Period(millis).normalizedStandard());\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 11236,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jan 3, 2011",
+  "title": "Understanding joda time PeriodFormatter",
+  "tags": [
+    "java",
+    "jodatime",
+    "periodformatter"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

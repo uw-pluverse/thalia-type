@@ -1,0 +1,21 @@
+{
+  "id": 8525863,
+  "postTypeId": 1,
+  "acceptedAnswerId": 8526115,
+  "parentId": 0,
+  "createDate": "Dec 15, 2011",
+  "score": 0,
+  "viewCount": 118,
+  "body": "\u003cp\u003eI\u0027m wondering if there is a more efficient way to do this, from a CPU time standpoint: \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e/*\u0026#xA;* Returns a string in the form of \"n days, x hours, y minutes\"\u0026#xA;* */\u0026#xA;\u0026#xA;public static String getFormattedDateDifference(DateTime startDate, DateTime endDate) {\u0026#xA;    Period p \u003d new Period(startDate, endDate,\u0026#xA;            PeriodType.standard().withSecondsRemoved().withMillisRemoved());\u0026#xA;    return PeriodFormat.getDefault().print(p);\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 479180,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Dec 15, 2011",
+  "title": "Is there a more efficient way to get formatted string than with Period/PeriodFormat?",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 1,
+  "commentCount": 4,
+  "favoriteCount": 0
+}

@@ -1,0 +1,22 @@
+{
+  "id": 7807271,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Oct 18, 2011",
+  "score": 1,
+  "viewCount": 4420,
+  "body": "\u003cp\u003eI managed to convert a valid date string in a different timezone to \u003ca href\u003d\"http://en.wikipedia.org/wiki/Coordinated_Universal_Time\" rel\u003d\"nofollow\"\u003eUTC\u003c/a\u003e as follows.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eString DATE_FORMAT \u003d \"yyyy-MM-dd HH:mm:ss\";\u0026#xA;DateTimeFormatter DATETIME_FORMATTER \u003d DateTimeFormat.forPattern(DATE_FORMAT);\u0026#xA;DateTimeZone dateTimeZone \u003d DateTimeZone.forID(\"-03:00\");\u0026#xA;//date is 2000-01-01 00:00:00 -03:00\u0026#xA;DateTime date \u003d    DATETIME_FORMATTER.withZone(dateTimeZone).parseDateTime(\"2000-01-01 00:00:00\"));\u0026#xA;System.out.println(\"Current date is: \" + date.toString());\u0026#xA;//now convert to UTC\u0026#xA;DateTime convertedDate \u003d date.toDateTime(DateTimeZone.UTC);\u0026#xA;System.out.println(\"Converted date: \" + date.toString());\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe result is \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eCurrent date is: 2000-01-01T00:00:00.000-03:00\u0026#xA;Converted date: 2000-01-01T03:00:00.000Z\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs there a shorter/better way of doing this? I want the final date to be a \u003ca href\u003d\"http://www.joda.org/joda-time/\" rel\u003d\"nofollow\"\u003eJoda-Time\u003c/a\u003e \u003ca href\u003d\"http://www.joda.org/joda-time/apidocs/org/joda/time/DateTime.html\" rel\u003d\"nofollow\"\u003eDateTime\u003c/a\u003e object.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 1001092,
+  "lastEditorUserId": 642706,
+  "lastEditDate": "Nov 19, 2013",
+  "lastActivityDate": "Nov 19, 2013",
+  "title": "How do I convert a String in a different timezone to UTC using Joda-Time",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

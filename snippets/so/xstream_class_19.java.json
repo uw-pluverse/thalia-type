@@ -1,0 +1,22 @@
+{
+  "id": 11484532,
+  "postTypeId": 1,
+  "acceptedAnswerId": 11524238,
+  "parentId": 0,
+  "createDate": "Jul 14, 2012",
+  "score": 3,
+  "viewCount": 3961,
+  "body": "\u003cp\u003eI have these classes:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@XStreamAlias(\"person\")\u0026#xA;public class PersonConfig {\u0026#xA;\u0026#xA;    private AnimalConfig animalConfig;\u0026#xA;\u0026#xA;}\u0026#xA;\u0026#xA;public interface AnimalConfig {}\u0026#xA;\u0026#xA;@XStreamAlias(\"dog\");\u0026#xA;public class DogConfig extend AnimalConfig {}\u0026#xA;\u0026#xA;@XStreamAlias(\"cat\");\u0026#xA;public class CatConfig extend AnimalConfig {}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnd I would like to be able to deserialize this xml with the classes above:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;person\u0026gt;\u0026#xA;    \u0026lt;dog/\u0026gt;\u0026#xA;\u0026lt;person\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAs well as deserialize this xml too, with the same classes:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;person\u0026gt;\u0026#xA;    \u0026lt;cat/\u0026gt;\u0026#xA;\u0026lt;person\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo that in both cases, the \u003ccode\u003ePersonConfig\u003c/code\u003e\u0027s field \u003ccode\u003eanimalConfig\u003c/code\u003e is filled. In the first XML with a \u003ccode\u003eDogConfig\u003c/code\u003e instance and in the second XML with a \u003ccode\u003eCatConfig\u003c/code\u003e instance.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIs this possible by adding some annotation to make this work?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 472109,
+  "lastEditorUserId": 496798,
+  "lastEditDate": "Jul 18, 2012",
+  "lastActivityDate": "Oct 9, 2013",
+  "title": "Polymorphism in XStream serialization and deserialization",
+  "tags": [
+    "java",
+    "xstream"
+  ],
+  "answerCount": 4,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

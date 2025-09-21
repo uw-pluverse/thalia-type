@@ -1,0 +1,25 @@
+{
+  "id": 2724147,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2724171,
+  "parentId": 0,
+  "createDate": "Apr 27, 2010",
+  "score": 3,
+  "viewCount": 5125,
+  "body": "\u003cp\u003eI have a web-application which uses hibernate and for some reason every thread (httprequest or other threads related to queueing) uses a different session.\u0026#xA;I\u0027ve implemented a \u003ccode\u003eHibernateSessionFactory\u003c/code\u003e class which looks like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class HibernateSessionFactory {\u0026#xA;private static final ThreadLocal\u0026lt;Session\u0026gt; threadLocal \u003d new ThreadLocal\u0026lt;Session\u0026gt;();\u0026#xA;private  static Configuration configuration \u003d new AnnotationConfiguration();    \u0026#xA;private static org.hibernate.SessionFactory sessionFactory;\u0026#xA;static {\u0026#xA;    try {\u0026#xA;        configuration.configure(configFile);\u0026#xA;        sessionFactory \u003d configuration.buildSessionFactory();\u0026#xA;    } catch (Exception e) {}\u0026#xA;}\u0026#xA;private HibernateSessionFactory() {}\u0026#xA;public static Session getSession() throws HibernateException {\u0026#xA;    Session session \u003d (Session) threadLocal.get();\u0026#xA;    if (session \u003d\u003d null || !session.isOpen()) {\u0026#xA;if (sessionFactory \u003d\u003d null) {\u0026#xA;    rebuildSessionFactory();//This method basically does what the static init block does\u0026#xA;}\u0026#xA;session \u003d (sessionFactory !\u003d null) ? sessionFactory.openSession(): null;\u0026#xA;threadLocal.set(session);\u0026#xA;}\u0026#xA;   return session;\u0026#xA;}\u0026#xA;//More non relevant methods here.\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eNow from my testing it seems that the \u003ccode\u003ethreadLocal\u003c/code\u003e member is indeed initialized only once when the class is first loaded by the \u003ccode\u003eJVM\u003c/code\u003e but for some reason when different threads access the \u003ccode\u003egetSession()\u003c/code\u003e method they use different sessions. When a thread first accesses this class  \u003ccode\u003e(Session) threadLocal.get();\u003c/code\u003e will return null but as expected all other access requests will yeild the same session. I\u0027m not sure how this can be happening as the \u003ccode\u003ethreadLocal\u003c/code\u003e variable is final and the method \u003ccode\u003ethreadLocal.set(session)\u003c/code\u003e is only used in the above context (which I\u0027m 99.9% sure has to yeild a non null session as I would have encountered a \u003ccode\u003eNullPointerException\u003c/code\u003e at a different part of my app).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m not sure this is relevant but these are the main parts of my \u003ccode\u003ehibernate.cfg.xml\u003c/code\u003e file:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;hibernate-configuration\u0026gt;\u0026#xA;\u0026lt;session-factory\u0026gt;\u0026#xA;\u0026lt;property name\u003d\"connection.url\"\u0026gt;someURL\u0026lt;/property\u0026gt;\u0026#xA;\u0026lt;property name\u003d\"connection.driver_class\"\u0026gt; com.microsoft.sqlserver.jdbc.SQLServerDriver\u0026lt;/property\u0026gt;\u0026#xA;\u0026lt;property name\u003d\"dialect\"\u0026gt;org.hibernate.dialect.SQLServerDialect\u0026lt;/property\u0026gt;\u0026#xA;\u0026#xA;\u0026lt;property name\u003d\"hibernate.connection.isolation\"\u0026gt;1\u0026lt;/property\u0026gt; \u0026#xA;\u0026#xA;\u0026lt;property name\u003d\"hibernate.connection.username\"\u0026gt;User\u0026lt;/property\u0026gt;\u0026#xA;\u0026lt;property name\u003d\"hibernate.connection.password\"\u0026gt;Password\u0026lt;/property\u0026gt;\u0026#xA;\u0026lt;property name\u003d\"hibernate.connection.pool_size\"\u0026gt;10\u0026lt;/property\u0026gt;\u0026#xA;\u0026#xA;\u0026lt;property name\u003d\"show_sql\"\u0026gt;false\u0026lt;/property\u0026gt;\u0026#xA;\u0026lt;property name\u003d\"current_session_context_class\"\u0026gt;thread\u0026lt;/property\u0026gt;\u0026#xA;\u0026lt;property name\u003d\"hibernate.hbm2ddl.auto\"\u0026gt;update\u0026lt;/property\u0026gt;\u0026#xA;\u0026#xA;\u0026lt;property name\u003d\"hibernate.cache.use_second_level_cache\"\u0026gt;false\u0026lt;/property\u0026gt;\u0026#xA;\u0026lt;property name\u003d\"hibernate.cache.provider_class\"\u0026gt;org.hibernate.cache.NoCacheProvider\u0026lt;/property\u0026gt;\u0026#xA;\u0026lt;!-- Mapping files --\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027d appreciate any help granted and of course if anyone has any questions I\u0027d be happy to clarify.\u0026#xA;Ittai\u003c/p\u003e\u0026#xA;",
+  "ownerId": 170013,
+  "lastEditorUserId": 1502059,
+  "lastEditDate": "Nov 20, 2011",
+  "lastActivityDate": "Sep 30, 2013",
+  "title": "Why does every thread in my application use a different hibernate session?",
+  "tags": [
+    "java",
+    "multithreading",
+    "hibernate",
+    "session",
+    "thread-local"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

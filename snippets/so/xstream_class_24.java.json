@@ -1,0 +1,22 @@
+{
+  "id": 2456909,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3814489,
+  "parentId": 0,
+  "createDate": "Mar 16, 2010",
+  "score": 3,
+  "viewCount": 2429,
+  "body": "\u003cp\u003eI am using XStream to serialize my Objects to XML format. The formatted xml that I get is as below: node1, node2, node 3 are attributes of pojo,DetailDollars\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have requirement where in I have to calucluate a percentage, for example 100/ 25 and add the new node to the existing  ones. So, the final output should be :\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;DetailDollars\u0026gt;\u0026#xA;    \u0026lt;node1\u0026gt;100 \u0026lt;/node1\u0026gt; \u0026#xA;    \u0026lt;node2\u0026gt;25\u0026lt;/node2\u0026gt; \u0026#xA;    \u0026lt;node3\u0026gt;10\u0026lt;/node3\u0026gt; \u0026#xA;\u0026lt;/DetailDollars\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI wrote a custom converter and registered to my xstream object.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic void marshal(..){\u0026#xA;         writer.startNode(\"node4\");         \u0026#xA;         writer.setValue(getNode1()/ getnode2() );\u0026#xA;         writer.endNode();\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut, the xml stream I get has only the new node:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;DetailDollars\u0026gt; \u0026#xA;    \u0026lt;node4\u0026gt;4\u0026lt;/node4\u0026gt;\u0026#xA;\u0026lt;/DetailDollars\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI am not sure which xstream api would get me the desired format. could you please help me with this .\u003c/p\u003e\u0026#xA;",
+  "ownerId": 185048,
+  "lastEditorUserId": 15619,
+  "lastEditDate": "Aug 28, 2013",
+  "lastActivityDate": "Aug 28, 2013",
+  "title": "custom converter in XStream",
+  "tags": [
+    "converter",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

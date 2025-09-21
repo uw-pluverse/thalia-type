@@ -1,0 +1,23 @@
+{
+  "id": 20331163,
+  "postTypeId": 1,
+  "acceptedAnswerId": 20331243,
+  "parentId": 0,
+  "createDate": "Dec 2, 2013",
+  "score": 197,
+  "viewCount": 280954,
+  "body": "\u003cp\u003eI have a string \"\u003ccode\u003e11/15/2013 08:00:00\u003c/code\u003e\", I want to format it to \"\u003ccode\u003e11/15/2013\u003c/code\u003e\", what is the correct \u003ccode\u003eDateTimeFormatter\u003c/code\u003e pattern?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve tried many and googled and still unable to find the correct pattern.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eedit: I am looking for \u003ca href\u003d\"http://www.joda.org/joda-time/\" rel\u003d\"noreferrer\"\u003eJoda-Time\u003c/a\u003e \u003ca href\u003d\"http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormatter.html\" rel\u003d\"noreferrer\"\u003e\u003ccode\u003eDateTimeFormatter\u003c/code\u003e\u003c/a\u003e, not Java\u0027s SimpleDateFormat..\u003c/p\u003e\u0026#xA;",
+  "ownerId": 802281,
+  "lastEditorUserId": 642706,
+  "lastEditDate": "Apr 24, 2014",
+  "lastActivityDate": "Aug 28, 2020",
+  "title": "How to format Joda-Time DateTime to only mm/dd/yyyy?",
+  "tags": [
+    "java",
+    "jodatime",
+    "date-format"
+  ],
+  "answerCount": 9,
+  "commentCount": 2,
+  "favoriteCount": 50
+}

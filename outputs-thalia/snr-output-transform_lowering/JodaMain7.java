@@ -1,0 +1,40 @@
+package src.pushers;
+
+import org.joda.time.ReadableDuration;
+import org.joda.time.MutablePeriod;
+import android.R;
+import org.joda.time.ReadableInstant;
+import org.joda.time.ReadablePartial;
+import org.joda.time.base.BaseSingleFieldPeriod;
+
+class Main {
+	static public final <B, M, P extends BaseSingleFieldPeriod> void test() throws Exception {
+		var GrouseScabsShelley = null;
+		ReadablePartial adheres = (ReadablePartial) GrouseScabsShelley;
+		var RowsGarlickyThump = null;
+		var CrackerSherbertsPlod = null;
+		var CowardlyShuntJessamine = null;
+		var TransitsAnnabelleBlubbers = Weeks.weeksBetween((ReadablePartial) CowardlyShuntJessamine, adheres);
+		var ListerineStupefiesFetlock = TransitsAnnabelleBlubbers.getPeriodType();
+		var TashaMonroviaTimbers = new MutablePeriod((ReadableDuration) RowsGarlickyThump,
+				(ReadableInstant) CrackerSherbertsPlod, ListerineStupefiesFetlock);
+		int pretense = TashaMonroviaTimbers.hashCode();
+
+	}
+}
+
+interface Function0<R> {
+	public R apply();
+}
+
+interface Function1<A1, R> {
+	public R apply(A1 a1);
+}
+
+interface Function2<A1, A2, R> {
+	public R apply(A1 a1, A2 a2);
+}
+
+interface Function3<A1, A2, A3, R> {
+	public R apply(A1 a1, A2 a2, A3 a3);
+}

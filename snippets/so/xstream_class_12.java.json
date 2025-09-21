@@ -1,0 +1,23 @@
+{
+  "id": 1791178,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1791678,
+  "parentId": 0,
+  "createDate": "Nov 24, 2009",
+  "score": 11,
+  "viewCount": 10521,
+  "body": "\u003cp\u003eI have an object that needs to be serialised as XML, which contains the following field:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eList\u0026lt;String\u0026gt; tags \u003d new List\u0026lt;String\u0026gt;();\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eXStream serialises it just fine (after some aliases) like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;tags\u0026gt;\u0026#xA;  \u0026lt;string\u0026gt;tagOne\u0026lt;/string\u0026gt;\u0026#xA;  \u0026lt;string\u0026gt;tagTwo\u0026lt;/string\u0026gt;\u0026#xA;  \u0026lt;string\u0026gt;tagThree\u0026lt;/string\u0026gt;\u0026#xA;  \u0026lt;string\u0026gt;tagFour\u0026lt;/string\u0026gt;\u0026#xA;\u0026lt;/tags\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThat\u0027s OK as far as it goes, but I\u0027d like to be able to rename the \u003ccode\u003e\u0026lt;string\u0026gt;\u003c/code\u003e elements to, say, \u003ccode\u003e\u0026lt;tag\u0026gt;\u003c/code\u003e. I can\u0027t see an obvious way to do that from the alias documentation on the XStream site. Am I missing something obvious?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 126899,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jul 2, 2016",
+  "title": "customising serialisation of java collections using xstream",
+  "tags": [
+    "java",
+    "collections",
+    "xml-serialization",
+    "xstream"
+  ],
+  "answerCount": 6,
+  "commentCount": 0,
+  "favoriteCount": 2
+}

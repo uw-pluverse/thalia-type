@@ -1,0 +1,24 @@
+{
+  "id": 2284635,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2290556,
+  "parentId": 0,
+  "createDate": "Feb 17, 2010",
+  "score": 2,
+  "viewCount": 1529,
+  "body": "\u003cp\u003eI\u0027m trying to get jquery to do some ui affects for me while using GWT.  I have notifications that I add to a page that when clicked should disappear.  Since there could be multiple notifications of the same type (warning, error, etc.) I\u0027m trying to dynamically add a style name only when they are clicked through GWT and then have jquery act on that particular class name.  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe problem is that the jquery function is firing before the style name can be added so the user has to click the notification twice in order for it to close.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny ideas?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e  public abstract class AbstractNotificationWidget extends Composite implements ClickHandler, HasClickHandlers {\u0026#xA;\u0026#xA;  protected abstract String getUniqueId();\u0026#xA;\u0026#xA;  @Override\u0026#xA;  public HandlerRegistration addClickHandler(ClickHandler handler) {\u0026#xA;    return addDomHandler(handler, ClickEvent.getType());\u0026#xA;  }\u0026#xA;\u0026#xA;  @Override\u0026#xA;  public void onClick(ClickEvent event) {\u0026#xA;    doClick(getUniqueId());\u0026#xA;  }\u0026#xA;\u0026#xA;  protected static native void doClick(String name) /*-{\u0026#xA;    $wnd.$(\"#\" + name).click(function () {\u0026#xA;      $wnd.$(this).slideUp(\"slow\");\u0026#xA;      $wnd.$(\"div\", this).fadeOut(\"slow\");\u0026#xA;      });\u0026#xA;  }-*/;\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI then have subclasses that extend the above class\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class ErrorNotificationWidget extends AbstractNotificationWidget {\u0026#xA;\u0026#xA;  private final String uniqueId;\u0026#xA;\u0026#xA;  public ErrorNotificationWidget (String title, String message) {\u0026#xA;    uniqueId \u003d DOM.createUniqueId();\u0026#xA;\u0026#xA;    initWidget(uiBinder.createAndBindUi(this));\u0026#xA;\u0026#xA;    this.getElement().setId(uniqueId);\u0026#xA;\u0026#xA;    this.addClickHandler(this);\u0026#xA;  }\u0026#xA;  @Override\u0026#xA;  protected String getUniqueId() {\u0026#xA;    return this.uniqueId;\u0026#xA;  }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThese subclasses use the UIBinder to determine how they should be drawn.  Then these widgets get added to a panel to be displayed.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 145880,
+  "lastEditorUserId": 145880,
+  "lastEditDate": "Feb 19, 2010",
+  "lastActivityDate": "Mar 10, 2011",
+  "title": "Getting JQuery to act on class name dynamically added by GWT",
+  "tags": [
+    "java",
+    "javascript",
+    "jquery",
+    "gwt"
+  ],
+  "answerCount": 4,
+  "commentCount": 3,
+  "favoriteCount": 0
+}

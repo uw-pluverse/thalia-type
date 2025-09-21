@@ -1,0 +1,21 @@
+{
+  "id": 9485667,
+  "postTypeId": 1,
+  "acceptedAnswerId": 9485753,
+  "parentId": 0,
+  "createDate": "Feb 28, 2012",
+  "score": 3,
+  "viewCount": 1135,
+  "body": "\u003cp\u003eI have Date that look like String, and I want parse it.\u003cbr\u003e\u0026#xA;But date can look like one of many patterns.  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eMM/dd/yy  \u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eor  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eHH:mm  \u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eor  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eMM/dd/yy HH:mm\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eor  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eMM/dd/yy HHmm   \u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have code, that can parse many patterns  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic DateTime parseDateTime(final String text)\u0026#xA;   {\u0026#xA;      if (StringUtils.isEmpty(text)) return null;\u0026#xA;      int field \u003d 0;\u0026#xA;      DateTime dateTime \u003d null;\u0026#xA;      IllegalArgumentException exception \u003d null;\u0026#xA;      for (; field \u0026lt; FIELD_COUNT; ++field)\u0026#xA;      {\u0026#xA;         if (null !\u003d formatters[field])\u0026#xA;         {\u0026#xA;            try\u0026#xA;            {\u0026#xA;               dateTime \u003d formatters[field].parseDateTime(text);\u0026#xA;               break;\u0026#xA;            }\u0026#xA;            catch (final IllegalArgumentException e)\u0026#xA;            {\u0026#xA;               exception \u003d null !\u003d exception ? exception : e;\u0026#xA;            }\u0026#xA;         }\u0026#xA;      }\u0026#xA;      if (dateTime \u003d\u003d null)\u0026#xA;      {\u0026#xA;         throw exception;\u0026#xA;      }\u0026#xA;      return dateTime;\u0026#xA;   }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003ccode\u003eformatters[]\u003c/code\u003e is array of \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDateTimeFormatter\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMay you suggest a different way? More simple \u003c/p\u003e\u0026#xA;",
+  "ownerId": 1143825,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Feb 29, 2012",
+  "title": "Parse joda-time",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 2,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

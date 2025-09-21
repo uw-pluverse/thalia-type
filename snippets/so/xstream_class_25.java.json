@@ -1,0 +1,25 @@
+{
+  "id": 12672541,
+  "postTypeId": 1,
+  "acceptedAnswerId": 12672923,
+  "parentId": 0,
+  "createDate": "Oct 1, 2012",
+  "score": 2,
+  "viewCount": 1743,
+  "body": "\u003cp\u003eI am working with xstream to convert some XML into Java objects. The XML pattern is of the below format:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;Objects\u0026gt;   \u0026#xA;\u0026lt;Object Type\u003d\"System.Tuning\" \u0026gt;4456\u0026lt;/Object\u0026gt; \u0026#xA;\u0026lt;Object Type\u003d\"System.Lag\" \u0026gt;7789\u0026lt;/Object\u0026gt;    \u0026#xA;\u0026lt;/Objects\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBasically the parent Objects tag can have n number of Object tags. For this I have modelled my class like this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eclass ParentResponseObject {    \u0026#xA;    List \u0026lt;ResponseObject\u0026gt;responseObjects \u003d new ArrayList\u0026lt;ResponseObject\u0026gt;();\u0026#xA;    public ParentResponseObject() {\u0026#xA;        // TODO Auto-generated constructor stub\u0026#xA;    }\u0026#xA;}\u0026#xA;class ResponseObject {\u0026#xA;       String Type;\u0026#xA;       String Value;\u0026#xA;    public ResponseObject() {\u0026#xA;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnd finally I am using the below code to populate my java class:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eXStream s \u003d new XStream(new DomDriver());\u0026#xA;  s.alias(\"Objects\", src.core.PowerShell.MyAgain.ParentResponseObject.class);\u0026#xA;  s.alias(\"Object\", src.core.PowerShell.MyAgain.ResponseObject.class);  \u0026#xA;  s.useAttributeFor(src.core.PowerShell.MyAgain.ResponseObject.class, \"Type\");  \u0026#xA;        s.addImplicitCollection(src.core.PowerShell.MyAgain.ParentResponseObject.class, \"responseObjects\");     \u0026#xA;        ParentResponseObject gh \u003d(ParentResponseObject)s.fromXML(k1);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eUsing the \u003ccode\u003euseAttribute\u003c/code\u003e method I am able to read the \"Type\" attribute of Object Type, but how do I read the values within tags like 4456, 7789 and populate it in the variable \u003ccode\u003eResponseObject\u003c/code\u003e.value.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 496934,
+  "lastEditorUserId": 58792,
+  "lastEditDate": "Oct 1, 2012",
+  "lastActivityDate": "Oct 1, 2012",
+  "title": "Reading XML value to populate Java variable",
+  "tags": [
+    "java",
+    "xml",
+    "xml-parsing",
+    "xml-serialization",
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

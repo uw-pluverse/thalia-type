@@ -1,0 +1,23 @@
+{
+  "id": 2265503,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2265637,
+  "parentId": 0,
+  "createDate": "Feb 15, 2010",
+  "score": 421,
+  "viewCount": 459355,
+  "body": "\u003cp\u003eRecently I read through this\u0026#xA;\u003ca href\u003d\"http://www.ibm.com/developerworks/java/library/j-jtp05273.html\" rel\u003d\"noreferrer\"\u003e Developer Works Document\u003c/a\u003e. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe document is all about defining \u003ccode\u003ehashCode()\u003c/code\u003e and \u003ccode\u003eequals()\u003c/code\u003e effectively and correctly, however I am not able to figure out why we need to override these two methods. \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow can I take the decision to implement these methods efficiently?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 112500,
+  "lastEditorUserId": 2195440,
+  "lastEditDate": "Mar 21, 2018",
+  "lastActivityDate": "Feb 2, 2021",
+  "title": "Why do I need to override the equals and hashCode methods in Java?",
+  "tags": [
+    "java",
+    "equals",
+    "hashcode"
+  ],
+  "answerCount": 30,
+  "commentCount": 1,
+  "favoriteCount": 303
+}

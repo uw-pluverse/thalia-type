@@ -1,0 +1,21 @@
+{
+  "id": 1482513,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1495546,
+  "parentId": 0,
+  "createDate": "Sep 27, 2009",
+  "score": 2,
+  "viewCount": 602,
+  "body": "\u003cp\u003eI\u0027m using \u003cstrong\u003eGoogle Web Tools\u003c/strong\u003e, and have a \u003ccode\u003eJsArray\u003c/code\u003e, which I\u0027m populating with data from JSON.  I\u0027m able to modify items within the array and add items to it, but I can\u0027t figure out how to \u003cem\u003eremove\u003c/em\u003e an item from it.  I\u0027m looking for something similar to the \u003ccode\u003epop()\u003c/code\u003e method in JavaScript.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI can add an item to the array by using the \u003ccode\u003eset(index,value)\u003c/code\u003e method with an \u003ccode\u003eindex\u003c/code\u003e that\u0027s out of the array\u0027s range, so I tried using \u003ccode\u003eset(index,null)\u003c/code\u003e to remove it, but the array still has the item, it\u0027s just null. (i.e. the array\u0027s length is unchanged.)\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027m currently using a hacky method whereby I create a new array, and copy all of the elements except the last one from the old to the new, but I\u0027m hoping I don\u0027t have to live with that, because it\u0027s ugly.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eprivate final JsArray\u0026lt;JsArrayInteger\u0026gt; popItemFromArray(\u0026#xA;        JsArray\u0026lt;JsArrayInteger\u0026gt; oldArray) {\u0026#xA;    // the createEmpty...  method is a native method which returns eval(\"[]\")\u0026#xA;    JsArray\u0026lt;JsArrayInteger\u0026gt; newArray \u003d createEmptyIntIntArray();\u0026#xA;\u0026#xA;    for (int i \u003d 0; i \u0026lt; oldArray.length() - 1; i++) {\u0026#xA;        newArray.set(i, oldArray.get(i));\u0026#xA;    }\u0026#xA;\u0026#xA;    return newArray;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 110560,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Sep 30, 2009",
+  "title": "How to remove an element from a JsArray in Google Web Tools?",
+  "tags": [
+    "json",
+    "gwt"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

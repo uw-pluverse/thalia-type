@@ -1,0 +1,22 @@
+{
+  "id": 2598154,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Apr 8, 2010",
+  "score": 0,
+  "viewCount": 740,
+  "body": "\u003cp\u003ei have form tag received from designer.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003ei need to submit the form from GWT given below.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eFormPanel form \u003d null;\u0026#xA;Button submit \u003d null;\u0026#xA;function onModuleLoad(){\u0026#xA;  form \u003d FormPanel.wrap(DOM.getElementById(\"MyForm\"));\u0026#xA;  form.setEncoding(FormPanel.ENCODING_MULTIPART);\u0026#xA;\u0026#xA;  submit \u003d Button.wrap(DOM.getElementById(\"OK\"));\u0026#xA;  submit.addClickHandler(new ClickHandler() {\u0026#xA;   public void onClick(ClickEvent event) {\u0026#xA;    // button clicked confirmed\u0026#xA;    form.submit();\u0026#xA;   }\u0026#xA;  });\u0026#xA;\u0026#xA;\u0026#xA;  formSubmitHandler \u003d form.addSubmitHandler(new SubmitHandler(){\u0026#xA;   public void onSubmit(SubmitEvent event) {\u0026#xA;                    }\u0026#xA;\u0026#xA;  });\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003ebut form was not submitted.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003edesigner wrote the following lines.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eform action\u003d\"./a.cgi\" method\u003d\"post\" name\u003d\"MyForm\" id\u003d\"MyForm\"\u0026#xA;\u0026#xA;input type\u003d\"button\" value\u003d\"OK\"\u0026#xA;\u0026#xA;form\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 311672,
+  "lastEditorUserId": 202923,
+  "lastEditDate": "Apr 8, 2010",
+  "lastActivityDate": "Apr 8, 2010",
+  "title": "gwt/extjs - form not submitting",
+  "tags": [
+    "gwt",
+    "extjs"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

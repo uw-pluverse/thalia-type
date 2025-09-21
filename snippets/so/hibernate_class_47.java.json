@@ -1,0 +1,22 @@
+{
+  "id": 4323066,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4323104,
+  "parentId": 0,
+  "createDate": "Dec 1, 2010",
+  "score": 0,
+  "viewCount": 7503,
+  "body": "\u003cp\u003eI\u0027m a hibernate newbie and im receiving this error when trying to persist an object - \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eError --\u003eUnknown entity: org.apache.struts.register.model.Event\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eIn my \u003ccode\u003ehibernate.cfg.xml\u003c/code\u003e, I define my mapping as, \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003ccode\u003e\u0026lt;mapping class\u003d\"org.apache.struts.register.model.Event\"/\u0026gt;\u003c/code\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy event class - \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage org.apache.struts.register.model;\u0026#xA;\u0026#xA;import org.hibernate.annotations.Entity;\u0026#xA;\u0026#xA;\u0026#xA;import javax.persistence.GenerationType;\u0026#xA;import javax.persistence.Id;\u0026#xA;import javax.persistence.GeneratedValue;\u0026#xA;import javax.persistence.Table;\u0026#xA;\u0026#xA;@Entity\u0026#xA;@Table (name\u003d\"event\")\u0026#xA;\u0026#xA;public class Event {\u0026#xA;\u0026#xA;    @Id\u0026#xA;    @GeneratedValue ( strategy \u003d  GenerationType.AUTO)\u0026#xA; private int eventId;\u0026#xA; private String eventName;\u0026#xA; private String eventDescription;\u0026#xA;\u0026#xA; public String getEventName() {\u0026#xA;  return eventName;\u0026#xA; }\u0026#xA;\u0026#xA; public void setEventName(String eventName) {\u0026#xA;  this.eventName \u003d eventName;\u0026#xA; }\u0026#xA;\u0026#xA; public String getEventDescription() {\u0026#xA;  return eventDescription;\u0026#xA; }\u0026#xA;\u0026#xA; public void setEventDescription(String eventDescription) {\u0026#xA;  this.eventDescription \u003d eventDescription;\u0026#xA; }\u0026#xA;\u0026#xA; public String toString(){\u0026#xA;  return this.eventName + \",\" + this.eventDescription;\u0026#xA; }\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eEventDAO - \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epackage dao;\u0026#xA;\u0026#xA;\u0026#xA;import org.apache.struts.register.model.Event;\u0026#xA;import org.hibernate.Session;\u0026#xA;import org.hibernate.SessionFactory;\u0026#xA;import org.hibernate.Transaction;\u0026#xA;\u0026#xA;\u0026#xA;public class EventDAO {\u0026#xA;\u0026#xA;    public static boolean registerEvent(Event u) {\u0026#xA;\u0026#xA;         SessionFactory sf \u003d HibernateUtil.getSessionFactory();\u0026#xA;         Transaction t \u003d null;\u0026#xA;         try  {\u0026#xA;         Session s  \u003d sf.openSession();\u0026#xA;         t \u003d s.beginTransaction(); // start a new transaction\u0026#xA;         s.persist(u);\u0026#xA;         t.commit();  // commit transaction \u0026#xA;         return true;\u0026#xA;         }\u0026#xA;         catch(Exception ex) {\u0026#xA;             System.err.println(\"Error --\u0026gt;\"  + ex.getMessage());\u0026#xA;             if ( t!\u003dnull) t.rollback();  // rollback transaction on exception \u0026#xA;             return false;\u0026#xA;         }\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003ccode\u003eSystem.err.println(\"Error --\u0026gt;\"  + ex.getMessage())\u003c/code\u003e, is the line that throws the exception.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThanks.\u003c/p\u003e\u0026#xA;",
+  "ownerId": 470184,
+  "lastEditorUserId": 69258,
+  "lastEditDate": "Jan 12, 2013",
+  "lastActivityDate": "Jan 12, 2013",
+  "title": "Hibernate mapping error - Unknown entity",
+  "tags": [
+    "java",
+    "hibernate"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

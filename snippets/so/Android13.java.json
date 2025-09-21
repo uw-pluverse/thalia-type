@@ -1,0 +1,26 @@
+{
+  "id": 559902,
+  "postTypeId": 1,
+  "acceptedAnswerId": 560006,
+  "parentId": 0,
+  "createDate": "Feb 18, 2009",
+  "score": 64,
+  "viewCount": 61069,
+  "body": "\u003cp\u003eI am trying to get a \u003ccode\u003eFileInputStream\u003c/code\u003e object on an image that the user selects from the picture gallery. This is the android \u003ccode\u003eURI\u003c/code\u003e returned by \u003ccode\u003eandroid.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI\u003c/code\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003econtent://media/external/images/media/3\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen I try to construct a java URI object from this object, I get an \u003ccode\u003eIllegalArgumentException\u003c/code\u003e with the exception description \u003cstrong\u003eExpected file scheme in URI: content://media/external/images/media/3\u003c/strong\u003e whereas the android URI shows the scheme as \u003cstrong\u003econtent\u003c/strong\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrong\u003eUpdate\u003c/strong\u003e:\u0026#xA;Never found a solution for the original question. But if you want the byte stream of an image in the pictures gallery, this piece of code will do that.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eBitmap bitmap \u003d Media.getBitmap(getContentResolver(), imageUri);\u0026#xA;ByteArrayOutputStream bytes \u003d new ByteArrayOutputStream();\u0026#xA;bitmap.compress(Bitmap.CompressFormat.JPEG, 40, bytes);\u0026#xA;ByteArrayInputStream fileInputStream \u003d new ByteArrayInputStream(bytes.toByteArray());\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 46297,
+  "ownerDisplayName": "lostInTransit",
+  "lastEditorUserId": 3623128,
+  "lastEditorDisplayName": "lostInTransit",
+  "lastEditDate": "Jul 14, 2019",
+  "lastActivityDate": "Jul 14, 2019",
+  "title": "Android- how can I convert android.net.Uri object to java.net.URI object?",
+  "tags": [
+    "android",
+    "uri",
+    "android-bitmap",
+    "fileinputstream"
+  ],
+  "answerCount": 5,
+  "commentCount": 0,
+  "favoriteCount": 11
+}

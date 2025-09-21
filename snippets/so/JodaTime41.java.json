@@ -1,0 +1,24 @@
+{
+  "id": 41452661,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Jan 3, 2017",
+  "score": -2,
+  "viewCount": 883,
+  "body": "\u003cp\u003eI am calculating time based on Hawaii timezone.I have test scenario where my current date is \u003cstrong\u003e2017-01-01T10:52:07.656-10:00\u003c/strong\u003e (January 1). When I try to get previous date using .minusDays(1) I get date as \u003cstrong\u003e2016-12-31T12:52:07.656-08:00\u003c/strong\u003e (December 31).\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eNow for previous date when I try to format in \u003cem\u003eMM/DD/YYYY\u003c/em\u003e. I get output as \u003cem\u003e12/366/2016\u003c/em\u003e instead of \u003cem\u003e12/31/2016\u003c/em\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    DateTime dt4 \u003d new DateTime(\"2017-01-01T10:52:07.656-10:00\");\u0026#xA;    System.out.println(\"Given Date:\"+ dt4);\u0026#xA;    DateTimeFormatter fmt \u003d DateTimeFormat.forPattern(\"MM/DD/YYYY\");\u0026#xA;    System.out.println(\"Given Date After Date format: \"+fmt.print(dt4));\u0026#xA;\u0026#xA;    DateTime previousDay \u003d dt4.minusDays(1);\u0026#xA;    System.out.println(\"Previous Day: \"+ previousDay);\u0026#xA;    System.out.println(\"Previous Date After Date format: \"+fmt.print(previousDay));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eO/p:\u003cbr\u003e\u003cbr\u003e\u0026#xA;        Given Date:    2017-01-01T12:52:07.656-08:00\u003cbr\u003e\u0026#xA;        Given date After Date format: 01/01/2017\u003cbr\u003e\u0026#xA;        Previous Day: 2016-12-31T12:52:07.656-08:00\u003cbr\u003e\u0026#xA;        Previous Date After Date format: 12/366/2016\u003c/p\u003e\u0026#xA;",
+  "ownerId": 2748161,
+  "lastEditorUserId": 2864275,
+  "lastEditDate": "Jan 3, 2017",
+  "lastActivityDate": "Jan 3, 2017",
+  "title": "Calculate previous day using joda time",
+  "tags": [
+    "java",
+    "date",
+    "jodatime"
+  ],
+  "answerCount": 1,
+  "commentCount": 1,
+  "favoriteCount": 0,
+  "closedDate": "Jan 4, 2017"
+}

@@ -1,0 +1,12 @@
+Here are the necessary import statements:
+
+```java
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DockPanel;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.InitWidget;
+import com.google.gwt.user.client.ui.VerticalPanel;
+```

@@ -1,0 +1,21 @@
+{
+  "id": 1163812,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1163899,
+  "parentId": 0,
+  "createDate": "Jul 22, 2009",
+  "score": 4,
+  "viewCount": 4934,
+  "body": "\u003cp\u003eIm trying to change the icon on the handle when i try to open the slidingdrawer.\u0026#xA;When I extract the handle from the view and sets the onclicklistener or ontouchlistener it seems to never get trigget.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic void onCreate(Bundle savedInstanceState) {\u0026#xA;    super.onCreate(savedInstanceState);\u0026#xA;    setContentView(R.layout.main);\u0026#xA;\u0026#xA;    SlidingDrawer drawer \u003d (SlidingDrawer)findViewById(R.id.drawer_landscape);\u0026#xA;\u0026#xA;    ImageView handle \u003d (ImageView)findViewById(R.id.handle_l);\u0026#xA;    handle.setFocusable(true);\u0026#xA;\u0026#xA;    handle.setOnClickListener(new OnClickListener(){\u0026#xA;\u0026#xA;\u0026#xA;        @Override\u0026#xA;        public void onClick(View v) {\u0026#xA;            // TODO Auto-generated method stub\u0026#xA;            Log.i(\"test\",\"onClick\");\u0026#xA;        }\u0026#xA;\u0026#xA;    });\u0026#xA;\u0026#xA;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAnd my XML\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;FrameLayout xmlns:android\u003d\"http://schemas.android.com/apk/res/android\"\u0026#xA;     android:layout_width\u003d\"fill_parent\"\u0026#xA;     android:layout_height\u003d\"fill_parent\"\u0026#xA;     android:id\u003d\"@+id/base_frame_layout\"\u0026#xA;     android:layout_gravity\u003d\"bottom\"\u0026#xA;     \u0026gt;        \u0026#xA;    \u0026lt;LinearLayout xmlns:android\u003d\"http://schemas.android.com/apk/res/android\"\u0026#xA;        android:orientation\u003d\"vertical\"\u0026#xA;        android:layout_width\u003d\"fill_parent\"\u0026#xA;        android:layout_height\u003d\"fill_parent\"\u0026#xA;        \u0026gt;\u0026#xA;        \u0026lt;TextView  \u0026#xA;            android:layout_width\u003d\"fill_parent\" \u0026#xA;            android:layout_height\u003d\"wrap_content\" \u0026#xA;            android:text\u003d\"@string/hello\"\u0026#xA;            /\u0026gt;\u0026#xA;    \u0026lt;/LinearLayout\u0026gt;\u0026#xA;\u0026#xA;        \u0026lt;SlidingDrawer\u0026#xA;             android:id\u003d\"@+id/drawer_landscape\"\u0026#xA;             android:layout_width\u003d\"wrap_content\"\u0026#xA;             android:layout_height\u003d\"wrap_content\"\u0026#xA;             android:handle\u003d\"@+id/handle_l\"\u0026#xA;             android:content\u003d\"@+id/content\"\u0026#xA;             android:orientation\u003d\"vertical\"\u0026#xA;             android:visibility\u003d\"visible\"\u0026#xA;        \u0026gt;\u0026#xA;\u0026#xA;            \u0026lt;ImageView\u0026#xA;                android:id\u003d\"@+id/handle_l\"\u0026#xA;                android:layout_height\u003d\"50px\"\u0026#xA;                android:layout_width\u003d\"64px\"\u0026#xA;                android:padding\u003d\"0px\"\u0026#xA;                android:src\u003d\"@drawable/icon\"\u0026#xA;            /\u0026gt;\u0026#xA;\u0026#xA;            \u0026lt;TextView\u0026#xA;                android:id\u003d\"@+id/content\" \u0026#xA;                android:text\u003d\"content\" \u0026#xA;                android:layout_height\u003d\"50px\"\u0026#xA;                android:layout_width\u003d\"64px\"\u0026#xA;            /\u0026gt;                  \u0026#xA;\u0026#xA;         \u0026lt;/SlidingDrawer\u0026gt;       \u0026#xA;\u0026#xA;\u0026lt;/FrameLayout\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI was hoping this code should log \"onClick\" message, but it doesn\u0027t.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny ideas?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 133858,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Oct 8, 2016",
+  "title": "How to change icon on the SlidingDrawer handle when clicked",
+  "tags": [
+    "android",
+    "slider"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 3
+}

@@ -1,0 +1,10 @@
+Here are the necessary import statements:
+
+```java
+import org.junit.Test;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
+```
+
+Note that I've only included imports for types used in this code snippet.

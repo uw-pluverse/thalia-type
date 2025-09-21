@@ -1,0 +1,24 @@
+{
+  "id": 3422673,
+  "postTypeId": 1,
+  "acceptedAnswerId": 3423360,
+  "parentId": 0,
+  "createDate": "Aug 6, 2010",
+  "score": 344,
+  "viewCount": 475690,
+  "body": "\u003cp\u003eI\u0027m trying to write a Java routine to evaluate math expressions from \u003ccode\u003eString\u003c/code\u003e values like:\u003c/p\u003e\u0026#xA;\u003col\u003e\u0026#xA;\u003cli\u003e\u003ccode\u003e\u0026quot;5+3\u0026quot;\u003c/code\u003e\u003c/li\u003e\u0026#xA;\u003cli\u003e\u003ccode\u003e\u0026quot;10-40\u0026quot;\u003c/code\u003e\u003c/li\u003e\u0026#xA;\u003cli\u003e\u003ccode\u003e\u0026quot;(1+10)*3\u0026quot;\u003c/code\u003e\u003c/li\u003e\u0026#xA;\u003c/ol\u003e\u0026#xA;\u003cp\u003eI want to avoid a lot of if-then-else statements.\u0026#xA;How can I do this?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 256082,
+  "lastEditorUserId": 1393766,
+  "lastEditorDisplayName": "user10758159",
+  "lastEditDate": "Sep 26, 2020",
+  "lastActivityDate": "Sep 26, 2020",
+  "title": "How to evaluate a math expression given in string form?",
+  "tags": [
+    "java",
+    "string",
+    "math"
+  ],
+  "answerCount": 25,
+  "commentCount": 7,
+  "favoriteCount": 172
+}

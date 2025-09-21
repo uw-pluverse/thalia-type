@@ -1,0 +1,22 @@
+{
+  "id": 8746084,
+  "postTypeId": 1,
+  "acceptedAnswerId": 8746203,
+  "parentId": 0,
+  "createDate": "Jan 5, 2012",
+  "score": 110,
+  "viewCount": 200202,
+  "body": "\u003cp\u003eHow can i convert a string to a \u003ccode\u003eLocalDate\u003c/code\u003e?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI have seen examples like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eLocalDate dt \u003d new LocalDate(\"2005-11-12\");\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut my strings are like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e2005-nov-12\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 1022707,
+  "lastEditorUserId": 343955,
+  "lastEditDate": "Jan 5, 2012",
+  "lastActivityDate": "Jan 6, 2020",
+  "title": "String to LocalDate",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 5,
+  "commentCount": 0,
+  "favoriteCount": 19
+}

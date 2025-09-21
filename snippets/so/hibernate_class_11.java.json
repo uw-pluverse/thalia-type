@@ -1,0 +1,25 @@
+{
+  "id": 1310603,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1310654,
+  "parentId": 0,
+  "createDate": "Aug 21, 2009",
+  "score": 18,
+  "viewCount": 19609,
+  "body": "\u003cp\u003eConsider the following database schema:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003ecreate table UserGroup ( id int not null auto_increment, name varchar(200),\u0026#xA;    primary key(id));\u0026#xA;create table User ( id int not null auto_increment, name varchar(200),\u0026#xA;    groupId int not null, primary key(id));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eUser.groupId \u003d UserGroup.id, so a user can only be a member of one group, but a usergroup can exist of many users. Fine so far, let\u0027s make the entities in Hibernate.  Here\u0027s \u003ccode\u003eUser\u003c/code\u003e:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@Entity\u0026#xA;@Table(name \u003d \"User\")\u0026#xA;public class User {\u0026#xA;\u0026#xA;    @Id\u0026#xA;    @Column(name\u003d\"id\", nullable \u003d false)\u0026#xA;    private Integer id;\u0026#xA;\u0026#xA;    @Column(name\u003d\"name\", length \u003d 200, nullable \u003d true)\u0026#xA;    private String name;\u0026#xA;\u0026#xA;    @ManyToOne(fetch\u003dFetchType.EAGER)\u0026#xA;    @JoinColumn(name \u003d \"groupId\", nullable \u003d false, insertable\u003dfalse, updatable\u003dfalse)\u0026#xA;    @ForeignKey(name\u003d\"FK_GroupId\")\u0026#xA;    private UserGroup userGroup;\u0026#xA;\u0026#xA;    /* Getters, Setters, toString, equals \u0026amp; hashCode */\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere\u0027s \u003ccode\u003eUserGroup\u003c/code\u003e:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@Entity\u0026#xA;@Table(name \u003d \"UserGroup\")\u0026#xA;public class UserGroup {\u0026#xA;\u0026#xA;    @Id\u0026#xA;    @Column(name\u003d\"id\", nullable \u003d false)\u0026#xA;    private Integer id;\u0026#xA;\u0026#xA;    @Column(name\u003d\"name\", length \u003d 200, nullable \u003d true)\u0026#xA;    private String name;\u0026#xA;\u0026#xA;    @OneToMany(fetch\u003dFetchType.EAGER)\u0026#xA;    private List\u0026lt;User\u0026gt; users;\u0026#xA;\u0026#xA;    /* Getters, Setters, toString, equals \u0026amp; hashCode */\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eNow I\u0027ll get an error \u003ccode\u003e\"Table mydb.usergroup_user\u0027 doesn\u0027t exist\"\u003c/code\u003e because it expects a join-table. My data structure is \"set in stone\" due to interoperability with other applications that this application will replace, so I won\u0027t be making a join-table. Also, it should not be needed. How can I make a \u003ccode\u003eList\u0026lt;User\u0026gt; users\u003c/code\u003e that simply is a list of User where \u003ccode\u003eUser.groupId \u003d\u003d UserGroup.Id\u003c/code\u003e?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 80246,
+  "lastEditorUserId": 179850,
+  "lastEditDate": "Mar 30, 2015",
+  "lastActivityDate": "Oct 31, 2017",
+  "title": "Hibernate @OneToMany without a separate join table",
+  "tags": [
+    "java",
+    "hibernate",
+    "jpa",
+    "join",
+    "entity-relationship"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 6
+}

@@ -1,0 +1,21 @@
+{
+  "id": 9122641,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Feb 3, 2012",
+  "score": 0,
+  "viewCount": 178,
+  "body": "\u003cp\u003eThe following code does not print the days correctly, I need to print out days and minutes as well.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDuration duration \u003d new Duration(1328223198241L - 1326308781131L);\u0026#xA;Period p2 \u003d new Period(duration.getMillis());\u0026#xA;System.out.println(p2.getDays()); // prints 0, should print 22 days\u0026#xA;System.out.println(p2.getHours()); // prints  531 which is expected.\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 1186512,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Feb 9, 2012",
+  "title": "Getting JODA Duration to work",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 3,
+  "commentCount": 2,
+  "favoriteCount": 0
+}

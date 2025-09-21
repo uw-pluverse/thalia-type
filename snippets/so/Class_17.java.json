@@ -1,0 +1,25 @@
+{
+  "id": 4772425,
+  "postTypeId": 1,
+  "acceptedAnswerId": 0,
+  "parentId": 0,
+  "createDate": "Jan 23, 2011",
+  "score": 477,
+  "viewCount": 1374142,
+  "body": "\u003cp\u003eI\u0027ve a \u003ccode\u003eString\u003c/code\u003e representing a date.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eString date_s \u003d \"2011-01-18 00:00:00.0\";\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027d like to convert it to a \u003ccode\u003eDate\u003c/code\u003e and output it in \u003ccode\u003eYYYY-MM-DD\u003c/code\u003e format.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cblockquote\u003e\u0026#xA;  \u003cp\u003e2011-01-18\u003c/p\u003e\u0026#xA;\u003c/blockquote\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow can I achieve this?\u003c/p\u003e\u0026#xA;\u0026#xA;\u003chr\u003e\u0026#xA;\u0026#xA;\u003cp\u003eOkay, based on the answers I retrieved below, here\u0027s something I\u0027ve tried:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eString date_s \u003d \" 2011-01-18 00:00:00.0\"; \u0026#xA;SimpleDateFormat dt \u003d new SimpleDateFormat(\"yyyyy-mm-dd hh:mm:ss\"); \u0026#xA;Date date \u003d dt.parse(date_s); \u0026#xA;SimpleDateFormat dt1 \u003d new SimpleDateFormat(\"yyyyy-mm-dd\");\u0026#xA;System.out.println(dt1.format(date));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eBut it outputs \u003ccode\u003e02011-00-1\u003c/code\u003e instead of the desired \u003ccode\u003e2011-01-18\u003c/code\u003e. What am I doing wrong?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 586154,
+  "lastEditorUserId": 3669624,
+  "lastEditDate": "Aug 5, 2018",
+  "lastActivityDate": "Jun 22, 2020",
+  "title": "Change date format in a Java string",
+  "tags": [
+    "java",
+    "string",
+    "date",
+    "formatting",
+    "date-format"
+  ],
+  "answerCount": 19,
+  "commentCount": 4,
+  "favoriteCount": 125
+}

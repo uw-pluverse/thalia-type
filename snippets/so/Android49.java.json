@@ -1,0 +1,22 @@
+{
+  "id": 1325576,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1325800,
+  "parentId": 0,
+  "createDate": "Aug 25, 2009",
+  "score": 6,
+  "viewCount": 3873,
+  "body": "\u003cp\u003eWhen I switch to landscape mode, the following custom view throws an exception in Android 1.5r3 cupcake:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003ejava.lang.RuntimeException: Unable to start activity ComponentInfo{com.opentable/com.opentable.activity.SearchResults}: \u0026#xA;    java.lang.IllegalArgumentException: Wrong state class -- expecting View State\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eMy code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class TextProgressBar extends LinearLayout {\u0026#xA;    public TextProgressBar(Context context, AttributeSet attrs) {\u0026#xA;        super(context, attrs);\u0026#xA;        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.text_progress_bar, this, true);\u0026#xA;        setGravity(Gravity.CENTER);\u0026#xA;    }\u0026#xA;\u0026#xA;    public TextProgressBar(Context context) {\u0026#xA;        this(context,null);\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThe XML for this view is fairly straightforward:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u0026gt;\u0026#xA;\u0026lt;LinearLayout\u0026#xA;    xmlns:android\u003d\"http://schemas.android.com/apk/res/android\"\u0026#xA;    android:layout_width\u003d\"wrap_content\"\u0026#xA;    android:layout_height\u003d\"wrap_content\"\u0026gt;\u0026#xA;\u0026#xA;    \u0026lt;ProgressBar\u0026#xA;        android:layout_width\u003d\"wrap_content\"\u0026#xA;        android:layout_height\u003d\"wrap_content\"\u0026#xA;        android:indeterminate\u003d\"true\"\u0026#xA;        android:id\u003d\"@+id/progress\" /\u0026gt;\u0026#xA;\u0026#xA;    \u0026lt;TextView\u0026#xA;        android:text\u003d\"Loading...\"\u0026#xA;        android:layout_width\u003d\"wrap_content\"\u0026#xA;        android:layout_height\u003d\"wrap_content\" /\u0026gt;\u0026#xA;\u0026#xA;\u0026lt;/LinearLayout\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAny ideas what might be happening?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 82156,
+  "lastEditorUserId": 1000551,
+  "lastEditDate": "Mar 12, 2019",
+  "lastActivityDate": "Jul 23, 2019",
+  "title": "Wrong state class -- expecting View State exception in Android 1.5 with Custom View",
+  "tags": [
+    "android",
+    "android-view"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 0
+}

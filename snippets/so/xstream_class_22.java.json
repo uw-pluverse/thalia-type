@@ -1,0 +1,21 @@
+{
+  "id": 17616142,
+  "postTypeId": 1,
+  "acceptedAnswerId": 17650746,
+  "parentId": 0,
+  "createDate": "Jul 12, 2013",
+  "score": 1,
+  "viewCount": 1371,
+  "body": "\u003cp\u003eThe XML I\u0027m trying to convert looks like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e\u0026lt;numberOfEmployees year\u003d\"2013\"\u0026gt;499.0\u0026lt;/numberOfEmployees\u0026gt;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eAccording to the XSD, there can be multiple of these tags, so it\u0027s a collection. The generated code looks like:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    protected List\u0026lt;NumberOfPersonnel\u0026gt; numberOfEmployees;\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eWhen I use \u003ccode\u003e@XStreamImplicit\u003c/code\u003e, it drops the value, so I need a converter. But combining \u003ccode\u003e@XStreamImplicit\u003c/code\u003e with \u003ccode\u003e@XStreamConverter\u003c/code\u003e doesn\u0027t seem to work.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo how do I do this? I\u0027ve tried messing about with my own custom converter that inherits from CollectionConverter, but it claims not to find any children, and honestly I have no idea what I\u0027m doing.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eCould someone enlighten me? This shouldn\u0027t be this hard, should it?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 214416,
+  "lastEditorUserId": 214416,
+  "lastEditDate": "Jul 16, 2013",
+  "lastActivityDate": "Jul 16, 2013",
+  "title": "XStream: convert collection with attributes",
+  "tags": [
+    "xstream"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

@@ -1,0 +1,33 @@
+```java
+import java.util.Map;
+import java.lang.Object;
+import java.lang.Class;
+import org.hibernate.tuple.component.AbstractTupleElement;
+import org.hibernate.tuple.component.MapAttribute;
+import org.hibernate.tuple.component.MapAttributeJoin;
+import org.hibernate.tuple.component.MapJoinImplementor;
+import org.hibernate.tuple.component.TupleElementImplementor;
+import org.hibernate.tuple.component.MapKeyPath;
+import org.hibernate.tuple.component.MapProxy;
+import org.hibernate.tuple.component.SortedMapProxy;
+import org.hibernate.tuple.component.ListProxy;
+import org.hibernate.tuple.component.Vertex;
+import org.hibernate.tuple.component.Triple;
+import org.hibernate.tuple.component.FirstNonNullResultExitStrategy;
+import org.hibernate.tuple.component.AggregatedAuditExpression;
+import org.hibernate.tuple.component.Context;
+import org.hibernate.tuple.component.EntityMode;
+import org.hibernate.tuple.component.EmptyInterceptor;
+import org.hibernate.tuple.component.JoinType;
+import org.hibernate.tuple.component.ExitOperationsCollector;
+import org.hibernate.tuple.component.ShardedTransactionImpl;
+import org.hibernate.tuple.component.QueryTimeoutException;
+import org.hibernate.tuple.component.FlushEntityEventListener;
+import org.hibernate.tuple.component.ValidatePreUpdateEventListener;
+import org.hibernate.tuple.component.QueryBinder;
+import org.hibernate.tuple.component.LiteralExpression;
+import org.hibernate.tuple.component.Instrumenter;
+import org.hibernate.tuple.component.CriteriaBuilderImpl;
+import org.hibernate.tuple.component.MiddleRelatedComponentMapper;
+import org.hibernate.tuple.component.ConcurrentReferenceHashMap;
+```

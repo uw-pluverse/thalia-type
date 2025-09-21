@@ -1,0 +1,24 @@
+{
+  "id": 2822667,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2823184,
+  "parentId": 0,
+  "createDate": "May 12, 2010",
+  "score": 9,
+  "viewCount": 22796,
+  "body": "\u003cp\u003eI have a GWT page where user enter data (start date, end date, etc.), then this data goes to the server via RPC call. On the server I want to generate Excel report with POI and let user save that file on their local machine.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eThis is my test code to stream file back to the client but for some reason I think it does not know how to stream file to the client when I\u0027m using RPC:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class ReportsServiceImpl extends RemoteServiceServlet implements ReportsService {\u0026#xA;    public String myMethod(String s) {\u0026#xA;\u0026#xA;        File f \u003d new File(\"/excelTestFile.xls\");\u0026#xA;\u0026#xA;        String filename \u003d f.getName();\u0026#xA;\u0026#xA;        int length \u003d 0;\u0026#xA;\u0026#xA;        try {\u0026#xA;            HttpServletResponse resp \u003d getThreadLocalResponse();\u0026#xA;            ServletOutputStream op \u003d resp.getOutputStream();\u0026#xA;            ServletContext context \u003d getServletConfig().getServletContext();\u0026#xA;            resp.setContentType(\"application/octet-stream\");\u0026#xA;            resp.setContentLength((int) f.length());\u0026#xA;            resp.setHeader(\"Content-Disposition\", \"attachment; filename*\u003d\\\"utf-8\u0027\u0027\" + filename + \"\");\u0026#xA;\u0026#xA;            byte[] bbuf \u003d new byte[1024];\u0026#xA;            DataInputStream in \u003d new DataInputStream(new FileInputStream(f));\u0026#xA;\u0026#xA;            while ((in !\u003d null) \u0026amp;\u0026amp; ((length \u003d in.read(bbuf)) !\u003d -1)) {\u0026#xA;                op.write(bbuf, 0, length);\u0026#xA;            }\u0026#xA;\u0026#xA;            in.close();\u0026#xA;            op.flush();\u0026#xA;            op.close();\u0026#xA;\u0026#xA;        }\u0026#xA;        catch (Exception ex) {\u0026#xA;            ex.printStackTrace();\u0026#xA;        }\u0026#xA;\u0026#xA;        return \"Server says: \" + filename;\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI\u0027ve read somewhere on internet that you can\u0027t do file stream with RPC and I have to use Servlet for that. Is there any example of how to use Servlet and how to call that servlet from \u003cstrong\u003eReportsServiceImpl\u003c/strong\u003e. Do I really need to make a servlet or it is possible to stream it back with my RPC?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 51230,
+  "lastEditorUserId": 51230,
+  "lastEditDate": "May 13, 2010",
+  "lastActivityDate": "Jan 4, 2013",
+  "title": "Download dynamic file with GWT",
+  "tags": [
+    "java",
+    "gwt",
+    "servlets",
+    "rpc"
+  ],
+  "answerCount": 3,
+  "commentCount": 2,
+  "favoriteCount": 3
+}

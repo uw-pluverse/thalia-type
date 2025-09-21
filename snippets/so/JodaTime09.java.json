@@ -1,0 +1,21 @@
+{
+  "id": 4057816,
+  "postTypeId": 1,
+  "acceptedAnswerId": 4057857,
+  "parentId": 0,
+  "createDate": "Oct 30, 2010",
+  "score": 9,
+  "viewCount": 7179,
+  "body": "\u003cp\u003eI am experimenting to Joda time.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e    final String string_from_3rd_party \u003d \"GMT+08:00\";\u0026#xA;    // Works for standard Java TimeZone!\u0026#xA;    System.out.println(TimeZone.getTimeZone(string_from_3rd_party));\u0026#xA;    // Exception in thread \"main\" java.lang.IllegalArgumentException: The datetime zone id is not recognised: GMT+08:00\u0026#xA;    System.out.println(DateTimeZone.forID(string_from_3rd_party));\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHow can I retain the \u003ccode\u003estring_from_3rd_party\u003c/code\u003e, yet, able to construct a Joda \u003ccode\u003eDateTimeZone\u003c/code\u003e out from it?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 72437,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Oct 30, 2010",
+  "title": "Migrate TimeZone to DateTimeZone",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 1,
+  "commentCount": 0,
+  "favoriteCount": 1
+}

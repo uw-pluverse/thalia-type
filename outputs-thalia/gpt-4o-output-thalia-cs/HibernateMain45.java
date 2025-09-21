@@ -1,0 +1,31 @@
+```java
+import java.util.concurrent.ConcurrentReferenceHashMap;
+import javax.persistence.criteria.CriteriaBuilderImpl;
+import javax.persistence.criteria.JoinType;
+import javax.persistence.criteria.MapJoinImplementor;
+import javax.persistence.metamodel.MapAttribute;
+import org.hibernate.engine.spi.EntityMode;
+import org.hibernate.event.spi.FlushEntityEventListener;
+import org.hibernate.event.spi.ValidatePreUpdateEventListener;
+import org.hibernate.hql.internal.ast.tree.LiteralNode;
+import org.hibernate.internal.util.collections.SortedMapProxy;
+import org.hibernate.proxy.map.MapProxy;
+import org.hibernate.query.criteria.internal.expression.LiteralExpression;
+import org.hibernate.query.criteria.internal.path.MapAttributeJoin;
+import org.hibernate.query.criteria.internal.path.MapKeyPath;
+import org.hibernate.query.criteria.internal.predicate.AggregatedAuditExpression;
+import org.hibernate.query.criteria.internal.predicate.FirstNonNullResultExitStrategy;
+import org.hibernate.query.criteria.internal.predicate.Triple;
+import org.hibernate.query.criteria.internal.predicate.TupleElementImplementor;
+import org.hibernate.query.criteria.internal.predicate.Vertex;
+import org.hibernate.query.criteria.internal.predicate.AbstractTupleElement;
+import org.hibernate.query.criteria.internal.predicate.ExitOperationsCollector;
+import org.hibernate.query.criteria.internal.predicate.QueryBinder;
+import org.hibernate.query.criteria.internal.predicate.ShardedTransactionImpl;
+import org.hibernate.query.criteria.internal.predicate.QueryTimeoutException;
+import org.hibernate.query.criteria.internal.predicate.MiddleRelatedComponentMapper;
+import org.hibernate.query.criteria.internal.predicate.Instrumenter;
+import org.hibernate.query.criteria.internal.predicate.EmptyInterceptor;
+import org.hibernate.query.criteria.internal.predicate.ListProxy;
+import org.hibernate.query.criteria.internal.predicate.Context;
+```

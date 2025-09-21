@@ -1,0 +1,25 @@
+{
+  "id": 288044,
+  "postTypeId": 1,
+  "acceptedAnswerId": 339021,
+  "parentId": 0,
+  "createDate": "Nov 13, 2008",
+  "score": 24,
+  "viewCount": 24520,
+  "body": "\u003cp\u003eI am using a \u003ccode\u003eListView\u003c/code\u003e to display the main screen of my application.\u003cbr\u003e\u0026#xA;The main screen is essentially a \u003ccode\u003emenu\u003c/code\u003e to get into the different sections of application.  Currently, I have the \u003ccode\u003eListView\u003c/code\u003e whose contents are added programmatically in the \u003ccode\u003eonCreate\u003c/code\u003e method.  \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHere is the code snippet that does this:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eString[] mainItems \u003d {\u0026#xA;    \"Inbox\", \"Projects\", \"Contexts\", \"Next Actions\"\u0026#xA;}\u0026#xA;\u0026#xA;@Override\u0026#xA;public void onCreate(Bundle icicle) {\u0026#xA;    super.onCreate(icicle);\u0026#xA;    setContentView(R.layout.main);\u0026#xA;\u0026#xA;    setListAdapter(new ArrayAdapter\u0026lt;String\u0026gt;(\u0026#xA;            this, android.R.layout.simple_list_item_1, mainItems));\u0026#xA;    registerForContextMenu(getListView());\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo the menu is essentially just a bunch of nodes with the text contained in the mainItems array.  I know that I can create an XML layout (i.e. \u003ccode\u003eR.layout.mainMenu_item\u003c/code\u003e) that has an ImageView and TextView in it, but I am unsure how to set the ImageView\u0027s icon.  I have seen that there is a setImageResouce(int resId) method, but the way to use this when generating with an ArrayAdapter is eluding me.  Is there a better way to do this?\u003c/p\u003e\u0026#xA;",
+  "ownerId": 37436,
+  "ownerDisplayName": "Michael Herold",
+  "lastEditorUserId": 1904696,
+  "lastEditDate": "Dec 27, 2017",
+  "lastActivityDate": "Dec 27, 2017",
+  "title": "How can I create icons for menu items in Android\u0027s ListView?",
+  "tags": [
+    "android",
+    "listview",
+    "menu",
+    "icons"
+  ],
+  "answerCount": 2,
+  "commentCount": 0,
+  "favoriteCount": 6
+}

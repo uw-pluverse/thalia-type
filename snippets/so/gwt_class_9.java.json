@@ -1,0 +1,21 @@
+{
+  "id": 1624218,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1624420,
+  "parentId": 0,
+  "createDate": "Oct 26, 2009",
+  "score": 0,
+  "viewCount": 4469,
+  "body": "\u003cp\u003eMy code is \u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e          VerticalPanel v1 \u003d new VerticalPanel();\u0026#xA;\u0026#xA;    Command comm \u003d new Command() {\u0026#xA;        @Override\u0026#xA;        public void execute() {\u0026#xA;                       // How i know that which menu item is cliked\u0026#xA;        }\u0026#xA;    };\u0026#xA;\u0026#xA;    MenuBar menu \u003d new MenuBar();\u0026#xA;    menu.setWidth(\"500px\");\u0026#xA;    menu.setAnimationEnabled(true);\u0026#xA;    menu.setAutoOpen(true);\u0026#xA;    menu.addSeparator();\u0026#xA;    MenuBar fileBar \u003d new MenuBar(true);\u0026#xA;    MenuBar editBar \u003d new MenuBar(true);\u0026#xA;\u0026#xA;    fileBar.addItem(new MenuItem(\"New\", comm));\u0026#xA;    fileBar.addSeparator();\u0026#xA;    fileBar.addItem(new MenuItem(\"Open\", comm));\u0026#xA;    fileBar.addItem(new MenuItem(\"Save\", comm));\u0026#xA;\u0026#xA;    editBar.addItem(\"Edit 11\", comm);\u0026#xA;    editBar.addItem(\"Edit 11\", comm);\u0026#xA;\u0026#xA;    menu.addItem(new MenuItem(\"File\", fileBar));\u0026#xA;    menu.addItem(new MenuItem(\"Edit\", editBar));\u0026#xA;\u0026#xA;    v1.add(menu);\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eplease help me \u003c/p\u003e\u0026#xA;",
+  "ownerId": 196480,
+  "lastEditorUserId": 196480,
+  "lastEditDate": "Oct 26, 2009",
+  "lastActivityDate": "Oct 26, 2009",
+  "title": "How do i know that which menu item is clicked?",
+  "tags": [
+    "gwt"
+  ],
+  "answerCount": 2,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

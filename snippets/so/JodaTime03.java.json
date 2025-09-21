@@ -1,0 +1,22 @@
+{
+  "id": 2092883,
+  "postTypeId": 1,
+  "acceptedAnswerId": 2092987,
+  "parentId": 0,
+  "createDate": "Jan 19, 2010",
+  "score": 1,
+  "viewCount": 1782,
+  "body": "\u003cp\u003eI\u0027ve created a method that takes two dates (in milliseconds) and returns a sentence that indicates the duration between these two dates.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cp\u003eFor the moment, I have this code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic static String formatDuration(long start, long end) {\u0026#xA;    Interval interval \u003d new Interval(start, end);\u0026#xA;    return getPeriodFormatter().print(interval.toPeriod()).trim();\u0026#xA;}\u0026#xA;\u0026#xA;private static PeriodFormatter getPeriodFormatter() {\u0026#xA;    PeriodFormatter pf \u003d new PeriodFormatterBuilder().printZeroRarelyFirst()\u0026#xA;        .appendYears().appendSuffix(\"y \", \"y \")\u0026#xA;        .appendMonths().appendSuffix(\"m\" , \"m \")\u0026#xA;        .appendDays().appendSuffix(\"d \", \"d \")\u0026#xA;        .appendHours().appendSuffix(\"h \", \"h \")\u0026#xA;        .appendMinutes().appendSuffix(\"m \", \"m \")\u0026#xA;        .appendSeconds().appendSuffix(\"s \", \"s \")\u0026#xA;        .toFormatter();\u0026#xA;\u0026#xA;    return pf;\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eHowever, I think I misunderstand the way I must define an interval in JodaTime. If I try the following test code:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003e@Test\u0026#xA;public void foobar() {\u0026#xA;    try {\u0026#xA;        TimeZone.setDefault(TimeZone.getTimeZone(\"UTC\"));\u0026#xA;        SimpleDateFormat sdf \u003d new SimpleDateFormat(\"HH:mm:ss dd/MM/yyyy\");\u0026#xA;        long start \u003d sdf.parse(\"10:30:00 24/06/2009\").getTime();\u0026#xA;        long end \u003d sdf.parse(\"23:05:17 22/08/2009\").getTime();\u0026#xA;        System.out.println(\"Duration: \" + formatDuration(start, end));\u0026#xA;    } catch (Exception e) {\u0026#xA;        e.printStackTrace();\u0026#xA;        fail(\"Could not test duration.\");\u0026#xA;    }\u0026#xA;}\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI get the following output, which is wrong (especially on the day part):\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDuration: 1m 1d 12h 35m 17s\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003e\u003cstrike\u003eHow do I define the correct duration in JodaTime?\u003c/strike\u003e\u003c/p\u003e\u0026#xA;\u0026#xA;\u003chr/\u003e\u0026#xA;\u0026#xA;\u003cp\u003eOk, in fact, what I forgot in my \u003ccode\u003ePeriodFormatter\u003c/code\u003e is to append the weeks.\u0026#xA;So if I add the weeks, I get the following output, which is correct:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDuration: 1m 4w 1d 12h 35m 17s\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eSo my question changes a little: Is there a way to display the number of days in month instead of weeks + days? In others words, instead of having:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDuration: 1m 4w 1d 12h 35m 17s\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;\u0026#xA;\u003cp\u003eI want to have:\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003eDuration: 1m 29d 12h 35m 17s\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 26457,
+  "lastEditorUserId": 26457,
+  "lastEditDate": "Jan 19, 2010",
+  "lastActivityDate": "Jan 19, 2010",
+  "title": "Correctly defining a duration using JodaTime",
+  "tags": [
+    "java",
+    "jodatime"
+  ],
+  "answerCount": 1,
+  "commentCount": 1,
+  "favoriteCount": 0
+}

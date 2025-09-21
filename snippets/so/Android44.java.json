@@ -1,0 +1,21 @@
+{
+  "id": 1204012,
+  "postTypeId": 1,
+  "acceptedAnswerId": 1204419,
+  "parentId": 0,
+  "createDate": "Jul 30, 2009",
+  "score": 5,
+  "viewCount": 22138,
+  "body": "\u003cp\u003eMy service spawns a new thread, and stops it according to the \u003ca href\u003d\"http://java.sun.com/j2se/1.4.2/docs/guide/misc/threadPrimitiveDeprecation.html\" rel\u003d\"noreferrer\"\u003etypically recommended java\u003c/a\u003e method of interrupt()\u0027ing. When I stop the service, I stop the thread in onDestroy(). The service is stopped, and the interrupt code is reached. However, soon enough the thread restarts from the beginning of the Runnable.\u003c/p\u003e\u0026#xA;\u0026#xA;\u003cpre\u003e\u003ccode\u003epublic class DoScan extends Service {\u0026#xA;    public volatile Thread runner;\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public IBinder onBind(Intent intent) {\u0026#xA;        return null;\u0026#xA;    }\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public void onCreate() {\u0026#xA;        super.onCreate();\u0026#xA;\u0026#xA;        startThread();\u0026#xA;    }\u0026#xA;\u0026#xA;    @Override\u0026#xA;    public void onDestroy() {\u0026#xA;        super.onDestroy();\u0026#xA;        android.util.Log.v(\"@@@@@@@@@@@@@@@@@@@@\", \"DoScan.onDestroy\");\u0026#xA;        stopThread();\u0026#xA;    }\u0026#xA;\u0026#xA;\u0026#xA;    public synchronized void startThread(){\u0026#xA;        if(runner \u003d\u003d null){\u0026#xA;            android.util.Log.v(\"@@@@@@@@@@@@@@@@@@@@\", \"DoScan.startthread\");     \u0026#xA;            runner \u003d new Thread(new ScanningThread());\u0026#xA;            runner.start();\u0026#xA;        }\u0026#xA;    }\u0026#xA;    /* use a handler in a loop cycling through most of oncreate.\u0026#xA;     * the scanningthread does the work, then notifies the svc\u0027s uithread\u0026#xA;     */\u0026#xA;\u0026#xA;    public synchronized void stopThread(){\u0026#xA;        if(runner !\u003d null){\u0026#xA;            android.util.Log.v(\"@@@@@@@@@@@@@@@@@@@@\", \"DoScan.stopthread\");\u0026#xA;            Thread moribund \u003d runner;\u0026#xA;            runner \u003d null;\u0026#xA;            moribund.interrupt();\u0026#xA;            android.util.Log.v(\"@@@@@@@@@@@@@@@@@@@@\", \"interrupted?\" + moribund.isInterrupted());\u0026#xA;        }\u0026#xA;    }\u0026#xA;        }\u0026#xA;\u003c/code\u003e\u003c/pre\u003e\u0026#xA;",
+  "ownerId": 122961,
+  "lastEditorUserId": 0,
+  "lastActivityDate": "Jul 30, 2009",
+  "title": "Why isn\u0027t the thread stopping?",
+  "tags": [
+    "android",
+    "multithreading"
+  ],
+  "answerCount": 3,
+  "commentCount": 0,
+  "favoriteCount": 2
+}
